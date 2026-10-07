@@ -534,7 +534,7 @@
       <h2>Coverage</h2>
       <p>${counts.implementations} implementations (${counts.by_category.kem} KEM, ${counts.by_category.kex} KEX, ${counts.by_category.sig} SIG) from ${m.ngcc.schemes} NGCC Round-1 submissions with ${m.ngcc.instances} parameter sets (${counts.unsupported_instances} never imported). Submission packages were fetched from the NGCC candidate list${m.ngcc.fetched && m.ngcc.fetched.length ? ` between ${esc(m.ngcc.fetched[0])} and ${esc(m.ngcc.fetched[1])}` : ""}.</p>
       <h2>Reproducing</h2>
-      <pre>git clone --recursive https://github.com/JunhaoHuang/ngccm4.git
+      <pre>git clone --recursive https://github.com/ngccm4dev/ngccm4.git
 python3 benchmark_schemes.py PLATFORM=nucleo-l4r5zi --apps speed      # all board-tier schemes
 python3 kat_check.py --md Out/kat_summary.md                           # KAT check on QEMU
 python3 tools/make_site_data.py --ngcc-root NGCC                    # regenerate docs/data</pre>
@@ -556,7 +556,7 @@ python3 tools/make_site_data.py --ngcc-root NGCC                    # regenerate
       [m.ngcc.schemes, "NGCC submissions"],
     ];
     $("#stat-row").replaceChildren(...tiles.map(([n, label]) => el("div", { class: "stat" }, [el("b", { text: fmt(n) }), el("span", { text: label })])));
-    $("#footer").innerHTML = `ngccm4 benchmark site · data generated ${esc(m.generated_on)} by <code>${esc(m.generator)}</code>${m.git_rev ? ` at <code>${esc(m.git_rev)}</code>` : ""} · <a href="${esc(m.repo)}" rel="noopener">JunhaoHuang/ngccm4</a>`;
+    $("#footer").innerHTML = `ngccm4 benchmark site · data generated ${esc(m.generated_on)} by <code>${esc(m.generator)}</code>${m.git_rev ? ` at <code>${esc(m.git_rev)}</code>` : ""} · <a href="${esc(m.repo)}" rel="noopener">ngccm4dev/ngccm4</a>`;
   }
   function render() {
     for (const b of document.querySelectorAll("#tabs button")) b.setAttribute("aria-selected", b.dataset.tab === state.tab ? "true" : "false");

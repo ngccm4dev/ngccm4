@@ -30160,7 +30160,7 @@ window.NGCCM4_DATA = {
    "source": "https://www.niccs.org.cn/niccs/Round1Additional/pc/list.html"
   },
   "platform": "nucleo-l4r5zi",
-  "repo": "https://github.com/JunhaoHuang/ngccm4",
+  "repo": "https://github.com/ngccm4dev/ngccm4",
   "sources": {
    "kat_summary": "Out/kat_summary.md",
    "manifest": "tools/ngcc_manifest.json",

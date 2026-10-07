@@ -4,14 +4,14 @@
 ## Introduction
 This repository aims to provide an automated tools, similar to [pqm4](https://github.com/mupq/pqm4) for benchmarking algorithms submitted to the New Generation Commercial Cryptography ([NGCC](https://niccs.org.cn/symmbzyjy/tzgg/pc/content/1976155884915003392/content_1976155884915003392.html)) issued by the Institute of Commercial Cryptography Standards (ICCS) in China.
 
-Authors: [Junhao Huang](https://github.com/JunhaoHuang), junhaohuang@smu.edu.sg, Singapore Management University.
+Authors: [Junhao Huang](https://github.com/JunhaoHuang), jhhuang_nuaa@126.com, Singapore Management University.
 
 --------------------
 ## Clone and Dependencies
 
 Clone the repository through:
 ```bash
-git clone --recursive-submodules https://github.com/JunhaoHuang/ngccm4.git
+git clone --recursive-submodules https://github.com/ngccm4dev/ngccm4.git
 ```
 This repository relies on [libopencm3(@87a080c)](https://github.com/libopencm3/libopencm3/tree/87a080c94ce67643216464821c752c1c406c6414) to provide M4-related supports.
 
@@ -483,7 +483,7 @@ summary starts with a status table for targets that failed to build or run.
 ## Benchmark website
 
 The board results are published as a static site at
-<https://junhaohuang.github.io/ngccm4/> (GitHub Pages, served from `docs/`).
+<https://ngccm4dev.github.io/ngccm4/> (GitHub Pages, served from `docs/`).
 It shows the three categories (KEM, key exchange, signatures) on separate tabs
 with every column sortable (cycles per operation, code size, stack usage, key
 sizes with proportional bars, KAT status, security level normalised to

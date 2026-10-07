@@ -73,6 +73,13 @@ p { margin: 0.4em 0; }
 .header-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .subtitle { color: var(--text-2); margin: 6px 0 10px; }
 .stat-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.notice {
+  margin: 0 0 12px; padding: 10px 14px; border: 1px solid var(--status-warning); border-left-width: 4px;
+  border-radius: 8px; background: var(--surface); color: var(--text); font-size: 0.93rem; line-height: 1.45;
+}
+.notice p { margin: 0; }
+.notice p + p { margin-top: 6px; }
+.notice a { color: var(--accent); }
 .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; min-width: 110px; }
 .stat b { display: block; font-size: 1.25rem; font-variant-numeric: tabular-nums; font-weight: 650; }
 .stat span { color: var(--text-2); font-size: 0.82rem; }

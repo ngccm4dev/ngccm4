@@ -1001,7 +1001,7 @@ def main(argv: list[str]) -> int:
                 "kat_summary": "Out/kat_summary.md",
                 "manifest": "tools/ngcc_manifest.json",
             },
-            "repo": "https://github.com/JunhaoHuang/ngccm4",
+            "repo": "https://github.com/ngccm4dev/ngccm4",
         },
         "categories": {
             cat: {
