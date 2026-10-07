@@ -4,7 +4,9 @@
 ## Introduction
 This repository aims to provide an automated tools, similar to [pqm4](https://github.com/mupq/pqm4) for benchmarking algorithms submitted to the New Generation Commercial Cryptography ([NGCC](https://niccs.org.cn/symmbzyjy/tzgg/pc/content/1976155884915003392/content_1976155884915003392.html)) issued by the Institute of Commercial Cryptography Standards (ICCS) in China.
 
-Authors: [Junhao Huang](https://github.com/JunhaoHuang), jhhuang_nuaa@126.com, Singapore Management University.
+Authors: 
+- [Junhao Huang](https://github.com/JunhaoHuang), jhhuang_nuaa@126.com, Singapore Management University
+- Claude Code Fable 5.1
 
 --------------------
 ## Clone and Dependencies
@@ -62,12 +64,11 @@ If you do not need hardware flashing, `openocd` can be omitted.
 		- SM3 for xof and drng, required by ICCS
 		- SHA3 for better comparison with NIST's variants of PQC schemes.
 	- crypto_kem: Key Encapsulation Mechanism schemes
-		- DKEM
-		- ZEN: NTRU-based KEM
 	- crypto_sign: Digital Signature schemes
 	- crypto_kex: Key Exchange schemes
 	- libopencm3: third-party library for ARM Cortex-M4
 	- mk: Makefiles related for building and compiling
+	- tools: related scripts for collecting data and maintaining website.
 	- README.md
 
 ## Manual Usage
@@ -564,11 +565,66 @@ Notes:
 - `USE_SM3_ASM=1` controls the optimized SM3 assembly path. It is independent from `USE_KECCAK`.
 
 
-## LICENSES
-Different parts of **ngccm4** have different licenses. 
-Each subdirectory containing implementations contains a LICENSE or COPYING file stating 
-under what license that specific implementation is released. 
-The files in common contain licensing information at the top of the file. 
+## Licenses
 
-All other code in this repository is licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) and under the conditions of [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+**ngccm4** is a collection of code from different sources, and different parts are under different terms.
+Nothing in this section is legal advice; the license text that ships with each component is authoritative.
 
+### Code written for ngccm4
+
+The build system (`Makefile`, `mk/`, `ldscripts/`), the Python drivers and tools (`build_schemes.py`,
+`benchmark_schemes.py`, `kat_check.py`, `tools/`, `hostside/`), the board/QEMU HAL and benchmark apps
+(`common/hal-*.c`, `crypto_*/{speed,stack,hashing,test,testvectors}.c`), the SM3 compression-function
+assembly (`common/sm3_bit_compress_asm*.S`), the hand-written Cortex-M4 ports in `crypto_*/<scheme>/m4`
+for ZEN, DKEM, DKEX and ADKEX, the benchmark website (`docs/`) and the published measurement data are
+dual-licensed: you may use them under the terms of either the
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) or
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), at your option
+(`SPDX-License-Identifier: Apache-2.0 OR CC0-1.0`). This is the same convention as
+[pqm4](https://github.com/mupq/pqm4), on which the layout of this repository is modelled.
+
+### Third-party support code in `common/`
+
+- `common/fips202.c` / `fips202.h` are based on the public-domain Keccak reference and "TweetFips202"
+  implementations.
+- `common/keccakf1600.S` is the Cortex-M4 Keccak-f[1600] permutation from the Keccak Code Package / pqm4;
+  its authors waived all copyright (CC0).
+- `common/sha256_armv7m.S` and `common/internal-sha256.h` are Copyright (C) 2021 Southern Storm Software,
+  Pty Ltd, under the MIT license stated in the file headers.
+- `crypto_sign/dilithium/` (used only as the signature component of the hand-ported DKEX schemes) is the
+  CRYSTALS-Dilithium reference code; see its `LICENSE` (public domain / CC0, or Apache 2.0, or GPL 2.0)
+  and `AUTHORS.md`.
+
+### libopencm3
+
+`libopencm3/` is a git submodule of [libopencm3](https://github.com/libopencm3/libopencm3), licensed under
+the GNU Lesser General Public License v3 (its examples under the GPL v3). Copies of both licenses are kept
+in `COPYING.LGPL3` and `COPYING.GPL3` in the repository root. Board ELFs built by this repository link
+against it and are therefore subject to the LGPL's terms.
+
+### NGCC candidate implementations
+
+The reference implementations under `crypto_kem/`, `crypto_kex/` and `crypto_sign/` (and the submitters'
+own Cortex-M4 ports imported as `<scheme>/m4`) are taken from the Round-1 submission packages published by
+the Institute of Commercial Cryptography Standards (ICCS) on the
+[NGCC page](https://niccs.org.cn/symmbzyjy/tzgg/pc/content/1976155884915003392/content_1976155884915003392.html).
+They are the work of the respective submission teams, who retain the copyright; each scheme should be
+credited to its team, and the submission package is the authoritative source.
+
+- This repository does not grant any license to the NGCC code. The terms are whatever the submission
+  package states, and they differ from package to package: many files declare themselves public domain or
+  CC0 (for example Aigis, BiT, DARTS, Galas, GreatWall, Phoenix, TRINE, TSUOV), several use the MIT license
+  (for example Lynxer, ReSolveD, SYDO), some mix MIT and CC0 files (the MPC-in-the-head family), QIMEN-PIKE and SQIsign2D ship
+  Apache-2.0 `LICENSE`/`NOTICE` files, and a number of packages carry no license statement at all.
+  Some packages also bundle third-party components with their own notices (NIST's KAT `rng.c`, Intel IPP
+  Crypto sources, and others). Check the package before using any of this code outside benchmarking.
+- The code is redistributed here for the purpose of benchmarking and research. Every imported directory
+  contains an `NGCC_ORIGIN.txt` naming the submission, the package SHA-256 and the instance it was taken
+  from, and listing the files that `tools/import_ngcc.py` left out (KAT harnesses, duplicated DRNG/hash
+  glue). The only textual changes are the per-package `sed` rules in `tools/ngcc_manifest.json`, which fix build or
+  correctness problems noted in the manifest; the sources are otherwise as published.
+- The schemes' algorithm-specification PDFs served by the website (`docs/specs/`) are likewise the
+  submitters' documents, copied unchanged from the submission packages.
+
+If you are a submitter and would like your package to be attributed, licensed or described differently
+here, please open an issue or contact the maintainer listed above.
