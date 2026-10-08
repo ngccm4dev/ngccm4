@@ -4926,8 +4926,8 @@ window.NGCCM4_DATA = {
       "bss": 5424,
       "data": 1352,
       "source": "report",
-      "text": 31088,
-      "total": 37864
+      "text": 31080,
+      "total": 37856
      },
      "completed_ops": [],
      "cycles": {},
@@ -4937,7 +4937,7 @@ window.NGCCM4_DATA = {
       "encaps",
       "decaps"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": "hardfault",
      "family": "crypto_kem",
      "hand_ported": false,
      "id": "crypto_kem_HQC-512_ref",
@@ -4981,7 +4981,7 @@ window.NGCCM4_DATA = {
       "ss": 64
      },
      "stack": null,
-     "status_text": "timeout: no output within the cap (same decaps hang as HQC-384 expected)",
+     "status_text": "HardFault on the board (heap or stack beyond the 640 KB SRAM); completed none",
      "tier": "board"
     },
     {
@@ -21473,8 +21473,8 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 25180,
-      "total": 27080
+      "text": 25164,
+      "total": 27064
      },
      "completed_ops": [],
      "cycles": {
@@ -21562,8 +21562,8 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 25060,
-      "total": 26960
+      "text": 25044,
+      "total": 26944
      },
      "completed_ops": [],
      "cycles": {
@@ -21651,11 +21651,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 25212,
-      "total": 27112
+      "text": 25196,
+      "total": 27096
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -21717,7 +21717,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "board"
     },
     {
@@ -23712,14 +23712,10 @@ window.NGCCM4_DATA = {
       "bss": 1100,
       "data": 1352,
       "source": "report",
-      "text": 432920,
-      "total": 435372
+      "text": 432904,
+      "total": 435356
      },
-     "completed_ops": [
-      "keypair",
-      "sign",
-      "verify"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
        "avg": 73331864,
@@ -23749,7 +23745,7 @@ window.NGCCM4_DATA = {
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Lynxer-160f_ref",
@@ -23783,9 +23779,7 @@ window.NGCCM4_DATA = {
       "title": "Lynxer",
       "zip_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Lynxer.zip"
      },
-     "notes": [
-      "timeout: no '#' within the capture limit; completed keypair, sign, verify"
-     ],
+     "notes": [],
      "run_status": "measured",
      "scheme": "Lynxer-160f",
      "sizes": {
@@ -23802,7 +23796,7 @@ window.NGCCM4_DATA = {
       "sign": 145364,
       "verify": 145324
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair, sign, verify",
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -24186,8 +24180,8 @@ window.NGCCM4_DATA = {
       "bss": 1100,
       "data": 1352,
       "source": "report",
-      "text": 434736,
-      "total": 437188
+      "text": 434720,
+      "total": 437172
      },
      "completed_ops": [
       "keypair"
@@ -24261,8 +24255,8 @@ window.NGCCM4_DATA = {
       "bss": 1100,
       "data": 1352,
       "source": "report",
-      "text": 434736,
-      "total": 437188
+      "text": 434720,
+      "total": 437172
      },
      "completed_ops": [
       "keypair"
@@ -24894,14 +24888,10 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 30376,
-      "total": 32276
+      "text": 30360,
+      "total": 32260
      },
-     "completed_ops": [
-      "keypair",
-      "sign",
-      "verify"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
        "avg": 167075797,
@@ -24931,7 +24921,7 @@ window.NGCCM4_DATA = {
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Phoenix-SHAKE-128f_ref",
@@ -24971,8 +24961,7 @@ window.NGCCM4_DATA = {
       "zip_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Phoenix.zip"
      },
      "notes": [
-      "host build of the reference code reports different sizes: sig_max 13670 (shown: benchmarked binary (QEMU testvectors dump))",
-      "timeout: no '#' within the capture limit; completed keypair, sign, verify"
+      "host build of the reference code reports different sizes: sig_max 13670 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
      "run_status": "measured",
      "scheme": "Phoenix-SHAKE-128f",
@@ -24990,7 +24979,7 @@ window.NGCCM4_DATA = {
       "sign": 4916,
       "verify": 5896
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair, sign, verify",
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -24999,11 +24988,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 32152,
-      "total": 34052
+      "text": 32136,
+      "total": 34036
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -25076,7 +25065,7 @@ window.NGCCM4_DATA = {
       "sign": 4468,
       "verify": 5048
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -25085,14 +25074,10 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 30864,
-      "total": 32764
+      "text": 30848,
+      "total": 32748
      },
-     "completed_ops": [
-      "keypair",
-      "sign",
-      "verify"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
        "avg": 244522735,
@@ -25122,7 +25107,7 @@ window.NGCCM4_DATA = {
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Phoenix-SHAKE-192f_ref",
@@ -25162,8 +25147,7 @@ window.NGCCM4_DATA = {
       "zip_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Phoenix.zip"
      },
      "notes": [
-      "host build of the reference code reports different sizes: sig_max 30766 (shown: benchmarked binary (QEMU testvectors dump))",
-      "timeout: no '#' within the capture limit; completed keypair, sign, verify"
+      "host build of the reference code reports different sizes: sig_max 30766 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
      "run_status": "measured",
      "scheme": "Phoenix-SHAKE-192f",
@@ -25181,7 +25165,7 @@ window.NGCCM4_DATA = {
       "sign": 6764,
       "verify": 9288
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair, sign, verify",
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -25190,11 +25174,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31248,
-      "total": 33148
+      "text": 31232,
+      "total": 33132
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -25267,7 +25251,7 @@ window.NGCCM4_DATA = {
       "sign": 6156,
       "verify": 7304
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -25276,14 +25260,10 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31064,
-      "total": 32964
+      "text": 31048,
+      "total": 32948
      },
-     "completed_ops": [
-      "keypair",
-      "sign",
-      "verify"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
        "avg": 496173410,
@@ -25313,7 +25293,7 @@ window.NGCCM4_DATA = {
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Phoenix-SHAKE-256f_ref",
@@ -25353,8 +25333,7 @@ window.NGCCM4_DATA = {
       "zip_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Phoenix.zip"
      },
      "notes": [
-      "host build of the reference code reports different sizes: sig_max 44906 (shown: benchmarked binary (QEMU testvectors dump))",
-      "timeout: no '#' within the capture limit; completed keypair, sign, verify"
+      "host build of the reference code reports different sizes: sig_max 44906 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
      "run_status": "measured",
      "scheme": "Phoenix-SHAKE-256f",
@@ -25372,7 +25351,7 @@ window.NGCCM4_DATA = {
       "sign": 10124,
       "verify": 14856
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair, sign, verify",
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -25381,11 +25360,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31320,
-      "total": 33220
+      "text": 31304,
+      "total": 33204
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -25454,7 +25433,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -25463,11 +25442,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31552,
-      "total": 33452
+      "text": 31536,
+      "total": 33436
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -25536,7 +25515,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -25545,11 +25524,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31584,
-      "total": 33484
+      "text": 31568,
+      "total": 33468
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -25618,7 +25597,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -25627,11 +25606,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31624,
-      "total": 33524
+      "text": 31608,
+      "total": 33508
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -25700,7 +25679,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -25709,10 +25688,12 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31552,
-      "total": 33452
+      "text": 31536,
+      "total": 33436
      },
-     "completed_ops": [],
+     "completed_ops": [
+      "n"
+     ],
      "cycles": {},
      "cycles_total": null,
      "expected_ops": [
@@ -25770,7 +25751,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed none",
+     "status_text": "timeout (30 min cap, 1 iteration): completed n; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -25879,14 +25860,10 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29372,
-      "total": 31272
+      "text": 29356,
+      "total": 31256
      },
-     "completed_ops": [
-      "keypair",
-      "sign",
-      "verify"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
        "avg": 1152185496,
@@ -25896,27 +25873,27 @@ window.NGCCM4_DATA = {
        "min": 1152184108
       },
       "sign": {
-       "avg": 14359963669,
+       "avg": 14369089091,
        "count": 1,
-       "max": 14359963669,
-       "median": 14359963669,
-       "min": 14359963669
+       "max": 14369089091,
+       "median": 14369089091,
+       "min": 14369089091
       },
       "verify": {
-       "avg": 46484862,
+       "avg": 46492306,
        "count": 1,
-       "max": 46484862,
-       "median": 46484862,
-       "min": 46484862
+       "max": 46492306,
+       "median": 46492306,
+       "min": 46492306
       }
      },
-     "cycles_total": 15558634027,
+     "cycles_total": 15567766893,
      "expected_ops": [
       "keypair",
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Phoenix-SM3-128s_ref",
@@ -25956,8 +25933,7 @@ window.NGCCM4_DATA = {
       "zip_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Phoenix.zip"
      },
      "notes": [
-      "host build of the reference code reports different sizes: sig_max 6258 (shown: benchmarked binary (QEMU testvectors dump))",
-      "timeout: no '#' within the capture limit; completed keypair, sign, verify"
+      "host build of the reference code reports different sizes: sig_max 6258 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
      "run_status": "measured",
      "scheme": "Phoenix-SM3-128s",
@@ -25975,7 +25951,7 @@ window.NGCCM4_DATA = {
       "sign": 4548,
       "verify": 5204
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair, sign, verify",
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -26084,11 +26060,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 28996,
-      "total": 30896
+      "text": 28980,
+      "total": 30880
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -26162,7 +26138,7 @@ window.NGCCM4_DATA = {
       "sign": 6244,
       "verify": 7660
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -26171,14 +26147,10 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 28860,
-      "total": 30760
+      "text": 28844,
+      "total": 30744
      },
-     "completed_ops": [
-      "keypair",
-      "sign",
-      "verify"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
        "avg": 191724496,
@@ -26208,7 +26180,7 @@ window.NGCCM4_DATA = {
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Phoenix-SM3-256f_ref",
@@ -26248,8 +26220,7 @@ window.NGCCM4_DATA = {
       "zip_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/Phoenix.zip"
      },
      "notes": [
-      "host build of the reference code reports different sizes: sig_max 44906 (shown: benchmarked binary (QEMU testvectors dump))",
-      "timeout: no '#' within the capture limit; completed keypair, sign, verify"
+      "host build of the reference code reports different sizes: sig_max 44906 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
      "run_status": "measured",
      "scheme": "Phoenix-SM3-256f",
@@ -26267,7 +26238,7 @@ window.NGCCM4_DATA = {
       "sign": 10204,
       "verify": 15164
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair, sign, verify",
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -26276,11 +26247,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29128,
-      "total": 31028
+      "text": 29112,
+      "total": 31012
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -26353,7 +26324,7 @@ window.NGCCM4_DATA = {
       "sign": 7468,
       "verify": 9900
      },
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -26362,14 +26333,10 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29492,
-      "total": 31392
+      "text": 29476,
+      "total": 31376
      },
-     "completed_ops": [
-      "keypair",
-      "sign",
-      "verify"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
        "avg": 406241657,
@@ -26399,7 +26366,7 @@ window.NGCCM4_DATA = {
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Phoenix-SM3-384f_ref",
@@ -26440,8 +26407,7 @@ window.NGCCM4_DATA = {
      },
      "notes": [
       "host build of the reference code reports different sizes: sig_max 88442 (shown: benchmarked binary (QEMU testvectors dump))",
-      "official KAT file reports different sizes: sig_max 88058 (shown: benchmarked binary (QEMU testvectors dump))",
-      "timeout: no '#' within the capture limit; completed keypair, sign, verify"
+      "official KAT file reports different sizes: sig_max 88058 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
      "run_status": "measured",
      "scheme": "Phoenix-SM3-384f",
@@ -26454,8 +26420,12 @@ window.NGCCM4_DATA = {
       "sk": 192,
       "source": "kat_raw"
      },
-     "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed keypair, sign, verify",
+     "stack": {
+      "keypair": 14324,
+      "sign": 11124,
+      "verify": 18052
+     },
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -26464,11 +26434,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29504,
-      "total": 31404
+      "text": 29488,
+      "total": 31388
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -26537,7 +26507,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout (10 min cap, 1 iteration): completed keypair; the remaining operation(s) exceed the cap",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -26546,28 +26516,40 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29584,
-      "total": 31484
+      "text": 29568,
+      "total": 31468
      },
-     "completed_ops": [
-      "keypair"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 809693749,
+       "avg": 809618905,
        "count": 1,
-       "max": 809693749,
-       "median": 809693749,
-       "min": 809693749
+       "max": 809618905,
+       "median": 809618905,
+       "min": 809618905
+      },
+      "sign": {
+       "avg": 19666493167,
+       "count": 1,
+       "max": 19666493167,
+       "median": 19666493167,
+       "min": 19666493167
+      },
+      "verify": {
+       "avg": 437171999,
+       "count": 1,
+       "max": 437171999,
+       "median": 437171999,
+       "min": 437171999
       }
      },
-     "cycles_total": null,
+     "cycles_total": 20913284071,
      "expected_ops": [
       "keypair",
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_Phoenix-SM3-512f_ref",
@@ -26586,7 +26568,9 @@ window.NGCCM4_DATA = {
       "variant": "f"
      },
      "measured_ops": [
-      "keypair"
+      "keypair",
+      "sign",
+      "verify"
      ],
      "ngcc": {
       "comments_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/thread/M3XAI6VRCGWEXYF5YOYXWH25JFDYAWVZ/",
@@ -26607,7 +26591,7 @@ window.NGCCM4_DATA = {
      "notes": [
       "host build of the reference code reports different sizes: sig_max 138454 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
-     "run_status": "partial",
+     "run_status": "measured",
      "scheme": "Phoenix-SM3-512f",
      "sizes": {
       "kat_path": "schemes/Phoenix/Test_Vectors/KAT_SIG_Phoenix-SM3-512f.txt",
@@ -26618,8 +26602,12 @@ window.NGCCM4_DATA = {
       "sk": 256,
       "source": "kat_raw"
      },
-     "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed keypair",
+     "stack": {
+      "keypair": 20380,
+      "sign": 16076,
+      "verify": 28540
+     },
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -26628,11 +26616,11 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29488,
-      "total": 31388
+      "text": 29472,
+      "total": 31372
      },
      "completed_ops": [
-      "keypair"
+      "k"
      ],
      "cycles": {
       "keypair": {
@@ -26701,7 +26689,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout (10 min cap, 1 iteration): completed keypair; the remaining operation(s) exceed the cap",
+     "status_text": "timeout (30 min cap, 1 iteration): completed k; the remaining operation(s) exceed the cap",
      "tier": "qemu"
     },
     {
@@ -27851,18 +27839,28 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 39124,
-      "total": 41024
+      "text": 39108,
+      "total": 41008
      },
-     "completed_ops": [],
-     "cycles": {},
+     "completed_ops": [
+      "keypair"
+     ],
+     "cycles": {
+      "keypair": {
+       "avg": 25576964,
+       "count": 1,
+       "max": 25576964,
+       "median": 25576964,
+       "min": 25576964
+      }
+     },
      "cycles_total": null,
      "expected_ops": [
       "keypair",
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_TRINE-128-balanced_ref",
@@ -27880,7 +27878,9 @@ window.NGCCM4_DATA = {
       "source": "name",
       "variant": null
      },
-     "measured_ops": [],
+     "measured_ops": [
+      "keypair"
+     ],
      "ngcc": {
       "comments_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/thread/PHFOUHYOCTA42ALMCBKHF5JLD2HQGVXV/",
       "folder": "TRINE",
@@ -27893,7 +27893,7 @@ window.NGCCM4_DATA = {
       "zip_url": "https://www.niccs.org.cn/niccs/Proposal/Public-Key%20Cryptographic%20Algorithms/Round%201%20candidates/TRINE.zip"
      },
      "notes": [],
-     "run_status": "failed",
+     "run_status": "partial",
      "scheme": "TRINE-128-balanced",
      "sizes": {
       "kat_path": "schemes/TRINE/Test_Vectors/KAT_SIG_TRINE-128-Balanced.txt",
@@ -27905,7 +27905,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout: no '#' within the capture limit; completed none",
+     "status_text": "HardFault on the board (heap or stack beyond the 640 KB SRAM); completed keypair",
      "tier": "qemu"
     },
     {
@@ -28104,28 +28104,40 @@ window.NGCCM4_DATA = {
       "bss": 126116,
       "data": 1384,
       "source": "report",
-      "text": 34892,
-      "total": 162392
+      "text": 34876,
+      "total": 162376
      },
-     "completed_ops": [
-      "keypair"
-     ],
+     "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 7757573369,
+       "avg": 7757572557,
        "count": 1,
-       "max": 7757573369,
-       "median": 7757573369,
-       "min": 7757573369
+       "max": 7757572557,
+       "median": 7757572557,
+       "min": 7757572557
+      },
+      "sign": {
+       "avg": 3834521911,
+       "count": 1,
+       "max": 3834521911,
+       "median": 3834521911,
+       "min": 3834521911
+      },
+      "verify": {
+       "avg": 3618129013,
+       "count": 1,
+       "max": 3618129013,
+       "median": 3618129013,
+       "min": 3618129013
       }
      },
-     "cycles_total": null,
+     "cycles_total": 15210223481,
      "expected_ops": [
       "keypair",
       "sign",
       "verify"
      ],
-     "failure_kind": "timeout",
+     "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
      "id": "crypto_sign_TSUOV_512_ref",
@@ -28144,7 +28156,9 @@ window.NGCCM4_DATA = {
       "variant": null
      },
      "measured_ops": [
-      "keypair"
+      "keypair",
+      "sign",
+      "verify"
      ],
      "ngcc": {
       "comments_url": "https://list.niccs.org.cn/archives/list/pkcforum@list.niccs.org.cn/thread/BP4QW5XTWWAJOCTHWK64Z6L3LTCXEWIA/",
@@ -28160,7 +28174,7 @@ window.NGCCM4_DATA = {
      "notes": [
       "official KAT file reports different sizes: pk 3974, sk 48, sig_max 1494 (shown: benchmarked binary (QEMU testvectors dump))"
      ],
-     "run_status": "partial",
+     "run_status": "measured",
      "scheme": "TSUOV_512",
      "sizes": {
       "kat_path": "schemes/TSUOV/Test_Vectors/KAT_SIG_TSUOV-512.txt",
@@ -28172,7 +28186,7 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": null,
-     "status_text": "timeout (10 min cap, 1 iteration): completed keypair; the remaining operation(s) exceed the cap",
+     "status_text": null,
      "tier": "qemu"
     },
     {
@@ -30090,16 +30104,17 @@ window.NGCCM4_DATA = {
  "meta": {
   "board": "STM32L4R5ZI (Nucleo-L4R5ZI, Cortex-M4, 640 KB SRAM, 2 MB flash)",
   "conditions": [
-   "Measured 2026-10-01 to 2026-10-07 with `benchmark_schemes.py PLATFORM=nucleo-l4r5zi --apps speed`.",
+   "Measured 2026-10-01 to 2026-10-08 with `benchmark_schemes.py PLATFORM=nucleo-l4r5zi --apps speed`.",
    "Clock: HSI16 (16 MHz), 0 flash wait states, I/D caches on; cycle counts from DWT.",
    "Compiler: arm-none-eabi-gcc 13.2.1, `-O3`, SM3 compression in assembly (USE_SM3_ASM=1), SM3 DRNG.",
    "KEM/KEX: the 147 board-tier implementations (the 153 QEMU-tier ones do not fit the board).",
-   "Signatures: every crypto_sign implementation that links for the board was attempted (1 iteration, 10 min cap); the status table lists each one that did not complete and why.",
+   "Signatures: every crypto_sign implementation that links for the board was attempted (the slowest ones finally at 1 iteration with a 30 min cap); the status table lists each one that did not complete and why.",
    "Iterations per operation (\"count\" column): 100 for most KEM/KEX schemes (see the 2026-10-05/06 note below); 10 for the submitter m4 ports, PolarLAC, CreTAKE, BAG-Loong-128, HQC-128/256 and TRIKE-2; 3 for bag_piglet_256/384/512 and TRIKE-5; signature iterations as described in the notes below. Timing is deterministic on this board for constant-time code (DTRU-648: min/max within 0.005%); schemes with rejection sampling vary by ~1% between iterations, so a single-iteration row is one sample of that distribution.",
    "Code size is `arm-none-eabi-size` of the speed ELF (.text/.data/.bss include the benchmark driver and HAL).",
    "Signature schemes re-measured 2026-10-06/07 in several runs: 23 schemes (Aigis-Sig, BiT, CEDRUSALPHA-160*, CEDRUSC, COMPASS-SIG, DARTS) at NGCC_ITERATIONS=100; the remaining 98 at NGCC_ITERATIONS=10 (the 'count' column gives the iterations actually completed). Per-target capture caps: 30 min for the 100-iteration run and the first 10-iteration run, 5 min for the final 44 schemes (QingLuan, ReSolveD, Sigurd, TRINE, TSUOV, lwrdsa, Chinith-family, SYDO, ...); where a shorter-capped rerun timed out without adding anything, the earlier run's figures and status were kept. Targets whose status line says 'timeout' did not finish all operations within the cap; 'completed <ops>' lists the operations that were measured.",
    "2026-10-07: added the submitters' Cortex-M4 ports (BW-KEM, DTRU, MORNING-Scabbard, Rudraksh2 as <scheme>/m4), the PolarLAC reference sets and the 13 board-tier CreTAKE sets (NGCC_ITERATIONS=10, speed and stack; all 66 targets completed).",
-   "2026-10-05/06: all 108 board-tier KEM/KEX reference and hand-ported m4 sets (plus BiT, DARTS) re-measured at NGCC_ITERATIONS=100 with the speed and stack apps (run output in benchmark_summary.{csv,md}; the 'count' column is 100 for these rows). The 2026-10-01..03 10-iteration figures remain only where the 100-iteration run did not finish within its 30 min cap (BAG-Loong-128, HQC-128/256, TRIKE-2/5, bag_piglet_256/384/512) and for the imported submitter m4 ports, PolarLAC and CreTAKE sets measured 2026-10-07 at 10 iterations. The HQC-384 and MAMBA-NIKE-384/512 raw logs show a HardFault (not a hang) after the listed operations."
+   "2026-10-05/06: all 108 board-tier KEM/KEX reference and hand-ported m4 sets (plus BiT, DARTS) re-measured at NGCC_ITERATIONS=100 with the speed and stack apps (run output in benchmark_summary.{csv,md}; the 'count' column is 100 for these rows). The 2026-10-01..03 10-iteration figures remain only where the 100-iteration run did not finish within its 30 min cap (BAG-Loong-128, HQC-128/256, TRIKE-2/5, bag_piglet_256/384/512) and for the imported submitter m4 ports, PolarLAC and CreTAKE sets measured 2026-10-07 at 10 iterations. The HQC-384 and MAMBA-NIKE-384/512 raw logs show a HardFault (not a hang) after the listed operations.",
+   "2026-10-07/08: the 23 signature/KEM targets that had timed out were rerun once more at NGCC_ITERATIONS=1 with a 30 min capture cap (speed; stack for the 15 that had no stack figures). This completed Phoenix-SM3-512f and TSUOV_512 (speed) and Phoenix-SM3-384f/512f (stack), measured TRINE-128-balanced keypair before its HardFault, and showed HQC-512 HardFaults at start-up (not a hang). Status lines saying '30 min cap, 1 iteration' are targets whose remaining operations exceed even that cap; their earlier figures were kept."
   ],
   "counts": {
    "by_category": {
@@ -30115,9 +30130,9 @@ window.NGCCM4_DATA = {
     "kex.measured": 40,
     "kex.not-run": 16,
     "kex.partial": 2,
-    "sig.failed": 17,
-    "sig.measured": 43,
-    "sig.partial": 61
+    "sig.failed": 16,
+    "sig.measured": 45,
+    "sig.partial": 60
    },
    "by_tier": {
     "kem.board": 125,
@@ -30140,9 +30155,9 @@ window.NGCCM4_DATA = {
   "footnotes": [
    "10 instances listed in schemes.json are components of another submission (CreTAKE's BiT/ZEN/POLARLAC building blocks, benchmarked under their own submissions) and are not counted: CreTAKE/BiT-128, CreTAKE/BiT-256, CreTAKE/BiT-512, CreTAKE/POLARLAC-128, CreTAKE/POLARLAC-256, CreTAKE/POLARLAC-512, CreTAKE/POLARLAC-512-Star, CreTAKE/ZEN_128, CreTAKE/ZEN_256, CreTAKE/ZEN_512"
   ],
-  "generated_on": "2026-10-07",
+  "generated_on": "2026-10-08",
   "generator": "tools/make_site_data.py",
-  "git_rev": "5b8ab34",
+  "git_rev": "b395f18",
   "kat_notes": [
    "qube-128/256/384/512 and Phoenix-SM3 (10). The submissions' own reference code, built on the host, reproduces our QEMU output byte for byte and does not reproduce their published test-vector files. These are inconsistencies inside the submission packages.",
    "lwrdsa-128/192/256/512. The wrapper reports a signature length of CRYPTO_BYTES plus the message length but never writes those trailing bytes, so both the KAT file and our output end in uninitialized memory. The real signature bytes match in every count.",
@@ -30218,7 +30233,6 @@ window.NGCCM4_DATA = {
    "crypto_sign_Phoenix-SM3-192s_ref",
    "crypto_sign_Phoenix-SM3-256s_ref",
    "crypto_sign_Phoenix-SM3-384s_ref",
-   "crypto_sign_Phoenix-SM3-512f_ref",
    "crypto_sign_Phoenix-SM3-512s_ref",
    "crypto_sign_QingLuan-256_ref",
    "crypto_sign_QingLuan-384_ref",
@@ -30236,7 +30250,6 @@ window.NGCCM4_DATA = {
    "crypto_sign_Sigurd512_REF_ref",
    "crypto_sign_TRINE-128-ShortSig_ref",
    "crypto_sign_TRINE-128-balanced_ref",
-   "crypto_sign_TSUOV_512_ref",
    "crypto_sign_sm4th_d3_128f_loose_ref",
    "crypto_sign_sm4th_d3_128f_tight_ref",
    "crypto_sign_sm4th_d3_128s_loose_ref",

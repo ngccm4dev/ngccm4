@@ -7,7 +7,8 @@
         --note "Signatures re-measured 2026-10-07 ..." [--out PREFIX] [--dry-run]
 
 Each --add is CSV[:MD[:LOG]] of one benchmark_schemes.py run (later runs win):
-  * CSV rows replace base rows with the same (family, scheme, implementation, app, metric);
+  * CSV rows replace base rows with the same (family, scheme, implementation, app, metric), unless the
+    base row was measured over more iterations (its "count" is higher): that row is kept;
   * every target the run attempted (from its LOG "==> target run" lines, else from its CSV/MD)
     loses its old status line, unless the run merely timed out without measuring anything the
     base did not already have (a shorter capture cap adds no information: the base rows and
@@ -244,11 +245,16 @@ def main(argv: list[str]) -> int:
             if text:
                 statuses[target] = text; added += 1
         run_rows = OrderedDict((k, v) for k, v in run_rows.items() if f"{k[1]}_{k[2]}_{k[3]}_{k[4]}" not in keep)
+        # A row measured over fewer iterations never displaces one measured over more (a 1-iteration
+        # rerun that merely completes the operation list keeps the earlier multi-iteration averages).
+        fewer = [k for k, v in run_rows.items() if k in rows and to_int(rows[k]["count"]) > to_int(v["count"])]
+        for k in fewer:
+            del run_rows[k]
         replaced = sum(1 for k in run_rows if k in rows)
         rows.update(run_rows)
-        report.append(f"{run_csv.name}: {len(run_rows)} rows ({replaced} replaced), {len(targets)} targets attempted, "
-                      f"{dropped} old status lines dropped, {added} status lines written, {kept} earlier results kept over a shorter-cap timeout, "
-                      f"{len(run_code)} code sizes")
+        report.append(f"{run_csv.name}: {len(run_rows)} rows ({replaced} replaced, {len(fewer)} kept from the base with more iterations), "
+                      f"{len(targets)} targets attempted, {dropped} old status lines dropped, {added} status lines written, "
+                      f"{kept} earlier results kept over a shorter-cap timeout, {len(run_code)} code sizes")
     rows = OrderedDict(sorted(rows.items(), key=lambda kv: metric_sort_key(kv[0])))
     notes = [n for n in args.note if n]
     out = Path(args.out) if args.out else base
