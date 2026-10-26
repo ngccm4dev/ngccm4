@@ -256,6 +256,14 @@ define lib_cppflags
 $(if $(filter hashprof,$(2)),-DHASHING_PROFILE)
 endef
 
+# The hashing app counts the assembly hash primitives whoever calls them: the
+# hashprof object (common/hashprof.c) supplies __wrap_ trampolines and the ELF
+# is linked with --wrap for the two primitives. $(1)=implementation, $(2)=app.
+HASHPROF_WRAP_LDFLAGS := -Wl,--wrap=KeccakF1600_StatePermute -Wl,--wrap=KeccakF1600_StatePermute_plain -Wl,--wrap=sm3_bit_compress_asm
+define hashing_link_extras
+$(if $(and $(filter hashing,$(2)),$(filter common/hashprof.c,$(call impl_lib_sources,$(1)))),$(call obj_from_src,$(1),hashprof,common/hashprof.c) $(HASHPROF_WRAP_LDFLAGS))
+endef
+
 ELFS := $(foreach impl,$(IMPLS),$(foreach app,$(call selected_apps_for_impl,$(impl)),$(call elf_target,$(impl),$(app))))
 BINS := $(ELFS:elf/%.elf=bin/%.bin)
 
@@ -274,7 +282,7 @@ $(call lib_target,$(1),hashprof): $(call lib_objects,$(1),hashprof)
 
 $(if $(call dkex_sig_mldsa_impl,$(1)),$(eval $(call mldsa_lib_target,$(1)): $(call mldsa_lib_objects,$(1)) ; @printf '  AR      $$@\n'; $(Q)mkdir -p $$(@D); $(Q)$(AR) rcs $$@ $$^))
 
-$(foreach src,$(DKEX_SIG_MLDSA_SRCS),$(if $(call dkex_sig_mldsa_impl,$(1)),$(eval $(call mldsa_obj_from_src,$(1),$(src)): $(src) $(COMPILEDEPS) | platform-sync ; @printf '  CC      $(src) [mldsa]\n'; $(Q)mkdir -p $$(@D); $(Q)$(CC) $(CPPFLAGS) $(call impl_cppflags,$(1)) $(CFLAGS) -I$(CURDIR)/crypto_sign/dilithium/ref -c $(src) -o $$@)))
+$(foreach src,$(DKEX_SIG_MLDSA_SRCS),$(if $(call dkex_sig_mldsa_impl,$(1)),$(eval $(call mldsa_obj_from_src,$(1),$(src)): $(src) $(COMPILEDEPS) | platform-sync ; @printf '  CC      $(src) [mldsa]\n'; $(Q)mkdir -p $$(@D); $(Q)$(CC) $(CPPFLAGS) $(call impl_cppflags,$(1)) $(CFLAGS) -I$(CURDIR)/common -I$(CURDIR)/crypto_sign/dilithium/ref -c $(src) -o $$@)))
 
 $(foreach src,$(call impl_lib_sources,$(1)),$(eval $(call obj_from_src,$(1),normal,$(src)): $(src) $(COMPILEDEPS) | platform-sync ; @printf '  $(if $(filter %.c,$(src)),CC,AS)      $(src)\n'; $(Q)mkdir -p $$(@D); $(Q)$(CC) $(CPPFLAGS) $(call impl_cppflags,$(1)) $(CFLAGS) $(call src_cppflags,$(1),$(src)) $(call source_include_flags_for_impl,$(1),$(src)) -c $(src) -o $$@))
 $(foreach src,$(call impl_lib_sources,$(1)),$(eval $(call obj_from_src,$(1),hashprof,$(src)): $(src) $(COMPILEDEPS) | platform-sync ; @printf '  $(if $(filter %.c,$(src)),CC,AS)      $(src) [hashprof]\n'; $(Q)mkdir -p $$(@D); $(Q)$(CC) $(CPPFLAGS) $(call lib_cppflags,$(1),hashprof) $(call impl_cppflags,$(1)) $(CFLAGS) $(call src_cppflags,$(1),$(src)) $(call source_include_flags_for_impl,$(1),$(src)) -c $(src) -o $$@))
@@ -287,7 +295,7 @@ $(foreach app,$(call selected_apps_for_impl,$(1)),$(eval $(call elf_target,$(1),
 $(foreach app,$(call selected_apps_for_impl,$(1)),$(eval $(call elf_target,$(1),$(app)):
 	@printf '  LD      $$@\n'
 	$(Q)mkdir -p $$(@D)
-	$(Q)$(LD) $(CFLAGS) $(call app_object,$(1),$(app)) $(call elf_dep_objects,$(1),$(app)) $(LDFLAGS) -Wl,--start-group $(call elf_libraries,$(1),$(app)) $(LDLIBS) -Wl,--end-group -o $$@
+	$(Q)$(LD) $(CFLAGS) $(call app_object,$(1),$(app)) $(call elf_dep_objects,$(1),$(app)) $(call hashing_link_extras,$(1),$(app)) $(LDFLAGS) -Wl,--start-group $(call elf_libraries,$(1),$(app)) $(LDLIBS) -Wl,--end-group -o $$@
 	@printf '  SIZE    $$@\n'
 	$(Q)$(SIZE) $$@))
 

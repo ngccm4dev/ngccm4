@@ -204,6 +204,11 @@ def parse_args(argv: list[str]) -> tuple[argparse.Namespace, str, list[str], lis
         ),
     )
     parser.add_argument("--no-build", action="store_true", help="Skip the make build step before running.")
+    parser.add_argument(
+        "--no-code-size",
+        action="store_true",
+        help="Do not build the speed app for the code-size table (saves a full rebuild per implementation when only the stack or hashing app is wanted).",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Print commands without running them.")
     parser.add_argument("--fail-fast", action="store_true", help="Stop after the first failed target.")
 
@@ -573,6 +578,8 @@ def classify_failure(output: str, code: int) -> str:
         return "alloc-failed"
     if "error keys" in text:
         return "wrong-result"
+    if "reprogrammed during the capture" in text:
+        return "board-interrupted"
     if "failed" in text:
         return "run-failed"
     return f"exit-{code}"
@@ -883,6 +890,29 @@ def main(argv: list[str]) -> int:
                         flash_timeout=args.flash_timeout,
                         capture_timeout=args.timeout,
                     )
+                    # The ST-LINK virtual COM port occasionally drops out right after flashing
+                    # ("device reports readiness to read but returned no data"); that is a host-side
+                    # glitch, not a result, so flash and capture once more before giving up.
+                    for attempt in range(2):
+                        if code == 0 or "returned no data" not in output:
+                            break
+                        print(f"serial port dropped out, retrying ({attempt + 1}/2): {target}", file=sys.stderr)
+                        time.sleep(3)
+                        code, output = run_board_capture(
+                            platform=platform,
+                            elf=elf,
+                            serial_port=args.serial_port,
+                            baud=args.baud,
+                            cwd=root,
+                            flash_timeout=args.flash_timeout,
+                            capture_timeout=args.timeout,
+                        )
+
+                # Every app prints one start banner after hal_setup(); a second one means the board was
+                # reset or reprogrammed by someone else during the capture, so the output is not ours.
+                if code == 0 and output.count("==========================") > 1:
+                    output += "\nerror: the board was reset or reprogrammed during the capture (second start banner seen); measurements discarded\n"
+                    code = 1
 
                 write_raw_log(raw_dir, target, run_index, output)
 
@@ -908,7 +938,7 @@ def main(argv: list[str]) -> int:
                     key = (platform, impl.family, impl.scheme, impl.name, app, metric)
                     measurements_by_key.setdefault(key, []).extend(values)
 
-    for impl in implementations:
+    for impl in ([] if args.no_code_size else implementations):
         family_apps = set(build_schemes.family_apps(root, impl.family))
         if "speed" not in family_apps:
             continue

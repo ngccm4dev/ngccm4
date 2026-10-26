@@ -43,9 +43,7 @@ other purposes.
                      (a)[2] = (unsigned char)((b) >> 8),  \
                      (a)[3] = (unsigned char)(b))
 
-#ifdef HASHING_PROFILE
-extern unsigned long long hash_cycles;
-#endif
+#include "hashprof.h"
 
 static void sm3_bit_init(unsigned int *init_digest)
 {
@@ -253,9 +251,7 @@ static int SM3_df(unsigned char *input_string, unsigned long long input_string_l
 
 static int SM3_DRNG_Instantiate(DRNG_ctx *drng, const unsigned char *nonce, unsigned long long nonce_len_bytes)
 {
-#ifdef HASHING_PROFILE
-    uint64_t t0 = hal_get_time();
-#endif
+    HASHPROF_BEGIN();
     unsigned char *seed_material = NULL;
     unsigned char seed[SEEDLEN];
     unsigned char padded_V[1 + sizeof(drng->V)];
@@ -265,6 +261,7 @@ static int SM3_DRNG_Instantiate(DRNG_ctx *drng, const unsigned char *nonce, unsi
     if (NULL == seed_material)
     {
         fprintf(stderr, "ERROR: Memory allocation failed at %s, line %d. \n", __FILE__, __LINE__);
+        HASHPROF_END();
         return DRNG_MEMORY_ALLOCATION_FAILED;
     }
     memset(seed_material, 0, MAX_INT(nonce_len_bytes, SEEDLEN));
@@ -279,18 +276,13 @@ static int SM3_DRNG_Instantiate(DRNG_ctx *drng, const unsigned char *nonce, unsi
     inc_Big_Number(drng->reseed_counter, SEEDLEN);
 
     free(seed_material);
-#ifdef HASHING_PROFILE
-    uint64_t t1 = hal_get_time();
-    hash_cycles += (t1 - t0);
-#endif
+    HASHPROF_END();
     return DRNG_SUCCESS;
 }
 
 static int SM3_DRNG_Generate(DRNG_ctx *drng, unsigned long long requested_no_of_bits, unsigned char *return_bits)
 {
-#ifdef HASHING_PROFILE
-    uint64_t t0 = hal_get_time();
-#endif
+    HASHPROF_BEGIN();
     unsigned long long m;
     unsigned char data[SEEDLEN];
     unsigned char w[OUTLEN];
@@ -337,10 +329,7 @@ static int SM3_DRNG_Generate(DRNG_ctx *drng, unsigned long long requested_no_of_
     sm3_bit(padded_V, sizeof(padded_V) * 8, H + (SEEDLEN - OUTLEN));
     plus_Big_Number(drng->V, H, drng->C, drng->reseed_counter, SEEDLEN);
     inc_Big_Number(drng->reseed_counter, SEEDLEN);
-#ifdef HASHING_PROFILE
-    uint64_t t1 = hal_get_time();
-    hash_cycles += (t1 - t0);
-#endif
+    HASHPROF_END();
     return DRNG_SUCCESS;
 }
 

@@ -313,6 +313,33 @@ The CSV keeps raw metric names for post-processing. The Markdown summary is grou
 average(<operation>_hash_cycles) / average(<operation>_cycles) * 100
 ```
 
+`<operation>_hash_cycles` is accumulated by the `HASHING_PROFILE` build of the
+library (`obj/hashprof/`): the ICCS hash API in `common/auxfunc.c` (`sm3hash`,
+`pseudohash`, `pseudoXOF`, `pseudoXOF_squeeze`) and the SM3 DRNG in
+`common/drng.c` add the DWT cycles of every call. `<operation>_cycles` is the
+whole operation measured in the same run, so the ratio is self-consistent (the
+instrumentation costs well under 1%). A scheme that links its own Keccak, SHA-2
+or SM3 code spends hash cycles that are not counted; `tools/hashing_coverage.py`
+records that per implementation from the symbols of the linked hashing ELF (the
+link uses `--gc-sections`, so a symbol in the ELF is reachable code).
+
+To measure the hashing share of every implementation that has a complete speed
+benchmark, in iteration groups so that the slow hash-based signatures do not time
+out (10 iterations when 10 iterations of all operations take at most 20 minutes,
+else 3, else 1):
+
+```bash
+python3 tools/plan_hashing_run.py                 # show the groups and the per-group driver commands
+tools/run_hashing_benchmark.sh nucleo-l4r5zi      # run them, scan coverage, write Out/benchmark_hashing_nucleo-l4r5zi.{csv,md}
+python3 tools/hashing_percentage.py Out/benchmark_hashing_iter10.csv Out/benchmark_hashing_iter3.csv \
+    Out/benchmark_hashing_iter1.csv --csv Out/benchmark_hashing_percent_nucleo-l4r5zi.csv   # percentage table only
+```
+
+`tools/hashing_percentage.py` merges the per-group CSVs (later files win unless
+an earlier row has more iterations), writes the merged raw CSV, a percentage CSV
+with one row per operation plus an `all` row per implementation (sum of hash
+cycles over sum of operation cycles), and the Markdown report.
+
 Notes:
 
 - Compare benchmark numbers only within the same platform. QEMU `mps2-an386` timings are useful for automation and regression checks, but they are not cycle-accurate hardware measurements.
@@ -372,7 +399,7 @@ importer, driven by an `m4` block in the manifest:
 | submission | zip sub-directory | instances | notes |
 | --- | --- | --- | --- |
 | BW-KEM | `Implementations/Additional_Implementation/ARM-performance-optimized` | BW_KEM_C128/256/512 (`m4fspeed`) | NTT/basemul assembly, SM3 M4 kernels |
-| DTRU | `Implementations and Test_Vectors/Implementations/Additional_Implementation/KEM-DTRU-ARM-Optimized` | all seven DTRU sets (`m4fspeed`) | NTT/base-inversion assembly |
+| DTRU | `Implementations and Test_Vectors/Implementations/Additional_Implementation/KEM-DTRU-ARM-Optimized` | all seven DTRU sets (`m4fspeed`) | NTT/base-inversion assembly; the importer adds `vpush`/`vpop` to DTRU-Light's `ntt_fast`/`invntt_fast` (they clobber the callee-saved s17/s18) and DTRU-1024's `doublebasemul_asm_opt` (s24), see below |
 | MORNING-Scabbard | `Implementations/Additional_Implementations/Cortex_M4` | scabbard128/256 | Toom/schoolbook multiplication in assembly (`SCABBARD_USE_ASM_MUL=1`); scabbard512 is too large for the board, as for `ref` |
 | Rudraksh2 | `Implementations/Additional_Implementations/Cortex_M4` | lwekem128/256/512 | plain C, no assembly (on the board it runs at the same speed as `ref`, within 0.5 %); the package's `minal.c` for 128/256 sets `MINAL_BETA 0` where the reference uses 220, the importer restores the reference value so the KATs match |
 
@@ -389,6 +416,19 @@ The m4 import inherits the scheme-level rules and the instance's defines of the
 reference import; `NGCC_ORIGIN.txt` records `impl=m4` and the zip
 sub-directory. All fifteen imported m4 implementations build for the board and
 match the official KAT files on QEMU.
+
+Calling-convention check: Cortex-M4 code built with `-mfloat-abi=hard` must
+preserve s16 to s31 (d8 to d15) across calls (AAPCS). DTRU-Light's
+`fastntt.S`/`fastinvntt.S` keep their Barrett constants in s17/s18 and
+DTRU-1024's `fastbasemul.S` uses s24 as a scratch slot, none of them saved. GCC
+keeps a 64-bit zero in d8 in the hashing app's `main()` and clears the cycle
+counters with `vstr d8`, so after the first NTT the DTRU-Light counters read
+`0xffed0ae3` in their high words (the Barrett constant). Manifest `sed` rules on
+the `m4` instances add `vpush {s16-s19}` / `vpop` and `vpush {s24-s25}` /
+`vpop` (found with an OpenOCD watchpoint on the counter: `wp 0x2000094c 4 w`).
+The hand-ported DKEM/DKEX/ADKEX `matacc_asm.S` also write s16 to s21 and s26 to
+s29 without saving them; no corruption has been observed there, but callers
+must not keep live data in those registers.
 
 ### Skip list
 
@@ -486,7 +526,8 @@ summary starts with a status table for targets that failed to build or run.
 The board results are published as a static site at
 <https://ngccm4dev.github.io/ngccm4/> (GitHub Pages, served from `docs/`).
 It shows the three categories (KEM, key exchange, signatures) on separate tabs
-with every column sortable (cycles per operation, code size, stack usage, key
+with every column sortable (cycles per operation, hashing share of each
+operation, code size, stack usage, key
 sizes with proportional bars, KAT status, security level normalised to
 128/192/256/384/512 bits, a link to the submission's specification PDF), a report of every
 scheme without a complete board benchmark and why, and the measurement
@@ -497,6 +538,7 @@ generated from the gitignored `Out/` directory and the NGCC mirror:
 
 ```bash
 python3 benchmark_schemes.py PLATFORM=nucleo-l4r5zi --apps speed   # Out/benchmark_speed_nucleo-l4r5zi.{csv,md}
+tools/run_hashing_benchmark.sh nucleo-l4r5zi                         # Out/benchmark_hashing_nucleo-l4r5zi.{csv,md}, Out/benchmark_hashing_coverage.json
 python3 kat_check.py --md Out/kat_summary.md                        # Out/kat_summary.md, Out/kat_raw/
 python3 tools/collect_ngcc_specs.py                                # docs/specs/*.pdf + tools/ngcc_specs.json (specification PDFs)
 python3 tools/fetch_ngcc_links.py                                  # tools/ngcc_links.json (zip + comment URLs; only when the NGCC list changes)
@@ -506,7 +548,9 @@ git add docs && git commit -m "site: regenerate benchmark data"
 
 The generator reads the speed CSV and Markdown report (including the
 hand-written target status table and code-size tables), `Out/benchmark_sizes/`,
-the stack logs in `Out/benchmark_raw/`, `Out/kat_summary.md`, `Out/kat_raw/`,
+the stack logs in `Out/benchmark_raw/`, the hashing-run CSV and coverage JSON
+(`Out/benchmark_hashing_nucleo-l4r5zi.csv`, `Out/benchmark_hashing_coverage.json`;
+missing files only drop the "Hashing %" columns), `Out/kat_summary.md`, `Out/kat_raw/`,
 `tools/ngcc_manifest.json`, `tools/ngcc_specs.json` (which PDF under each
 submission's `Specification/` is the algorithm specification; written by
 `tools/collect_ngcc_specs.py`, which also copies those PDFs and their addenda
@@ -526,24 +570,61 @@ when `docs/index.html` is opened directly). To publish, enable GitHub Pages once
 in the repository settings: Settings, Pages, "Deploy from a branch", branch
 `master`, folder `/docs`.
 
-## Usage of SHA3
+## Hash primitives: SM3 and Keccak assembly, `USE_KECCAK`
 
-NGCCM4 uses SM3-based hashing and deterministic random generation by default. To build the schemes with the SHA3/SHAKE code path, pass `USE_KECCAK=1` to `make`, `build_schemes.py`, or `benchmark_schemes.py`.
+NGCCM4 uses SM3-based hashing and deterministic random generation (the ICCS
+`auxfunc`/`drng` API in `common/`) by default. The hash primitives in `common/`
+are assembly: SM3 compression (`common/sm3_bit_compress_asm_fp.S`, selected by
+`USE_SM3_ASM=1`, the default) and the Keccak-f[1600] permutation
+(`common/keccakf1600.S`, always in every library since 2026-10-20).
 
-When `USE_KECCAK=1` is enabled, the build system defines `USE_KECCAK` and adds the FIPS 202 implementation files from `common/`:
+Imported schemes that bring their own hash code are routed to these primitives
+at import time, so the reference code's padding, absorb/squeeze and API layers
+stay as shipped while the expensive core runs in assembly:
 
-```text
-common/fips202.c
-common/fips202.h
-common/keccakf1600.S
-common/keccakf1600.h
-common/randombytes.c
-common/randombytes.h
-```
+- the assembly permutation keeps its state *bit-interleaved* (each 64-bit lane
+  split into its even and odd bits; only `KeccakF1600_StateXORBytes` and
+  `KeccakF1600_StateExtractBytes` understand the plain byte view), while every
+  reference `fips202.c` reads and writes the lanes directly. Scheme code therefore
+  calls `KeccakF1600_StatePermute_plain` (`common/keccakf1600_plain.c`), which
+  interleaves the plain state into a scratch state, permutes it and extracts it
+  back; the conversion costs a few hundred cycles per permutation of roughly ten
+  thousand;
+- every `KeccakF1600_StatePermute` definition (the Kyber/Dilithium/SPHINCS+-style
+  `fips202.c` found in 69 implementation directories of Aigis-Enc+, Aigis-Sig+,
+  BiT, DARTS, MAMBA-NIKE, NEV, NEV-AKE, PolarLAC, Phoenix-SHAKE, Scloudplus,
+  TRINE, Weaver) is renamed to an unused `*_c` function by the importer's default
+  rule `KECCAK_ASM_SED` in `tools/import_ngcc.py`, and a macro sends the file's
+  calls to the plain-state wrapper; a manifest entry can opt out with
+  `"keccak_asm": false`. The KAT check showed that only HQC, Lore-SHAKE,
+  MAMBA-NIKE, Scloudplus (AES/SHAKE sets), GreatWall and Phoenix-SHAKE actually
+  reach a Keccak permutation; in the other submissions the shipped `fips202.c` is
+  dead code (they hash through the ICCS SM3 API) and the rewrite changes nothing;
+- permutations under other names are routed by per-scheme `sed` rules in
+  `tools/ngcc_manifest.json`: Lore (`keccak_permute`), NSS-HQC (`keccakf1600`),
+  GreatWall (XKCP reference, `keccakp1600_permute`, 24-round calls only) and the
+  XKCP opt64 code shared by Lynxer and ReSolveD (`KeccakP1600_Permute_24rounds`
+  and `KeccakF1600_FastLoop_Absorb`); their KAT paths use `pseudoXOF` and their
+  own C SHA-256 (`enc.c`), so for them the Keccak routing is dormant and the
+  SHA-256 remains uncounted hash code;
+- the schemes' own SM3 compression functions are routed to `sm3_bit_compress`
+  (Phoenix-SM3 `crypto_hashblocks_sm3`, Aigis-Sig+ `UpdateSM3`) or directly to
+  `sm3_bit_compress_asm` (Scloudplus, whose `sm3_reference.c` is a copy of the
+  ICCS `auxfunc.c`). The hand-ported `crypto_sign/dilithium/ref/fips202.c` (a
+  DKEX dependency) was edited the same way. BW-KEM's submitter M4 port keeps its
+  own SM3 assembly kernels.
 
-This switches the guarded scheme code to the Keccak/SHA3/SHAKE implementation, including SHAKE-based XOF usage in sampling and SHA3/SHAKE-based hashing paths where the scheme code is guarded by `#ifdef USE_KECCAK`. For schemes that want to use SHA3, you need to add support for the SHA3 calls using `#ifdef USE_KECCAK` manually.
+Every other scheme already hashes through the ICCS API (`sm3hash`, `pseudohash`,
+`pseudoXOF`) and therefore through the SM3 assembly. The KAT check
+(`kat_check.py`) is the correctness gate for these rewrites: a routed scheme must
+still match its official test vectors.
 
-Examples:
+`USE_KECCAK` is a different switch: it changes the apps' randomness from the
+SM3 DRNG to `common/randombytes.c` (the board's hardware RNG, a fixed-seed
+fallback on QEMU) and adds the C FIPS 202 API layer (`common/fips202.c`,
+`fips202.h`) for scheme code guarded by `#ifdef USE_KECCAK`. It stays off by
+default because the test-vector app can only reproduce the official KATs with
+the deterministic SM3 DRNG. To build with it:
 
 ```bash
 make PLATFORM=nucleo-l4r5zi USE_KECCAK=1 crypto_kem_{SCHEME_NAME}_ref_test
@@ -552,17 +633,12 @@ python3 build_schemes.py PLATFORM=nucleo-l4r5zi {SCHEME_NAME...} USE_KECCAK=1
 python3 benchmark_schemes.py PLATFORM=nucleo-l4r5zi {SCHEME_NAME...} --apps speed hashing USE_KECCAK=1
 ```
 
-To use the default SM3 path explicitly, pass `USE_KECCAK=0`:
-
-```bash
-python3 benchmark_schemes.py PLATFORM=nucleo-l4r5zi {SCHEME_NAME} --apps speed hashing USE_KECCAK=0
-```
-
 Notes:
 
-- `USE_KECCAK` only accepts `0` or `1`; other values are rejected by `mk/config.mk`.
-- Changing `USE_KECCAK` changes the build configuration, so the make system will clean stale `bin`, `elf`, and `obj` outputs automatically.
-- `USE_SM3_ASM=1` controls the optimized SM3 assembly path. It is independent from `USE_KECCAK`.
+- `USE_KECCAK` and `USE_SM3_ASM` only accept `0` or `1`; other values are rejected by `mk/config.mk`.
+- Changing either changes the build configuration, so the make system cleans stale `bin`, `elf`, and `obj` outputs automatically.
+- With `USE_SM3_ASM=0` the routed schemes fall back to the C SM3 compression in `common/auxfunc.c` (or their own, for Scloudplus); the Keccak routing has no C fallback switch, the assembly permutation is always used.
+- The hashing app counts the assembly primitives for every caller: the hashing ELF is linked with `--wrap=KeccakF1600_StatePermute --wrap=KeccakF1600_StatePermute_plain --wrap=sm3_bit_compress_asm` and `common/hashprof.c` provides nesting-safe trampolines (`common/hashprof.h`), so hash cycles are counted once whether a scheme calls the ICCS wrappers or the primitives directly.
 
 
 ## Licenses

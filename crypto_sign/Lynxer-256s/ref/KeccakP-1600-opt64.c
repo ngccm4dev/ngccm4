@@ -53,6 +53,7 @@ Please refer to LowLevel.build for the exact list of other files it must be comb
 #endif
 #include "KeccakP-1600-unrolling.macros"
 #include "SnP-Relaned.h"
+#include "keccakf1600.h"
 
 static const uint64_t KeccakF1600RoundConstants[24] = {
     0x0000000000000001ULL,
@@ -341,15 +342,7 @@ void KeccakP1600_Permute_Nrounds(void *state, unsigned int nr)
 
 void KeccakP1600_Permute_24rounds(void *state)
 {
-    declareABCDE
-    #ifndef KeccakP1600_fullUnrolling
-    unsigned int i;
-    #endif
-    uint64_t *stateAsLanes = (uint64_t*)state;
-
-    copyFromState(A, stateAsLanes)
-    rounds24
-    copyToState(stateAsLanes, A)
+    KeccakF1600_StatePermute_plain((uint64_t*)state);
 }
 
 /* ---------------------------------------------------------------- */
@@ -523,21 +516,19 @@ void KeccakP1600_ExtractAndAddBytes(const void *state, const unsigned char *inpu
 size_t KeccakF1600_FastLoop_Absorb(void *state, unsigned int laneCount, const unsigned char *data, size_t dataByteLen)
 {
     size_t originalDataByteLen = dataByteLen;
-    declareABCDE
-    #ifndef KeccakP1600_fullUnrolling
-    unsigned int i;
-    #endif
     uint64_t *stateAsLanes = (uint64_t*)state;
-    uint64_t *inDataAsLanes = (uint64_t*)data;
+    unsigned int i;
+    uint64_t lane;
 
-    copyFromState(A, stateAsLanes)
     while(dataByteLen >= laneCount*8) {
-        addInput(A, inDataAsLanes, laneCount)
-        rounds24
-        inDataAsLanes += laneCount;
+        for (i = 0; i < laneCount; i++) {
+            memcpy(&lane, data + 8*i, 8);
+            stateAsLanes[i] ^= lane;
+        }
+        KeccakF1600_StatePermute_plain(stateAsLanes);
+        data += laneCount*8;
         dataByteLen -= laneCount*8;
     }
-    copyToState(stateAsLanes, A)
     return originalDataByteLen - dataByteLen;
 }
 

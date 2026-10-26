@@ -10,4 +10,5 @@ ngcc_category=KEM
 tier=board
 kat_file=Test_Vectors/KAT_KEM_DTRU-768.txt
 copy_dirs=schemes/DTRU/M4_Implementation/crypto_kem/dtru-768/m4fspeed
+deps=
 stripped=auxfunc.c (strip rule 'auxfunc\.[ch]');auxfunc.h (strip rule 'auxfunc\.[ch]');drng.c (strip rule 'drng\.[ch]');drng.h (strip rule 'drng\.[ch]')

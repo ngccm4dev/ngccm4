@@ -10,6 +10,7 @@
 .align 2
 invntt_fast:
   push {r4-r11, lr}
+  vpush {s16-s19}  @ ngccm4: s17/s18 are callee-saved (AAPCS), the port clobbers them
 
   poly        .req r0
   twiddle_ptr .req r1
@@ -208,4 +209,5 @@ sub.w poly, #1024 //将poly的地址减1024，回到第一个参数的位置
   bne.w 6b
 #endif
 
+  vpop {s16-s19}
   pop {r4-r11, pc}

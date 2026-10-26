@@ -82,13 +82,20 @@ COMMON_LIB_SRCS := \
 	common/sendfn.h \
 	common/internal-sha256.h \
 	common/sha256_armv7m.S \
+	common/keccakf1600.S \
+	common/keccakf1600.h \
+	common/keccakf1600_plain.c \
+	common/hashprof.c \
+	common/hashprof.h \
 
+# The Keccak-f[1600] permutation in assembly (keccakf1600.S) is always in the
+# library: the importer routes every scheme's own permutation to it (see
+# tools/import_ngcc.py KECCAK_ASM_SED). USE_KECCAK=1 additionally switches the
+# apps' randomness to common/randombytes.c and adds the C FIPS 202 API layer.
 ifeq ($(USE_KECCAK),1)
 COMMON_LIB_SRCS += \
 	common/fips202.c \
 	common/fips202.h \
-	common/keccakf1600.S \
-	common/keccakf1600.h \
 	common/randombytes.c \
 	common/randombytes.h
 endif

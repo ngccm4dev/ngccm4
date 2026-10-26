@@ -30,7 +30,9 @@ static uint64_t rotl64(uint64_t x, unsigned int n)
     return n == 0 ? x : ((x << n) | (x >> (64 - n)));
 }
 
-static void keccak_permute(uint64_t a[25])
+#include "keccakf1600.h"
+static void keccak_permute(uint64_t a[25]) { KeccakF1600_StatePermute_plain(a); }
+static void __attribute__((unused)) keccak_permute_c(uint64_t a[25])
 {
     uint64_t c[5];
     uint64_t d[5];

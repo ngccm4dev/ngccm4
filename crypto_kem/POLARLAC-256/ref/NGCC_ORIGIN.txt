@@ -9,4 +9,5 @@ ngcc_category=KEM
 tier=board
 kat_file=Test_Vectors/Reference_Implementation/x86/KAT_KEM_POLARLAC-256.txt
 copy_dirs=schemes/PolarLAC/Reference_Implementation/POLARLAC-256
+deps=
 stripped=KAT_KEM.c (strip rule 'KAT_.*\.c');auxfunc.c (strip rule 'auxfunc\.[ch]');auxfunc.h (strip rule 'auxfunc\.[ch]');cycles_test.c (strip rule '.*_test\.c');drng.c (strip rule 'drng\.[ch]');drng.h (strip rule 'drng\.[ch]');test.c (strip rule 'test.*\.c')

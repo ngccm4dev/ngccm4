@@ -49,6 +49,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1386389,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 481922,
+        "hash_max": 487258,
+        "hash_median": 480744,
+        "hash_min": 478128,
+        "invalid": false,
+        "pct": 40.66,
+        "total_avg": 1185139,
+        "total_median": 1183932
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 481667,
+        "hash_max": 487003,
+        "hash_median": 480488,
+        "hash_min": 477873,
+        "invalid": false,
+        "pct": 50.82,
+        "total_avg": 947880,
+        "total_median": 946669
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 422800,
+        "hash_max": 428150,
+        "hash_median": 421636,
+        "hash_min": 418880,
+        "invalid": false,
+        "pct": 62.72,
+        "total_avg": 674085,
+        "total_median": 672892
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 49.39,
+      "pct_measured": 49.39,
+      "self_instrumented": false,
+      "total_avg": 2807104
+     },
      "id": "crypto_kem_Aigis-Enc-I_ref",
      "impl": "ref",
      "kat": {
@@ -141,6 +198,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2201023,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 782329,
+        "hash_max": 797848,
+        "hash_median": 779582,
+        "hash_min": 770451,
+        "invalid": false,
+        "pct": 31.99,
+        "total_avg": 2445202,
+        "total_median": 2442454
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 775486,
+        "hash_max": 791009,
+        "hash_median": 772744,
+        "hash_min": 763612,
+        "invalid": false,
+        "pct": 41.39,
+        "total_avg": 1873552,
+        "total_median": 1870797
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 643208,
+        "hash_max": 658738,
+        "hash_median": 640473,
+        "hash_min": 631339,
+        "invalid": false,
+        "pct": 52.77,
+        "total_avg": 1218782,
+        "total_median": 1216048
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 39.75,
+      "pct_measured": 39.75,
+      "self_instrumented": false,
+      "total_avg": 5537536
+     },
      "id": "crypto_kem_Aigis-Enc-II_ref",
      "impl": "ref",
      "kat": {
@@ -233,6 +348,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4716762,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1686927,
+        "hash_max": 1697882,
+        "hash_median": 1688746,
+        "hash_min": 1679610,
+        "invalid": false,
+        "pct": 30.01,
+        "total_avg": 5620282,
+        "total_median": 5622062
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1636421,
+        "hash_max": 1647376,
+        "hash_median": 1638242,
+        "hash_min": 1629106,
+        "invalid": false,
+        "pct": 38.64,
+        "total_avg": 4234904,
+        "total_median": 4236706
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1393414,
+        "hash_max": 1404376,
+        "hash_median": 1395240,
+        "hash_min": 1386106,
+        "invalid": false,
+        "pct": 50.78,
+        "total_avg": 2743820,
+        "total_median": 2745586
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 37.44,
+      "pct_measured": 37.44,
+      "self_instrumented": false,
+      "total_avg": 12599006
+     },
      "id": "crypto_kem_Aigis-Enc-III_ref",
      "impl": "ref",
      "kat": {
@@ -325,6 +497,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2952005,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1046695,
+        "hash_max": 1059381,
+        "hash_median": 1059380,
+        "hash_min": 1027656,
+        "invalid": false,
+        "pct": 29.58,
+        "total_avg": 3538504,
+        "total_median": 3550724
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1058514,
+        "hash_max": 1071204,
+        "hash_median": 1071203,
+        "hash_min": 1039479,
+        "invalid": false,
+        "pct": 39.09,
+        "total_avg": 2707710,
+        "total_median": 2720144
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 846796,
+        "hash_max": 859502,
+        "hash_median": 859424,
+        "hash_min": 827777,
+        "invalid": false,
+        "pct": 48.14,
+        "total_avg": 1759124,
+        "total_median": 1771702
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 36.88,
+      "pct_measured": 36.88,
+      "self_instrumented": false,
+      "total_avg": 8005338
+     },
      "id": "crypto_kem_Amoeba-1152_ref",
      "impl": "ref",
      "kat": {
@@ -417,6 +646,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4385322,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1561697,
+        "hash_max": 1571210,
+        "hash_median": 1571210,
+        "hash_min": 1539487,
+        "invalid": false,
+        "pct": 28.39,
+        "total_avg": 5499957,
+        "total_median": 5508462
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1573520,
+        "hash_max": 1583067,
+        "hash_median": 1583029,
+        "hash_min": 1551307,
+        "invalid": false,
+        "pct": 37.62,
+        "total_avg": 4182476,
+        "total_median": 4191336
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1250105,
+        "hash_max": 1259674,
+        "hash_median": 1259635,
+        "hash_min": 1227743,
+        "invalid": false,
+        "pct": 46.39,
+        "total_avg": 2695035,
+        "total_median": 2704598
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 35.43,
+      "pct_measured": 35.43,
+      "self_instrumented": false,
+      "total_avg": 12377468
+     },
      "id": "crypto_kem_Amoeba-1728_ref",
      "impl": "ref",
      "kat": {
@@ -509,6 +795,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5745669,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 2053657,
+        "hash_max": 2066378,
+        "hash_median": 2066338,
+        "hash_min": 2034615,
+        "invalid": false,
+        "pct": 27.51,
+        "total_avg": 7465092,
+        "total_median": 7477284
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 2065471,
+        "hash_max": 2078157,
+        "hash_median": 2078156,
+        "hash_min": 2046433,
+        "invalid": false,
+        "pct": 36.54,
+        "total_avg": 5652606,
+        "total_median": 5664972
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1626541,
+        "hash_max": 1639247,
+        "hash_median": 1639161,
+        "hash_min": 1607524,
+        "invalid": false,
+        "pct": 45.07,
+        "total_avg": 3609072,
+        "total_median": 3621672
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 34.35,
+      "pct_measured": 34.35,
+      "self_instrumented": false,
+      "total_avg": 16726770
+     },
      "id": "crypto_kem_Amoeba-2304_ref",
      "impl": "ref",
      "kat": {
@@ -601,6 +944,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1960206,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 701147,
+        "hash_max": 720182,
+        "hash_median": 688457,
+        "hash_min": 688456,
+        "invalid": false,
+        "pct": 36.99,
+        "total_avg": 1895568,
+        "total_median": 1883762
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 712974,
+        "hash_max": 732005,
+        "hash_median": 700298,
+        "hash_min": 700280,
+        "invalid": false,
+        "pct": 47.45,
+        "total_avg": 1502678,
+        "total_median": 1490468
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 546085,
+        "hash_max": 565134,
+        "hash_median": 533409,
+        "hash_min": 533409,
+        "invalid": false,
+        "pct": 56.11,
+        "total_avg": 973224,
+        "total_median": 960516
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 44.84,
+      "pct_measured": 44.84,
+      "self_instrumented": false,
+      "total_avg": 4371470
+     },
      "id": "crypto_kem_Amoeba-576_ref",
      "impl": "ref",
      "kat": {
@@ -693,6 +1093,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2671924,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 964731,
+        "hash_max": 977421,
+        "hash_median": 977420,
+        "hash_min": 945697,
+        "invalid": false,
+        "pct": 35.15,
+        "total_avg": 2744325,
+        "total_median": 2756256
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 976559,
+        "hash_max": 989279,
+        "hash_median": 989241,
+        "hash_min": 957518,
+        "invalid": false,
+        "pct": 45.27,
+        "total_avg": 2157103,
+        "total_median": 2169235
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 730634,
+        "hash_max": 743339,
+        "hash_median": 743264,
+        "hash_min": 711615,
+        "invalid": false,
+        "pct": 53.09,
+        "total_avg": 1376226,
+        "total_median": 1388876
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 42.56,
+      "pct_measured": 42.56,
+      "self_instrumented": false,
+      "total_avg": 6277654
+     },
      "id": "crypto_kem_Amoeba-864_ref",
      "impl": "ref",
      "kat": {
@@ -785,6 +1242,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 275822806,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 125900010,
+        "hash_max": 125900025,
+        "hash_median": 125900021,
+        "hash_min": 125899943,
+        "invalid": false,
+        "pct": 55.65,
+        "total_avg": 226229118,
+        "total_median": 226069760
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 78468713,
+        "hash_max": 78468731,
+        "hash_median": 78468725,
+        "hash_min": 78468688,
+        "invalid": false,
+        "pct": 60.85,
+        "total_avg": 128959006,
+        "total_median": 128879565
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 71454083,
+        "hash_max": 71454125,
+        "hash_median": 71454082,
+        "hash_min": 71454043,
+        "invalid": false,
+        "pct": 56.93,
+        "total_avg": 125512826,
+        "total_median": 125481533
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 57.38,
+      "pct_measured": 57.38,
+      "self_instrumented": false,
+      "total_avg": 480700950
+     },
      "id": "crypto_kem_BAG-Loong-128_ref",
      "impl": "ref",
      "kat": {
@@ -852,9 +1367,10 @@ window.NGCCM4_DATA = {
       "encaps",
       "decaps"
      ],
-     "failure_kind": "hangs",
+     "failure_kind": "hardfault",
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_BAG-Loong-256_ref",
      "impl": "ref",
      "kat": {
@@ -894,7 +1410,7 @@ window.NGCCM4_DATA = {
       "ss": 32
      },
      "stack": null,
-     "status_text": "not run: hangs on the board at the first iteration (exceeds 640 KB SRAM; BAG-Loong-128 runs)",
+     "status_text": "HardFault on the board in keypair at the first iteration (heap exhaustion inside malloc: the speed app's heap peaks at 1,488,600 bytes on QEMU, beyond the 640 KB SRAM; BAG-Loong-128 peaks at 640,728 bytes and runs); rerun 2026-10-09 with the same result; completed none",
      "tier": "board"
     },
     {
@@ -914,9 +1430,10 @@ window.NGCCM4_DATA = {
       "encaps",
       "decaps"
      ],
-     "failure_kind": "other",
+     "failure_kind": "hardfault",
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_BAG-Loong-384_ref",
      "impl": "ref",
      "kat": {
@@ -956,7 +1473,7 @@ window.NGCCM4_DATA = {
       "ss": 48
      },
      "stack": null,
-     "status_text": "not run: same as BAG-Loong-256",
+     "status_text": "HardFault on the board at the first iteration: same heap exhaustion as BAG-Loong-256 with larger parameters; completed none",
      "tier": "board"
     },
     {
@@ -976,9 +1493,10 @@ window.NGCCM4_DATA = {
       "encaps",
       "decaps"
      ],
-     "failure_kind": "other",
+     "failure_kind": "hardfault",
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_BAG-Loong-512_ref",
      "impl": "ref",
      "kat": {
@@ -1018,7 +1536,7 @@ window.NGCCM4_DATA = {
       "ss": 64
      },
      "stack": null,
-     "status_text": "not run: same as BAG-Loong-256",
+     "status_text": "HardFault on the board at the first iteration: same heap exhaustion as BAG-Loong-256 with larger parameters; completed none",
      "tier": "board"
     },
     {
@@ -1063,6 +1581,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1076330,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 383215,
+        "hash_max": 383216,
+        "hash_median": 383215,
+        "hash_min": 383212,
+        "invalid": false,
+        "pct": 60.08,
+        "total_avg": 637838,
+        "total_median": 637834
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 360993,
+        "hash_max": 361029,
+        "hash_median": 360990,
+        "hash_min": 360987,
+        "invalid": false,
+        "pct": 63.6,
+        "total_avg": 567603,
+        "total_median": 567594
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 332122,
+        "hash_max": 332138,
+        "hash_median": 332136,
+        "hash_min": 331995,
+        "invalid": false,
+        "pct": 64.77,
+        "total_avg": 512768,
+        "total_median": 512758
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 62.64,
+      "pct_measured": 62.64,
+      "self_instrumented": false,
+      "total_avg": 1718209
+     },
      "id": "crypto_kem_BW_KEM_C128_m4",
      "impl": "m4",
      "kat": {
@@ -1155,6 +1730,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1076214,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 383176,
+        "hash_max": 383177,
+        "hash_median": 383176,
+        "hash_min": 383175,
+        "invalid": false,
+        "pct": 34.61,
+        "total_avg": 1107170,
+        "total_median": 1107166
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 360949,
+        "hash_max": 360950,
+        "hash_median": 360949,
+        "hash_min": 360948,
+        "invalid": false,
+        "pct": 41.19,
+        "total_avg": 876349,
+        "total_median": 876344
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 332089,
+        "hash_max": 332103,
+        "hash_median": 332103,
+        "hash_min": 331961,
+        "invalid": false,
+        "pct": 46.27,
+        "total_avg": 717766,
+        "total_median": 717755
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 39.84,
+      "pct_measured": 39.84,
+      "self_instrumented": false,
+      "total_avg": 2701285
+     },
      "id": "crypto_kem_BW_KEM_C128_ref",
      "impl": "ref",
      "kat": {
@@ -1247,6 +1879,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2825391,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 980415,
+        "hash_max": 1034510,
+        "hash_median": 974404,
+        "hash_min": 974404,
+        "invalid": false,
+        "pct": 74.56,
+        "total_avg": 1314888,
+        "total_median": 1308961
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 932280,
+        "hash_max": 986410,
+        "hash_median": 926265,
+        "hash_min": 926265,
+        "invalid": false,
+        "pct": 79.72,
+        "total_avg": 1169428,
+        "total_median": 1163501
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 912696,
+        "hash_max": 966809,
+        "hash_median": 906702,
+        "hash_min": 906543,
+        "invalid": false,
+        "pct": 79.78,
+        "total_avg": 1144040,
+        "total_median": 1138135
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 77.87,
+      "pct_measured": 77.87,
+      "self_instrumented": false,
+      "total_avg": 3628356
+     },
      "id": "crypto_kem_BW_KEM_C256_m4",
      "impl": "m4",
      "kat": {
@@ -1339,6 +2028,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2825597,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 980489,
+        "hash_max": 1034579,
+        "hash_median": 974475,
+        "hash_min": 974472,
+        "invalid": false,
+        "pct": 40.71,
+        "total_avg": 2408338,
+        "total_median": 2402410
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 932355,
+        "hash_max": 986478,
+        "hash_median": 926338,
+        "hash_min": 926334,
+        "invalid": false,
+        "pct": 49.91,
+        "total_avg": 1867940,
+        "total_median": 1862011
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 912753,
+        "hash_max": 966864,
+        "hash_median": 906758,
+        "hash_min": 906602,
+        "invalid": false,
+        "pct": 54.37,
+        "total_avg": 1678689,
+        "total_median": 1672781
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 47.45,
+      "pct_measured": 47.45,
+      "self_instrumented": false,
+      "total_avg": 5954967
+     },
      "id": "crypto_kem_BW_KEM_C256_ref",
      "impl": "ref",
      "kat": {
@@ -1431,6 +2177,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 9555907,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3342290,
+        "hash_max": 3342380,
+        "hash_median": 3342271,
+        "hash_min": 3342271,
+        "invalid": false,
+        "pct": 82.29,
+        "total_avg": 4061549,
+        "total_median": 4061532
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3127569,
+        "hash_max": 3127600,
+        "hash_median": 3127561,
+        "hash_min": 3127561,
+        "invalid": false,
+        "pct": 85.87,
+        "total_avg": 3642242,
+        "total_median": 3642252
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 3086048,
+        "hash_max": 3086098,
+        "hash_median": 3086058,
+        "hash_min": 3085879,
+        "invalid": false,
+        "pct": 86.22,
+        "total_avg": 3579218,
+        "total_median": 3579227
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 84.69,
+      "pct_measured": 84.69,
+      "self_instrumented": false,
+      "total_avg": 11283009
+     },
      "id": "crypto_kem_BW_KEM_C512_m4",
      "impl": "m4",
      "kat": {
@@ -1523,6 +2326,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 9555893,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3342288,
+        "hash_max": 3342376,
+        "hash_median": 3342271,
+        "hash_min": 3342267,
+        "invalid": false,
+        "pct": 49.53,
+        "total_avg": 6748378,
+        "total_median": 6748361
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3127570,
+        "hash_max": 3127598,
+        "hash_median": 3127560,
+        "hash_min": 3127556,
+        "invalid": false,
+        "pct": 57.51,
+        "total_avg": 5438741,
+        "total_median": 5438740
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 3086035,
+        "hash_max": 3086053,
+        "hash_median": 3086053,
+        "hash_min": 3085874,
+        "invalid": false,
+        "pct": 61.8,
+        "total_avg": 4993864,
+        "total_median": 4993898
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 55.62,
+      "pct_measured": 55.62,
+      "self_instrumented": false,
+      "total_avg": 17180983
+     },
      "id": "crypto_kem_BW_KEM_C512_ref",
      "impl": "ref",
      "kat": {
@@ -1615,6 +2475,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 8995499,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 2997020,
+        "hash_max": 2997051,
+        "hash_median": 2997012,
+        "hash_min": 2997012,
+        "invalid": false,
+        "pct": 81.95,
+        "total_avg": 3657219,
+        "total_median": 3657129
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3000227,
+        "hash_max": 3000255,
+        "hash_median": 3000216,
+        "hash_min": 3000215,
+        "invalid": false,
+        "pct": 86.44,
+        "total_avg": 3470730,
+        "total_median": 3470658
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 2998252,
+        "hash_max": 2998256,
+        "hash_median": 2998255,
+        "hash_min": 2998220,
+        "invalid": false,
+        "pct": 90.98,
+        "total_avg": 3295351,
+        "total_median": 3295276
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 86.3,
+      "pct_measured": 86.3,
+      "self_instrumented": false,
+      "total_avg": 10423300
+     },
      "id": "crypto_kem_COMPASS-KEM-128_ref",
      "impl": "ref",
      "kat": {
@@ -1708,6 +2626,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 35260775,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 11754112,
+        "hash_max": 11754123,
+        "hash_median": 11754119,
+        "hash_min": 11754081,
+        "invalid": false,
+        "pct": 89.54,
+        "total_avg": 13127373,
+        "total_median": 13127342
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 11754313,
+        "hash_max": 11754328,
+        "hash_median": 11754324,
+        "hash_min": 11754285,
+        "invalid": false,
+        "pct": 91.75,
+        "total_avg": 12811879,
+        "total_median": 12811856
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 11752350,
+        "hash_max": 11752371,
+        "hash_median": 11752368,
+        "hash_min": 11752290,
+        "invalid": false,
+        "pct": 93.82,
+        "total_avg": 12527102,
+        "total_median": 12527076
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 91.67,
+      "pct_measured": 91.67,
+      "self_instrumented": false,
+      "total_avg": 38466354
+     },
      "id": "crypto_kem_COMPASS-KEM-256_ref",
      "impl": "ref",
      "kat": {
@@ -1801,6 +2777,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 20266063,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 6759563,
+        "hash_max": 6759590,
+        "hash_median": 6759548,
+        "hash_min": 6759546,
+        "invalid": false,
+        "pct": 71.27,
+        "total_avg": 9483991,
+        "total_median": 9483940
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 6754218,
+        "hash_max": 6754245,
+        "hash_median": 6754207,
+        "hash_min": 6754207,
+        "invalid": false,
+        "pct": 76.92,
+        "total_avg": 8781012,
+        "total_median": 8780966
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 6752282,
+        "hash_max": 6752312,
+        "hash_median": 6752275,
+        "hash_min": 6752207,
+        "invalid": false,
+        "pct": 83.09,
+        "total_avg": 8126412,
+        "total_median": 8126346
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 76.79,
+      "pct_measured": 76.79,
+      "self_instrumented": false,
+      "total_avg": 26391415
+     },
      "id": "crypto_kem_COMPASS-KEM-384_ref",
      "impl": "ref",
      "kat": {
@@ -1894,6 +2928,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 35844886,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 11956112,
+        "hash_max": 11956124,
+        "hash_median": 11956124,
+        "hash_min": 11956086,
+        "invalid": false,
+        "pct": 76.1,
+        "total_avg": 15711820,
+        "total_median": 15711889
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 11945356,
+        "hash_max": 11945362,
+        "hash_median": 11945360,
+        "hash_min": 11945321,
+        "invalid": false,
+        "pct": 80.59,
+        "total_avg": 14822307,
+        "total_median": 14822372
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 11943418,
+        "hash_max": 11943435,
+        "hash_median": 11943432,
+        "hash_min": 11943326,
+        "invalid": false,
+        "pct": 85.34,
+        "total_avg": 13995474,
+        "total_median": 13995536
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 80.5,
+      "pct_measured": 80.5,
+      "self_instrumented": false,
+      "total_avg": 44529601
+     },
      "id": "crypto_kem_COMPASS-KEM-512_ref",
      "impl": "ref",
      "kat": {
@@ -1987,6 +3079,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1241958,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 433297,
+        "hash_max": 433297,
+        "hash_median": 433297,
+        "hash_min": 433297,
+        "invalid": false,
+        "pct": 26.73,
+        "total_avg": 1621209,
+        "total_median": 1621200
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 438835,
+        "hash_max": 438835,
+        "hash_median": 438835,
+        "hash_min": 438835,
+        "invalid": false,
+        "pct": 34.53,
+        "total_avg": 1270836,
+        "total_median": 1270827
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 369826,
+        "hash_max": 369842,
+        "hash_median": 369841,
+        "hash_min": 369694,
+        "invalid": false,
+        "pct": 43.4,
+        "total_avg": 852040,
+        "total_median": 852049
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 33.17,
+      "pct_measured": 33.17,
+      "self_instrumented": false,
+      "total_avg": 3744085
+     },
      "id": "crypto_kem_Cheetah128_ref",
      "impl": "ref",
      "kat": {
@@ -2079,6 +3228,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3137007,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1066325,
+        "hash_max": 1066356,
+        "hash_median": 1066317,
+        "hash_min": 1066317,
+        "invalid": false,
+        "pct": 29.74,
+        "total_avg": 3585363,
+        "total_median": 3585352
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1068508,
+        "hash_max": 1068508,
+        "hash_median": 1068508,
+        "hash_min": 1068508,
+        "invalid": false,
+        "pct": 37.15,
+        "total_avg": 2876460,
+        "total_median": 2876448
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1002174,
+        "hash_max": 1002179,
+        "hash_median": 1002179,
+        "hash_min": 1002133,
+        "invalid": false,
+        "pct": 45.02,
+        "total_avg": 2225830,
+        "total_median": 2225811
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 36.11,
+      "pct_measured": 36.11,
+      "self_instrumented": false,
+      "total_avg": 8687653
+     },
      "id": "crypto_kem_Cheetah256_ref",
      "impl": "ref",
      "kat": {
@@ -2171,6 +3377,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 10516325,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3609441,
+        "hash_max": 3609473,
+        "hash_median": 3609433,
+        "hash_min": 3609433,
+        "invalid": false,
+        "pct": 45.72,
+        "total_avg": 7895178,
+        "total_median": 7895161
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3502654,
+        "hash_max": 3502689,
+        "hash_median": 3502650,
+        "hash_min": 3502650,
+        "invalid": false,
+        "pct": 52.09,
+        "total_avg": 6724094,
+        "total_median": 6724080
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 3404230,
+        "hash_max": 3404273,
+        "hash_median": 3404233,
+        "hash_min": 3404168,
+        "invalid": false,
+        "pct": 58.83,
+        "total_avg": 5786628,
+        "total_median": 5786578
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 51.54,
+      "pct_measured": 51.54,
+      "self_instrumented": false,
+      "total_avg": 20405900
+     },
      "id": "crypto_kem_Cheetah384_ref",
      "impl": "ref",
      "kat": {
@@ -2263,6 +3526,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 17092589,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 5831908,
+        "hash_max": 5831943,
+        "hash_median": 5831904,
+        "hash_min": 5831904,
+        "invalid": false,
+        "pct": 48.19,
+        "total_avg": 12101498,
+        "total_median": 12101418
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 5667807,
+        "hash_max": 5667807,
+        "hash_median": 5667807,
+        "hash_min": 5667807,
+        "invalid": false,
+        "pct": 53.88,
+        "total_avg": 10518656,
+        "total_median": 10518603
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 5592874,
+        "hash_max": 5592889,
+        "hash_median": 5592887,
+        "hash_min": 5592787,
+        "invalid": false,
+        "pct": 59.62,
+        "total_avg": 9381471,
+        "total_median": 9381414
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 53.41,
+      "pct_measured": 53.41,
+      "self_instrumented": false,
+      "total_avg": 32001625
+     },
      "id": "crypto_kem_Cheetah512_ref",
      "impl": "ref",
      "kat": {
@@ -2355,6 +3675,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 902692,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 305658,
+        "hash_max": 305659,
+        "hash_median": 305658,
+        "hash_min": 305657,
+        "invalid": false,
+        "pct": 68.76,
+        "total_avg": 444516,
+        "total_median": 444504
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 309756,
+        "hash_max": 309758,
+        "hash_median": 309756,
+        "hash_min": 309755,
+        "invalid": false,
+        "pct": 74.46,
+        "total_avg": 416027,
+        "total_median": 416000
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 287278,
+        "hash_max": 287285,
+        "hash_median": 287284,
+        "hash_min": 287225,
+        "invalid": false,
+        "pct": 78.13,
+        "total_avg": 367696,
+        "total_median": 367674
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 73.49,
+      "pct_measured": 73.49,
+      "self_instrumented": false,
+      "total_avg": 1228239
+     },
      "id": "crypto_kem_DKEM-128_m4",
      "impl": "m4",
      "kat": {
@@ -2447,6 +3825,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 922038,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 312109,
+        "hash_max": 312109,
+        "hash_median": 312109,
+        "hash_min": 312109,
+        "invalid": false,
+        "pct": 33.06,
+        "total_avg": 943983,
+        "total_median": 943961
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 316202,
+        "hash_max": 316203,
+        "hash_median": 316202,
+        "hash_min": 316202,
+        "invalid": false,
+        "pct": 41.98,
+        "total_avg": 753223,
+        "total_median": 753202
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 293727,
+        "hash_max": 293732,
+        "hash_median": 293732,
+        "hash_min": 293678,
+        "invalid": false,
+        "pct": 49.41,
+        "total_avg": 594489,
+        "total_median": 594472
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 40.23,
+      "pct_measured": 40.23,
+      "self_instrumented": false,
+      "total_avg": 2291695
+     },
      "id": "crypto_kem_DKEM-128_ref",
      "impl": "ref",
      "kat": {
@@ -2539,6 +3974,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2755134,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 921249,
+        "hash_max": 921284,
+        "hash_median": 921245,
+        "hash_min": 921245,
+        "invalid": false,
+        "pct": 74.65,
+        "total_avg": 1234169,
+        "total_median": 1234246
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 925341,
+        "hash_max": 925375,
+        "hash_median": 925337,
+        "hash_min": 925337,
+        "invalid": false,
+        "pct": 78.17,
+        "total_avg": 1183724,
+        "total_median": 1183801
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 908544,
+        "hash_max": 908550,
+        "hash_median": 908550,
+        "hash_min": 908494,
+        "invalid": false,
+        "pct": 80.3,
+        "total_avg": 1131496,
+        "total_median": 1131560
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 77.62,
+      "pct_measured": 77.62,
+      "self_instrumented": false,
+      "total_avg": 3549389
+     },
      "id": "crypto_kem_DKEM-256_m4",
      "impl": "m4",
      "kat": {
@@ -2631,6 +4124,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2759477,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 922692,
+        "hash_max": 922693,
+        "hash_median": 922692,
+        "hash_min": 922692,
+        "invalid": false,
+        "pct": 41.4,
+        "total_avg": 2228846,
+        "total_median": 2228902
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 926791,
+        "hash_max": 926825,
+        "hash_median": 926787,
+        "hash_min": 926787,
+        "invalid": false,
+        "pct": 48.42,
+        "total_avg": 1914106,
+        "total_median": 1914161
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 909994,
+        "hash_max": 909999,
+        "hash_median": 909999,
+        "hash_min": 909944,
+        "invalid": false,
+        "pct": 52.98,
+        "total_avg": 1717490,
+        "total_median": 1717539
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 47.09,
+      "pct_measured": 47.09,
+      "self_instrumented": false,
+      "total_avg": 5860442
+     },
      "id": "crypto_kem_DKEM-256_ref",
      "impl": "ref",
      "kat": {
@@ -2723,6 +4273,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 9147537,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3090665,
+        "hash_max": 3090695,
+        "hash_median": 3090658,
+        "hash_min": 3090658,
+        "invalid": false,
+        "pct": 81.7,
+        "total_avg": 3783065,
+        "total_median": 3783116
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3073886,
+        "hash_max": 3073916,
+        "hash_median": 3073879,
+        "hash_min": 3073879,
+        "invalid": false,
+        "pct": 84.89,
+        "total_avg": 3620945,
+        "total_median": 3620998
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 2982986,
+        "hash_max": 2983031,
+        "hash_median": 2982992,
+        "hash_min": 2982857,
+        "invalid": false,
+        "pct": 87.08,
+        "total_avg": 3425641,
+        "total_median": 3425689
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 84.47,
+      "pct_measured": 84.47,
+      "self_instrumented": false,
+      "total_avg": 10829651
+     },
      "id": "crypto_kem_DKEM-512_m4",
      "impl": "m4",
      "kat": {
@@ -2815,6 +4423,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 9174884,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3099792,
+        "hash_max": 3099824,
+        "hash_median": 3099784,
+        "hash_min": 3099783,
+        "invalid": false,
+        "pct": 52.22,
+        "total_avg": 5935965,
+        "total_median": 5935998
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3083004,
+        "hash_max": 3083004,
+        "hash_median": 3083004,
+        "hash_min": 3083003,
+        "invalid": false,
+        "pct": 59.52,
+        "total_avg": 5180099,
+        "total_median": 5180140
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 2992088,
+        "hash_max": 2992102,
+        "hash_median": 2992102,
+        "hash_min": 2991966,
+        "invalid": false,
+        "pct": 62.64,
+        "total_avg": 4776608,
+        "total_median": 4776662
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 57.73,
+      "pct_measured": 57.73,
+      "self_instrumented": false,
+      "total_avg": 15892672
+     },
      "id": "crypto_kem_DKEM-512_ref",
      "impl": "ref",
      "kat": {
@@ -2871,34 +4537,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 2176,
       "source": "report",
-      "text": 155212,
-      "total": 157936
+      "text": 155220,
+      "total": 157944
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 861844,
+       "avg": 861856,
        "count": 10,
-       "max": 861845,
-       "median": 861844,
-       "min": 861844
+       "max": 861856,
+       "median": 861856,
+       "min": 861856
       },
       "encaps": {
        "avg": 436536,
        "count": 10,
-       "max": 436581,
-       "median": 436543,
-       "min": 436432
+       "max": 436582,
+       "median": 436542,
+       "min": 436440
       },
       "keypair": {
-       "avg": 647516,
+       "avg": 647396,
        "count": 10,
-       "max": 647524,
-       "median": 647513,
-       "min": 647513
+       "max": 647404,
+       "median": 647393,
+       "min": 647393
       }
      },
-     "cycles_total": 1945896,
+     "cycles_total": 1945788,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -2907,6 +4573,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 571046,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 255638,
+        "hash_max": 255638,
+        "hash_median": 255638,
+        "hash_min": 255638,
+        "invalid": false,
+        "pct": 29.52,
+        "total_avg": 865898,
+        "total_median": 865894
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 150546,
+        "hash_max": 150557,
+        "hash_median": 150557,
+        "hash_min": 150450,
+        "invalid": false,
+        "pct": 34.2,
+        "total_avg": 440171,
+        "total_median": 440182
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 164862,
+        "hash_max": 164863,
+        "hash_median": 164862,
+        "hash_min": 164862,
+        "invalid": false,
+        "pct": 25.35,
+        "total_avg": 650382,
+        "total_median": 650382
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 29.19,
+      "pct_measured": 29.19,
+      "self_instrumented": false,
+      "total_avg": 1956451
+     },
      "id": "crypto_kem_DTRU-1024_m4",
      "impl": "m4",
      "kat": {
@@ -2950,9 +4674,9 @@ window.NGCCM4_DATA = {
       "ss": 32
      },
      "stack": {
-      "decaps": 15468,
-      "encaps": 14060,
-      "keypair": 12372
+      "decaps": 15476,
+      "encaps": 14068,
+      "keypair": 12380
      },
      "status_text": null,
      "tier": "board"
@@ -2999,6 +4723,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 561638,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 251989,
+        "hash_max": 251989,
+        "hash_median": 251989,
+        "hash_min": 251989,
+        "invalid": false,
+        "pct": 14.67,
+        "total_avg": 1718063,
+        "total_median": 1718059
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 147302,
+        "hash_max": 147312,
+        "hash_median": 147312,
+        "hash_min": 147210,
+        "invalid": false,
+        "pct": 17.03,
+        "total_avg": 864872,
+        "total_median": 864882
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 162347,
+        "hash_max": 162350,
+        "hash_median": 162347,
+        "hash_min": 162347,
+        "invalid": false,
+        "pct": 14.23,
+        "total_avg": 1140854,
+        "total_median": 1140850
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 15.08,
+      "pct_measured": 15.08,
+      "self_instrumented": false,
+      "total_avg": 3723789
+     },
      "id": "crypto_kem_DTRU-1024_ref",
      "impl": "ref",
      "kat": {
@@ -3091,6 +4872,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 824758,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 401634,
+        "hash_max": 401735,
+        "hash_median": 401623,
+        "hash_min": 401623,
+        "invalid": false,
+        "pct": 36.41,
+        "total_avg": 1102936,
+        "total_median": 1102925
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 247689,
+        "hash_max": 247710,
+        "hash_median": 247710,
+        "hash_min": 247499,
+        "invalid": false,
+        "pct": 43.53,
+        "total_avg": 569019,
+        "total_median": 569040
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 175435,
+        "hash_max": 175438,
+        "hash_median": 175435,
+        "hash_min": 175435,
+        "invalid": false,
+        "pct": 25.25,
+        "total_avg": 694808,
+        "total_median": 694804
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 34.85,
+      "pct_measured": 34.85,
+      "self_instrumented": false,
+      "total_avg": 2366763
+     },
      "id": "crypto_kem_DTRU-1536_m4",
      "impl": "m4",
      "kat": {
@@ -3183,6 +5021,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 824779,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 401630,
+        "hash_max": 401630,
+        "hash_median": 401630,
+        "hash_min": 401630,
+        "invalid": false,
+        "pct": 14.79,
+        "total_avg": 2714768,
+        "total_median": 2714760
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 247712,
+        "hash_max": 247723,
+        "hash_median": 247723,
+        "hash_min": 247615,
+        "invalid": false,
+        "pct": 18.02,
+        "total_avg": 1374956,
+        "total_median": 1374967
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 175437,
+        "hash_max": 175439,
+        "hash_median": 175437,
+        "hash_min": 175437,
+        "invalid": false,
+        "pct": 11.69,
+        "total_avg": 1500724,
+        "total_median": 1500720
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 14.75,
+      "pct_measured": 14.75,
+      "self_instrumented": false,
+      "total_avg": 5590448
+     },
      "id": "crypto_kem_DTRU-1536_ref",
      "impl": "ref",
      "kat": {
@@ -3275,6 +5170,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1109291,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 520572,
+        "hash_max": 520670,
+        "hash_median": 520561,
+        "hash_min": 520561,
+        "invalid": false,
+        "pct": 17.22,
+        "total_avg": 3022840,
+        "total_median": 3022825
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 319072,
+        "hash_max": 319096,
+        "hash_median": 319095,
+        "hash_min": 318865,
+        "invalid": false,
+        "pct": 20.83,
+        "total_avg": 1531626,
+        "total_median": 1531649
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 269647,
+        "hash_max": 269658,
+        "hash_median": 269646,
+        "hash_min": 269646,
+        "invalid": false,
+        "pct": 14.33,
+        "total_avg": 1882189,
+        "total_median": 1882184
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 17.23,
+      "pct_measured": 17.23,
+      "self_instrumented": false,
+      "total_avg": 6436655
+     },
      "id": "crypto_kem_DTRU-2048_m4",
      "impl": "m4",
      "kat": {
@@ -3367,6 +5319,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1109341,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 520585,
+        "hash_max": 520685,
+        "hash_median": 520574,
+        "hash_min": 520574,
+        "invalid": false,
+        "pct": 12.9,
+        "total_avg": 4035647,
+        "total_median": 4035628
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 319102,
+        "hash_max": 319150,
+        "hash_median": 319110,
+        "hash_min": 318995,
+        "invalid": false,
+        "pct": 15.66,
+        "total_avg": 2037701,
+        "total_median": 2037705
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 269654,
+        "hash_max": 269688,
+        "hash_median": 269649,
+        "hash_min": 269649,
+        "invalid": false,
+        "pct": 8.97,
+        "total_avg": 3007115,
+        "total_median": 3007110
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 12.22,
+      "pct_measured": 12.22,
+      "self_instrumented": false,
+      "total_avg": 9080463
+     },
      "id": "crypto_kem_DTRU-2048_ref",
      "impl": "ref",
      "kat": {
@@ -3459,6 +5468,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 407351,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 155812,
+        "hash_max": 155812,
+        "hash_median": 155812,
+        "hash_min": 155812,
+        "invalid": false,
+        "pct": 25.73,
+        "total_avg": 605464,
+        "total_median": 605464
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 88968,
+        "hash_max": 88988,
+        "hash_median": 88988,
+        "hash_min": 88789,
+        "invalid": false,
+        "pct": 29.26,
+        "total_avg": 304047,
+        "total_median": 304067
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 162571,
+        "hash_max": 162571,
+        "hash_median": 162571,
+        "hash_min": 162571,
+        "invalid": false,
+        "pct": 23.44,
+        "total_avg": 693425,
+        "total_median": 693425
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 25.41,
+      "pct_measured": 25.41,
+      "self_instrumented": false,
+      "total_avg": 1602936
+     },
      "id": "crypto_kem_DTRU-648_m4",
      "impl": "m4",
      "kat": {
@@ -3551,6 +5618,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 407365,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 155822,
+        "hash_max": 155822,
+        "hash_median": 155822,
+        "hash_min": 155822,
+        "invalid": false,
+        "pct": 13.83,
+        "total_avg": 1126912,
+        "total_median": 1126908
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 88972,
+        "hash_max": 88992,
+        "hash_median": 88992,
+        "hash_min": 88792,
+        "invalid": false,
+        "pct": 15.75,
+        "total_avg": 564775,
+        "total_median": 564791
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 162571,
+        "hash_max": 162573,
+        "hash_median": 162571,
+        "hash_min": 162571,
+        "invalid": false,
+        "pct": 17.04,
+        "total_avg": 954139,
+        "total_median": 954139
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 15.4,
+      "pct_measured": 15.4,
+      "self_instrumented": false,
+      "total_avg": 2645826
+     },
      "id": "crypto_kem_DTRU-648_ref",
      "impl": "ref",
      "kat": {
@@ -3643,6 +5767,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 479452,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 217252,
+        "hash_max": 217252,
+        "hash_median": 217252,
+        "hash_min": 217252,
+        "invalid": false,
+        "pct": 36.75,
+        "total_avg": 591108,
+        "total_median": 591108
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 136487,
+        "hash_max": 136507,
+        "hash_median": 136507,
+        "hash_min": 136304,
+        "invalid": false,
+        "pct": 43.44,
+        "total_avg": 314206,
+        "total_median": 314226
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 125713,
+        "hash_max": 125715,
+        "hash_median": 125713,
+        "hash_min": 125713,
+        "invalid": false,
+        "pct": 32.42,
+        "total_avg": 387807,
+        "total_median": 387807
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 37.08,
+      "pct_measured": 37.08,
+      "self_instrumented": false,
+      "total_avg": 1293121
+     },
      "id": "crypto_kem_DTRU-768_m4",
      "impl": "m4",
      "kat": {
@@ -3735,6 +5916,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 479461,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 217254,
+        "hash_max": 217254,
+        "hash_median": 217254,
+        "hash_min": 217254,
+        "invalid": false,
+        "pct": 16.07,
+        "total_avg": 1351602,
+        "total_median": 1351598
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 136497,
+        "hash_max": 136506,
+        "hash_median": 136506,
+        "hash_min": 136413,
+        "invalid": false,
+        "pct": 19.65,
+        "total_avg": 694468,
+        "total_median": 694473
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 125710,
+        "hash_max": 125711,
+        "hash_median": 125710,
+        "hash_min": 125710,
+        "invalid": false,
+        "pct": 15.38,
+        "total_avg": 817337,
+        "total_median": 817337
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 16.74,
+      "pct_measured": 16.74,
+      "self_instrumented": false,
+      "total_avg": 2863407
+     },
      "id": "crypto_kem_DTRU-768_ref",
      "impl": "ref",
      "kat": {
@@ -3791,34 +6029,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 2376,
       "source": "report",
-      "text": 49100,
-      "total": 52024
+      "text": 49116,
+      "total": 52040
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 330851,
+       "avg": 330922,
        "count": 10,
-       "max": 330851,
-       "median": 330851,
-       "min": 330851
+       "max": 330922,
+       "median": 330922,
+       "min": 330920
       },
       "encaps": {
-       "avg": 162827,
+       "avg": 162867,
        "count": 10,
-       "max": 162841,
-       "median": 162841,
-       "min": 162702
+       "max": 162881,
+       "median": 162881,
+       "min": 162744
       },
       "keypair": {
-       "avg": 213954,
+       "avg": 213992,
        "count": 10,
-       "max": 213954,
-       "median": 213954,
-       "min": 213952
+       "max": 213992,
+       "median": 213992,
+       "min": 213991
       }
      },
-     "cycles_total": 707632,
+     "cycles_total": 707781,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -3827,6 +6065,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 225252,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 112763,
+        "hash_max": 112763,
+        "hash_median": 112763,
+        "hash_min": 112763,
+        "invalid": false,
+        "pct": 33.86,
+        "total_avg": 333016,
+        "total_median": 333016
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 64672,
+        "hash_max": 64686,
+        "hash_median": 64686,
+        "hash_min": 64551,
+        "invalid": false,
+        "pct": 39.3,
+        "total_avg": 164560,
+        "total_median": 164573
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 47817,
+        "hash_max": 47817,
+        "hash_median": 47817,
+        "hash_min": 47817,
+        "invalid": false,
+        "pct": 22.25,
+        "total_avg": 214872,
+        "total_median": 214872
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 31.62,
+      "pct_measured": 31.62,
+      "self_instrumented": false,
+      "total_avg": 712448
+     },
      "id": "crypto_kem_DTRU-Light_m4",
      "impl": "m4",
      "kat": {
@@ -3919,6 +6215,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 221631,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 111055,
+        "hash_max": 111055,
+        "hash_median": 111055,
+        "hash_min": 111055,
+        "invalid": false,
+        "pct": 15.01,
+        "total_avg": 739712,
+        "total_median": 739712
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 63373,
+        "hash_max": 63387,
+        "hash_median": 63387,
+        "hash_min": 63249,
+        "invalid": false,
+        "pct": 17.25,
+        "total_avg": 367436,
+        "total_median": 367450
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 47203,
+        "hash_max": 47203,
+        "hash_median": 47203,
+        "hash_min": 47202,
+        "invalid": false,
+        "pct": 11.78,
+        "total_avg": 400664,
+        "total_median": 400664
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 14.7,
+      "pct_measured": 14.7,
+      "self_instrumented": false,
+      "total_avg": 1507812
+     },
      "id": "crypto_kem_DTRU-Light_ref",
      "impl": "ref",
      "kat": {
@@ -4011,6 +6364,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 408743,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 217117,
+        "hash_max": 217117,
+        "hash_median": 217117,
+        "hash_min": 217117,
+        "invalid": false,
+        "pct": 16.19,
+        "total_avg": 1340728,
+        "total_median": 1340724
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 107612,
+        "hash_max": 107622,
+        "hash_median": 107622,
+        "hash_min": 107518,
+        "invalid": false,
+        "pct": 16.5,
+        "total_avg": 652319,
+        "total_median": 652329
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 84014,
+        "hash_max": 84014,
+        "hash_median": 84014,
+        "hash_min": 84014,
+        "invalid": false,
+        "pct": 0.03,
+        "total_avg": 250211051,
+        "total_median": 250211054
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 0.16,
+      "pct_measured": 0.16,
+      "self_instrumented": false,
+      "total_avg": 252204098
+     },
      "id": "crypto_kem_DTRU-Prime_m4",
      "impl": "m4",
      "kat": {
@@ -4103,6 +6513,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 408719,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 217113,
+        "hash_max": 217113,
+        "hash_median": 217113,
+        "hash_min": 217113,
+        "invalid": false,
+        "pct": 9.59,
+        "total_avg": 2264100,
+        "total_median": 2264100
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 107591,
+        "hash_max": 107612,
+        "hash_median": 107612,
+        "hash_min": 107399,
+        "invalid": false,
+        "pct": 9.66,
+        "total_avg": 1113996,
+        "total_median": 1114010
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 84015,
+        "hash_max": 84051,
+        "hash_median": 84011,
+        "hash_min": 84011,
+        "invalid": false,
+        "pct": 0.03,
+        "total_avg": 250672732,
+        "total_median": 250672736
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 0.16,
+      "pct_measured": 0.16,
+      "self_instrumented": false,
+      "total_avg": 254050828
+     },
      "id": "crypto_kem_DTRU-Prime_ref",
      "impl": "ref",
      "kat": {
@@ -4195,6 +6662,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 304846,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 91686,
+        "hash_max": 91686,
+        "hash_median": 91686,
+        "hash_min": 91686,
+        "invalid": false,
+        "pct": 12.27,
+        "total_avg": 747420,
+        "total_median": 747396
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 126934,
+        "hash_max": 126934,
+        "hash_median": 126934,
+        "hash_min": 126934,
+        "invalid": false,
+        "pct": 28.44,
+        "total_avg": 446258,
+        "total_median": 446260
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 86226,
+        "hash_max": 117898,
+        "hash_median": 82714,
+        "hash_min": 82647,
+        "invalid": false,
+        "pct": 19.75,
+        "total_avg": 436679,
+        "total_median": 430630
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 18.7,
+      "pct_measured": 18.7,
+      "self_instrumented": false,
+      "total_avg": 1630357
+     },
      "id": "crypto_kem_FLIT128_REF_ref",
      "impl": "ref",
      "kat": {
@@ -4287,6 +6812,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 548535,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 149683,
+        "hash_max": 149683,
+        "hash_median": 149683,
+        "hash_min": 149683,
+        "invalid": false,
+        "pct": 9.2,
+        "total_avg": 1627278,
+        "total_median": 1627293
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 207701,
+        "hash_max": 207701,
+        "hash_median": 207701,
+        "hash_min": 207701,
+        "invalid": false,
+        "pct": 21.43,
+        "total_avg": 969238,
+        "total_median": 969243
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 191151,
+        "hash_max": 432095,
+        "hash_median": 145265,
+        "hash_min": 145200,
+        "invalid": false,
+        "pct": 16.51,
+        "total_avg": 1157511,
+        "total_median": 1092829
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 14.61,
+      "pct_measured": 14.61,
+      "self_instrumented": false,
+      "total_avg": 3754027
+     },
      "id": "crypto_kem_FLIT256_REF_ref",
      "impl": "ref",
      "kat": {
@@ -4379,6 +6962,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2178514,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 607245,
+        "hash_max": 607245,
+        "hash_median": 607245,
+        "hash_min": 607244,
+        "invalid": false,
+        "pct": 12.25,
+        "total_avg": 4958188,
+        "total_median": 4958099
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 886894,
+        "hash_max": 886894,
+        "hash_median": 886894,
+        "hash_min": 886894,
+        "invalid": false,
+        "pct": 30.19,
+        "total_avg": 2937234,
+        "total_median": 2937251
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 684375,
+        "hash_max": 767820,
+        "hash_median": 684371,
+        "hash_min": 600961,
+        "invalid": false,
+        "pct": 14.63,
+        "total_avg": 4677213,
+        "total_median": 4678642
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 17.33,
+      "pct_measured": 17.33,
+      "self_instrumented": false,
+      "total_avg": 12572635
+     },
      "id": "crypto_kem_FLIT512_REF_ref",
      "impl": "ref",
      "kat": {
@@ -4443,6 +7083,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_HARE-128-kr_ref",
      "impl": "ref",
      "kat": {
@@ -4499,6 +7140,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_HARE-256-kr_ref",
      "impl": "ref",
      "kat": {
@@ -4555,6 +7197,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_HARE-384-kr_ref",
      "impl": "ref",
      "kat": {
@@ -4611,6 +7254,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_HARE-512-kr_ref",
      "impl": "ref",
      "kat": {
@@ -4659,34 +7303,34 @@ window.NGCCM4_DATA = {
       "bss": 5424,
       "data": 1352,
       "source": "report",
-      "text": 33712,
-      "total": 40488
+      "text": 39708,
+      "total": 46484
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 236828599,
+       "avg": 227141085,
        "count": 10,
-       "max": 236897894,
-       "median": 236865930,
-       "min": 236678630
+       "max": 227210403,
+       "median": 227178418,
+       "min": 226991099
       },
       "encaps": {
-       "avg": 83042752,
+       "avg": 77401559,
        "count": 10,
-       "max": 83167509,
-       "median": 83044336,
-       "min": 82940238
+       "max": 77526328,
+       "median": 77403156,
+       "min": 77299056
       },
       "keypair": {
-       "avg": 44680938,
+       "avg": 41934160,
        "count": 10,
-       "max": 44775263,
-       "median": 44682900,
-       "min": 44570039
+       "max": 42028498,
+       "median": 41936118,
+       "min": 41823276
       }
      },
-     "cycles_total": 364552289,
+     "cycles_total": 346476804,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -4695,6 +7339,68 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 7849585,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 4182012,
+        "hash_max": 4182042,
+        "hash_median": 4182000,
+        "hash_min": 4182000,
+        "invalid": false,
+        "pct": 1.84,
+        "total_avg": 227099076,
+        "total_median": 227085956
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 2453976,
+        "hash_max": 2454012,
+        "hash_median": 2453972,
+        "hash_min": 2453972,
+        "invalid": false,
+        "pct": 3.17,
+        "total_avg": 77348299,
+        "total_median": 77336518
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1213597,
+        "hash_max": 1213631,
+        "hash_median": 1213593,
+        "hash_min": 1213592,
+        "invalid": false,
+        "pct": 2.9,
+        "total_avg": 41879916,
+        "total_median": 41872972
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_hash.constprop.0",
+       "shake256",
+       "shake256.constprop.0",
+       "shake256.constprop.1"
+      ],
+      "pct": 2.27,
+      "pct_measured": 2.27,
+      "self_instrumented": false,
+      "total_avg": 346327291
+     },
      "id": "crypto_kem_HQC-128_ref",
      "impl": "ref",
      "kat": {
@@ -4751,34 +7457,34 @@ window.NGCCM4_DATA = {
       "bss": 5424,
       "data": 1352,
       "source": "report",
-      "text": 30616,
-      "total": 37392
+      "text": 36636,
+      "total": 43412
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 524574825,
+       "avg": 509511924,
        "count": 10,
-       "max": 524942800,
-       "median": 524578362,
-       "min": 524025124
+       "max": 509879853,
+       "median": 509515474,
+       "min": 508962257
       },
       "encaps": {
-       "avg": 232198160,
+       "avg": 222865074,
        "count": 10,
-       "max": 232553173,
-       "median": 232233740,
-       "min": 231825750
+       "max": 223220071,
+       "median": 222900678,
+       "min": 222492652
       },
       "keypair": {
-       "avg": 124737021,
+       "avg": 121251894,
        "count": 10,
-       "max": 125011743,
-       "median": 124727986,
-       "min": 124476742
+       "max": 121526659,
+       "median": 121242866,
+       "min": 120991611
       }
      },
-     "cycles_total": 881510006,
+     "cycles_total": 853628892,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -4787,6 +7493,68 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 12082440,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 6502510,
+        "hash_max": 6502578,
+        "hash_median": 6502502,
+        "hash_min": 6502502,
+        "invalid": false,
+        "pct": 1.28,
+        "total_avg": 509530150,
+        "total_median": 509572296
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 4047578,
+        "hash_max": 4047638,
+        "hash_median": 4047560,
+        "hash_min": 4047559,
+        "invalid": false,
+        "pct": 1.82,
+        "total_avg": 222855704,
+        "total_median": 222837778
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1532352,
+        "hash_max": 1532382,
+        "hash_median": 1532344,
+        "hash_min": 1532343,
+        "invalid": false,
+        "pct": 1.27,
+        "total_avg": 121129187,
+        "total_median": 121110372
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_hash.constprop.0",
+       "shake256",
+       "shake256.constprop.0",
+       "shake256.constprop.1"
+      ],
+      "pct": 1.42,
+      "pct_measured": 1.42,
+      "self_instrumented": false,
+      "total_avg": 853515041
+     },
      "id": "crypto_kem_HQC-256_ref",
      "impl": "ref",
      "kat": {
@@ -4875,6 +7643,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_HQC-384_ref",
      "impl": "ref",
      "kat": {
@@ -4940,6 +7709,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_HQC-512_ref",
      "impl": "ref",
      "kat": {
@@ -4998,6 +7768,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Loong128_ref",
      "impl": "ref",
      "kat": {
@@ -5054,6 +7825,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Loong256_ref",
      "impl": "ref",
      "kat": {
@@ -5110,6 +7882,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Loong384_ref",
      "impl": "ref",
      "kat": {
@@ -5166,6 +7939,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Loong512_ref",
      "impl": "ref",
      "kat": {
@@ -5214,34 +7988,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1608,
       "source": "report",
-      "text": 28904,
-      "total": 31060
+      "text": 34808,
+      "total": 36964
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 2986092,
-       "count": 100,
-       "max": 2986477,
-       "median": 2986076,
-       "min": 2985891
+       "avg": 2710602,
+       "count": 10,
+       "max": 2710701,
+       "median": 2710628,
+       "min": 2710418
       },
       "encaps": {
-       "avg": 2249451,
-       "count": 100,
-       "max": 2249706,
-       "median": 2249446,
-       "min": 2249270
+       "avg": 1990050,
+       "count": 10,
+       "max": 1990121,
+       "median": 1990062,
+       "min": 1989904
       },
       "keypair": {
-       "avg": 1156656,
-       "count": 100,
-       "max": 1156859,
-       "median": 1156662,
-       "min": 1156471
+       "avg": 1028482,
+       "count": 10,
+       "max": 1028640,
+       "median": 1028494,
+       "min": 1028388
       }
      },
-     "cycles_total": 6392199,
+     "cycles_total": 5729134,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -5250,6 +8024,68 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 1066873,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 433501,
+        "hash_max": 433501,
+        "hash_median": 433501,
+        "hash_min": 433501,
+        "invalid": false,
+        "pct": 15.96,
+        "total_avg": 2716939,
+        "total_median": 2716916
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 417430,
+        "hash_max": 417464,
+        "hash_median": 417426,
+        "hash_min": 417426,
+        "invalid": false,
+        "pct": 20.91,
+        "total_avg": 1996247,
+        "total_median": 1996230
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 215942,
+        "hash_max": 215975,
+        "hash_median": 215938,
+        "hash_min": 215938,
+        "invalid": false,
+        "pct": 20.93,
+        "total_avg": 1031634,
+        "total_median": 1031593
+       }
+      },
+      "own_hash_symbols": [
+       "lore_fips202_ref_sha3_256",
+       "lore_fips202_ref_shake128_absorb_once",
+       "lore_fips202_ref_shake128_squeezeblocks",
+       "lore_fips202_ref_shake256"
+      ],
+      "pct": 18.57,
+      "pct_measured": 18.57,
+      "self_instrumented": false,
+      "total_avg": 5744820
+     },
      "id": "crypto_kem_Lore-SHAKE-L1_ref",
      "impl": "ref",
      "kat": {
@@ -5294,7 +8130,7 @@ window.NGCCM4_DATA = {
       "ss": 32
      },
      "stack": {
-      "decaps": 18100,
+      "decaps": 18004,
       "encaps": 17212,
       "keypair": 12852
      },
@@ -5307,34 +8143,34 @@ window.NGCCM4_DATA = {
       "bss": 552,
       "data": 1608,
       "source": "report",
-      "text": 33992,
-      "total": 36152
+      "text": 39672,
+      "total": 41832
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 8444612,
-       "count": 100,
-       "max": 8479474,
-       "median": 8445024,
-       "min": 8409379
+       "avg": 7914472,
+       "count": 10,
+       "max": 7932639,
+       "median": 7914142,
+       "min": 7894835
       },
       "encaps": {
-       "avg": 6854393,
-       "count": 100,
-       "max": 39048145,
-       "median": 6529276,
-       "min": 6526829
+       "avg": 9267237,
+       "count": 10,
+       "max": 38534196,
+       "median": 6015475,
+       "min": 6014365
       },
       "keypair": {
-       "avg": 4439454,
-       "count": 100,
-       "max": 4439978,
-       "median": 4439452,
-       "min": 4439046
+       "avg": 4089540,
+       "count": 10,
+       "max": 4089857,
+       "median": 4089540,
+       "min": 4089177
       }
      },
-     "cycles_total": 19738459,
+     "cycles_total": 21271249,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -5343,6 +8179,68 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 2239744,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 841512,
+        "hash_max": 841546,
+        "hash_median": 841508,
+        "hash_min": 841508,
+        "invalid": false,
+        "pct": 10.61,
+        "total_avg": 7933071,
+        "total_median": 7928984
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 825286,
+        "hash_max": 825287,
+        "hash_median": 825286,
+        "hash_min": 825286,
+        "invalid": false,
+        "pct": 8.89,
+        "total_avg": 9279888,
+        "total_median": 6028062
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 572946,
+        "hash_max": 572947,
+        "hash_median": 572946,
+        "hash_min": 572946,
+        "invalid": false,
+        "pct": 13.98,
+        "total_avg": 4097994,
+        "total_median": 4098044
+       }
+      },
+      "own_hash_symbols": [
+       "lore_fips202_ref_sha3_256",
+       "lore_fips202_ref_shake128_absorb_once",
+       "lore_fips202_ref_shake128_squeezeblocks",
+       "lore_fips202_ref_shake256"
+      ],
+      "pct": 10.51,
+      "pct_measured": 10.51,
+      "self_instrumented": false,
+      "total_avg": 21310953
+     },
      "id": "crypto_kem_Lore-SHAKE-L2_ref",
      "impl": "ref",
      "kat": {
@@ -5388,7 +8286,7 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "decaps": 43524,
-      "encaps": 42156,
+      "encaps": 42252,
       "keypair": 34652
      },
      "status_text": null,
@@ -5400,34 +8298,34 @@ window.NGCCM4_DATA = {
       "bss": 552,
       "data": 1608,
       "source": "report",
-      "text": 34728,
-      "total": 36888
+      "text": 40440,
+      "total": 42600
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 15269711,
-       "count": 100,
-       "max": 15282818,
-       "median": 15269544,
-       "min": 15255767
+       "avg": 14326397,
+       "count": 10,
+       "max": 14334315,
+       "median": 14327703,
+       "min": 14315172
       },
       "encaps": {
-       "avg": 12803029,
-       "count": 100,
-       "max": 24820845,
-       "median": 12681652,
-       "min": 12680281
+       "avg": 12968636,
+       "count": 10,
+       "max": 23893839,
+       "median": 11754962,
+       "min": 11754085
       },
       "keypair": {
-       "avg": 9656637,
-       "count": 100,
-       "max": 9657189,
-       "median": 9656690,
-       "min": 9655928
+       "avg": 8943073,
+       "count": 10,
+       "max": 8943495,
+       "median": 8943142,
+       "min": 8942700
       }
      },
-     "cycles_total": 37729377,
+     "cycles_total": 36238106,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -5436,6 +8334,68 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 4155119,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1504531,
+        "hash_max": 1504565,
+        "hash_median": 1504527,
+        "hash_min": 1504527,
+        "invalid": false,
+        "pct": 10.48,
+        "total_avg": 14352055,
+        "total_median": 14352634
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1491115,
+        "hash_max": 1491115,
+        "hash_median": 1491115,
+        "hash_min": 1491113,
+        "invalid": false,
+        "pct": 11.48,
+        "total_avg": 12990989,
+        "total_median": 11777072
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1159473,
+        "hash_max": 1159503,
+        "hash_median": 1159465,
+        "hash_min": 1159465,
+        "invalid": false,
+        "pct": 12.94,
+        "total_avg": 8960053,
+        "total_median": 8960140
+       }
+      },
+      "own_hash_symbols": [
+       "lore_fips202_ref_sha3_256",
+       "lore_fips202_ref_shake128_absorb_once",
+       "lore_fips202_ref_shake128_squeezeblocks",
+       "lore_fips202_ref_shake256"
+      ],
+      "pct": 11.45,
+      "pct_measured": 11.45,
+      "self_instrumented": false,
+      "total_avg": 36303097
+     },
      "id": "crypto_kem_Lore-SHAKE-L3_ref",
      "impl": "ref",
      "kat": {
@@ -5482,7 +8442,7 @@ window.NGCCM4_DATA = {
      "stack": {
       "decaps": 65396,
       "encaps": 63196,
-      "keypair": 53204
+      "keypair": 53108
      },
      "status_text": null,
      "tier": "board"
@@ -5493,34 +8453,34 @@ window.NGCCM4_DATA = {
       "bss": 552,
       "data": 1608,
       "source": "report",
-      "text": 35536,
-      "total": 37696
+      "text": 41208,
+      "total": 43368
      },
      "completed_ops": [],
      "cycles": {
       "decaps": {
-       "avg": 29918758,
-       "count": 100,
-       "max": 29948405,
-       "median": 29918482,
-       "min": 29885503
+       "avg": 28562562,
+       "count": 10,
+       "max": 28578373,
+       "median": 28563482,
+       "min": 28546264
       },
       "encaps": {
-       "avg": 24992238,
-       "count": 100,
-       "max": 77207444,
-       "median": 24464934,
-       "min": 24462397
+       "avg": 28404126,
+       "count": 10,
+       "max": 75872300,
+       "median": 23130072,
+       "min": 23128975
       },
       "keypair": {
-       "avg": 18537214,
-       "count": 100,
-       "max": 18537869,
-       "median": 18537253,
-       "min": 18536389
+       "avg": 17514086,
+       "count": 10,
+       "max": 17514563,
+       "median": 17514026,
+       "min": 17513519
       }
      },
-     "cycles_total": 73448210,
+     "cycles_total": 74480774,
      "expected_ops": [
       "keypair",
       "encaps",
@@ -5529,6 +8489,68 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 5965386,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 2167508,
+        "hash_max": 2167540,
+        "hash_median": 2167500,
+        "hash_min": 2167500,
+        "invalid": false,
+        "pct": 7.58,
+        "total_avg": 28602855,
+        "total_median": 28602550
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 2141189,
+        "hash_max": 2141189,
+        "hash_median": 2141189,
+        "hash_min": 2141188,
+        "invalid": false,
+        "pct": 7.53,
+        "total_avg": 28436012,
+        "total_median": 23162050
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1656689,
+        "hash_max": 1656689,
+        "hash_median": 1656689,
+        "hash_min": 1656689,
+        "invalid": false,
+        "pct": 9.45,
+        "total_avg": 17538341,
+        "total_median": 17538372
+       }
+      },
+      "own_hash_symbols": [
+       "lore_fips202_ref_sha3_256",
+       "lore_fips202_ref_shake128_absorb_once",
+       "lore_fips202_ref_shake128_squeezeblocks",
+       "lore_fips202_ref_shake256"
+      ],
+      "pct": 8.0,
+      "pct_measured": 8.0,
+      "self_instrumented": false,
+      "total_avg": 74577208
+     },
      "id": "crypto_kem_Lore-SHAKE-L4_ref",
      "impl": "ref",
      "kat": {
@@ -5574,7 +8596,7 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "decaps": 97492,
-      "encaps": 94236,
+      "encaps": 94332,
       "keypair": 79260
      },
      "status_text": null,
@@ -5622,6 +8644,69 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 1293017,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 474919,
+        "hash_max": 474919,
+        "hash_median": 474919,
+        "hash_min": 474919,
+        "invalid": false,
+        "pct": 18.05,
+        "total_avg": 2631606,
+        "total_median": 2631634
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 473819,
+        "hash_max": 473819,
+        "hash_median": 473819,
+        "hash_min": 473819,
+        "invalid": false,
+        "pct": 24.53,
+        "total_avg": 1931288,
+        "total_median": 1931295
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 344279,
+        "hash_max": 344280,
+        "hash_median": 344279,
+        "hash_min": 344279,
+        "invalid": false,
+        "pct": 31.48,
+        "total_avg": 1093738,
+        "total_median": 1093726
+       }
+      },
+      "own_hash_symbols": [
+       "sm3",
+       "sm3_kdf",
+       "sm3_xof128_absorb_once",
+       "sm3_xof128_squeezeblocks",
+       "sm3_xof256"
+      ],
+      "pct": 22.86,
+      "pct_measured": 22.86,
+      "self_instrumented": false,
+      "total_avg": 5656632
+     },
      "id": "crypto_kem_Lore-SM3-L1_ref",
      "impl": "ref",
      "kat": {
@@ -5715,6 +8800,69 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 3939217,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1363892,
+        "hash_max": 1363928,
+        "hash_median": 1363888,
+        "hash_min": 1363888,
+        "invalid": false,
+        "pct": 16.67,
+        "total_avg": 8180698,
+        "total_median": 8175116
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1362606,
+        "hash_max": 1362643,
+        "hash_median": 1362598,
+        "hash_min": 1362598,
+        "invalid": false,
+        "pct": 14.27,
+        "total_avg": 9545528,
+        "total_median": 6293752
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1212719,
+        "hash_max": 1212719,
+        "hash_median": 1212719,
+        "hash_min": 1212718,
+        "invalid": false,
+        "pct": 26.72,
+        "total_avg": 4539264,
+        "total_median": 4539280
+       }
+      },
+      "own_hash_symbols": [
+       "sm3",
+       "sm3_kdf",
+       "sm3_xof128_absorb_once",
+       "sm3_xof128_squeezeblocks",
+       "sm3_xof256"
+      ],
+      "pct": 17.69,
+      "pct_measured": 17.69,
+      "self_instrumented": false,
+      "total_avg": 22265490
+     },
      "id": "crypto_kem_Lore-SM3-L2_ref",
      "impl": "ref",
      "kat": {
@@ -5808,6 +8956,69 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 8350529,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 2844835,
+        "hash_max": 2844958,
+        "hash_median": 2844813,
+        "hash_min": 2844813,
+        "invalid": false,
+        "pct": 18.75,
+        "total_avg": 15173128,
+        "total_median": 15173596
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 2843971,
+        "hash_max": 2844002,
+        "hash_median": 2843963,
+        "hash_min": 2843963,
+        "invalid": false,
+        "pct": 20.56,
+        "total_avg": 13830528,
+        "total_median": 12616516
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 2661723,
+        "hash_max": 2661813,
+        "hash_median": 2661705,
+        "hash_min": 2661705,
+        "invalid": false,
+        "pct": 26.49,
+        "total_avg": 10048145,
+        "total_median": 10048186
+       }
+      },
+      "own_hash_symbols": [
+       "sm3",
+       "sm3_kdf",
+       "sm3_xof128_absorb_once",
+       "sm3_xof128_squeezeblocks",
+       "sm3_xof256"
+      ],
+      "pct": 21.38,
+      "pct_measured": 21.38,
+      "self_instrumented": false,
+      "total_avg": 39051801
+     },
      "id": "crypto_kem_Lore-SM3-L3_ref",
      "impl": "ref",
      "kat": {
@@ -5901,6 +9112,69 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 19667618,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 6646789,
+        "hash_max": 6646813,
+        "hash_median": 6646774,
+        "hash_min": 6646774,
+        "invalid": false,
+        "pct": 20.54,
+        "total_avg": 32353087,
+        "total_median": 32353256
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 6643437,
+        "hash_max": 6643463,
+        "hash_median": 6643421,
+        "hash_min": 6643421,
+        "invalid": false,
+        "pct": 20.62,
+        "total_avg": 32217005,
+        "total_median": 26942788
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 6377392,
+        "hash_max": 6377419,
+        "hash_median": 6377380,
+        "hash_min": 6377379,
+        "invalid": false,
+        "pct": 29.41,
+        "total_avg": 21682112,
+        "total_median": 21682177
+       }
+      },
+      "own_hash_symbols": [
+       "sm3",
+       "sm3_kdf",
+       "sm3_xof128_absorb_once",
+       "sm3_xof128_squeezeblocks",
+       "sm3_xof256"
+      ],
+      "pct": 22.8,
+      "pct_measured": 22.8,
+      "self_instrumented": false,
+      "total_avg": 86252204
+     },
      "id": "crypto_kem_Lore-SM3-L4_ref",
      "impl": "ref",
      "kat": {
@@ -5994,6 +9268,66 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 918456,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 362121,
+        "hash_max": 362157,
+        "hash_median": 362117,
+        "hash_min": 362117,
+        "invalid": false,
+        "pct": 16.54,
+        "total_avg": 2189804,
+        "total_median": 2190672
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 329435,
+        "hash_max": 329435,
+        "hash_median": 329435,
+        "hash_min": 329435,
+        "invalid": false,
+        "pct": 19.46,
+        "total_avg": 1692793,
+        "total_median": 1693022
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 226900,
+        "hash_max": 226906,
+        "hash_median": 226906,
+        "hash_min": 226844,
+        "invalid": false,
+        "pct": 20.84,
+        "total_avg": 1088902,
+        "total_median": 1088908
+       }
+      },
+      "own_hash_symbols": [
+       "shake128",
+       "shake256",
+       "viper_gen_public_shake"
+      ],
+      "pct": 18.47,
+      "pct_measured": 18.47,
+      "self_instrumented": false,
+      "total_avg": 4971499
+     },
      "id": "crypto_kem_MAMBA-Viper-128_ref",
      "impl": "ref",
      "kat": {
@@ -6086,6 +9420,66 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 1676244,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 616941,
+        "hash_max": 616941,
+        "hash_median": 616941,
+        "hash_min": 616940,
+        "invalid": false,
+        "pct": 15.49,
+        "total_avg": 3982946,
+        "total_median": 3981584
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 593041,
+        "hash_max": 593041,
+        "hash_median": 593041,
+        "hash_min": 593041,
+        "invalid": false,
+        "pct": 18.2,
+        "total_avg": 3258162,
+        "total_median": 3255941
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 466262,
+        "hash_max": 466302,
+        "hash_median": 466257,
+        "hash_min": 466257,
+        "invalid": false,
+        "pct": 19.65,
+        "total_avg": 2372876,
+        "total_median": 2372868
+       }
+      },
+      "own_hash_symbols": [
+       "shake128",
+       "shake256",
+       "viper_gen_public_shake"
+      ],
+      "pct": 17.44,
+      "pct_measured": 17.44,
+      "self_instrumented": false,
+      "total_avg": 9613984
+     },
      "id": "crypto_kem_MAMBA-Viper-192_ref",
      "impl": "ref",
      "kat": {
@@ -6178,6 +9572,66 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 2542807,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 902873,
+        "hash_max": 902873,
+        "hash_median": 902873,
+        "hash_min": 902873,
+        "invalid": false,
+        "pct": 14.55,
+        "total_avg": 6203815,
+        "total_median": 6203149
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 890335,
+        "hash_max": 890335,
+        "hash_median": 890335,
+        "hash_min": 890335,
+        "invalid": false,
+        "pct": 16.92,
+        "total_avg": 5260676,
+        "total_median": 5259629
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 749599,
+        "hash_max": 749631,
+        "hash_median": 749586,
+        "hash_min": 749586,
+        "invalid": false,
+        "pct": 18.23,
+        "total_avg": 4112469,
+        "total_median": 4112468
+       }
+      },
+      "own_hash_symbols": [
+       "shake128",
+       "shake256",
+       "viper_gen_public_shake"
+      ],
+      "pct": 16.32,
+      "pct_measured": 16.32,
+      "self_instrumented": false,
+      "total_avg": 15576960
+     },
      "id": "crypto_kem_MAMBA-Viper-256_ref",
      "impl": "ref",
      "kat": {
@@ -6270,6 +9724,66 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 6975508,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 2399776,
+        "hash_max": 2399809,
+        "hash_median": 2399768,
+        "hash_min": 2399768,
+        "invalid": false,
+        "pct": 15.09,
+        "total_avg": 15906754,
+        "total_median": 15904372
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 2407515,
+        "hash_max": 2407543,
+        "hash_median": 2407503,
+        "hash_min": 2407503,
+        "invalid": false,
+        "pct": 16.83,
+        "total_avg": 14307805,
+        "total_median": 14305638
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 2168217,
+        "hash_max": 2168249,
+        "hash_median": 2168209,
+        "hash_min": 2168209,
+        "invalid": false,
+        "pct": 17.5,
+        "total_avg": 12387177,
+        "total_median": 12387184
+       }
+      },
+      "own_hash_symbols": [
+       "shake128",
+       "shake256",
+       "viper_gen_public_shake"
+      ],
+      "pct": 16.37,
+      "pct_measured": 16.37,
+      "self_instrumented": false,
+      "total_avg": 42601736
+     },
      "id": "crypto_kem_MAMBA-Viper-384_ref",
      "impl": "ref",
      "kat": {
@@ -6362,6 +9876,66 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 10891490,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3705205,
+        "hash_max": 3705232,
+        "hash_median": 3705194,
+        "hash_min": 3705194,
+        "invalid": false,
+        "pct": 14.96,
+        "total_avg": 24770792,
+        "total_median": 24771893
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3733096,
+        "hash_max": 3733127,
+        "hash_median": 3733088,
+        "hash_min": 3733088,
+        "invalid": false,
+        "pct": 16.43,
+        "total_avg": 22727617,
+        "total_median": 22728693
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 3453189,
+        "hash_max": 3453315,
+        "hash_median": 3453171,
+        "hash_min": 3453171,
+        "invalid": false,
+        "pct": 17.02,
+        "total_avg": 20284583,
+        "total_median": 20284565
+       }
+      },
+      "own_hash_symbols": [
+       "shake128",
+       "shake256",
+       "viper_gen_public_shake"
+      ],
+      "pct": 16.07,
+      "pct_measured": 16.07,
+      "self_instrumented": false,
+      "total_avg": 67782992
+     },
      "id": "crypto_kem_MAMBA-Viper-512_ref",
      "impl": "ref",
      "kat": {
@@ -6454,6 +10028,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 826645,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 266719,
+        "hash_max": 266720,
+        "hash_median": 266719,
+        "hash_min": 266719,
+        "invalid": false,
+        "pct": 11.18,
+        "total_avg": 2385843,
+        "total_median": 2385839
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 276279,
+        "hash_max": 276314,
+        "hash_median": 276275,
+        "hash_min": 276275,
+        "invalid": false,
+        "pct": 13.26,
+        "total_avg": 2083017,
+        "total_median": 2083009
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 283647,
+        "hash_max": 283661,
+        "hash_median": 283661,
+        "hash_min": 283524,
+        "invalid": false,
+        "pct": 15.85,
+        "total_avg": 1789130,
+        "total_median": 1789144
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 13.21,
+      "pct_measured": 13.21,
+      "self_instrumented": false,
+      "total_avg": 6257990
+     },
      "id": "crypto_kem_Mithril-128_ref",
      "impl": "ref",
      "kat": {
@@ -6546,6 +10176,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1413494,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 464088,
+        "hash_max": 464122,
+        "hash_median": 464084,
+        "hash_min": 464084,
+        "invalid": false,
+        "pct": 6.23,
+        "total_avg": 7451887,
+        "total_median": 7451870
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 471069,
+        "hash_max": 471069,
+        "hash_median": 471069,
+        "hash_min": 471069,
+        "invalid": false,
+        "pct": 7.4,
+        "total_avg": 6366409,
+        "total_median": 6366391
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 478337,
+        "hash_max": 478375,
+        "hash_median": 478337,
+        "hash_min": 478295,
+        "invalid": false,
+        "pct": 9.02,
+        "total_avg": 5301630,
+        "total_median": 5301623
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 7.39,
+      "pct_measured": 7.39,
+      "self_instrumented": false,
+      "total_avg": 19119926
+     },
      "id": "crypto_kem_Mithril-256_ref",
      "impl": "ref",
      "kat": {
@@ -6638,6 +10324,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2998088,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1018855,
+        "hash_max": 1018885,
+        "hash_median": 1018848,
+        "hash_min": 1018848,
+        "invalid": false,
+        "pct": 3.89,
+        "total_avg": 26199745,
+        "total_median": 26199745
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 993318,
+        "hash_max": 993318,
+        "hash_median": 993318,
+        "hash_min": 993318,
+        "invalid": false,
+        "pct": 4.49,
+        "total_avg": 22112600,
+        "total_median": 22112600
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 985915,
+        "hash_max": 985932,
+        "hash_median": 985932,
+        "hash_min": 985758,
+        "invalid": false,
+        "pct": 5.45,
+        "total_avg": 18082576,
+        "total_median": 18082594
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 4.52,
+      "pct_measured": 4.52,
+      "self_instrumented": false,
+      "total_avg": 66394921
+     },
      "id": "crypto_kem_Mithril-512_ref",
      "impl": "ref",
      "kat": {
@@ -6702,6 +10444,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-1-128_ref",
      "impl": "ref",
      "kat": {
@@ -6758,6 +10501,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-1-256_ref",
      "impl": "ref",
      "kat": {
@@ -6814,6 +10558,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-1-512_ref",
      "impl": "ref",
      "kat": {
@@ -6870,6 +10615,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-1-E-128_ref",
      "impl": "ref",
      "kat": {
@@ -6926,6 +10672,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-1-E-256_ref",
      "impl": "ref",
      "kat": {
@@ -6982,6 +10729,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-1-E-512_ref",
      "impl": "ref",
      "kat": {
@@ -7038,6 +10786,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-2-E-128_ref",
      "impl": "ref",
      "kat": {
@@ -7094,6 +10843,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-2-E-256_ref",
      "impl": "ref",
      "kat": {
@@ -7150,6 +10900,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Mito-2-E-512_ref",
      "impl": "ref",
      "kat": {
@@ -7234,6 +10985,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 185277,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 39754,
+        "hash_max": 39754,
+        "hash_median": 39754,
+        "hash_min": 39754,
+        "invalid": false,
+        "pct": 9.58,
+        "total_avg": 414806,
+        "total_median": 414804
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 73496,
+        "hash_max": 73496,
+        "hash_median": 73496,
+        "hash_min": 73496,
+        "invalid": false,
+        "pct": 24.72,
+        "total_avg": 297259,
+        "total_median": 297256
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 72027,
+        "hash_max": 72033,
+        "hash_median": 72033,
+        "hash_min": 71969,
+        "invalid": false,
+        "pct": 20.75,
+        "total_avg": 347044,
+        "total_median": 347050
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 17.49,
+      "pct_measured": 17.49,
+      "self_instrumented": false,
+      "total_avg": 1059109
+     },
      "id": "crypto_kem_NEV-C1_ref",
      "impl": "ref",
      "kat": {
@@ -7326,6 +11134,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 157593,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 25907,
+        "hash_max": 25907,
+        "hash_median": 25907,
+        "hash_min": 25907,
+        "invalid": false,
+        "pct": 5.55,
+        "total_avg": 466433,
+        "total_median": 466433
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 59649,
+        "hash_max": 59649,
+        "hash_median": 59649,
+        "hash_min": 59649,
+        "invalid": false,
+        "pct": 20.84,
+        "total_avg": 286166,
+        "total_median": 286166
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 72037,
+        "hash_max": 72043,
+        "hash_median": 72043,
+        "hash_min": 71979,
+        "invalid": false,
+        "pct": 20.76,
+        "total_avg": 347045,
+        "total_median": 347051
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 14.33,
+      "pct_measured": 14.33,
+      "self_instrumented": false,
+      "total_avg": 1099644
+     },
      "id": "crypto_kem_NEV-C1-c_ref",
      "impl": "ref",
      "kat": {
@@ -7418,6 +11283,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 349797,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 89243,
+        "hash_max": 89243,
+        "hash_median": 89243,
+        "hash_min": 89243,
+        "invalid": false,
+        "pct": 9.35,
+        "total_avg": 954359,
+        "total_median": 954360
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 144549,
+        "hash_max": 144549,
+        "hash_median": 144549,
+        "hash_min": 144549,
+        "invalid": false,
+        "pct": 22.27,
+        "total_avg": 648991,
+        "total_median": 648992
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 116005,
+        "hash_max": 116007,
+        "hash_median": 116005,
+        "hash_min": 116005,
+        "invalid": false,
+        "pct": 13.85,
+        "total_avg": 837793,
+        "total_median": 837793
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 14.33,
+      "pct_measured": 14.33,
+      "self_instrumented": false,
+      "total_avg": 2441143
+     },
      "id": "crypto_kem_NEV-C2_ref",
      "impl": "ref",
      "kat": {
@@ -7510,6 +11433,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 305501,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 67091,
+        "hash_max": 67091,
+        "hash_median": 67091,
+        "hash_min": 67091,
+        "invalid": false,
+        "pct": 6.31,
+        "total_avg": 1063450,
+        "total_median": 1063442
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 122397,
+        "hash_max": 122397,
+        "hash_median": 122397,
+        "hash_min": 122397,
+        "invalid": false,
+        "pct": 19.35,
+        "total_avg": 632579,
+        "total_median": 632579
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 116013,
+        "hash_max": 116013,
+        "hash_median": 116013,
+        "hash_min": 116011,
+        "invalid": false,
+        "pct": 13.85,
+        "total_avg": 837797,
+        "total_median": 837797
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 12.06,
+      "pct_measured": 12.06,
+      "self_instrumented": false,
+      "total_avg": 2533826
+     },
      "id": "crypto_kem_NEV-C2-c_ref",
      "impl": "ref",
      "kat": {
@@ -7602,6 +11583,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1122376,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 215109,
+        "hash_max": 215109,
+        "hash_median": 215109,
+        "hash_min": 215109,
+        "invalid": false,
+        "pct": 9.71,
+        "total_avg": 2215435,
+        "total_median": 2215436
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 424080,
+        "hash_max": 424080,
+        "hash_median": 424080,
+        "hash_min": 424080,
+        "invalid": false,
+        "pct": 27.29,
+        "total_avg": 1553996,
+        "total_median": 1554000
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 483187,
+        "hash_max": 483234,
+        "hash_median": 483182,
+        "hash_min": 483182,
+        "invalid": false,
+        "pct": 19.04,
+        "total_avg": 2537536,
+        "total_median": 2537523
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 17.8,
+      "pct_measured": 17.8,
+      "self_instrumented": false,
+      "total_avg": 6306967
+     },
      "id": "crypto_kem_NEV-C3_ref",
      "impl": "ref",
      "kat": {
@@ -7694,6 +11733,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 979281,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 143564,
+        "hash_max": 143564,
+        "hash_median": 143564,
+        "hash_min": 143564,
+        "invalid": false,
+        "pct": 5.97,
+        "total_avg": 2406250,
+        "total_median": 2406246
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 352532,
+        "hash_max": 352532,
+        "hash_median": 352532,
+        "hash_min": 352532,
+        "invalid": false,
+        "pct": 23.6,
+        "total_avg": 1493901,
+        "total_median": 1493897
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 483185,
+        "hash_max": 483231,
+        "hash_median": 483180,
+        "hash_min": 483180,
+        "invalid": false,
+        "pct": 19.04,
+        "total_avg": 2537535,
+        "total_median": 2537522
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 15.21,
+      "pct_measured": 15.21,
+      "self_instrumented": false,
+      "total_avg": 6437686
+     },
      "id": "crypto_kem_NEV-C3-c_ref",
      "impl": "ref",
      "kat": {
@@ -7786,6 +11882,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 566986,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 161727,
+        "hash_max": 161727,
+        "hash_median": 161727,
+        "hash_min": 161727,
+        "invalid": false,
+        "pct": 30.1,
+        "total_avg": 537369,
+        "total_median": 537369
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 202383,
+        "hash_max": 202383,
+        "hash_median": 202383,
+        "hash_min": 202383,
+        "invalid": false,
+        "pct": 45.2,
+        "total_avg": 447744,
+        "total_median": 447744
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 202876,
+        "hash_max": 202919,
+        "hash_median": 202879,
+        "hash_min": 202812,
+        "invalid": false,
+        "pct": 42.92,
+        "total_avg": 472703,
+        "total_median": 472706
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 38.89,
+      "pct_measured": 38.89,
+      "self_instrumented": false,
+      "total_avg": 1457816
+     },
      "id": "crypto_kem_NEV-D1_ref",
      "impl": "ref",
      "kat": {
@@ -7878,6 +12031,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 727088,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 204011,
+        "hash_max": 204011,
+        "hash_median": 204011,
+        "hash_min": 204011,
+        "invalid": false,
+        "pct": 20.85,
+        "total_avg": 978508,
+        "total_median": 978504
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 270696,
+        "hash_max": 270696,
+        "hash_median": 270696,
+        "hash_min": 270696,
+        "invalid": false,
+        "pct": 36.87,
+        "total_avg": 734188,
+        "total_median": 734188
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 252381,
+        "hash_max": 252381,
+        "hash_median": 252381,
+        "hash_min": 252380,
+        "invalid": false,
+        "pct": 29.61,
+        "total_avg": 852323,
+        "total_median": 852323
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 28.35,
+      "pct_measured": 28.35,
+      "self_instrumented": false,
+      "total_avg": 2565019
+     },
      "id": "crypto_kem_NEV-D2_ref",
      "impl": "ref",
      "kat": {
@@ -7970,6 +12181,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1905117,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 476665,
+        "hash_max": 476665,
+        "hash_median": 476665,
+        "hash_min": 476665,
+        "invalid": false,
+        "pct": 21.39,
+        "total_avg": 2228396,
+        "total_median": 2228392
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 732313,
+        "hash_max": 732313,
+        "hash_median": 732313,
+        "hash_min": 732313,
+        "invalid": false,
+        "pct": 42.15,
+        "total_avg": 1737205,
+        "total_median": 1737201
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 696139,
+        "hash_max": 696280,
+        "hash_median": 696123,
+        "hash_min": 696121,
+        "invalid": false,
+        "pct": 29.17,
+        "total_avg": 2386631,
+        "total_median": 2386608
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 29.99,
+      "pct_measured": 29.99,
+      "self_instrumented": false,
+      "total_avg": 6352232
+     },
      "id": "crypto_kem_NEV-D3_ref",
      "impl": "ref",
      "kat": {
@@ -8062,6 +12330,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 287387,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 71595,
+        "hash_max": 71595,
+        "hash_median": 71595,
+        "hash_min": 71595,
+        "invalid": false,
+        "pct": 16.25,
+        "total_avg": 440659,
+        "total_median": 440659
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 107642,
+        "hash_max": 107642,
+        "hash_median": 107642,
+        "hash_min": 107642,
+        "invalid": false,
+        "pct": 33.08,
+        "total_avg": 325397,
+        "total_median": 325397
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 108150,
+        "hash_max": 108194,
+        "hash_median": 108152,
+        "hash_min": 108086,
+        "invalid": false,
+        "pct": 26.95,
+        "total_avg": 401290,
+        "total_median": 401292
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 24.62,
+      "pct_measured": 24.62,
+      "self_instrumented": false,
+      "total_avg": 1167346
+     },
      "id": "crypto_kem_NEV-R1_ref",
      "impl": "ref",
      "kat": {
@@ -8154,6 +12479,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 440687,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 113097,
+        "hash_max": 113097,
+        "hash_median": 113097,
+        "hash_min": 113097,
+        "invalid": false,
+        "pct": 11.98,
+        "total_avg": 944386,
+        "total_median": 944379
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 172952,
+        "hash_max": 172952,
+        "hash_median": 172952,
+        "hash_min": 172952,
+        "invalid": false,
+        "pct": 27.21,
+        "total_avg": 635590,
+        "total_median": 635590
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 154638,
+        "hash_max": 154638,
+        "hash_median": 154638,
+        "hash_min": 154636,
+        "invalid": false,
+        "pct": 16.06,
+        "total_avg": 962895,
+        "total_median": 962895
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 17.33,
+      "pct_measured": 17.33,
+      "self_instrumented": false,
+      "total_avg": 2542871
+     },
      "id": "crypto_kem_NEV-R2_ref",
      "impl": "ref",
      "kat": {
@@ -8246,6 +12629,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1218469,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 298246,
+        "hash_max": 298246,
+        "hash_median": 298246,
+        "hash_min": 298246,
+        "invalid": false,
+        "pct": 12.9,
+        "total_avg": 2312656,
+        "total_median": 2312663
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 525843,
+        "hash_max": 525877,
+        "hash_median": 525839,
+        "hash_min": 525839,
+        "invalid": false,
+        "pct": 32.19,
+        "total_avg": 1633720,
+        "total_median": 1633723
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 394380,
+        "hash_max": 394426,
+        "hash_median": 394375,
+        "hash_min": 394375,
+        "invalid": false,
+        "pct": 14.61,
+        "total_avg": 2699814,
+        "total_median": 2699817
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 18.33,
+      "pct_measured": 18.33,
+      "self_instrumented": false,
+      "total_avg": 6646190
+     },
      "id": "crypto_kem_NEV-R3_ref",
      "impl": "ref",
      "kat": {
@@ -8338,6 +12779,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 267767,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 64095,
+        "hash_max": 64095,
+        "hash_median": 64095,
+        "hash_min": 64095,
+        "invalid": false,
+        "pct": 16.08,
+        "total_avg": 398487,
+        "total_median": 398486
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 113056,
+        "hash_max": 113056,
+        "hash_median": 113056,
+        "hash_min": 113056,
+        "invalid": false,
+        "pct": 36.19,
+        "total_avg": 312366,
+        "total_median": 312366
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 90616,
+        "hash_max": 90623,
+        "hash_median": 90623,
+        "hash_min": 90555,
+        "invalid": false,
+        "pct": 25.33,
+        "total_avg": 357774,
+        "total_median": 357781
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 25.06,
+      "pct_measured": 25.06,
+      "self_instrumented": false,
+      "total_avg": 1068627
+     },
      "id": "crypto_kem_NTRE-128_ref",
      "impl": "ref",
      "kat": {
@@ -8430,6 +12928,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 482207,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 121590,
+        "hash_max": 121590,
+        "hash_median": 121590,
+        "hash_min": 121590,
+        "invalid": false,
+        "pct": 15.71,
+        "total_avg": 773942,
+        "total_median": 773942
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 207362,
+        "hash_max": 207362,
+        "hash_median": 207362,
+        "hash_min": 207362,
+        "invalid": false,
+        "pct": 35.11,
+        "total_avg": 590523,
+        "total_median": 590521
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 153255,
+        "hash_max": 153270,
+        "hash_median": 153270,
+        "hash_min": 153123,
+        "invalid": false,
+        "pct": 23.27,
+        "total_avg": 658732,
+        "total_median": 658747
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 23.83,
+      "pct_measured": 23.83,
+      "self_instrumented": false,
+      "total_avg": 2023197
+     },
      "id": "crypto_kem_NTRE-256_ref",
      "impl": "ref",
      "kat": {
@@ -8522,6 +13077,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 987189,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 296922,
+        "hash_max": 296922,
+        "hash_median": 296922,
+        "hash_min": 296922,
+        "invalid": false,
+        "pct": 17.22,
+        "total_avg": 1724668,
+        "total_median": 1724690
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 442546,
+        "hash_max": 442546,
+        "hash_median": 442546,
+        "hash_min": 442545,
+        "invalid": false,
+        "pct": 33.65,
+        "total_avg": 1315172,
+        "total_median": 1315190
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 247721,
+        "hash_max": 247726,
+        "hash_median": 247726,
+        "hash_min": 247679,
+        "invalid": false,
+        "pct": 18.39,
+        "total_avg": 1346921,
+        "total_median": 1346921
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 22.5,
+      "pct_measured": 22.5,
+      "self_instrumented": false,
+      "total_avg": 4386761
+     },
      "id": "crypto_kem_NTRE-512_ref",
      "impl": "ref",
      "kat": {
@@ -8614,6 +13226,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1000050,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 247566,
+        "hash_max": 247601,
+        "hash_median": 247562,
+        "hash_min": 247562,
+        "invalid": false,
+        "pct": 22.01,
+        "total_avg": 1124985,
+        "total_median": 1124977
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 482416,
+        "hash_max": 482423,
+        "hash_median": 482423,
+        "hash_min": 482348,
+        "invalid": false,
+        "pct": 44.49,
+        "total_avg": 1084232,
+        "total_median": 1084239
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 270068,
+        "hash_max": 270167,
+        "hash_median": 270057,
+        "hash_min": 270057,
+        "invalid": false,
+        "pct": 23.1,
+        "total_avg": 1168940,
+        "total_median": 1168928
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 29.6,
+      "pct_measured": 29.6,
+      "self_instrumented": false,
+      "total_avg": 3378157
+     },
      "id": "crypto_kem_OAEP-NTRU-1296_ref",
      "impl": "ref",
      "kat": {
@@ -8706,6 +13375,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2787959,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 880131,
+        "hash_max": 880167,
+        "hash_median": 880127,
+        "hash_min": 880127,
+        "invalid": false,
+        "pct": 31.96,
+        "total_avg": 2754025,
+        "total_median": 2754013
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1363171,
+        "hash_max": 1363203,
+        "hash_median": 1363163,
+        "hash_min": 1363163,
+        "invalid": false,
+        "pct": 52.38,
+        "total_avg": 2602413,
+        "total_median": 2602405
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 544657,
+        "hash_max": 544661,
+        "hash_median": 544661,
+        "hash_min": 544625,
+        "invalid": false,
+        "pct": 21.67,
+        "total_avg": 2513121,
+        "total_median": 2513125
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 35.43,
+      "pct_measured": 35.43,
+      "self_instrumented": false,
+      "total_avg": 7869559
+     },
      "id": "crypto_kem_OAEP-NTRU-2592_ref",
      "impl": "ref",
      "kat": {
@@ -8798,6 +13524,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 297480,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 75979,
+        "hash_max": 75979,
+        "hash_median": 75979,
+        "hash_min": 75979,
+        "invalid": false,
+        "pct": 18.71,
+        "total_avg": 406018,
+        "total_median": 406018
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 137582,
+        "hash_max": 137591,
+        "hash_median": 137591,
+        "hash_min": 137498,
+        "invalid": false,
+        "pct": 40.92,
+        "total_avg": 336220,
+        "total_median": 336229
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 83919,
+        "hash_max": 83920,
+        "hash_median": 83919,
+        "hash_min": 83919,
+        "invalid": false,
+        "pct": 20.65,
+        "total_avg": 406454,
+        "total_median": 406450
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 25.9,
+      "pct_measured": 25.9,
+      "self_instrumented": false,
+      "total_avg": 1148692
+     },
      "id": "crypto_kem_OAEP-NTRU-648_ref",
      "impl": "ref",
      "kat": {
@@ -8890,6 +13673,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 782879,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 292310,
+        "hash_max": 292310,
+        "hash_median": 292310,
+        "hash_min": 292310,
+        "invalid": false,
+        "pct": 32.02,
+        "total_avg": 912840,
+        "total_median": 912834
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 274788,
+        "hash_max": 274788,
+        "hash_median": 274788,
+        "hash_min": 274788,
+        "invalid": false,
+        "pct": 40.8,
+        "total_avg": 673510,
+        "total_median": 673511
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 215781,
+        "hash_max": 215793,
+        "hash_median": 215793,
+        "hash_min": 215671,
+        "invalid": false,
+        "pct": 41.09,
+        "total_avg": 525146,
+        "total_median": 525160
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 37.08,
+      "pct_measured": 37.08,
+      "self_instrumented": false,
+      "total_avg": 2111496
+     },
      "id": "crypto_kem_POLARLAC-128_ref",
      "impl": "ref",
      "kat": {
@@ -8982,6 +13821,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1365219,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 528925,
+        "hash_max": 586138,
+        "hash_median": 522568,
+        "hash_min": 522568,
+        "invalid": false,
+        "pct": 28.31,
+        "total_avg": 1868090,
+        "total_median": 1847121
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 487605,
+        "hash_max": 544818,
+        "hash_median": 481248,
+        "hash_min": 481248,
+        "invalid": false,
+        "pct": 36.36,
+        "total_avg": 1341202,
+        "total_median": 1320236
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 348689,
+        "hash_max": 348734,
+        "hash_median": 348684,
+        "hash_min": 348684,
+        "invalid": false,
+        "pct": 34.83,
+        "total_avg": 1001076,
+        "total_median": 1001076
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 32.43,
+      "pct_measured": 32.43,
+      "self_instrumented": false,
+      "total_avg": 4210368
+     },
      "id": "crypto_kem_POLARLAC-256_ref",
      "impl": "ref",
      "kat": {
@@ -9074,6 +13969,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4985905,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1929616,
+        "hash_max": 1929646,
+        "hash_median": 1929608,
+        "hash_min": 1929608,
+        "invalid": false,
+        "pct": 38.84,
+        "total_avg": 4968484,
+        "total_median": 4968495
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1742799,
+        "hash_max": 1742890,
+        "hash_median": 1742780,
+        "hash_min": 1742780,
+        "invalid": false,
+        "pct": 47.35,
+        "total_avg": 3680870,
+        "total_median": 3680864
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1313490,
+        "hash_max": 1445178,
+        "hash_median": 1298860,
+        "hash_min": 1298803,
+        "invalid": false,
+        "pct": 46.79,
+        "total_avg": 2807316,
+        "total_median": 2778924
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 43.52,
+      "pct_measured": 43.52,
+      "self_instrumented": false,
+      "total_avg": 11456670
+     },
      "id": "crypto_kem_POLARLAC-512_ref",
      "impl": "ref",
      "kat": {
@@ -9166,6 +14117,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5002963,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1954040,
+        "hash_max": 1954040,
+        "hash_median": 1954040,
+        "hash_min": 1954040,
+        "invalid": false,
+        "pct": 30.23,
+        "total_avg": 6464059,
+        "total_median": 6464020
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1739163,
+        "hash_max": 1739199,
+        "hash_median": 1739159,
+        "hash_min": 1739159,
+        "invalid": false,
+        "pct": 35.01,
+        "total_avg": 4968181,
+        "total_median": 4968148
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1309760,
+        "hash_max": 1385207,
+        "hash_median": 1301362,
+        "hash_min": 1301362,
+        "invalid": false,
+        "pct": 35.21,
+        "total_avg": 3719967,
+        "total_median": 3694869
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 33.02,
+      "pct_measured": 33.02,
+      "self_instrumented": false,
+      "total_avg": 15152207
+     },
      "id": "crypto_kem_POLARLAC-512-Star_ref",
      "impl": "ref",
      "kat": {
@@ -9258,6 +14265,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 709354,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 263994,
+        "hash_max": 264029,
+        "hash_median": 263990,
+        "hash_min": 263990,
+        "invalid": false,
+        "pct": 30.12,
+        "total_avg": 876425,
+        "total_median": 876423
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 248770,
+        "hash_max": 248770,
+        "hash_median": 248770,
+        "hash_min": 248769,
+        "invalid": false,
+        "pct": 38.85,
+        "total_avg": 640349,
+        "total_median": 640350
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 196590,
+        "hash_max": 211152,
+        "hash_median": 194985,
+        "hash_min": 194864,
+        "invalid": false,
+        "pct": 39.19,
+        "total_avg": 501668,
+        "total_median": 496661
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 35.14,
+      "pct_measured": 35.14,
+      "self_instrumented": false,
+      "total_avg": 2018442
+     },
      "id": "crypto_kem_POLARLAC-Light_ref",
      "impl": "ref",
      "kat": {
@@ -9350,6 +14413,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3053426,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1829440,
+        "hash_max": 1829475,
+        "hash_median": 1829436,
+        "hash_min": 1829436,
+        "invalid": false,
+        "pct": 80.81,
+        "total_avg": 2263993,
+        "total_median": 2263994
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 916202,
+        "hash_max": 916295,
+        "hash_median": 916187,
+        "hash_min": 916187,
+        "invalid": false,
+        "pct": 81.09,
+        "total_avg": 1129799,
+        "total_median": 1129782
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 307784,
+        "hash_max": 307790,
+        "hash_median": 307790,
+        "hash_min": 307729,
+        "invalid": false,
+        "pct": 98.46,
+        "total_avg": 312587,
+        "total_median": 312593
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 82.38,
+      "pct_measured": 82.38,
+      "self_instrumented": false,
+      "total_avg": 3706379
+     },
      "id": "crypto_kem_PolarKEM-128_ref",
      "impl": "ref",
      "kat": {
@@ -9442,6 +14562,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3971091,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 2255285,
+        "hash_max": 2255286,
+        "hash_median": 2255285,
+        "hash_min": 2255285,
+        "invalid": false,
+        "pct": 72.66,
+        "total_avg": 3104000,
+        "total_median": 3104018
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1114598,
+        "hash_max": 1114695,
+        "hash_median": 1114587,
+        "hash_min": 1114587,
+        "invalid": false,
+        "pct": 72.72,
+        "total_avg": 1532653,
+        "total_median": 1532666
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 601208,
+        "hash_max": 601214,
+        "hash_median": 601214,
+        "hash_min": 601153,
+        "invalid": false,
+        "pct": 98.8,
+        "total_avg": 608491,
+        "total_median": 608497
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 75.71,
+      "pct_measured": 75.71,
+      "self_instrumented": false,
+      "total_avg": 5245144
+     },
      "id": "crypto_kem_PolarKEM-256_ref",
      "impl": "ref",
      "kat": {
@@ -9534,6 +14711,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 7863820,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 4476268,
+        "hash_max": 4476291,
+        "hash_median": 4476268,
+        "hash_min": 4476249,
+        "invalid": false,
+        "pct": 73.51,
+        "total_avg": 6089614,
+        "total_median": 6089610
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 2199490,
+        "hash_max": 2199490,
+        "hash_median": 2199490,
+        "hash_min": 2199490,
+        "invalid": false,
+        "pct": 73.33,
+        "total_avg": 2999321,
+        "total_median": 2999329
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1188062,
+        "hash_max": 1188068,
+        "hash_median": 1188068,
+        "hash_min": 1188007,
+        "invalid": false,
+        "pct": 98.98,
+        "total_avg": 1200308,
+        "total_median": 1200314
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 76.43,
+      "pct_measured": 76.43,
+      "self_instrumented": false,
+      "total_avg": 10289243
+     },
      "id": "crypto_kem_PolarKEM-512_ref",
      "impl": "ref",
      "kat": {
@@ -9598,6 +14832,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-128-AES_ref",
      "impl": "ref",
      "kat": {
@@ -9654,6 +14889,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-128-SHAKE_ref",
      "impl": "ref",
      "kat": {
@@ -9710,6 +14946,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-128-SM3_ref",
      "impl": "ref",
      "kat": {
@@ -9766,6 +15003,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-192-AES_ref",
      "impl": "ref",
      "kat": {
@@ -9822,6 +15060,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-192-SHAKE_ref",
      "impl": "ref",
      "kat": {
@@ -9878,6 +15117,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-192-SM3_ref",
      "impl": "ref",
      "kat": {
@@ -9934,6 +15174,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-256-AES_ref",
      "impl": "ref",
      "kat": {
@@ -9990,6 +15231,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-256-SHAKE_ref",
      "impl": "ref",
      "kat": {
@@ -10046,6 +15288,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-256-SM3_ref",
      "impl": "ref",
      "kat": {
@@ -10102,6 +15345,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-384-AES_ref",
      "impl": "ref",
      "kat": {
@@ -10158,6 +15402,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-384-SHAKE_ref",
      "impl": "ref",
      "kat": {
@@ -10214,6 +15459,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-384-SM3_ref",
      "impl": "ref",
      "kat": {
@@ -10270,6 +15516,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-512-AES_ref",
      "impl": "ref",
      "kat": {
@@ -10326,6 +15573,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-512-SHAKE_ref",
      "impl": "ref",
      "kat": {
@@ -10382,6 +15630,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_Scloudplus-512-SM3_ref",
      "impl": "ref",
      "kat": {
@@ -10466,6 +15715,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 9247187,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3856117,
+        "hash_max": 3856619,
+        "hash_median": 3856022,
+        "hash_min": 3855860,
+        "invalid": false,
+        "pct": 1.25,
+        "total_avg": 307632508,
+        "total_median": 307558336
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 3864914,
+        "hash_max": 3864946,
+        "hash_median": 3864913,
+        "hash_min": 3864902,
+        "invalid": false,
+        "pct": 3.83,
+        "total_avg": 100845500,
+        "total_median": 100845478
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1526156,
+        "hash_max": 1526176,
+        "hash_median": 1526154,
+        "hash_min": 1526143,
+        "invalid": false,
+        "pct": 0.13,
+        "total_avg": 1218224776,
+        "total_median": 1218224694
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 0.57,
+      "pct_measured": 0.57,
+      "self_instrumented": false,
+      "total_avg": 1626702784
+     },
      "id": "crypto_kem_TRIKE-2_ref",
      "impl": "ref",
      "kat": {
@@ -10558,6 +15863,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "pseudohash",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 16849559,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 1,
+        "hash_avg": 7076370,
+        "hash_max": 7076370,
+        "hash_median": 7076370,
+        "hash_min": 7076370,
+        "invalid": false,
+        "pct": 0.51,
+        "total_avg": 1395180906,
+        "total_median": 1395180906
+       },
+       "encaps": {
+        "count": 1,
+        "hash_avg": 7085634,
+        "hash_max": 7085634,
+        "hash_median": 7085634,
+        "hash_min": 7085634,
+        "invalid": false,
+        "pct": 0.74,
+        "total_avg": 958415999,
+        "total_median": 958415999
+       },
+       "keypair": {
+        "count": 1,
+        "hash_avg": 2687555,
+        "hash_max": 2687555,
+        "hash_median": 2687555,
+        "hash_min": 2687555,
+        "invalid": false,
+        "pct": 0.03,
+        "total_avg": 10393125196,
+        "total_median": 10393125196
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 0.13,
+      "pct_measured": 0.13,
+      "self_instrumented": false,
+      "total_avg": 12746722101
+     },
      "id": "crypto_kem_TRIKE-5_ref",
      "impl": "ref",
      "kat": {
@@ -10628,6 +15989,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_TRIKE-7_ref",
      "impl": "ref",
      "kat": {
@@ -10690,6 +16052,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_TRIKE-9_ref",
      "impl": "ref",
      "kat": {
@@ -10746,6 +16109,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_TriQ-KEM-128_ref",
      "impl": "ref",
      "kat": {
@@ -10802,6 +16166,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_TriQ-KEM-256_ref",
      "impl": "ref",
      "kat": {
@@ -10858,6 +16223,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_TriQ-KEM-384_ref",
      "impl": "ref",
      "kat": {
@@ -10914,6 +16280,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_TriQ-KEM-512_ref",
      "impl": "ref",
      "kat": {
@@ -10998,6 +16365,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2764608,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 938269,
+        "hash_max": 938269,
+        "hash_median": 938269,
+        "hash_min": 938268,
+        "invalid": false,
+        "pct": 54.08,
+        "total_avg": 1734846,
+        "total_median": 1734772
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 941595,
+        "hash_max": 941596,
+        "hash_median": 941595,
+        "hash_min": 941594,
+        "invalid": false,
+        "pct": 60.72,
+        "total_avg": 1550733,
+        "total_median": 1550659
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 884744,
+        "hash_max": 884788,
+        "hash_median": 884748,
+        "hash_min": 884598,
+        "invalid": false,
+        "pct": 66.64,
+        "total_avg": 1327605,
+        "total_median": 1327542
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 59.93,
+      "pct_measured": 59.93,
+      "self_instrumented": false,
+      "total_avg": 4613184
+     },
      "id": "crypto_kem_WeaverKEM-128_ref",
      "impl": "ref",
      "kat": {
@@ -11090,6 +16514,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3821528,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1252635,
+        "hash_max": 1252635,
+        "hash_median": 1252635,
+        "hash_min": 1252635,
+        "invalid": false,
+        "pct": 44.49,
+        "total_avg": 2815505,
+        "total_median": 2815378
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1315058,
+        "hash_max": 1315058,
+        "hash_median": 1315058,
+        "hash_min": 1315058,
+        "invalid": false,
+        "pct": 52.58,
+        "total_avg": 2500892,
+        "total_median": 2500765
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1253835,
+        "hash_max": 1253869,
+        "hash_median": 1253828,
+        "hash_min": 1253780,
+        "invalid": false,
+        "pct": 60.0,
+        "total_avg": 2089815,
+        "total_median": 2089848
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 51.6,
+      "pct_measured": 51.6,
+      "self_instrumented": false,
+      "total_avg": 7406212
+     },
      "id": "crypto_kem_WeaverKEM-256_ref",
      "impl": "ref",
      "kat": {
@@ -11182,6 +16663,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 13185947,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 4510079,
+        "hash_max": 4510096,
+        "hash_median": 4510092,
+        "hash_min": 4510054,
+        "invalid": false,
+        "pct": 55.66,
+        "total_avg": 8103464,
+        "total_median": 8103259
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 4533946,
+        "hash_max": 4533975,
+        "hash_median": 4533936,
+        "hash_min": 4533932,
+        "invalid": false,
+        "pct": 62.48,
+        "total_avg": 7256518,
+        "total_median": 7256286
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 4141922,
+        "hash_max": 4141964,
+        "hash_median": 4141917,
+        "hash_min": 4141916,
+        "invalid": false,
+        "pct": 67.83,
+        "total_avg": 6106043,
+        "total_median": 6105960
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 61.43,
+      "pct_measured": 61.43,
+      "self_instrumented": false,
+      "total_avg": 21466025
+     },
      "id": "crypto_kem_WeaverKEM-512_ref",
      "impl": "ref",
      "kat": {
@@ -11274,6 +16812,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1486186,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 431392,
+        "hash_max": 431406,
+        "hash_median": 431390,
+        "hash_min": 431384,
+        "invalid": false,
+        "pct": 10.08,
+        "total_avg": 4280322,
+        "total_median": 4280438
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 552901,
+        "hash_max": 552921,
+        "hash_median": 552899,
+        "hash_min": 552854,
+        "invalid": false,
+        "pct": 22.77,
+        "total_avg": 2428180,
+        "total_median": 2428232
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 501893,
+        "hash_max": 763854,
+        "hash_median": 492858,
+        "hash_min": 402526,
+        "invalid": false,
+        "pct": 10.75,
+        "total_avg": 4667729,
+        "total_median": 4655122
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 13.06,
+      "pct_measured": 13.06,
+      "self_instrumented": false,
+      "total_avg": 11376231
+     },
      "id": "crypto_kem_YuanYang-KEM-1024_ref",
      "impl": "ref",
      "kat": {
@@ -11367,6 +16961,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2667260,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 752098,
+        "hash_max": 752107,
+        "hash_median": 752095,
+        "hash_min": 752095,
+        "invalid": false,
+        "pct": 5.08,
+        "total_avg": 14813138,
+        "total_median": 14813134
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1002389,
+        "hash_max": 1002439,
+        "hash_median": 1002388,
+        "hash_min": 1002322,
+        "invalid": false,
+        "pct": 9.33,
+        "total_avg": 10747273,
+        "total_median": 10747272
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 912773,
+        "hash_max": 1256053,
+        "hash_median": 894701,
+        "hash_min": 714036,
+        "invalid": false,
+        "pct": 10.63,
+        "total_avg": 8590634,
+        "total_median": 8566018
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 7.81,
+      "pct_measured": 7.81,
+      "self_instrumented": false,
+      "total_avg": 34151045
+     },
      "id": "crypto_kem_YuanYang-KEM-2048_ref",
      "impl": "ref",
      "kat": {
@@ -11460,6 +17110,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 907726,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 284138,
+        "hash_max": 284171,
+        "hash_median": 284132,
+        "hash_min": 284131,
+        "invalid": false,
+        "pct": 7.82,
+        "total_avg": 3635506,
+        "total_median": 3635518
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 345089,
+        "hash_max": 345098,
+        "hash_median": 345087,
+        "hash_min": 345087,
+        "invalid": false,
+        "pct": 12.57,
+        "total_avg": 2745358,
+        "total_median": 2745358
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 278499,
+        "hash_max": 522393,
+        "hash_median": 251400,
+        "hash_min": 251399,
+        "invalid": false,
+        "pct": 13.71,
+        "total_avg": 2032042,
+        "total_median": 1991592
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 10.79,
+      "pct_measured": 10.79,
+      "self_instrumented": false,
+      "total_avg": 8412906
+     },
      "id": "crypto_kem_YuanYang-KEM-512_ref",
      "impl": "ref",
      "kat": {
@@ -11553,6 +17259,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 504724,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 171374,
+        "hash_max": 171374,
+        "hash_median": 171374,
+        "hash_min": 171374,
+        "invalid": false,
+        "pct": 40.84,
+        "total_avg": 419633,
+        "total_median": 419633
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 182982,
+        "hash_max": 182988,
+        "hash_median": 182988,
+        "hash_min": 182926,
+        "invalid": false,
+        "pct": 67.59,
+        "total_avg": 270732,
+        "total_median": 270738
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 150368,
+        "hash_max": 267688,
+        "hash_median": 129038,
+        "hash_min": 118371,
+        "invalid": false,
+        "pct": 42.5,
+        "total_avg": 353768,
+        "total_median": 328400
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 48.34,
+      "pct_measured": 48.34,
+      "self_instrumented": true,
+      "total_avg": 1044133
+     },
      "id": "crypto_kem_ZEN-128_m4",
      "impl": "m4",
      "kat": {
@@ -11645,6 +17409,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 504759,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 171386,
+        "hash_max": 171386,
+        "hash_median": 171386,
+        "hash_min": 171386,
+        "invalid": false,
+        "pct": 13.3,
+        "total_avg": 1288277,
+        "total_median": 1288277
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 182989,
+        "hash_max": 182995,
+        "hash_median": 182995,
+        "hash_min": 182934,
+        "invalid": false,
+        "pct": 47.2,
+        "total_avg": 387694,
+        "total_median": 387700
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 150384,
+        "hash_max": 267711,
+        "hash_median": 129048,
+        "hash_min": 118380,
+        "invalid": false,
+        "pct": 24.13,
+        "total_avg": 623215,
+        "total_median": 596639
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 21.95,
+      "pct_measured": 21.95,
+      "self_instrumented": false,
+      "total_avg": 2299186
+     },
      "id": "crypto_kem_ZEN-128_ref",
      "impl": "ref",
      "kat": {
@@ -11737,6 +17559,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 643916,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 163053,
+        "hash_max": 163053,
+        "hash_median": 163053,
+        "hash_min": 163053,
+        "invalid": false,
+        "pct": 25.3,
+        "total_avg": 644571,
+        "total_median": 644571
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 179037,
+        "hash_max": 179037,
+        "hash_median": 179037,
+        "hash_min": 179037,
+        "invalid": false,
+        "pct": 57.6,
+        "total_avg": 310827,
+        "total_median": 310827
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 301826,
+        "hash_max": 528276,
+        "hash_median": 276664,
+        "hash_min": 213762,
+        "invalid": false,
+        "pct": 37.91,
+        "total_avg": 796236,
+        "total_median": 759887
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 36.76,
+      "pct_measured": 36.76,
+      "self_instrumented": false,
+      "total_avg": 1751634
+     },
      "id": "crypto_kem_ZEN-256_m4",
      "impl": "m4",
      "kat": {
@@ -11829,6 +17709,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 643868,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 163034,
+        "hash_max": 163035,
+        "hash_median": 163034,
+        "hash_min": 163034,
+        "invalid": false,
+        "pct": 4.14,
+        "total_avg": 3935920,
+        "total_median": 3935908
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 179018,
+        "hash_max": 179018,
+        "hash_median": 179018,
+        "hash_min": 179018,
+        "invalid": false,
+        "pct": 28.45,
+        "total_avg": 629299,
+        "total_median": 629299
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 301816,
+        "hash_max": 528256,
+        "hash_median": 276656,
+        "hash_min": 213756,
+        "invalid": false,
+        "pct": 22.09,
+        "total_avg": 1366424,
+        "total_median": 1329206
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 10.85,
+      "pct_measured": 10.85,
+      "self_instrumented": false,
+      "total_avg": 5931643
+     },
      "id": "crypto_kem_ZEN-256_ref",
      "impl": "ref",
      "kat": {
@@ -11921,6 +17859,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1899120,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 481901,
+        "hash_max": 481936,
+        "hash_median": 481897,
+        "hash_min": 481897,
+        "invalid": false,
+        "pct": 28.66,
+        "total_avg": 1681592,
+        "total_median": 1681584
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 529746,
+        "hash_max": 529746,
+        "hash_median": 529746,
+        "hash_min": 529746,
+        "invalid": false,
+        "pct": 58.7,
+        "total_avg": 902434,
+        "total_median": 902434
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 887473,
+        "hash_max": 1887720,
+        "hash_median": 637392,
+        "hash_min": 637392,
+        "invalid": false,
+        "pct": 39.96,
+        "total_avg": 2220734,
+        "total_median": 1883662
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 39.53,
+      "pct_measured": 39.53,
+      "self_instrumented": false,
+      "total_avg": 4804760
+     },
      "id": "crypto_kem_ZEN-512_m4",
      "impl": "m4",
      "kat": {
@@ -12013,6 +18008,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1899126,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 481903,
+        "hash_max": 481937,
+        "hash_median": 481900,
+        "hash_min": 481899,
+        "invalid": false,
+        "pct": 3.46,
+        "total_avg": 13930364,
+        "total_median": 13930371
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 529749,
+        "hash_max": 529749,
+        "hash_median": 529749,
+        "hash_min": 529749,
+        "invalid": false,
+        "pct": 31.77,
+        "total_avg": 1667444,
+        "total_median": 1667436
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 887474,
+        "hash_max": 1887730,
+        "hash_median": 637396,
+        "hash_min": 637396,
+        "invalid": false,
+        "pct": 21.44,
+        "total_avg": 4140141,
+        "total_median": 3798145
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 9.62,
+      "pct_measured": 9.62,
+      "self_instrumented": false,
+      "total_avg": 19737949
+     },
      "id": "crypto_kem_ZEN-512_ref",
      "impl": "ref",
      "kat": {
@@ -12105,6 +18157,67 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 6097893,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 3294906,
+        "hash_max": 3294937,
+        "hash_median": 3294902,
+        "hash_min": 3294902,
+        "invalid": false,
+        "pct": 3.67,
+        "total_avg": 89852151,
+        "total_median": 89825138
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1178266,
+        "hash_max": 1178266,
+        "hash_median": 1178266,
+        "hash_min": 1178266,
+        "invalid": false,
+        "pct": 3.51,
+        "total_avg": 33599930,
+        "total_median": 33629834
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1624721,
+        "hash_max": 1624817,
+        "hash_median": 1624706,
+        "hash_min": 1624706,
+        "invalid": false,
+        "pct": 16.31,
+        "total_avg": 9959524,
+        "total_median": 10016481
+       }
+      },
+      "own_hash_symbols": [
+       "ffi_vec_set_g_using_shake",
+       "ffi_vec_set_random_from_support_using_shake",
+       "ffi_vec_set_random_full_rank_using_shake",
+       "ffi_vec_set_random_using_shake"
+      ],
+      "pct": 4.57,
+      "pct_measured": 4.57,
+      "self_instrumented": false,
+      "total_avg": 133411605
+     },
      "id": "crypto_kem_bag_piglet_128_ref",
      "impl": "ref",
      "kat": {
@@ -12197,6 +18310,67 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 12356652,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 6693030,
+        "hash_max": 6693055,
+        "hash_median": 6693014,
+        "hash_min": 6693014,
+        "invalid": false,
+        "pct": 0.76,
+        "total_avg": 883490105,
+        "total_median": 884047491
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 2398289,
+        "hash_max": 2398325,
+        "hash_median": 2398285,
+        "hash_min": 2398285,
+        "invalid": false,
+        "pct": 0.72,
+        "total_avg": 332254921,
+        "total_median": 332261713
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 3265333,
+        "hash_max": 3265421,
+        "hash_median": 3265314,
+        "hash_min": 3265314,
+        "invalid": false,
+        "pct": 3.78,
+        "total_avg": 86385351,
+        "total_median": 86340824
+       }
+      },
+      "own_hash_symbols": [
+       "ffi_vec_set_g_using_shake",
+       "ffi_vec_set_random_from_support_using_shake",
+       "ffi_vec_set_random_full_rank_using_shake",
+       "ffi_vec_set_random_using_shake"
+      ],
+      "pct": 0.95,
+      "pct_measured": 0.95,
+      "self_instrumented": false,
+      "total_avg": 1302130377
+     },
      "id": "crypto_kem_bag_piglet_256_ref",
      "impl": "ref",
      "kat": {
@@ -12289,6 +18463,67 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 3,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 49075823,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 3,
+        "hash_avg": 26679113,
+        "hash_max": 26679115,
+        "hash_median": 26679113,
+        "hash_min": 26679112,
+        "invalid": false,
+        "pct": 1.25,
+        "total_avg": 2127677057,
+        "total_median": 2131860870
+       },
+       "encaps": {
+        "count": 3,
+        "hash_avg": 9358475,
+        "hash_max": 9358488,
+        "hash_median": 9358487,
+        "hash_min": 9358449,
+        "invalid": false,
+        "pct": 1.21,
+        "total_avg": 774880898,
+        "total_median": 776120783
+       },
+       "keypair": {
+        "count": 3,
+        "hash_avg": 13038235,
+        "hash_max": 13038248,
+        "hash_median": 13038248,
+        "hash_min": 13038208,
+        "invalid": false,
+        "pct": 6.3,
+        "total_avg": 206832789,
+        "total_median": 206591884
+       }
+      },
+      "own_hash_symbols": [
+       "ffi_vec_set_g_using_shake",
+       "ffi_vec_set_random_from_support_using_shake",
+       "ffi_vec_set_random_full_rank_using_shake",
+       "ffi_vec_set_random_using_shake"
+      ],
+      "pct": 1.58,
+      "pct_measured": 1.58,
+      "self_instrumented": false,
+      "total_avg": 3109390744
+     },
      "id": "crypto_kem_bag_piglet_384_ref",
      "impl": "ref",
      "kat": {
@@ -12381,6 +18616,67 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 351392276,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 1,
+        "hash_avg": 191606492,
+        "hash_max": 191606492,
+        "hash_median": 191606492,
+        "hash_min": 191606492,
+        "invalid": false,
+        "pct": 3.4,
+        "total_avg": 5631016984,
+        "total_median": 5631016984
+       },
+       "encaps": {
+        "count": 1,
+        "hash_avg": 64744056,
+        "hash_max": 64744056,
+        "hash_median": 64744056,
+        "hash_min": 64744056,
+        "invalid": false,
+        "pct": 3.42,
+        "total_avg": 1893289553,
+        "total_median": 1893289553
+       },
+       "keypair": {
+        "count": 1,
+        "hash_avg": 95041728,
+        "hash_max": 95041728,
+        "hash_median": 95041728,
+        "hash_min": 95041728,
+        "invalid": false,
+        "pct": 17.14,
+        "total_avg": 554613938,
+        "total_median": 554613938
+       }
+      },
+      "own_hash_symbols": [
+       "ffi_vec_set_g_using_shake",
+       "ffi_vec_set_random_from_support_using_shake",
+       "ffi_vec_set_random_full_rank_using_shake",
+       "ffi_vec_set_random_using_shake"
+      ],
+      "pct": 4.35,
+      "pct_measured": 4.35,
+      "self_instrumented": false,
+      "total_avg": 8078920475
+     },
      "id": "crypto_kem_bag_piglet_512_ref",
      "impl": "ref",
      "kat": {
@@ -12469,6 +18765,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 16913880,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 5633510,
+        "hash_max": 5633538,
+        "hash_median": 5633499,
+        "hash_min": 5633499,
+        "invalid": false,
+        "pct": 82.65,
+        "total_avg": 6816348,
+        "total_median": 6816210
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 5637415,
+        "hash_max": 5637435,
+        "hash_median": 5637415,
+        "hash_min": 5637396,
+        "invalid": false,
+        "pct": 85.04,
+        "total_avg": 6629357,
+        "total_median": 6629250
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 5642955,
+        "hash_max": 5642986,
+        "hash_median": 5642947,
+        "hash_min": 5642946,
+        "invalid": false,
+        "pct": 85.43,
+        "total_avg": 6605534,
+        "total_median": 6605396
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 84.35,
+      "pct_measured": 84.35,
+      "self_instrumented": false,
+      "total_avg": 20051239
+     },
      "id": "crypto_kem_lwekem128_m4",
      "impl": "m4",
      "kat": {
@@ -12561,6 +18913,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 16910518,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 5630450,
+        "hash_max": 5630477,
+        "hash_median": 5630438,
+        "hash_min": 5630438,
+        "invalid": false,
+        "pct": 82.75,
+        "total_avg": 6803811,
+        "total_median": 6803722
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 5637140,
+        "hash_max": 5637164,
+        "hash_median": 5637126,
+        "hash_min": 5637125,
+        "invalid": false,
+        "pct": 85.25,
+        "total_avg": 6612383,
+        "total_median": 6612324
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 5642928,
+        "hash_max": 5642969,
+        "hash_median": 5642931,
+        "hash_min": 5642787,
+        "invalid": false,
+        "pct": 85.74,
+        "total_avg": 6581465,
+        "total_median": 6581388
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 84.56,
+      "pct_measured": 84.56,
+      "self_instrumented": false,
+      "total_avg": 19997659
+     },
      "id": "crypto_kem_lwekem128_ref",
      "impl": "ref",
      "kat": {
@@ -12653,6 +19061,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 33720315,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 11235901,
+        "hash_max": 11235914,
+        "hash_median": 11235913,
+        "hash_min": 11235873,
+        "invalid": false,
+        "pct": 81.98,
+        "total_avg": 13705535,
+        "total_median": 13705702
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 11241802,
+        "hash_max": 11241819,
+        "hash_median": 11241818,
+        "hash_min": 11241776,
+        "invalid": false,
+        "pct": 84.56,
+        "total_avg": 13293708,
+        "total_median": 13293860
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 11242612,
+        "hash_max": 11242636,
+        "hash_median": 11242632,
+        "hash_min": 11242536,
+        "invalid": false,
+        "pct": 85.22,
+        "total_avg": 13192056,
+        "total_median": 13192240
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 83.9,
+      "pct_measured": 83.9,
+      "self_instrumented": false,
+      "total_avg": 40191299
+     },
      "id": "crypto_kem_lwekem256_m4",
      "impl": "m4",
      "kat": {
@@ -12745,6 +19209,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 33718833,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 11233562,
+        "hash_max": 11233576,
+        "hash_median": 11233572,
+        "hash_min": 11233535,
+        "invalid": false,
+        "pct": 81.92,
+        "total_avg": 13713526,
+        "total_median": 13713600
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 11242179,
+        "hash_max": 11242194,
+        "hash_median": 11242190,
+        "hash_min": 11242149,
+        "invalid": false,
+        "pct": 84.58,
+        "total_avg": 13292140,
+        "total_median": 13292180
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 11243092,
+        "hash_max": 11243129,
+        "hash_median": 11243121,
+        "hash_min": 11242925,
+        "invalid": false,
+        "pct": 85.32,
+        "total_avg": 13178104,
+        "total_median": 13178171
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 83.91,
+      "pct_measured": 83.91,
+      "self_instrumented": false,
+      "total_avg": 40183770
+     },
      "id": "crypto_kem_lwekem256_ref",
      "impl": "ref",
      "kat": {
@@ -12837,6 +19357,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 105819911,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 35285218,
+        "hash_max": 35285252,
+        "hash_median": 35285212,
+        "hash_min": 35285169,
+        "invalid": false,
+        "pct": 89.64,
+        "total_avg": 39361174,
+        "total_median": 39361264
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 35276901,
+        "hash_max": 35276905,
+        "hash_median": 35276901,
+        "hash_min": 35276897,
+        "invalid": false,
+        "pct": 91.46,
+        "total_avg": 38569242,
+        "total_median": 38569326
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 35257792,
+        "hash_max": 35257841,
+        "hash_median": 35257794,
+        "hash_min": 35257742,
+        "invalid": false,
+        "pct": 91.28,
+        "total_avg": 38626923,
+        "total_median": 38627006
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 90.79,
+      "pct_measured": 90.79,
+      "self_instrumented": false,
+      "total_avg": 116557339
+     },
      "id": "crypto_kem_lwekem512_m4",
      "impl": "m4",
      "kat": {
@@ -12929,6 +19505,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 105817114,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 35282301,
+        "hash_max": 35282350,
+        "hash_median": 35282310,
+        "hash_min": 35282272,
+        "invalid": false,
+        "pct": 89.34,
+        "total_avg": 39492487,
+        "total_median": 39492610
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 35276881,
+        "hash_max": 35276888,
+        "hash_median": 35276880,
+        "hash_min": 35276878,
+        "invalid": false,
+        "pct": 91.23,
+        "total_avg": 38666595,
+        "total_median": 38666718
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 35257932,
+        "hash_max": 35257949,
+        "hash_median": 35257938,
+        "hash_min": 35257875,
+        "invalid": false,
+        "pct": 91.36,
+        "total_avg": 38593574,
+        "total_median": 38593690
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 90.63,
+      "pct_measured": 90.63,
+      "self_instrumented": false,
+      "total_avg": 116752656
+     },
      "id": "crypto_kem_lwekem512_ref",
      "impl": "ref",
      "kat": {
@@ -12993,6 +19625,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_qube-128_ref",
      "impl": "ref",
      "kat": {
@@ -13051,6 +19684,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_qube-192_ref",
      "impl": "ref",
      "kat": {
@@ -13108,6 +19742,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_qube-256_ref",
      "impl": "ref",
      "kat": {
@@ -13166,6 +19801,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_qube-384_ref",
      "impl": "ref",
      "kat": {
@@ -13224,6 +19860,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kem_qube-512_ref",
      "impl": "ref",
      "kat": {
@@ -13310,6 +19947,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3150335,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1028845,
+        "hash_max": 1028845,
+        "hash_median": 1028845,
+        "hash_min": 1028844,
+        "invalid": false,
+        "pct": 61.1,
+        "total_avg": 1683821,
+        "total_median": 1683814
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1070718,
+        "hash_max": 1070752,
+        "hash_median": 1070714,
+        "hash_min": 1070714,
+        "invalid": false,
+        "pct": 64.55,
+        "total_avg": 1658816,
+        "total_median": 1658812
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1050772,
+        "hash_max": 1050779,
+        "hash_median": 1050779,
+        "hash_min": 1050714,
+        "invalid": false,
+        "pct": 66.49,
+        "total_avg": 1580398,
+        "total_median": 1580404
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 63.99,
+      "pct_measured": 63.99,
+      "self_instrumented": false,
+      "total_avg": 4923035
+     },
      "id": "crypto_kem_scabbard128_m4",
      "impl": "m4",
      "kat": {
@@ -13402,6 +20095,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3150650,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1028949,
+        "hash_max": 1028983,
+        "hash_median": 1028945,
+        "hash_min": 1028945,
+        "invalid": false,
+        "pct": 34.35,
+        "total_avg": 2995217,
+        "total_median": 2995209
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1070739,
+        "hash_max": 1070773,
+        "hash_median": 1070735,
+        "hash_min": 1070735,
+        "invalid": false,
+        "pct": 37.71,
+        "total_avg": 2839298,
+        "total_median": 2839291
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1050962,
+        "hash_max": 1051003,
+        "hash_median": 1050965,
+        "hash_min": 1050900,
+        "invalid": false,
+        "pct": 39.78,
+        "total_avg": 2642080,
+        "total_median": 2642083
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 37.17,
+      "pct_measured": 37.17,
+      "self_instrumented": false,
+      "total_avg": 8476595
+     },
      "id": "crypto_kem_scabbard128_ref",
      "impl": "ref",
      "kat": {
@@ -13494,6 +20243,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5445491,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1785812,
+        "hash_max": 1785812,
+        "hash_median": 1785812,
+        "hash_min": 1785812,
+        "invalid": false,
+        "pct": 50.65,
+        "total_avg": 3525642,
+        "total_median": 3525642
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1859781,
+        "hash_max": 1859815,
+        "hash_median": 1859777,
+        "hash_min": 1859777,
+        "invalid": false,
+        "pct": 54.3,
+        "total_avg": 3425303,
+        "total_median": 3425291
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1799898,
+        "hash_max": 1799930,
+        "hash_median": 1799890,
+        "hash_min": 1799890,
+        "invalid": false,
+        "pct": 56.08,
+        "total_avg": 3209413,
+        "total_median": 3209398
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 53.6,
+      "pct_measured": 53.6,
+      "self_instrumented": false,
+      "total_avg": 10160358
+     },
      "id": "crypto_kem_scabbard256_m4",
      "impl": "m4",
      "kat": {
@@ -13586,6 +20391,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kem",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5444662,
+      "measured_ops": [
+       "keypair",
+       "encaps",
+       "decaps"
+      ],
+      "ops": {
+       "decaps": {
+        "count": 10,
+        "hash_avg": 1785469,
+        "hash_max": 1785469,
+        "hash_median": 1785469,
+        "hash_min": 1785469,
+        "invalid": false,
+        "pct": 19.62,
+        "total_avg": 9099890,
+        "total_median": 9099890
+       },
+       "encaps": {
+        "count": 10,
+        "hash_avg": 1859603,
+        "hash_max": 1859604,
+        "hash_median": 1859603,
+        "hash_min": 1859603,
+        "invalid": false,
+        "pct": 21.95,
+        "total_avg": 8473041,
+        "total_median": 8473026
+       },
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1799590,
+        "hash_max": 1799620,
+        "hash_median": 1799582,
+        "hash_min": 1799582,
+        "invalid": false,
+        "pct": 23.22,
+        "total_avg": 7749922,
+        "total_median": 7749922
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 21.5,
+      "pct_measured": 21.5,
+      "self_instrumented": false,
+      "total_avg": 25322853
+     },
      "id": "crypto_kem_scabbard256_ref",
      "impl": "ref",
      "kat": {
@@ -13722,6 +20583,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2042816,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 427656,
+        "hash_max": 427696,
+        "hash_median": 427652,
+        "hash_min": 427650,
+        "invalid": false,
+        "pct": 75.0,
+        "total_avg": 570225,
+        "total_median": 570152
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 5122,
+        "hash_max": 5122,
+        "hash_median": 5122,
+        "hash_min": 5121,
+        "invalid": false,
+        "pct": 95.68,
+        "total_avg": 5353,
+        "total_median": 5353
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 85,
+        "total_median": 85
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 287279,
+        "hash_max": 287287,
+        "hash_median": 287285,
+        "hash_min": 287223,
+        "invalid": false,
+        "pct": 78.14,
+        "total_avg": 367644,
+        "total_median": 367602
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 590456,
+        "hash_max": 590467,
+        "hash_median": 590454,
+        "hash_min": 590452,
+        "invalid": false,
+        "pct": 75.91,
+        "total_avg": 777831,
+        "total_median": 777838
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 732303,
+        "hash_max": 732337,
+        "hash_median": 732299,
+        "hash_min": 732295,
+        "invalid": false,
+        "pct": 74.66,
+        "total_avg": 980863,
+        "total_median": 980862
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 75.6,
+      "pct_measured": 75.6,
+      "self_instrumented": false,
+      "total_avg": 2702001
+     },
      "id": "crypto_kex_ADKEX-128_m4",
      "impl": "m4",
      "kat": {
@@ -13851,6 +20806,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2081628,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 434118,
+        "hash_max": 434118,
+        "hash_median": 434118,
+        "hash_min": 434118,
+        "invalid": false,
+        "pct": 40.58,
+        "total_avg": 1069698,
+        "total_median": 1069650
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 5121,
+        "hash_max": 5121,
+        "hash_median": 5121,
+        "hash_min": 5121,
+        "invalid": false,
+        "pct": 95.67,
+        "total_avg": 5353,
+        "total_median": 5353
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 85,
+        "total_median": 85
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 293759,
+        "hash_max": 293800,
+        "hash_median": 293761,
+        "hash_min": 293700,
+        "invalid": false,
+        "pct": 49.41,
+        "total_avg": 594510,
+        "total_median": 594497
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 603398,
+        "hash_max": 603408,
+        "hash_median": 603397,
+        "hash_min": 603397,
+        "invalid": false,
+        "pct": 44.97,
+        "total_avg": 1341907,
+        "total_median": 1341932
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 745232,
+        "hash_max": 745232,
+        "hash_median": 745232,
+        "hash_min": 745232,
+        "invalid": false,
+        "pct": 41.0,
+        "total_avg": 1817603,
+        "total_median": 1817640
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 43.11,
+      "pct_measured": 43.11,
+      "self_instrumented": false,
+      "total_avg": 4829156
+     },
      "id": "crypto_kex_ADKEX-128_ref",
      "impl": "ref",
      "kat": {
@@ -13980,6 +21028,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5971700,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 1155090,
+        "hash_max": 1155123,
+        "hash_median": 1155086,
+        "hash_min": 1155084,
+        "invalid": false,
+        "pct": 78.31,
+        "total_avg": 1474981,
+        "total_median": 1474969
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 5120,
+        "hash_max": 5121,
+        "hash_median": 5120,
+        "hash_min": 5120,
+        "invalid": false,
+        "pct": 95.68,
+        "total_avg": 5351,
+        "total_median": 5351
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 85,
+        "total_median": 85
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 908622,
+        "hash_max": 908632,
+        "hash_median": 908628,
+        "hash_min": 908569,
+        "invalid": false,
+        "pct": 80.3,
+        "total_avg": 1131540,
+        "total_median": 1131540
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 1827462,
+        "hash_max": 1827470,
+        "hash_median": 1827462,
+        "hash_min": 1827458,
+        "invalid": false,
+        "pct": 79.1,
+        "total_avg": 2310381,
+        "total_median": 2310297
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2075406,
+        "hash_max": 2075436,
+        "hash_median": 2075402,
+        "hash_min": 2075400,
+        "invalid": false,
+        "pct": 78.22,
+        "total_avg": 2653420,
+        "total_median": 2653353
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 78.83,
+      "pct_measured": 78.83,
+      "self_instrumented": false,
+      "total_avg": 7575758
+     },
      "id": "crypto_kex_ADKEX-256_m4",
      "impl": "m4",
      "kat": {
@@ -14109,6 +21251,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5976729,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 1155920,
+        "hash_max": 1155920,
+        "hash_median": 1155920,
+        "hash_min": 1155919,
+        "invalid": false,
+        "pct": 46.82,
+        "total_avg": 2468834,
+        "total_median": 2468790
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 5121,
+        "hash_max": 5121,
+        "hash_median": 5121,
+        "hash_min": 5121,
+        "invalid": false,
+        "pct": 95.68,
+        "total_avg": 5352,
+        "total_median": 5352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 85,
+        "total_median": 85
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 909470,
+        "hash_max": 909476,
+        "hash_median": 909476,
+        "hash_min": 909416,
+        "invalid": false,
+        "pct": 52.98,
+        "total_avg": 1716719,
+        "total_median": 1716724
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 1829150,
+        "hash_max": 1829185,
+        "hash_median": 1829145,
+        "hash_min": 1829144,
+        "invalid": false,
+        "pct": 50.46,
+        "total_avg": 3625136,
+        "total_median": 3625074
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2077068,
+        "hash_max": 2077068,
+        "hash_median": 2077068,
+        "hash_min": 2077067,
+        "invalid": false,
+        "pct": 47.46,
+        "total_avg": 4376868,
+        "total_median": 4376813
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 49.02,
+      "pct_measured": 49.02,
+      "self_instrumented": false,
+      "total_avg": 12192994
+     },
      "id": "crypto_kex_ADKEX-256_ref",
      "impl": "ref",
      "kat": {
@@ -14238,6 +21473,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 20254182,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 4073746,
+        "hash_max": 4073775,
+        "hash_median": 4073736,
+        "hash_min": 4073734,
+        "invalid": false,
+        "pct": 85.22,
+        "total_avg": 4780082,
+        "total_median": 4779954
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 20151,
+        "hash_max": 20151,
+        "hash_median": 20151,
+        "hash_min": 20150,
+        "invalid": false,
+        "pct": 98.75,
+        "total_avg": 20406,
+        "total_median": 20406
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 85,
+        "total_median": 85
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 2982958,
+        "hash_max": 2982968,
+        "hash_median": 2982966,
+        "hash_min": 2982881,
+        "invalid": false,
+        "pct": 87.07,
+        "total_avg": 3425993,
+        "total_median": 3425902
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 6050297,
+        "hash_max": 6050324,
+        "hash_median": 6050288,
+        "hash_min": 6050277,
+        "invalid": false,
+        "pct": 85.9,
+        "total_avg": 7043806,
+        "total_median": 7043822
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 7127030,
+        "hash_max": 7127154,
+        "hash_median": 7127006,
+        "hash_min": 7126999,
+        "invalid": false,
+        "pct": 85.04,
+        "total_avg": 8380516,
+        "total_median": 8380519
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 85.64,
+      "pct_measured": 85.64,
+      "self_instrumented": false,
+      "total_avg": 23650888
+     },
      "id": "crypto_kex_ADKEX-512_m4",
      "impl": "m4",
      "kat": {
@@ -14367,6 +21696,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 20308748,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 4082835,
+        "hash_max": 4082864,
+        "hash_median": 4082825,
+        "hash_min": 4082821,
+        "invalid": false,
+        "pct": 58.89,
+        "total_avg": 6932934,
+        "total_median": 6932784
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 20150,
+        "hash_max": 20150,
+        "hash_median": 20150,
+        "hash_min": 20150,
+        "invalid": false,
+        "pct": 98.75,
+        "total_avg": 20405,
+        "total_median": 20405
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 85,
+        "total_median": 85
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 2992069,
+        "hash_max": 2992108,
+        "hash_median": 2992071,
+        "hash_min": 2991986,
+        "invalid": false,
+        "pct": 62.64,
+        "total_avg": 4776990,
+        "total_median": 4776908
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 6068492,
+        "hash_max": 6068537,
+        "hash_median": 6068478,
+        "hash_min": 6068473,
+        "invalid": false,
+        "pct": 60.97,
+        "total_avg": 9953922,
+        "total_median": 9953909
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 7145202,
+        "hash_max": 7145324,
+        "hash_median": 7145182,
+        "hash_min": 7145177,
+        "invalid": false,
+        "pct": 59.09,
+        "total_avg": 12092494,
+        "total_median": 12092512
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 60.13,
+      "pct_measured": 60.13,
+      "self_instrumented": false,
+      "total_avg": 33776830
+     },
      "id": "crypto_kex_ADKEX-512_ref",
      "impl": "ref",
      "kat": {
@@ -14512,6 +21935,123 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3523889,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "pass4",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 136,
+        "total_median": 136
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 133,
+        "total_median": 133
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 685349,
+        "hash_max": 780816,
+        "hash_median": 661490,
+        "hash_min": 661428,
+        "invalid": false,
+        "pct": 44.9,
+        "total_avg": 1526550,
+        "total_median": 1502593
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 661491,
+        "hash_max": 661491,
+        "hash_median": 661491,
+        "hash_min": 661491,
+        "invalid": false,
+        "pct": 44.03,
+        "total_avg": 1502426,
+        "total_median": 1502383
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 360989,
+        "hash_max": 360989,
+        "hash_median": 360989,
+        "hash_min": 360989,
+        "invalid": false,
+        "pct": 41.19,
+        "total_avg": 876325,
+        "total_median": 876297
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 762483,
+        "hash_max": 810212,
+        "hash_median": 750547,
+        "hash_min": 750546,
+        "invalid": false,
+        "pct": 38.09,
+        "total_avg": 2001938,
+        "total_median": 1989907
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 721567,
+        "hash_max": 769299,
+        "hash_median": 709634,
+        "hash_min": 709633,
+        "invalid": false,
+        "pct": 38.68,
+        "total_avg": 1865489,
+        "total_median": 1853482
+       },
+       "pass4": {
+        "count": 10,
+        "hash_avg": 332010,
+        "hash_max": 379740,
+        "hash_median": 320077,
+        "hash_min": 320077,
+        "invalid": false,
+        "pct": 44.15,
+        "total_avg": 751925,
+        "total_median": 739939
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 41.34,
+      "pct_measured": 41.34,
+      "self_instrumented": false,
+      "total_avg": 8524922
+     },
      "id": "crypto_kex_AFS_KEX_C128_ref",
      "impl": "ref",
      "kat": {
@@ -14663,6 +22203,123 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 9198185,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "pass4",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 145,
+        "total_median": 145
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 142,
+        "total_median": 142
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 1791418,
+        "hash_max": 1791428,
+        "hash_median": 1791424,
+        "hash_min": 1791365,
+        "invalid": false,
+        "pct": 51.79,
+        "total_avg": 3459189,
+        "total_median": 3459188
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 1803450,
+        "hash_max": 1911639,
+        "hash_median": 1791425,
+        "hash_min": 1791421,
+        "invalid": false,
+        "pct": 51.95,
+        "total_avg": 3471457,
+        "total_median": 3459267
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 932322,
+        "hash_max": 986414,
+        "hash_median": 926308,
+        "hash_min": 926308,
+        "invalid": false,
+        "pct": 49.91,
+        "total_avg": 1867885,
+        "total_median": 1861790
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 1923028,
+        "hash_max": 1977143,
+        "hash_median": 1916999,
+        "hash_min": 1916999,
+        "invalid": false,
+        "pct": 44.86,
+        "total_avg": 4286424,
+        "total_median": 4280352
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 1872398,
+        "hash_max": 1926487,
+        "hash_median": 1866380,
+        "hash_min": 1866378,
+        "invalid": false,
+        "pct": 45.3,
+        "total_avg": 4133040,
+        "total_median": 4126957
+       },
+       "pass4": {
+        "count": 10,
+        "hash_avg": 875569,
+        "hash_max": 875601,
+        "hash_median": 875565,
+        "hash_min": 875563,
+        "invalid": false,
+        "pct": 51.26,
+        "total_avg": 1708253,
+        "total_median": 1708246
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 48.6,
+      "pct_measured": 48.6,
+      "self_instrumented": false,
+      "total_avg": 18926535
+     },
      "id": "crypto_kex_AFS_KEX_C256_ref",
      "impl": "ref",
      "kat": {
@@ -14814,6 +22471,123 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 31240549,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "pass4",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 190,
+        "total_median": 190
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 186,
+        "total_median": 186
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 6101124,
+        "hash_max": 6101158,
+        "hash_median": 6101107,
+        "hash_min": 6101107,
+        "invalid": false,
+        "pct": 59.8,
+        "total_avg": 10201897,
+        "total_median": 10202282
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 6101120,
+        "hash_max": 6101147,
+        "hash_median": 6101108,
+        "hash_min": 6101108,
+        "invalid": false,
+        "pct": 59.81,
+        "total_avg": 10201567,
+        "total_median": 10201737
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 3127580,
+        "hash_max": 3127615,
+        "hash_median": 3127576,
+        "hash_min": 3127576,
+        "invalid": false,
+        "pct": 57.51,
+        "total_avg": 5438235,
+        "total_median": 5438335
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 6515743,
+        "hash_max": 6515766,
+        "hash_median": 6515729,
+        "hash_min": 6515727,
+        "invalid": false,
+        "pct": 53.27,
+        "total_avg": 12232343,
+        "total_median": 12232372
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 6391631,
+        "hash_max": 6391654,
+        "hash_median": 6391616,
+        "hash_min": 6391615,
+        "invalid": false,
+        "pct": 53.96,
+        "total_avg": 11845656,
+        "total_median": 11845676
+       },
+       "pass4": {
+        "count": 10,
+        "hash_avg": 3003351,
+        "hash_max": 3003379,
+        "hash_median": 3003339,
+        "hash_min": 3003339,
+        "invalid": false,
+        "pct": 59.45,
+        "total_avg": 5051549,
+        "total_median": 5051742
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 56.83,
+      "pct_measured": 56.83,
+      "self_instrumented": false,
+      "total_avg": 54971623
+     },
      "id": "crypto_kex_AFS_KEX_C512_ref",
      "impl": "ref",
      "kat": {
@@ -14949,6 +22723,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2568805,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 675417,
+        "hash_max": 675417,
+        "hash_median": 675417,
+        "hash_min": 675417,
+        "invalid": false,
+        "pct": 36.81,
+        "total_avg": 1834946,
+        "total_median": 1834948
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 218026,
+        "hash_max": 237194,
+        "hash_median": 215892,
+        "hash_min": 215892,
+        "invalid": false,
+        "pct": 41.06,
+        "total_avg": 531030,
+        "total_median": 525300
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 217977,
+        "hash_max": 237209,
+        "hash_median": 215836,
+        "hash_min": 215836,
+        "invalid": false,
+        "pct": 41.05,
+        "total_avg": 530978,
+        "total_median": 525250
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 514854,
+        "hash_max": 514854,
+        "hash_median": 514854,
+        "hash_min": 514854,
+        "invalid": false,
+        "pct": 42.04,
+        "total_avg": 1224539,
+        "total_median": 1224540
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 942531,
+        "hash_max": 942630,
+        "hash_median": 942520,
+        "hash_min": 942519,
+        "invalid": false,
+        "pct": 39.81,
+        "total_avg": 2367303,
+        "total_median": 2367303
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 39.59,
+      "pct_measured": 39.59,
+      "self_instrumented": false,
+      "total_avg": 6489148
+     },
      "id": "crypto_kex_CreTAKE-K2K-PLAC128_ref",
      "impl": "ref",
      "kat": {
@@ -15078,6 +22945,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4988272,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 1469913,
+        "hash_max": 1495341,
+        "hash_median": 1463556,
+        "hash_min": 1463556,
+        "invalid": false,
+        "pct": 37.12,
+        "total_avg": 3960148,
+        "total_median": 3939187
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 588,
+        "total_median": 588
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 348804,
+        "hash_max": 348823,
+        "hash_median": 348823,
+        "hash_min": 348636,
+        "invalid": false,
+        "pct": 34.84,
+        "total_avg": 1001277,
+        "total_median": 1001288
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 351878,
+        "hash_max": 380485,
+        "hash_median": 348699,
+        "hash_min": 348698,
+        "invalid": false,
+        "pct": 34.78,
+        "total_avg": 1011634,
+        "total_median": 1001157
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 874897,
+        "hash_max": 900325,
+        "hash_median": 868540,
+        "hash_min": 868540,
+        "invalid": false,
+        "pct": 36.71,
+        "total_avg": 2383573,
+        "total_median": 2362602
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 1942780,
+        "hash_max": 1965004,
+        "hash_median": 1933240,
+        "hash_min": 1933219,
+        "invalid": false,
+        "pct": 39.03,
+        "total_avg": 4977723,
+        "total_median": 4946312
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 37.41,
+      "pct_measured": 37.41,
+      "self_instrumented": false,
+      "total_avg": 13334943
+     },
      "id": "crypto_kex_CreTAKE-K2K-PLAC256_ref",
      "impl": "ref",
      "kat": {
@@ -15207,6 +23167,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 18992582,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 6332162,
+        "hash_max": 6434608,
+        "hash_median": 6288286,
+        "hash_min": 6288247,
+        "invalid": false,
+        "pct": 46.82,
+        "total_avg": 13524419,
+        "total_median": 13439189
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 1005,
+        "total_median": 1005
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 1372214,
+        "hash_max": 1884350,
+        "hash_median": 1299075,
+        "hash_min": 1298791,
+        "invalid": false,
+        "pct": 45.58,
+        "total_avg": 3010669,
+        "total_median": 2779118
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 1313483,
+        "hash_max": 1445171,
+        "hash_median": 1298851,
+        "hash_min": 1298851,
+        "invalid": false,
+        "pct": 46.79,
+        "total_avg": 2807258,
+        "total_median": 2778839
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 3120736,
+        "hash_max": 3252411,
+        "hash_median": 3106092,
+        "hash_min": 3106092,
+        "invalid": false,
+        "pct": 47.59,
+        "total_avg": 6557600,
+        "total_median": 6529192
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 6853987,
+        "hash_max": 6971048,
+        "hash_median": 6824728,
+        "hash_min": 6824689,
+        "invalid": false,
+        "pct": 49.2,
+        "total_avg": 13931382,
+        "total_median": 13874606
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 47.68,
+      "pct_measured": 47.68,
+      "self_instrumented": false,
+      "total_avg": 39832333
+     },
      "id": "crypto_kex_CreTAKE-K2K-PLAC512_ref",
      "impl": "ref",
      "kat": {
@@ -15336,6 +23389,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 19396330,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 6554841,
+        "hash_max": 6630316,
+        "hash_median": 6546452,
+        "hash_min": 6546433,
+        "invalid": false,
+        "pct": 37.24,
+        "total_avg": 17599697,
+        "total_median": 17574736
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 1004,
+        "total_median": 1004
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 1309957,
+        "hash_max": 1385443,
+        "hash_median": 1301601,
+        "hash_min": 1301319,
+        "invalid": false,
+        "pct": 35.21,
+        "total_avg": 3720136,
+        "total_median": 3694961
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 1301378,
+        "hash_max": 1301378,
+        "hash_median": 1301378,
+        "hash_min": 1301378,
+        "invalid": false,
+        "pct": 35.22,
+        "total_avg": 3694731,
+        "total_median": 3694707
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 3126483,
+        "hash_max": 3193583,
+        "hash_median": 3109718,
+        "hash_min": 3109699,
+        "invalid": false,
+        "pct": 35.57,
+        "total_avg": 8788978,
+        "total_median": 8738734
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 7103671,
+        "hash_max": 7179128,
+        "hash_median": 7095245,
+        "hash_min": 7095245,
+        "invalid": false,
+        "pct": 38.95,
+        "total_avg": 18237388,
+        "total_median": 18212392
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 37.27,
+      "pct_measured": 37.27,
+      "self_instrumented": false,
+      "total_avg": 52041934
+     },
      "id": "crypto_kex_CreTAKE-K2K-PLAC512Star_ref",
      "impl": "ref",
      "kat": {
@@ -15465,6 +23611,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1692002,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 441822,
+        "hash_max": 471687,
+        "hash_median": 439689,
+        "hash_min": 429023,
+        "invalid": false,
+        "pct": 15.01,
+        "total_avg": 2942700,
+        "total_median": 2940055
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 150528,
+        "hash_max": 225207,
+        "hash_median": 139879,
+        "hash_min": 118547,
+        "invalid": false,
+        "pct": 24.15,
+        "total_avg": 623399,
+        "total_median": 610131
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 143972,
+        "hash_max": 203702,
+        "hash_median": 139706,
+        "hash_min": 118374,
+        "invalid": false,
+        "pct": 23.4,
+        "total_avg": 615265,
+        "total_median": 609951
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 310296,
+        "hash_max": 340161,
+        "hash_median": 308163,
+        "hash_min": 297497,
+        "invalid": false,
+        "pct": 31.53,
+        "total_avg": 984227,
+        "total_median": 981570
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 645384,
+        "hash_max": 645479,
+        "hash_median": 645369,
+        "hash_min": 645369,
+        "invalid": false,
+        "pct": 29.61,
+        "total_avg": 2179711,
+        "total_median": 2179692
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 23.03,
+      "pct_measured": 23.03,
+      "self_instrumented": false,
+      "total_avg": 7345654
+     },
      "id": "crypto_kex_CreTAKE-K2K-ZEN128_ref",
      "impl": "ref",
      "kat": {
@@ -15594,6 +23834,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2979429,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 994466,
+        "hash_max": 1283790,
+        "hash_median": 969300,
+        "hash_min": 906400,
+        "invalid": false,
+        "pct": 10.85,
+        "total_avg": 9161921,
+        "total_median": 9124714
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 588,
+        "total_median": 588
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 270525,
+        "hash_max": 528246,
+        "hash_median": 213934,
+        "hash_min": 213934,
+        "invalid": false,
+        "pct": 20.49,
+        "total_avg": 1320115,
+        "total_median": 1236389
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 245202,
+        "hash_max": 402448,
+        "hash_median": 213752,
+        "hash_min": 213752,
+        "invalid": false,
+        "pct": 19.12,
+        "total_avg": 1282723,
+        "total_median": 1236199
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 468482,
+        "hash_max": 757810,
+        "hash_median": 443320,
+        "hash_min": 380420,
+        "invalid": false,
+        "pct": 23.6,
+        "total_avg": 1985489,
+        "total_median": 1948263
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 1000754,
+        "hash_max": 1000852,
+        "hash_median": 1000743,
+        "hash_min": 1000743,
+        "invalid": false,
+        "pct": 17.59,
+        "total_avg": 5689045,
+        "total_median": 5689011
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 15.33,
+      "pct_measured": 15.33,
+      "self_instrumented": false,
+      "total_avg": 19439881
+     },
      "id": "crypto_kex_CreTAKE-K2K-ZEN256_ref",
      "impl": "ref",
      "kat": {
@@ -15723,6 +24057,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 9831435,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 3417948,
+        "hash_max": 4001495,
+        "hash_median": 3272080,
+        "hash_min": 3167867,
+        "invalid": false,
+        "pct": 10.54,
+        "total_avg": 32440597,
+        "total_median": 32241094
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 1005,
+        "total_median": 1005
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 741774,
+        "hash_max": 1054367,
+        "hash_median": 637610,
+        "hash_min": 637591,
+        "invalid": false,
+        "pct": 18.82,
+        "total_avg": 3940888,
+        "total_median": 3798406
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 908469,
+        "hash_max": 1679505,
+        "hash_median": 741759,
+        "hash_min": 637565,
+        "invalid": false,
+        "pct": 21.79,
+        "total_avg": 4168850,
+        "total_median": 3940840
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 1275237,
+        "hash_max": 1858723,
+        "hash_median": 1129365,
+        "hash_min": 1025171,
+        "invalid": false,
+        "pct": 22.49,
+        "total_avg": 5669118,
+        "total_median": 5469609
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 3488007,
+        "hash_max": 3488097,
+        "hash_median": 3487988,
+        "hash_min": 3487987,
+        "invalid": false,
+        "pct": 18.13,
+        "total_avg": 19236694,
+        "total_median": 19236680
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 15.02,
+      "pct_measured": 15.02,
+      "self_instrumented": false,
+      "total_avg": 65457152
+     },
      "id": "crypto_kex_CreTAKE-K2K-ZEN512_ref",
      "impl": "ref",
      "kat": {
@@ -15852,6 +24279,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5068614,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 1094554,
+        "hash_max": 1096626,
+        "hash_median": 1093172,
+        "hash_min": 1093172,
+        "invalid": false,
+        "pct": 41.65,
+        "total_avg": 2628246,
+        "total_median": 2627020
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 220135,
+        "hash_max": 237250,
+        "hash_median": 215878,
+        "hash_min": 215878,
+        "invalid": false,
+        "pct": 41.01,
+        "total_avg": 536747,
+        "total_median": 525304
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 669678,
+        "hash_max": 669680,
+        "hash_median": 669678,
+        "hash_min": 669676,
+        "invalid": false,
+        "pct": 60.17,
+        "total_avg": 1113010,
+        "total_median": 1113058
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 208543,
+        "hash_max": 227778,
+        "hash_median": 206406,
+        "hash_min": 206406,
+        "invalid": false,
+        "pct": 39.97,
+        "total_avg": 521749,
+        "total_median": 516016
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2875704,
+        "hash_max": 4227856,
+        "hash_median": 2983704,
+        "hash_min": 1759666,
+        "invalid": false,
+        "pct": 35.06,
+        "total_avg": 8202883,
+        "total_median": 8646755
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 38.98,
+      "pct_measured": 38.98,
+      "self_instrumented": false,
+      "total_avg": 13002987
+     },
      "id": "crypto_kex_CreTAKE-K2S-PLAC128-BiT128_ref",
      "impl": "ref",
      "kat": {
@@ -15932,6 +24452,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-K2S-PLAC256-BiT256_ref",
      "impl": "ref",
      "kat": {
@@ -15998,6 +24519,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-K2S-PLAC512-BiT512_ref",
      "impl": "ref",
      "kat": {
@@ -16113,6 +24635,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4681468,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 966680,
+        "hash_max": 968752,
+        "hash_median": 965298,
+        "hash_min": 965298,
+        "invalid": false,
+        "pct": 26.26,
+        "total_avg": 3681120,
+        "total_median": 3679810
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 139859,
+        "hash_max": 182538,
+        "hash_median": 129126,
+        "hash_min": 118545,
+        "invalid": false,
+        "pct": 22.92,
+        "total_avg": 610100,
+        "total_median": 596746
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 669648,
+        "hash_max": 669744,
+        "hash_median": 669637,
+        "hash_min": 669635,
+        "invalid": false,
+        "pct": 60.17,
+        "total_avg": 1112985,
+        "total_median": 1113061
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 102729,
+        "hash_max": 149657,
+        "hash_median": 96330,
+        "hash_min": 85664,
+        "invalid": false,
+        "pct": 17.97,
+        "total_avg": 571804,
+        "total_median": 563833
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2802552,
+        "hash_max": 5581054,
+        "hash_median": 2370913,
+        "hash_min": 1824325,
+        "invalid": false,
+        "pct": 35.85,
+        "total_avg": 7817422,
+        "total_median": 6170890
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 33.94,
+      "pct_measured": 33.94,
+      "self_instrumented": false,
+      "total_avg": 13793783
+     },
      "id": "crypto_kex_CreTAKE-K2S-ZEN128-BiT128_ref",
      "impl": "ref",
      "kat": {
@@ -16193,6 +24809,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-K2S-ZEN256-BiT256_ref",
      "impl": "ref",
      "kat": {
@@ -16259,6 +24876,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-K2S-ZEN512-BiT512_ref",
      "impl": "ref",
      "kat": {
@@ -16374,6 +24992,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4939224,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 356051,
+        "hash_max": 356085,
+        "hash_median": 356047,
+        "hash_min": 356047,
+        "invalid": false,
+        "pct": 39.81,
+        "total_avg": 894420,
+        "total_median": 894415
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 675740,
+        "hash_max": 729767,
+        "hash_median": 669744,
+        "hash_min": 669672,
+        "invalid": false,
+        "pct": 60.38,
+        "total_avg": 1119203,
+        "total_median": 1113257
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 217914,
+        "hash_max": 237145,
+        "hash_median": 215773,
+        "hash_min": 215773,
+        "invalid": false,
+        "pct": 41.05,
+        "total_avg": 530904,
+        "total_median": 525184
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 2389150,
+        "hash_max": 6961360,
+        "hash_median": 1869038,
+        "hash_min": 1628655,
+        "invalid": false,
+        "pct": 36.16,
+        "total_avg": 6607282,
+        "total_median": 4799471
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 1300369,
+        "hash_max": 1350865,
+        "hash_median": 1292591,
+        "hash_min": 1290844,
+        "invalid": false,
+        "pct": 43.32,
+        "total_avg": 3001601,
+        "total_median": 2990381
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 40.64,
+      "pct_measured": 40.64,
+      "self_instrumented": false,
+      "total_avg": 12153762
+     },
      "id": "crypto_kex_CreTAKE-S2K-BiT128-PLAC128_ref",
      "impl": "ref",
      "kat": {
@@ -16503,6 +25215,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4620442,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 258519,
+        "hash_max": 360908,
+        "hash_median": 232922,
+        "hash_min": 232922,
+        "invalid": false,
+        "pct": 15.71,
+        "total_avg": 1645255,
+        "total_median": 1613370
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 675733,
+        "hash_max": 729771,
+        "hash_median": 669749,
+        "hash_min": 669568,
+        "invalid": false,
+        "pct": 60.38,
+        "total_avg": 1119199,
+        "total_median": 1113280
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 135438,
+        "hash_max": 182366,
+        "hash_median": 129038,
+        "hash_min": 118373,
+        "invalid": false,
+        "pct": 22.4,
+        "total_avg": 604638,
+        "total_median": 596667
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 2461251,
+        "hash_max": 4112338,
+        "hash_median": 1992464,
+        "hash_min": 1437344,
+        "invalid": false,
+        "pct": 33.7,
+        "total_avg": 7302864,
+        "total_median": 5581046
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 1089501,
+        "hash_max": 1143160,
+        "hash_median": 1083139,
+        "hash_min": 1083139,
+        "invalid": false,
+        "pct": 35.25,
+        "total_avg": 3090415,
+        "total_median": 3084162
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 33.57,
+      "pct_measured": 33.57,
+      "self_instrumented": false,
+      "total_avg": 13762723
+     },
      "id": "crypto_kex_CreTAKE-S2K-BiT128-ZEN128_ref",
      "impl": "ref",
      "kat": {
@@ -16583,6 +25389,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2K-BiT256-PLAC256_ref",
      "impl": "ref",
      "kat": {
@@ -16649,6 +25456,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2K-BiT256-ZEN256_ref",
      "impl": "ref",
      "kat": {
@@ -16715,6 +25523,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2K-BiT512-PLAC512_ref",
      "impl": "ref",
      "kat": {
@@ -16781,6 +25590,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2K-BiT512-ZEN512_ref",
      "impl": "ref",
      "kat": {
@@ -16896,6 +25706,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 7743558,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 1004682,
+        "hash_max": 1022881,
+        "hash_median": 1001509,
+        "hash_min": 1001509,
+        "invalid": false,
+        "pct": 45.31,
+        "total_avg": 2217452,
+        "total_median": 2210734
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 675727,
+        "hash_max": 729762,
+        "hash_median": 669742,
+        "hash_min": 669563,
+        "invalid": false,
+        "pct": 60.38,
+        "total_avg": 1119035,
+        "total_median": 1113032
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 669626,
+        "hash_max": 669660,
+        "hash_median": 669622,
+        "hash_min": 669620,
+        "invalid": false,
+        "pct": 60.16,
+        "total_avg": 1113082,
+        "total_median": 1113080
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 2089638,
+        "hash_max": 3342068,
+        "hash_median": 1837658,
+        "hash_min": 1330964,
+        "invalid": false,
+        "pct": 36.04,
+        "total_avg": 5798200,
+        "total_median": 5045180
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 3303885,
+        "hash_max": 5341640,
+        "hash_median": 2965365,
+        "hash_min": 2091553,
+        "invalid": false,
+        "pct": 36.54,
+        "total_avg": 9041553,
+        "total_median": 7819346
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 40.14,
+      "pct_measured": 40.14,
+      "self_instrumented": false,
+      "total_avg": 19289674
+     },
      "id": "crypto_kex_CreTAKE-S2S-BiT128-ePLAC128_ref",
      "impl": "ref",
      "kat": {
@@ -17025,6 +25929,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 8084163,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 902953,
+        "hash_max": 942446,
+        "hash_median": 901526,
+        "hash_min": 878447,
+        "invalid": false,
+        "pct": 30.5,
+        "total_avg": 2960370,
+        "total_median": 2958406
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 352,
+        "total_median": 352
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 675730,
+        "hash_max": 729765,
+        "hash_median": 669746,
+        "hash_min": 669566,
+        "invalid": false,
+        "pct": 60.39,
+        "total_avg": 1119033,
+        "total_median": 1113028
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 669626,
+        "hash_max": 669627,
+        "hash_median": 669626,
+        "hash_min": 669624,
+        "invalid": false,
+        "pct": 60.16,
+        "total_avg": 1113076,
+        "total_median": 1113081
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 2630424,
+        "hash_max": 7072872,
+        "hash_median": 1906596,
+        "hash_min": 1214775,
+        "invalid": false,
+        "pct": 32.51,
+        "total_avg": 8092152,
+        "total_median": 5547656
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 3205430,
+        "hash_max": 4726281,
+        "hash_median": 3155489,
+        "hash_min": 2005986,
+        "invalid": false,
+        "pct": 37.05,
+        "total_avg": 8651665,
+        "total_median": 8358754
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 36.85,
+      "pct_measured": 36.85,
+      "self_instrumented": false,
+      "total_avg": 21936648
+     },
      "id": "crypto_kex_CreTAKE-S2S-BiT128-eZEN128_ref",
      "impl": "ref",
      "kat": {
@@ -17105,6 +26103,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2S-BiT256-ePLAC256_ref",
      "impl": "ref",
      "kat": {
@@ -17171,6 +26170,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2S-BiT256-eZEN256_ref",
      "impl": "ref",
      "kat": {
@@ -17237,6 +26237,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2S-BiT512-ePLAC512_ref",
      "impl": "ref",
      "kat": {
@@ -17303,6 +26304,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_CreTAKE-S2S-BiT512-eZEN512_ref",
      "impl": "ref",
      "kat": {
@@ -17358,62 +26360,62 @@ window.NGCCM4_DATA = {
       "bss": 560,
       "data": 1352,
       "source": "report",
-      "text": 51096,
-      "total": 53008
+      "text": 54664,
+      "total": 56576
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
-       "avg": 5216,
-       "count": 100,
-       "max": 5216,
-       "median": 5216,
+       "avg": 5219,
+       "count": 10,
+       "max": 5219,
+       "median": 5219,
        "min": 5216
       },
       "derive_b": {
-       "avg": 3111072,
-       "count": 100,
-       "max": 3111563,
-       "median": 3111073,
-       "min": 3110591
+       "avg": 2323622,
+       "count": 10,
+       "max": 2323886,
+       "median": 2323550,
+       "min": 2323391
       },
       "init_a": {
-       "avg": 2961462,
-       "count": 100,
-       "max": 3016635,
-       "median": 2963788,
-       "min": 2889967
+       "avg": 2139271,
+       "count": 10,
+       "max": 2147252,
+       "median": 2140584,
+       "min": 2120881
       },
       "init_b": {
-       "avg": 2957662,
-       "count": 100,
-       "max": 3016715,
-       "median": 2953322,
-       "min": 2868835
+       "avg": 2136738,
+       "count": 10,
+       "max": 2160345,
+       "median": 2134086,
+       "min": 2120889
       },
       "pass1": {
-       "avg": 365893,
-       "count": 100,
-       "max": 366388,
-       "median": 365892,
-       "min": 365350
+       "avg": 365790,
+       "count": 10,
+       "max": 366056,
+       "median": 365797,
+       "min": 365456
       },
       "pass2": {
-       "avg": 11253632,
-       "count": 100,
-       "max": 42991170,
-       "median": 9097853,
-       "min": 5045455
+       "avg": 9345150,
+       "count": 10,
+       "max": 16346227,
+       "median": 8441420,
+       "min": 4170854
       },
       "pass3": {
-       "avg": 13799806,
-       "count": 100,
-       "max": 52562120,
-       "median": 11200410,
-       "min": 7780973
+       "avg": 11395167,
+       "count": 10,
+       "max": 24491228,
+       "median": 8191601,
+       "min": 6118501
       }
      },
-     "cycles_total": 34454743,
+     "cycles_total": 27710957,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -17426,6 +26428,129 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 10332805,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 5240,
+        "hash_max": 5240,
+        "hash_median": 5240,
+        "hash_min": 5240,
+        "invalid": false,
+        "pct": 95.46,
+        "total_avg": 5489,
+        "total_median": 5489
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 1267497,
+        "hash_max": 1267532,
+        "hash_median": 1267493,
+        "hash_min": 1267493,
+        "invalid": false,
+        "pct": 54.11,
+        "total_avg": 2342416,
+        "total_median": 2342468
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 1335287,
+        "hash_max": 1348034,
+        "hash_median": 1335284,
+        "hash_min": 1322532,
+        "invalid": false,
+        "pct": 61.63,
+        "total_avg": 2166794,
+        "total_median": 2166782
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 1325084,
+        "hash_max": 1360787,
+        "hash_median": 1322534,
+        "hash_min": 1284281,
+        "invalid": false,
+        "pct": 61.46,
+        "total_avg": 2156155,
+        "total_median": 2153580
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 291575,
+        "hash_max": 291583,
+        "hash_median": 291581,
+        "hash_min": 291522,
+        "invalid": false,
+        "pct": 77.76,
+        "total_avg": 374950,
+        "total_median": 374990
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2290248,
+        "hash_max": 4003893,
+        "hash_median": 2040356,
+        "hash_min": 1861835,
+        "invalid": false,
+        "pct": 38.73,
+        "total_avg": 5913595,
+        "total_median": 4976990
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 3817874,
+        "hash_max": 4960280,
+        "hash_median": 3889271,
+        "hash_min": 2818262,
+        "invalid": false,
+        "pct": 37.58,
+        "total_avg": 10158237,
+        "total_median": 10446727
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb",
+       "keccak_absorb_once.constprop.1",
+       "pqcrystals_dilithium2_ref_dilithium_shake128_stream_init",
+       "pqcrystals_dilithium2_ref_dilithium_shake256_stream_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake128_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake128_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks",
+       "pqcrystals_dilithium_fips202_ref_shake256",
+       "pqcrystals_dilithium_fips202_ref_shake256_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake256_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake256_init",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeeze",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeezeblocks"
+      ],
+      "pct": 44.7,
+      "pct_measured": 44.7,
+      "self_instrumented": false,
+      "total_avg": 23117636
+     },
      "id": "crypto_kex_DKEX-128_m4",
      "impl": "m4",
      "kat": {
@@ -17482,12 +26607,12 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "derive_a": 232,
-      "derive_b": 36448,
-      "init_a": 38708,
-      "init_b": 38600,
+      "derive_b": 36440,
+      "init_a": 38592,
+      "init_b": 38592,
       "pass1": 6844,
-      "pass2": 53640,
-      "pass3": 52344
+      "pass2": 53632,
+      "pass3": 52336
      },
      "status_text": null,
      "tier": "board"
@@ -17498,62 +26623,62 @@ window.NGCCM4_DATA = {
       "bss": 560,
       "data": 1352,
       "source": "report",
-      "text": 39256,
-      "total": 41168
+      "text": 42888,
+      "total": 44800
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
-       "avg": 5216,
-       "count": 100,
-       "max": 5216,
-       "median": 5216,
+       "avg": 5217,
+       "count": 10,
+       "max": 5218,
+       "median": 5218,
        "min": 5215
       },
       "derive_b": {
-       "avg": 3111069,
-       "count": 100,
-       "max": 3111564,
-       "median": 3111062,
-       "min": 3110630
+       "avg": 2323619,
+       "count": 10,
+       "max": 2323880,
+       "median": 2323554,
+       "min": 2323387
       },
       "init_a": {
-       "avg": 2961457,
-       "count": 100,
-       "max": 3016629,
-       "median": 2963786,
-       "min": 2889930
+       "avg": 2139256,
+       "count": 10,
+       "max": 2147272,
+       "median": 2140568,
+       "min": 2120862
       },
       "init_b": {
-       "avg": 2957659,
-       "count": 100,
-       "max": 3016710,
-       "median": 2953326,
-       "min": 2868839
+       "avg": 2136718,
+       "count": 10,
+       "max": 2160325,
+       "median": 2134087,
+       "min": 2120871
       },
       "pass1": {
-       "avg": 593621,
-       "count": 100,
-       "max": 593980,
-       "median": 593622,
-       "min": 593231
+       "avg": 593566,
+       "count": 10,
+       "max": 593771,
+       "median": 593565,
+       "min": 593278
       },
       "pass2": {
-       "avg": 11592014,
-       "count": 100,
-       "max": 43329644,
-       "median": 9436207,
-       "min": 5383975
+       "avg": 9683507,
+       "count": 10,
+       "max": 16684509,
+       "median": 8779717,
+       "min": 4509260
       },
       "pass3": {
-       "avg": 13961645,
-       "count": 100,
-       "max": 52724057,
-       "median": 11362244,
-       "min": 7942760
+       "avg": 11556944,
+       "count": 10,
+       "max": 24652940,
+       "median": 8353418,
+       "min": 6280306
       }
      },
-     "cycles_total": 35182681,
+     "cycles_total": 28438827,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -17566,6 +26691,128 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 10345337,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 5241,
+        "hash_max": 5241,
+        "hash_median": 5241,
+        "hash_min": 5241,
+        "invalid": false,
+        "pct": 95.46,
+        "total_avg": 5490,
+        "total_median": 5490
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 1267498,
+        "hash_max": 1267532,
+        "hash_median": 1267494,
+        "hash_min": 1267494,
+        "invalid": false,
+        "pct": 54.11,
+        "total_avg": 2342343,
+        "total_median": 2342384
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 1335286,
+        "hash_max": 1348037,
+        "hash_median": 1335286,
+        "hash_min": 1322535,
+        "invalid": false,
+        "pct": 61.63,
+        "total_avg": 2166725,
+        "total_median": 2166716
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 1325088,
+        "hash_max": 1360787,
+        "hash_median": 1322534,
+        "hash_min": 1284281,
+        "invalid": false,
+        "pct": 61.46,
+        "total_avg": 2156096,
+        "total_median": 2153534
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 297845,
+        "hash_max": 297851,
+        "hash_median": 297851,
+        "hash_min": 297791,
+        "invalid": false,
+        "pct": 49.52,
+        "total_avg": 601494,
+        "total_median": 601522
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2296511,
+        "hash_max": 4010155,
+        "hash_median": 2046606,
+        "hash_min": 1868105,
+        "invalid": false,
+        "pct": 36.74,
+        "total_avg": 6250651,
+        "total_median": 5314020
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 3817868,
+        "hash_max": 4960274,
+        "hash_median": 3889268,
+        "hash_min": 2818262,
+        "invalid": false,
+        "pct": 37.0,
+        "total_avg": 10319868,
+        "total_median": 10608382
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb",
+       "keccak_absorb_once.constprop.1",
+       "pqcrystals_dilithium2_ref_dilithium_shake128_stream_init",
+       "pqcrystals_dilithium2_ref_dilithium_shake256_stream_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake128_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake128_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks",
+       "pqcrystals_dilithium_fips202_ref_shake256",
+       "pqcrystals_dilithium_fips202_ref_shake256_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake256_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake256_init",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeeze",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeezeblocks"
+      ],
+      "pct": 43.39,
+      "pct_measured": 43.39,
+      "self_instrumented": false,
+      "total_avg": 23842667
+     },
      "id": "crypto_kex_DKEX-128_ref",
      "impl": "ref",
      "kat": {
@@ -17622,12 +26869,12 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "derive_a": 232,
-      "derive_b": 36448,
-      "init_a": 38600,
-      "init_b": 38600,
+      "derive_b": 36440,
+      "init_a": 38592,
+      "init_b": 38592,
       "pass1": 7568,
-      "pass2": 53748,
-      "pass3": 52452
+      "pass2": 53740,
+      "pass3": 52444
      },
      "status_text": null,
      "tier": "board"
@@ -17638,62 +26885,62 @@ window.NGCCM4_DATA = {
       "bss": 560,
       "data": 1352,
       "source": "report",
-      "text": 51736,
-      "total": 53648
+      "text": 55432,
+      "total": 57344
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
        "avg": 5216,
-       "count": 100,
+       "count": 10,
        "max": 5217,
        "median": 5216,
        "min": 5216
       },
       "derive_b": {
-       "avg": 8837048,
-       "count": 100,
-       "max": 8837510,
-       "median": 8837041,
-       "min": 8836681
+       "avg": 6363056,
+       "count": 10,
+       "max": 6363264,
+       "median": 6363070,
+       "min": 6362818
       },
       "init_a": {
-       "avg": 8701025,
-       "count": 100,
-       "max": 8802364,
-       "median": 8696898,
-       "min": 8591217
+       "avg": 6137964,
+       "count": 10,
+       "max": 6185389,
+       "median": 6139257,
+       "min": 6093245
       },
       "init_b": {
-       "avg": 8699563,
-       "count": 100,
-       "max": 8802406,
-       "median": 8696874,
-       "min": 8570144
+       "avg": 6122301,
+       "count": 10,
+       "max": 6146026,
+       "median": 6126264,
+       "min": 6067064
       },
       "pass1": {
-       "avg": 1127929,
-       "count": 100,
-       "max": 1129000,
-       "median": 1127912,
-       "min": 1126949
+       "avg": 1127576,
+       "count": 10,
+       "max": 1128072,
+       "median": 1127564,
+       "min": 1126972
       },
       "pass2": {
-       "avg": 21648017,
-       "count": 100,
-       "max": 63542259,
-       "median": 19468352,
-       "min": 12828757
+       "avg": 14669001,
+       "count": 10,
+       "max": 31929343,
+       "median": 12938540,
+       "min": 10227847
       },
       "pass3": {
-       "avg": 29181827,
-       "count": 100,
-       "max": 77362815,
-       "median": 26692395,
-       "min": 20548818
+       "avg": 19273220,
+       "count": 10,
+       "max": 26834252,
+       "median": 18186060,
+       "min": 15473700
       }
      },
-     "cycles_total": 78200625,
+     "cycles_total": 53698334,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -17706,6 +26953,129 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 31336002,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 5240,
+        "hash_max": 5240,
+        "hash_median": 5240,
+        "hash_min": 5240,
+        "invalid": false,
+        "pct": 95.46,
+        "total_avg": 5489,
+        "total_median": 5489
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 3970556,
+        "hash_max": 3970583,
+        "hash_median": 3970545,
+        "hash_min": 3970544,
+        "invalid": false,
+        "pct": 61.83,
+        "total_avg": 6421425,
+        "total_median": 6421378
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 4148008,
+        "hash_max": 4204098,
+        "hash_median": 4140343,
+        "hash_min": 4102128,
+        "invalid": false,
+        "pct": 67.03,
+        "total_avg": 6188337,
+        "total_median": 6180428
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 4140342,
+        "hash_max": 4165844,
+        "hash_median": 4133967,
+        "hash_min": 4114840,
+        "invalid": false,
+        "pct": 66.99,
+        "total_avg": 6180307,
+        "total_median": 6173916
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 928649,
+        "hash_max": 928657,
+        "hash_median": 928655,
+        "hash_min": 928599,
+        "invalid": false,
+        "pct": 80.21,
+        "total_avg": 1157801,
+        "total_median": 1157870
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 8389443,
+        "hash_max": 11717249,
+        "hash_median": 7414054,
+        "hash_min": 6553401,
+        "invalid": false,
+        "pct": 34.0,
+        "total_avg": 24674583,
+        "total_median": 19970184
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 9753764,
+        "hash_max": 11876682,
+        "hash_median": 9581638,
+        "hash_min": 8434106,
+        "invalid": false,
+        "pct": 45.0,
+        "total_avg": 21675628,
+        "total_median": 20782178
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb",
+       "keccak_absorb_once.constprop.1",
+       "pqcrystals_dilithium5_ref_dilithium_shake128_stream_init",
+       "pqcrystals_dilithium5_ref_dilithium_shake256_stream_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake128_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake128_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks",
+       "pqcrystals_dilithium_fips202_ref_shake256",
+       "pqcrystals_dilithium_fips202_ref_shake256_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake256_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake256_init",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeeze",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeezeblocks"
+      ],
+      "pct": 47.26,
+      "pct_measured": 47.26,
+      "self_instrumented": false,
+      "total_avg": 66303570
+     },
      "id": "crypto_kex_DKEX-256_m4",
      "impl": "m4",
      "kat": {
@@ -17762,12 +27132,12 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "derive_a": 232,
-      "derive_b": 93196,
-      "init_a": 97992,
-      "init_b": 97992,
-      "pass1": 11324,
-      "pass2": 125676,
-      "pass3": 123100
+      "derive_b": 93080,
+      "init_a": 98092,
+      "init_b": 98092,
+      "pass1": 11212,
+      "pass2": 125668,
+      "pass3": 122984
      },
      "status_text": null,
      "tier": "board"
@@ -17778,62 +27148,62 @@ window.NGCCM4_DATA = {
       "bss": 964,
       "data": 1352,
       "source": "report",
-      "text": 40088,
-      "total": 42404
+      "text": 43916,
+      "total": 46232
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
        "avg": 5216,
-       "count": 100,
+       "count": 10,
        "max": 5216,
        "median": 5216,
        "min": 5216
       },
       "derive_b": {
-       "avg": 8837047,
-       "count": 100,
-       "max": 8837528,
-       "median": 8837030,
-       "min": 8836684
+       "avg": 6363137,
+       "count": 10,
+       "max": 6363325,
+       "median": 6363151,
+       "min": 6362921
       },
       "init_a": {
-       "avg": 8701027,
-       "count": 100,
-       "max": 8802363,
-       "median": 8696902,
-       "min": 8591222
+       "avg": 6138012,
+       "count": 10,
+       "max": 6185469,
+       "median": 6139280,
+       "min": 6093293
       },
       "init_b": {
-       "avg": 8699563,
-       "count": 100,
-       "max": 8802406,
-       "median": 8696854,
-       "min": 8570108
+       "avg": 6122338,
+       "count": 10,
+       "max": 6146077,
+       "median": 6126270,
+       "min": 6067107
       },
       "pass1": {
-       "avg": 1681971,
-       "count": 100,
-       "max": 1682730,
-       "median": 1681982,
-       "min": 1681210
+       "avg": 1681750,
+       "count": 10,
+       "max": 1682108,
+       "median": 1681738,
+       "min": 1681280
       },
       "pass2": {
-       "avg": 22346695,
-       "count": 100,
-       "max": 64241224,
-       "median": 20167107,
-       "min": 13527611
+       "avg": 15367804,
+       "count": 10,
+       "max": 32628202,
+       "median": 13637412,
+       "min": 10926678
       },
       "pass3": {
-       "avg": 29445299,
-       "count": 100,
-       "max": 77626316,
-       "median": 26955861,
-       "min": 20812278
+       "avg": 19536775,
+       "count": 10,
+       "max": 27097814,
+       "median": 18449614,
+       "min": 15737272
       }
      },
-     "cycles_total": 79716818,
+     "cycles_total": 55215032,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -17846,6 +27216,128 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 31342678,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 5241,
+        "hash_max": 5241,
+        "hash_median": 5241,
+        "hash_min": 5241,
+        "invalid": false,
+        "pct": 95.46,
+        "total_avg": 5490,
+        "total_median": 5490
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 3970544,
+        "hash_max": 3970578,
+        "hash_median": 3970540,
+        "hash_min": 3970540,
+        "invalid": false,
+        "pct": 61.83,
+        "total_avg": 6421490,
+        "total_median": 6421452
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 4147992,
+        "hash_max": 4204089,
+        "hash_median": 4140334,
+        "hash_min": 4102119,
+        "invalid": false,
+        "pct": 67.03,
+        "total_avg": 6188402,
+        "total_median": 6180501
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 4140348,
+        "hash_max": 4165877,
+        "hash_median": 4133980,
+        "hash_min": 4114833,
+        "invalid": false,
+        "pct": 66.99,
+        "total_avg": 6180388,
+        "total_median": 6173972
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 932012,
+        "hash_max": 932018,
+        "hash_median": 932018,
+        "hash_min": 931959,
+        "invalid": false,
+        "pct": 53.28,
+        "total_avg": 1749428,
+        "total_median": 1749488
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 8392780,
+        "hash_max": 11720619,
+        "hash_median": 7417373,
+        "hash_min": 6556738,
+        "invalid": false,
+        "pct": 33.03,
+        "total_avg": 25410951,
+        "total_median": 20706562
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 9753761,
+        "hash_max": 11876705,
+        "hash_median": 9581624,
+        "hash_min": 8434090,
+        "invalid": false,
+        "pct": 44.46,
+        "total_avg": 21939256,
+        "total_median": 21045820
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb",
+       "keccak_absorb_once.constprop.1",
+       "pqcrystals_dilithium5_ref_dilithium_shake128_stream_init",
+       "pqcrystals_dilithium5_ref_dilithium_shake256_stream_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake128_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake128_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks",
+       "pqcrystals_dilithium_fips202_ref_shake256",
+       "pqcrystals_dilithium_fips202_ref_shake256_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake256_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake256_init",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeeze",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeezeblocks"
+      ],
+      "pct": 46.16,
+      "pct_measured": 46.16,
+      "self_instrumented": false,
+      "total_avg": 67895405
+     },
      "id": "crypto_kex_DKEX-256_ref",
      "impl": "ref",
      "kat": {
@@ -17902,12 +27394,12 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "derive_a": 232,
-      "derive_b": 93088,
-      "init_a": 98100,
-      "init_b": 98100,
+      "derive_b": 93080,
+      "init_a": 97984,
+      "init_b": 98092,
       "pass1": 18144,
-      "pass2": 125676,
-      "pass3": 122992
+      "pass2": 125560,
+      "pass3": 122984
      },
      "status_text": null,
      "tier": "board"
@@ -17918,62 +27410,62 @@ window.NGCCM4_DATA = {
       "bss": 560,
       "data": 1352,
       "source": "report",
-      "text": 49832,
-      "total": 51744
+      "text": 53592,
+      "total": 55504
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
        "avg": 15792,
-       "count": 100,
-       "max": 15793,
+       "count": 10,
+       "max": 15792,
        "median": 15792,
        "min": 15792
       },
       "derive_b": {
-       "avg": 8848358,
-       "count": 100,
-       "max": 8848705,
-       "median": 8848356,
-       "min": 8847970
+       "avg": 6374576,
+       "count": 10,
+       "max": 6374737,
+       "median": 6374570,
+       "min": 6374483
       },
       "init_a": {
-       "avg": 8701034,
-       "count": 100,
-       "max": 8802378,
-       "median": 8696903,
-       "min": 8591181
+       "avg": 6138095,
+       "count": 10,
+       "max": 6185500,
+       "median": 6139383,
+       "min": 6093377
       },
       "init_b": {
-       "avg": 8699572,
-       "count": 100,
-       "max": 8802416,
-       "median": 8696872,
-       "min": 8570149
+       "avg": 6122431,
+       "count": 10,
+       "max": 6146163,
+       "median": 6126358,
+       "min": 6067262
       },
       "pass1": {
-       "avg": 3422881,
-       "count": 100,
-       "max": 3423681,
-       "median": 3422816,
-       "min": 3422022
+       "avg": 3422827,
+       "count": 10,
+       "max": 3423277,
+       "median": 3422794,
+       "min": 3422394
       },
       "pass2": {
-       "avg": 24555138,
-       "count": 100,
-       "max": 70053641,
-       "median": 21939684,
-       "min": 15795589
+       "avg": 18968923,
+       "count": 10,
+       "max": 29972521,
+       "median": 18368804,
+       "min": 13195429
       },
       "pass3": {
-       "avg": 30487450,
-       "count": 100,
-       "max": 73154798,
-       "median": 27094731,
-       "min": 21201865
+       "avg": 26692673,
+       "count": 10,
+       "max": 61061365,
+       "median": 24257274,
+       "min": 16127376
       }
      },
-     "cycles_total": 84730225,
+     "cycles_total": 67735317,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -17986,6 +27478,128 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "pseudoXOF_squeeze",
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 35089843,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 15899,
+        "hash_max": 15899,
+        "hash_median": 15899,
+        "hash_min": 15899,
+        "invalid": false,
+        "pct": 98.32,
+        "total_avg": 16170,
+        "total_median": 16170
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 3981080,
+        "hash_max": 3981109,
+        "hash_median": 3981069,
+        "hash_min": 3981069,
+        "invalid": false,
+        "pct": 61.88,
+        "total_avg": 6433030,
+        "total_median": 6433051
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 4147996,
+        "hash_max": 4204089,
+        "hash_median": 4140354,
+        "hash_min": 4102081,
+        "invalid": false,
+        "pct": 67.03,
+        "total_avg": 6188468,
+        "total_median": 6180566
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 4140348,
+        "hash_max": 4165878,
+        "hash_median": 4133980,
+        "hash_min": 4114834,
+        "invalid": false,
+        "pct": 66.99,
+        "total_avg": 6180462,
+        "total_median": 6174061
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 3047228,
+        "hash_max": 3047271,
+        "hash_median": 3047231,
+        "hash_min": 3047157,
+        "invalid": false,
+        "pct": 87.17,
+        "total_avg": 3495730,
+        "total_median": 3495926
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 9787744,
+        "hash_max": 10992676,
+        "hash_median": 9845160,
+        "hash_min": 8123809,
+        "invalid": false,
+        "pct": 45.84,
+        "total_avg": 21350810,
+        "total_median": 21999994
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 9969548,
+        "hash_max": 11862987,
+        "hash_median": 9567903,
+        "hash_min": 8994164,
+        "invalid": false,
+        "pct": 47.69,
+        "total_avg": 20903006,
+        "total_median": 18973881
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb",
+       "keccak_absorb_once.constprop.1",
+       "pqcrystals_dilithium5_ref_dilithium_shake128_stream_init",
+       "pqcrystals_dilithium5_ref_dilithium_shake256_stream_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake128_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake128_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks",
+       "pqcrystals_dilithium_fips202_ref_shake256",
+       "pqcrystals_dilithium_fips202_ref_shake256_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake256_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake256_init",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeeze",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeezeblocks"
+      ],
+      "pct": 54.35,
+      "pct_measured": 54.35,
+      "self_instrumented": false,
+      "total_avg": 64567676
+     },
      "id": "crypto_kex_DKEX-512_m4",
      "impl": "m4",
      "kat": {
@@ -18042,12 +27656,12 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "derive_a": 320,
-      "derive_b": 93104,
-      "init_a": 97992,
-      "init_b": 97992,
-      "pass1": 33024,
-      "pass2": 125740,
-      "pass3": 123164
+      "derive_b": 93096,
+      "init_a": 97984,
+      "init_b": 98092,
+      "pass1": 33132,
+      "pass2": 125732,
+      "pass3": 123048
      },
      "status_text": null,
      "tier": "board"
@@ -18058,62 +27672,62 @@ window.NGCCM4_DATA = {
       "bss": 964,
       "data": 1352,
       "source": "report",
-      "text": 40920,
-      "total": 43236
+      "text": 44684,
+      "total": 47000
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
-       "avg": 15793,
-       "count": 100,
-       "max": 15794,
-       "median": 15793,
-       "min": 15793
+       "avg": 15794,
+       "count": 10,
+       "max": 15795,
+       "median": 15794,
+       "min": 15794
       },
       "derive_b": {
-       "avg": 8848354,
-       "count": 100,
-       "max": 8848702,
-       "median": 8848346,
-       "min": 8847982
+       "avg": 6374538,
+       "count": 10,
+       "max": 6374692,
+       "median": 6374542,
+       "min": 6374407
       },
       "init_a": {
-       "avg": 8701030,
-       "count": 100,
-       "max": 8802372,
-       "median": 8696888,
-       "min": 8591181
+       "avg": 6138078,
+       "count": 10,
+       "max": 6185534,
+       "median": 6139350,
+       "min": 6093356
       },
       "init_b": {
-       "avg": 8699569,
-       "count": 100,
-       "max": 8802416,
-       "median": 8696844,
-       "min": 8570151
+       "avg": 6122409,
+       "count": 10,
+       "max": 6146144,
+       "median": 6126360,
+       "min": 6067197
       },
       "pass1": {
-       "avg": 4714825,
-       "count": 100,
-       "max": 4715627,
-       "median": 4714768,
-       "min": 4713999
+       "avg": 4714767,
+       "count": 10,
+       "max": 4715203,
+       "median": 4714752,
+       "min": 4714343
       },
       "pass2": {
-       "avg": 26055240,
-       "count": 100,
-       "max": 71553664,
-       "median": 23439750,
-       "min": 17295696
+       "avg": 20468954,
+       "count": 10,
+       "max": 31472583,
+       "median": 19868819,
+       "min": 14695472
       },
       "pass3": {
-       "avg": 31081159,
-       "count": 100,
-       "max": 73748429,
-       "median": 27688465,
-       "min": 21795586
+       "avg": 27286294,
+       "count": 10,
+       "max": 61654974,
+       "median": 24850867,
+       "min": 16721009
       }
      },
-     "cycles_total": 88115970,
+     "cycles_total": 71120834,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -18126,6 +27740,128 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": true,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 35119540,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "pass3",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 15897,
+        "hash_max": 15897,
+        "hash_median": 15897,
+        "hash_min": 15897,
+        "invalid": false,
+        "pct": 98.32,
+        "total_avg": 16168,
+        "total_median": 16168
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 3981030,
+        "hash_max": 3981062,
+        "hash_median": 3981022,
+        "hash_min": 3981022,
+        "invalid": false,
+        "pct": 61.89,
+        "total_avg": 6432694,
+        "total_median": 6432714
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 4147943,
+        "hash_max": 4204028,
+        "hash_median": 4140297,
+        "hash_min": 4102066,
+        "invalid": false,
+        "pct": 67.03,
+        "total_avg": 6188170,
+        "total_median": 6180278
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 4140280,
+        "hash_max": 4165780,
+        "hash_median": 4133905,
+        "hash_min": 4114780,
+        "invalid": false,
+        "pct": 66.99,
+        "total_avg": 6180133,
+        "total_median": 6173732
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 3062239,
+        "hash_max": 3062276,
+        "hash_median": 3062243,
+        "hash_min": 3062171,
+        "invalid": false,
+        "pct": 63.01,
+        "total_avg": 4859713,
+        "total_median": 4859894
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 9802707,
+        "hash_max": 11007601,
+        "hash_median": 9860110,
+        "hash_min": 8138783,
+        "invalid": false,
+        "pct": 42.76,
+        "total_avg": 22922533,
+        "total_median": 23571737
+       },
+       "pass3": {
+        "count": 10,
+        "hash_avg": 9969444,
+        "hash_max": 11862854,
+        "hash_median": 9567807,
+        "hash_min": 8994031,
+        "invalid": false,
+        "pct": 46.38,
+        "total_avg": 21496028,
+        "total_median": 19566895
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb",
+       "keccak_absorb_once.constprop.1",
+       "pqcrystals_dilithium5_ref_dilithium_shake128_stream_init",
+       "pqcrystals_dilithium5_ref_dilithium_shake256_stream_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake128_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake128_init",
+       "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks",
+       "pqcrystals_dilithium_fips202_ref_shake256",
+       "pqcrystals_dilithium_fips202_ref_shake256_absorb",
+       "pqcrystals_dilithium_fips202_ref_shake256_finalize",
+       "pqcrystals_dilithium_fips202_ref_shake256_init",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeeze",
+       "pqcrystals_dilithium_fips202_ref_shake256_squeezeblocks"
+      ],
+      "pct": 51.57,
+      "pct_measured": 51.57,
+      "self_instrumented": false,
+      "total_avg": 68095439
+     },
      "id": "crypto_kex_DKEX-512_ref",
      "impl": "ref",
      "kat": {
@@ -18182,12 +27918,12 @@ window.NGCCM4_DATA = {
      },
      "stack": {
       "derive_a": 320,
-      "derive_b": 93212,
-      "init_a": 98100,
-      "init_b": 98100,
-      "pass1": 33048,
-      "pass2": 125740,
-      "pass3": 123056
+      "derive_b": 93204,
+      "init_a": 97984,
+      "init_b": 98092,
+      "pass1": 33156,
+      "pass2": 125624,
+      "pass3": 123048
      },
      "status_text": null,
      "tier": "board"
@@ -18198,48 +27934,48 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 37112,
-      "total": 39012
+      "text": 40820,
+      "total": 42720
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
        "avg": 26029,
-       "count": 100,
+       "count": 10,
        "max": 26029,
        "median": 26029,
        "min": 26029
       },
       "derive_b": {
-       "avg": 12229927,
-       "count": 100,
-       "max": 12229999,
-       "median": 12229929,
-       "min": 12229842
+       "avg": 11855935,
+       "count": 10,
+       "max": 11855975,
+       "median": 11855932,
+       "min": 11855887
       },
       "init_a": {
-       "avg": 11756578,
-       "count": 100,
-       "max": 11756648,
-       "median": 11756582,
-       "min": 11756512
+       "avg": 11573496,
+       "count": 10,
+       "max": 11573543,
+       "median": 11573494,
+       "min": 11573456
       },
       "init_b": {
-       "avg": 11756390,
-       "count": 100,
-       "max": 11756458,
-       "median": 11756394,
-       "min": 11756318
+       "avg": 11573310,
+       "count": 10,
+       "max": 11573339,
+       "median": 11573309,
+       "min": 11573282
       },
       "pass1": {
-       "avg": 24029012,
-       "count": 100,
-       "max": 24029119,
-       "median": 24029014,
-       "min": 24028893
+       "avg": 23471966,
+       "count": 10,
+       "max": 23472037,
+       "median": 23471966,
+       "min": 23471926
       }
      },
-     "cycles_total": 59797936,
+     "cycles_total": 58500736,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -18250,6 +27986,93 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 2133922,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 26033,
+        "total_median": 26029
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 599251,
+        "hash_max": 599251,
+        "hash_median": 599251,
+        "hash_min": 599251,
+        "invalid": false,
+        "pct": 5.05,
+        "total_avg": 11864788,
+        "total_median": 11864792
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 311808,
+        "hash_max": 311808,
+        "hash_median": 311808,
+        "hash_min": 311807,
+        "invalid": false,
+        "pct": 2.69,
+        "total_avg": 11578323,
+        "total_median": 11578330
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 311807,
+        "hash_max": 311807,
+        "hash_median": 311807,
+        "hash_min": 311807,
+        "invalid": false,
+        "pct": 2.69,
+        "total_avg": 11578143,
+        "total_median": 11578144
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 911056,
+        "hash_max": 911057,
+        "hash_median": 911056,
+        "hash_min": 911056,
+        "invalid": false,
+        "pct": 3.88,
+        "total_avg": 23485603,
+        "total_median": 23485592
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb.constprop.0",
+       "keccak_absorb.constprop.1",
+       "shake128_absorb",
+       "shake128_squeezeblocks",
+       "shake256"
+      ],
+      "pct": 3.65,
+      "pct_measured": 3.65,
+      "self_instrumented": false,
+      "total_avg": 58532890
+     },
      "id": "crypto_kex_MAMBA-NIKE-128_ref",
      "impl": "ref",
      "kat": {
@@ -18305,7 +28128,7 @@ window.NGCCM4_DATA = {
       "derive_b": 47684,
       "init_a": 45660,
       "init_b": 45652,
-      "pass1": 57996
+      "pass1": 58092
      },
      "status_text": null,
      "tier": "board"
@@ -18316,48 +28139,48 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 37176,
-      "total": 39076
+      "text": 40820,
+      "total": 42720
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
        "avg": 26029,
-       "count": 100,
+       "count": 10,
        "max": 26029,
        "median": 26029,
        "min": 26029
       },
       "derive_b": {
-       "avg": 12252179,
-       "count": 100,
-       "max": 12252226,
-       "median": 12252181,
-       "min": 12252119
+       "avg": 11870233,
+       "count": 10,
+       "max": 11870257,
+       "median": 11870238,
+       "min": 11870196
       },
       "init_a": {
-       "avg": 11781204,
-       "count": 100,
-       "max": 11781269,
-       "median": 11781204,
-       "min": 11781138
+       "avg": 11598113,
+       "count": 10,
+       "max": 11598150,
+       "median": 11598114,
+       "min": 11598067
       },
       "init_b": {
-       "avg": 11781009,
-       "count": 100,
-       "max": 11781058,
-       "median": 11781013,
-       "min": 11780941
+       "avg": 11597931,
+       "count": 10,
+       "max": 11597970,
+       "median": 11597935,
+       "min": 11597900
       },
       "pass1": {
-       "avg": 24077775,
-       "count": 100,
-       "max": 24077878,
-       "median": 24077771,
-       "min": 24077664
+       "avg": 23512733,
+       "count": 10,
+       "max": 23512836,
+       "median": 23512728,
+       "min": 23512696
       }
      },
-     "cycles_total": 59918196,
+     "cycles_total": 58605039,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -18368,6 +28191,93 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 2159426,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 26029,
+        "total_median": 26029
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 612000,
+        "hash_max": 612000,
+        "hash_median": 612000,
+        "hash_min": 612000,
+        "invalid": false,
+        "pct": 5.15,
+        "total_avg": 11879280,
+        "total_median": 11879278
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 311808,
+        "hash_max": 311808,
+        "hash_median": 311808,
+        "hash_min": 311807,
+        "invalid": false,
+        "pct": 2.69,
+        "total_avg": 11602938,
+        "total_median": 11602946
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 311811,
+        "hash_max": 311845,
+        "hash_median": 311807,
+        "hash_min": 311807,
+        "invalid": false,
+        "pct": 2.69,
+        "total_avg": 11602748,
+        "total_median": 11602754
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 923807,
+        "hash_max": 923807,
+        "hash_median": 923807,
+        "hash_min": 923807,
+        "invalid": false,
+        "pct": 3.93,
+        "total_avg": 23526592,
+        "total_median": 23526599
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb.constprop.0",
+       "keccak_absorb.constprop.1",
+       "shake128_absorb",
+       "shake128_squeezeblocks",
+       "shake256"
+      ],
+      "pct": 3.68,
+      "pct_measured": 3.68,
+      "self_instrumented": false,
+      "total_avg": 58637587
+     },
      "id": "crypto_kex_MAMBA-NIKE-192_ref",
      "impl": "ref",
      "kat": {
@@ -18434,48 +28344,48 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 37368,
-      "total": 39268
+      "text": 41076,
+      "total": 42976
      },
      "completed_ops": [],
      "cycles": {
       "derive_a": {
        "avg": 26029,
-       "count": 100,
+       "count": 10,
        "max": 26029,
        "median": 26029,
        "min": 26029
       },
       "derive_b": {
-       "avg": 12252172,
-       "count": 100,
-       "max": 12252224,
-       "median": 12252174,
-       "min": 12252100
+       "avg": 11870233,
+       "count": 10,
+       "max": 11870272,
+       "median": 11870231,
+       "min": 11870180
       },
       "init_a": {
-       "avg": 11884468,
-       "count": 100,
-       "max": 11884517,
-       "median": 11884472,
-       "min": 11884391
+       "avg": 11701375,
+       "count": 10,
+       "max": 11701425,
+       "median": 11701372,
+       "min": 11701326
       },
       "init_b": {
-       "avg": 11884273,
-       "count": 100,
-       "max": 11884324,
-       "median": 11884274,
-       "min": 11884206
+       "avg": 11701202,
+       "count": 10,
+       "max": 11701244,
+       "median": 11701197,
+       "min": 11701145
       },
       "pass1": {
-       "avg": 24181026,
-       "count": 100,
-       "max": 24181128,
-       "median": 24181028,
-       "min": 24180950
+       "avg": 23615994,
+       "count": 10,
+       "max": 23616042,
+       "median": 23615994,
+       "min": 23615920
       }
      },
-     "cycles_total": 60227968,
+     "cycles_total": 58914833,
      "expected_ops": [
       "init_a",
       "init_b",
@@ -18486,6 +28396,93 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 2159426,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 26029,
+        "total_median": 26029
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 612004,
+        "hash_max": 612038,
+        "hash_median": 612000,
+        "hash_min": 612000,
+        "invalid": false,
+        "pct": 5.15,
+        "total_avg": 11879262,
+        "total_median": 11879262
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 311808,
+        "hash_max": 311808,
+        "hash_median": 311808,
+        "hash_min": 311807,
+        "invalid": false,
+        "pct": 2.66,
+        "total_avg": 11706187,
+        "total_median": 11706194
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 311807,
+        "hash_max": 311807,
+        "hash_median": 311807,
+        "hash_min": 311807,
+        "invalid": false,
+        "pct": 2.66,
+        "total_avg": 11706004,
+        "total_median": 11706010
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 923807,
+        "hash_max": 923807,
+        "hash_median": 923807,
+        "hash_min": 923807,
+        "invalid": false,
+        "pct": 3.91,
+        "total_avg": 23629852,
+        "total_median": 23629843
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb.constprop.0",
+       "keccak_absorb.constprop.1",
+       "shake128_absorb",
+       "shake128_squeezeblocks",
+       "shake256"
+      ],
+      "pct": 3.66,
+      "pct_measured": 3.66,
+      "self_instrumented": false,
+      "total_avg": 58947334
+     },
      "id": "crypto_kex_MAMBA-NIKE-256_ref",
      "impl": "ref",
      "kat": {
@@ -18539,7 +28536,7 @@ window.NGCCM4_DATA = {
      "stack": {
       "derive_a": 2096,
       "derive_b": 47684,
-      "init_a": 45756,
+      "init_a": 45660,
       "init_b": 45652,
       "pass1": 57996
      },
@@ -18586,6 +28583,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_MAMBA-NIKE-384_ref",
      "impl": "ref",
      "kat": {
@@ -18677,6 +28675,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_MAMBA-NIKE-512_ref",
      "impl": "ref",
      "kat": {
@@ -18794,6 +28793,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 815471,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 253836,
+        "hash_max": 253836,
+        "hash_median": 253836,
+        "hash_min": 253836,
+        "invalid": false,
+        "pct": 32.39,
+        "total_avg": 783749,
+        "total_median": 783740
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 132,
+        "total_median": 132
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 57194,
+        "hash_max": 57212,
+        "hash_median": 57212,
+        "hash_min": 57035,
+        "invalid": false,
+        "pct": 17.18,
+        "total_avg": 332912,
+        "total_median": 332930
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 57099,
+        "hash_max": 57099,
+        "hash_median": 57099,
+        "hash_min": 57099,
+        "invalid": false,
+        "pct": 17.22,
+        "total_avg": 331599,
+        "total_median": 331599
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 97497,
+        "hash_max": 97497,
+        "hash_median": 97497,
+        "hash_min": 97497,
+        "invalid": false,
+        "pct": 16.35,
+        "total_avg": 596190,
+        "total_median": 596189
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 349845,
+        "hash_max": 349943,
+        "hash_median": 349834,
+        "hash_min": 349834,
+        "invalid": false,
+        "pct": 29.81,
+        "total_avg": 1173476,
+        "total_median": 1173470
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 25.34,
+      "pct_measured": 25.34,
+      "self_instrumented": false,
+      "total_avg": 3218058
+     },
      "id": "crypto_kex_NEV-AKE-C1_ref",
      "impl": "ref",
      "kat": {
@@ -18923,6 +29015,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 722610,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 221247,
+        "hash_max": 221247,
+        "hash_median": 221247,
+        "hash_min": 221247,
+        "invalid": false,
+        "pct": 27.15,
+        "total_avg": 815025,
+        "total_median": 815025
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 132,
+        "total_median": 132
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 57197,
+        "hash_max": 57215,
+        "hash_median": 57215,
+        "hash_min": 57035,
+        "invalid": false,
+        "pct": 17.18,
+        "total_avg": 332855,
+        "total_median": 332873
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 57099,
+        "hash_max": 57099,
+        "hash_median": 57099,
+        "hash_min": 57099,
+        "invalid": false,
+        "pct": 17.22,
+        "total_avg": 331596,
+        "total_median": 331596
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 83655,
+        "hash_max": 83655,
+        "hash_median": 83655,
+        "hash_min": 83654,
+        "invalid": false,
+        "pct": 14.31,
+        "total_avg": 584675,
+        "total_median": 584671
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 303412,
+        "hash_max": 303508,
+        "hash_median": 303401,
+        "hash_min": 303401,
+        "invalid": false,
+        "pct": 25.41,
+        "total_avg": 1193923,
+        "total_median": 1193910
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 22.18,
+      "pct_measured": 22.18,
+      "self_instrumented": false,
+      "total_avg": 3258206
+     },
      "id": "crypto_kex_NEV-AKE-C1-c_ref",
      "impl": "ref",
      "kat": {
@@ -19052,6 +29237,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1443007,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 490765,
+        "hash_max": 490765,
+        "hash_median": 490765,
+        "hash_min": 490765,
+        "invalid": false,
+        "pct": 28.49,
+        "total_avg": 1722709,
+        "total_median": 1722709
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 141,
+        "total_median": 141
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 79270,
+        "hash_max": 79288,
+        "hash_median": 79288,
+        "hash_min": 79109,
+        "invalid": false,
+        "pct": 9.88,
+        "total_avg": 802385,
+        "total_median": 802403
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 79109,
+        "hash_max": 79109,
+        "hash_median": 79109,
+        "hash_min": 79109,
+        "invalid": false,
+        "pct": 9.89,
+        "total_avg": 799912,
+        "total_median": 799912
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 147875,
+        "hash_max": 147875,
+        "hash_median": 147875,
+        "hash_min": 147875,
+        "invalid": false,
+        "pct": 10.76,
+        "total_avg": 1374167,
+        "total_median": 1374160
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 645988,
+        "hash_max": 646087,
+        "hash_median": 645977,
+        "hash_min": 645977,
+        "invalid": false,
+        "pct": 25.61,
+        "total_avg": 2522049,
+        "total_median": 2522032
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 19.98,
+      "pct_measured": 19.98,
+      "self_instrumented": false,
+      "total_avg": 7221363
+     },
      "id": "crypto_kex_NEV-AKE-C2_ref",
      "impl": "ref",
      "kat": {
@@ -19181,6 +29459,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1284367,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 433594,
+        "hash_max": 433594,
+        "hash_median": 433594,
+        "hash_min": 433594,
+        "invalid": false,
+        "pct": 24.15,
+        "total_avg": 1795069,
+        "total_median": 1795065
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 141,
+        "total_median": 141
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 79273,
+        "hash_max": 79291,
+        "hash_median": 79291,
+        "hash_min": 79110,
+        "invalid": false,
+        "pct": 9.88,
+        "total_avg": 802248,
+        "total_median": 802266
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 79111,
+        "hash_max": 79111,
+        "hash_median": 79111,
+        "hash_min": 79111,
+        "invalid": false,
+        "pct": 9.89,
+        "total_avg": 799911,
+        "total_median": 799907
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 125724,
+        "hash_max": 125724,
+        "hash_median": 125724,
+        "hash_min": 125724,
+        "invalid": false,
+        "pct": 9.27,
+        "total_avg": 1356920,
+        "total_median": 1356916
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 566665,
+        "hash_max": 566760,
+        "hash_median": 566650,
+        "hash_min": 566650,
+        "invalid": false,
+        "pct": 21.98,
+        "total_avg": 2578404,
+        "total_median": 2578396
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 17.52,
+      "pct_measured": 17.52,
+      "self_instrumented": false,
+      "total_avg": 7332693
+     },
      "id": "crypto_kex_NEV-AKE-C2-c_ref",
      "impl": "ref",
      "kat": {
@@ -19310,6 +29681,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5049605,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 1832418,
+        "hash_max": 1832454,
+        "hash_median": 1832414,
+        "hash_min": 1832414,
+        "invalid": false,
+        "pct": 38.85,
+        "total_avg": 4716919,
+        "total_median": 4716920
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 181,
+        "total_median": 181
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 298192,
+        "hash_max": 298212,
+        "hash_median": 298212,
+        "hash_min": 298015,
+        "invalid": false,
+        "pct": 12.66,
+        "total_avg": 2355022,
+        "total_median": 2355038
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 298073,
+        "hash_max": 298073,
+        "hash_median": 298073,
+        "hash_min": 298073,
+        "invalid": false,
+        "pct": 12.68,
+        "total_avg": 2350291,
+        "total_median": 2350287
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 453909,
+        "hash_max": 453909,
+        "hash_median": 453909,
+        "hash_min": 453909,
+        "invalid": false,
+        "pct": 12.48,
+        "total_avg": 3637126,
+        "total_median": 3637125
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2167013,
+        "hash_max": 2167098,
+        "hash_median": 2166990,
+        "hash_min": 2166990,
+        "invalid": false,
+        "pct": 33.52,
+        "total_avg": 6464238,
+        "total_median": 6464219
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 25.86,
+      "pct_measured": 25.86,
+      "self_instrumented": false,
+      "total_avg": 19523777
+     },
      "id": "crypto_kex_NEV-AKE-C3_ref",
      "impl": "ref",
      "kat": {
@@ -19439,6 +29904,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4474008,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 1616159,
+        "hash_max": 1616192,
+        "hash_median": 1616155,
+        "hash_min": 1616154,
+        "invalid": false,
+        "pct": 33.96,
+        "total_avg": 4759062,
+        "total_median": 4759051
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 182,
+        "total_median": 182
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 298194,
+        "hash_max": 298214,
+        "hash_median": 298214,
+        "hash_min": 298015,
+        "invalid": false,
+        "pct": 12.66,
+        "total_avg": 2354764,
+        "total_median": 2354780
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 298078,
+        "hash_max": 298078,
+        "hash_median": 298078,
+        "hash_min": 298078,
+        "invalid": false,
+        "pct": 12.68,
+        "total_avg": 2350300,
+        "total_median": 2350296
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 382373,
+        "hash_max": 382407,
+        "hash_median": 382369,
+        "hash_min": 382369,
+        "invalid": false,
+        "pct": 10.69,
+        "total_avg": 3576123,
+        "total_median": 3576115
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 1879204,
+        "hash_max": 1879294,
+        "hash_median": 1879186,
+        "hash_min": 1879186,
+        "invalid": false,
+        "pct": 29.15,
+        "total_avg": 6447018,
+        "total_median": 6447026
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 22.96,
+      "pct_measured": 22.96,
+      "self_instrumented": false,
+      "total_avg": 19487449
+     },
      "id": "crypto_kex_NEV-AKE-C3-c_ref",
      "impl": "ref",
      "kat": {
@@ -19568,6 +30127,98 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1113322,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 304292,
+        "hash_max": 304292,
+        "hash_median": 304292,
+        "hash_min": 304292,
+        "invalid": false,
+        "pct": 36.72,
+        "total_avg": 828713,
+        "total_median": 828713
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 132,
+        "total_median": 132
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 91001,
+        "hash_max": 91019,
+        "hash_median": 91019,
+        "hash_min": 90840,
+        "invalid": false,
+        "pct": 23.63,
+        "total_avg": 385038,
+        "total_median": 385056
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 90906,
+        "hash_max": 90906,
+        "hash_median": 90906,
+        "hash_min": 90906,
+        "invalid": false,
+        "pct": 23.7,
+        "total_avg": 383626,
+        "total_median": 383622
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 163145,
+        "hash_max": 163145,
+        "hash_median": 163145,
+        "hash_min": 163145,
+        "invalid": false,
+        "pct": 24.22,
+        "total_avg": 673729,
+        "total_median": 673725
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 463978,
+        "hash_max": 464079,
+        "hash_median": 463967,
+        "hash_min": 463967,
+        "invalid": false,
+        "pct": 36.55,
+        "total_avg": 1269447,
+        "total_median": 1269432
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 31.44,
+      "pct_measured": 31.44,
+      "self_instrumented": false,
+      "total_avg": 3540685
+     },
      "id": "crypto_kex_NEV-AKE-R1_ref",
      "impl": "ref",
      "kat": {
@@ -19697,6 +30348,99 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1739551,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 552132,
+        "hash_max": 552133,
+        "hash_median": 552132,
+        "hash_min": 552132,
+        "invalid": false,
+        "pct": 31.38,
+        "total_avg": 1759379,
+        "total_median": 1759375
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 141,
+        "total_median": 141
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 113358,
+        "hash_max": 113376,
+        "hash_median": 113376,
+        "hash_min": 113193,
+        "invalid": false,
+        "pct": 12.28,
+        "total_avg": 923327,
+        "total_median": 923345
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 113193,
+        "hash_max": 113193,
+        "hash_median": 113193,
+        "hash_min": 113193,
+        "invalid": false,
+        "pct": 12.29,
+        "total_avg": 920651,
+        "total_median": 920647
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 205816,
+        "hash_max": 205817,
+        "hash_median": 205816,
+        "hash_min": 205816,
+        "invalid": false,
+        "pct": 13.94,
+        "total_avg": 1476339,
+        "total_median": 1476335
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 755052,
+        "hash_max": 755151,
+        "hash_median": 755041,
+        "hash_min": 755041,
+        "invalid": false,
+        "pct": 30.01,
+        "total_avg": 2516290,
+        "total_median": 2516275
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 22.9,
+      "pct_measured": 22.9,
+      "self_instrumented": false,
+      "total_avg": 7596127
+     },
      "id": "crypto_kex_NEV-AKE-R2_ref",
      "impl": "ref",
      "kat": {
@@ -19826,6 +30570,100 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 5451835,
+      "measured_ops": [
+       "init_a",
+       "init_b",
+       "pass1",
+       "pass2",
+       "derive_a",
+       "derive_b"
+      ],
+      "ops": {
+       "derive_a": {
+        "count": 10,
+        "hash_avg": 2069960,
+        "hash_max": 2069995,
+        "hash_median": 2069956,
+        "hash_min": 2069956,
+        "invalid": false,
+        "pct": 41.36,
+        "total_avg": 5004764,
+        "total_median": 5004774
+       },
+       "derive_b": {
+        "count": 10,
+        "hash_avg": 0,
+        "hash_max": 0,
+        "hash_median": 0,
+        "hash_min": 0,
+        "invalid": false,
+        "pct": 0.0,
+        "total_avg": 182,
+        "total_median": 182
+       },
+       "init_a": {
+        "count": 10,
+        "hash_avg": 190773,
+        "hash_max": 190793,
+        "hash_median": 190793,
+        "hash_min": 190594,
+        "invalid": false,
+        "pct": 7.63,
+        "total_avg": 2499498,
+        "total_median": 2499512
+       },
+       "init_b": {
+        "count": 10,
+        "hash_avg": 190654,
+        "hash_max": 190654,
+        "hash_median": 190654,
+        "hash_min": 190654,
+        "invalid": false,
+        "pct": 7.64,
+        "total_avg": 2494346,
+        "total_median": 2494341
+       },
+       "pass1": {
+        "count": 10,
+        "hash_avg": 429627,
+        "hash_max": 429627,
+        "hash_median": 429627,
+        "hash_min": 429627,
+        "invalid": false,
+        "pct": 11.18,
+        "total_avg": 3842368,
+        "total_median": 3842372
+       },
+       "pass2": {
+        "count": 10,
+        "hash_avg": 2570821,
+        "hash_max": 2570906,
+        "hash_median": 2570799,
+        "hash_min": 2570799,
+        "invalid": false,
+        "pct": 37.75,
+        "total_avg": 6809809,
+        "total_median": 6809800
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 26.4,
+      "pct_measured": 26.4,
+      "self_instrumented": false,
+      "total_avg": 20650967
+     },
      "id": "crypto_kex_NEV-AKE-R3_ref",
      "impl": "ref",
      "kat": {
@@ -19906,6 +30744,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_TriQ-KEX-128_ref",
      "impl": "ref",
      "kat": {
@@ -19972,6 +30811,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_TriQ-KEX-256_ref",
      "impl": "ref",
      "kat": {
@@ -20038,6 +30878,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_TriQ-KEX-384_ref",
      "impl": "ref",
      "kat": {
@@ -20104,6 +30945,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_kex",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_kex_TriQ-KEX-512_ref",
      "impl": "ref",
      "kat": {
@@ -20191,6 +31033,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Aigis-Sig-I_ref",
      "impl": "ref",
      "kat": {
@@ -20256,6 +31099,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Aigis-Sig-II_ref",
      "impl": "ref",
      "kat": {
@@ -20321,6 +31165,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Aigis-Sig-III_ref",
      "impl": "ref",
      "kat": {
@@ -20408,6 +31253,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 4127247,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 669576,
+        "hash_max": 669584,
+        "hash_median": 669582,
+        "hash_min": 669522,
+        "invalid": false,
+        "pct": 60.17,
+        "total_avg": 1112837,
+        "total_median": 1112921
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 2844901,
+        "hash_max": 5544935,
+        "hash_median": 2751920,
+        "hash_min": 1074849,
+        "invalid": false,
+        "pct": 32.36,
+        "total_avg": 8792070,
+        "total_median": 8697455
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 612770,
+        "hash_max": 614838,
+        "hash_median": 611391,
+        "hash_min": 611391,
+        "invalid": false,
+        "pct": 47.92,
+        "total_avg": 1278846,
+        "total_median": 1277640
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 36.9,
+      "pct_measured": 36.9,
+      "self_instrumented": false,
+      "total_avg": 11183753
+     },
      "id": "crypto_sign_BiT-128_ref",
      "impl": "ref",
      "kat": {
@@ -20501,6 +31403,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 7301036,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1960940,
+        "hash_max": 1960953,
+        "hash_median": 1960951,
+        "hash_min": 1960833,
+        "invalid": false,
+        "pct": 60.45,
+        "total_avg": 3244161,
+        "total_median": 3244098
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 3389375,
+        "hash_max": 4996648,
+        "hash_median": 2806590,
+        "hash_min": 2806569,
+        "invalid": false,
+        "pct": 32.01,
+        "total_avg": 10588766,
+        "total_median": 8022916
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 1950721,
+        "hash_max": 1955949,
+        "hash_median": 1950127,
+        "hash_min": 1950127,
+        "invalid": false,
+        "pct": 50.0,
+        "total_avg": 3901424,
+        "total_median": 3900899
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 41.17,
+      "pct_measured": 41.17,
+      "self_instrumented": false,
+      "total_avg": 17734351
+     },
      "id": "crypto_sign_BiT-256_ref",
      "impl": "ref",
      "kat": {
@@ -20594,6 +31553,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 26391606,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 5861265,
+        "hash_max": 5861313,
+        "hash_median": 5861247,
+        "hash_min": 5861246,
+        "invalid": false,
+        "pct": 68.89,
+        "total_avg": 8508518,
+        "total_median": 8508539
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 14953650,
+        "hash_max": 24275735,
+        "hash_median": 10785923,
+        "hash_min": 9572155,
+        "invalid": false,
+        "pct": 34.09,
+        "total_avg": 43861150,
+        "total_median": 29278584
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 5576691,
+        "hash_max": 5576715,
+        "hash_median": 5576676,
+        "hash_min": 5576676,
+        "invalid": false,
+        "pct": 58.3,
+        "total_avg": 9565561,
+        "total_median": 9565615
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 42.61,
+      "pct_measured": 42.61,
+      "self_instrumented": false,
+      "total_avg": 61935229
+     },
      "id": "crypto_sign_BiT-512_ref",
      "impl": "ref",
      "kat": {
@@ -20687,6 +31703,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 1084406333,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 28825390,
+        "hash_max": 28825404,
+        "hash_median": 28825401,
+        "hash_min": 28825362,
+        "invalid": false,
+        "pct": 92.62,
+        "total_avg": 31123541,
+        "total_median": 30229578
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 1023876070,
+        "hash_max": 1023928196,
+        "hash_median": 1023871914,
+        "hash_min": 1023846385,
+        "invalid": false,
+        "pct": 95.33,
+        "total_avg": 1074048950,
+        "total_median": 1074044634
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 31704873,
+        "hash_max": 31734560,
+        "hash_median": 31708974,
+        "hash_min": 31652671,
+        "invalid": false,
+        "pct": 94.71,
+        "total_avg": 33475787,
+        "total_median": 33480084
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 95.24,
+      "pct_measured": 95.24,
+      "self_instrumented": false,
+      "total_avg": 1138648278
+     },
      "id": "crypto_sign_CEDRUSALPHA-160f_ref",
      "impl": "ref",
      "kat": {
@@ -20780,6 +31853,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 14929702601,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 1,
+        "hash_avg": 939696934,
+        "hash_max": 939696934,
+        "hash_median": 939696934,
+        "hash_min": 939696934,
+        "invalid": false,
+        "pct": 92.08,
+        "total_avg": 1020487136,
+        "total_median": 1020487136
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 13955658271,
+        "hash_max": 13955658271,
+        "hash_median": 13955658271,
+        "hash_min": 13955658271,
+        "invalid": false,
+        "pct": 95.58,
+        "total_avg": 14601417848,
+        "total_median": 14601417848
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 34347396,
+        "hash_max": 34347396,
+        "hash_median": 34347396,
+        "hash_min": 34347396,
+        "invalid": false,
+        "pct": 94.98,
+        "total_avg": 36163721,
+        "total_median": 36163721
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 95.35,
+      "pct_measured": 95.35,
+      "self_instrumented": false,
+      "total_avg": 15658068705
+     },
      "id": "crypto_sign_CEDRUSALPHA-160s_ref",
      "impl": "ref",
      "kat": {
@@ -20845,6 +31975,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "link-overflow",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_CEDRUSALPHA-256f_ref",
      "impl": "ref",
      "kat": {
@@ -20902,6 +32033,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "link-overflow",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_CEDRUSALPHA-256s_ref",
      "impl": "ref",
      "kat": {
@@ -20959,6 +32091,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "link-overflow",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_CEDRUSALPHA-384s_ref",
      "impl": "ref",
      "kat": {
@@ -21044,6 +32177,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 976745568,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 25854613,
+        "hash_max": 25856186,
+        "hash_median": 25854813,
+        "hash_min": 25852164,
+        "invalid": false,
+        "pct": 95.68,
+        "total_avg": 27022400,
+        "total_median": 27022716
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 923242735,
+        "hash_max": 939593924,
+        "hash_median": 924776932,
+        "hash_min": 909013045,
+        "invalid": false,
+        "pct": 95.45,
+        "total_avg": 967205594,
+        "total_median": 968953584
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 27648220,
+        "hash_max": 27648323,
+        "hash_median": 27648210,
+        "hash_min": 27648167,
+        "invalid": false,
+        "pct": 95.59,
+        "total_avg": 28923742,
+        "total_median": 28923718
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 95.46,
+      "pct_measured": 95.46,
+      "self_instrumented": false,
+      "total_avg": 1023151736
+     },
      "id": "crypto_sign_CEDRUSC-160f_ref",
      "impl": "ref",
      "kat": {
@@ -21137,6 +32327,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 15959179634,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 1,
+        "hash_avg": 1051842384,
+        "hash_max": 1051842384,
+        "hash_median": 1051842384,
+        "hash_min": 1051842384,
+        "invalid": false,
+        "pct": 95.7,
+        "total_avg": 1099146446,
+        "total_median": 1099146446
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 14869598369,
+        "hash_max": 14869598369,
+        "hash_median": 14869598369,
+        "hash_min": 14869598369,
+        "invalid": false,
+        "pct": 95.63,
+        "total_avg": 15548320328,
+        "total_median": 15548320328
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 37738881,
+        "hash_max": 37738881,
+        "hash_median": 37738881,
+        "hash_min": 37738881,
+        "invalid": false,
+        "pct": 95.73,
+        "total_avg": 39423894,
+        "total_median": 39423894
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 95.64,
+      "pct_measured": 95.64,
+      "self_instrumented": false,
+      "total_avg": 16686890668
+     },
      "id": "crypto_sign_CEDRUSC-160s_ref",
      "impl": "ref",
      "kat": {
@@ -21230,6 +32477,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 3,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 2410071027,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 3,
+        "hash_avg": 83779457,
+        "hash_max": 83781337,
+        "hash_median": 83779896,
+        "hash_min": 83777137,
+        "invalid": false,
+        "pct": 95.26,
+        "total_avg": 87944089,
+        "total_median": 87944053
+       },
+       "sign": {
+        "count": 3,
+        "hash_avg": 2287979282,
+        "hash_max": 2340203999,
+        "hash_median": 2285999590,
+        "hash_min": 2237734257,
+        "invalid": false,
+        "pct": 95.22,
+        "total_avg": 2402735473,
+        "total_median": 2400360800
+       },
+       "verify": {
+        "count": 3,
+        "hash_avg": 38312288,
+        "hash_max": 38312445,
+        "hash_median": 38312309,
+        "hash_min": 38312110,
+        "invalid": false,
+        "pct": 95.31,
+        "total_avg": 40198902,
+        "total_median": 40198951
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 95.23,
+      "pct_measured": 95.23,
+      "self_instrumented": false,
+      "total_avg": 2530878464
+     },
      "id": "crypto_sign_CEDRUSC-256f_ref",
      "impl": "ref",
      "kat": {
@@ -21323,6 +32627,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 24915034831,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 1,
+        "hash_avg": 1745078305,
+        "hash_max": 1745078305,
+        "hash_median": 1745078305,
+        "hash_min": 1745078305,
+        "invalid": false,
+        "pct": 95.26,
+        "total_avg": 1831949662,
+        "total_median": 1831949662
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 23106570290,
+        "hash_max": 23106570290,
+        "hash_median": 23106570290,
+        "hash_min": 23106570290,
+        "invalid": false,
+        "pct": 95.28,
+        "total_avg": 24252227078,
+        "total_median": 24252227078
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 63386236,
+        "hash_max": 63386236,
+        "hash_median": 63386236,
+        "hash_min": 63386236,
+        "invalid": false,
+        "pct": 95.36,
+        "total_avg": 66471252,
+        "total_median": 66471252
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 95.28,
+      "pct_measured": 95.28,
+      "self_instrumented": false,
+      "total_avg": 26150647992
+     },
      "id": "crypto_sign_CEDRUSC-256s_ref",
      "impl": "ref",
      "kat": {
@@ -21416,6 +32777,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 24558073777,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 1,
+        "hash_avg": 1228614315,
+        "hash_max": 1228614315,
+        "hash_median": 1228614315,
+        "hash_min": 1228614315,
+        "invalid": false,
+        "pct": 98.17,
+        "total_avg": 1251509100,
+        "total_median": 1251509100
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 23093699419,
+        "hash_max": 23093699419,
+        "hash_median": 23093699419,
+        "hash_min": 23093699419,
+        "invalid": false,
+        "pct": 98.09,
+        "total_avg": 23543016552,
+        "total_median": 23543016552
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 235760043,
+        "hash_max": 235760043,
+        "hash_median": 235760043,
+        "hash_min": 235760043,
+        "invalid": false,
+        "pct": 98.13,
+        "total_avg": 240250098,
+        "total_median": 240250098
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 98.1,
+      "pct_measured": 98.1,
+      "self_instrumented": false,
+      "total_avg": 25034775750
+     },
      "id": "crypto_sign_CEDRUSC-384f_ref",
      "impl": "ref",
      "kat": {
@@ -21509,6 +32926,7 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_CEDRUSC-384s_ref",
      "impl": "ref",
      "kat": {
@@ -21598,6 +33016,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 49939884336,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 1,
+        "hash_avg": 3308286615,
+        "hash_max": 3308286615,
+        "hash_median": 3308286615,
+        "hash_min": 3308286615,
+        "invalid": false,
+        "pct": 98.08,
+        "total_avg": 3373123350,
+        "total_median": 3373123350
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 46337453097,
+        "hash_max": 46337453097,
+        "hash_median": 46337453097,
+        "hash_min": 46337453097,
+        "invalid": false,
+        "pct": 98.01,
+        "total_avg": 47280270083,
+        "total_median": 47280270083
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 294144624,
+        "hash_max": 294144624,
+        "hash_median": 294144624,
+        "hash_min": 294144624,
+        "invalid": false,
+        "pct": 98.06,
+        "total_avg": 299967866,
+        "total_median": 299967866
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 98.01,
+      "pct_measured": 98.01,
+      "self_instrumented": false,
+      "total_avg": 50953361299
+     },
      "id": "crypto_sign_CEDRUSC-512f_ref",
      "impl": "ref",
      "kat": {
@@ -21675,6 +33149,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_CEDRUSC-512s_ref",
      "impl": "ref",
      "kat": {
@@ -21762,6 +33237,74 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 6,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 9480935,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 7,
+        "hash_avg": 2474400,
+        "hash_max": 2487897,
+        "hash_median": 2465098,
+        "hash_min": 2465060,
+        "invalid": false,
+        "pct": 80.07,
+        "total_avg": 3090181,
+        "total_median": 3078721
+       },
+       "sign": {
+        "count": 6,
+        "hash_avg": 4614406,
+        "hash_max": 8236905,
+        "hash_median": 4111003,
+        "hash_min": 2967761,
+        "invalid": false,
+        "pct": 55.17,
+        "total_avg": 8363304,
+        "total_median": 7267328
+       },
+       "verify": {
+        "count": 6,
+        "hash_avg": 2392129,
+        "hash_max": 2403057,
+        "hash_median": 2391607,
+        "hash_min": 2381726,
+        "invalid": false,
+        "pct": 73.76,
+        "total_avg": 3243250,
+        "total_median": 3242615
+       }
+      },
+      "own_hash_symbols": [
+       "COMPASS_SIG_shake128_stream_init",
+       "COMPASS_SIG_shake256_stream_init",
+       "shake128",
+       "shake128_squeeze",
+       "shake128_squeezeblocks",
+       "shake256",
+       "shake256_absorb",
+       "shake256_finalize",
+       "shake256_init",
+       "shake256_squeeze",
+       "shake256_squeezeblocks"
+      ],
+      "pct": 64.51,
+      "pct_measured": 64.51,
+      "self_instrumented": false,
+      "total_avg": 14696735
+     },
      "id": "crypto_sign_COMPASS-SIG-128_ref",
      "impl": "ref",
      "kat": {
@@ -21851,6 +33394,74 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 28798159,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 2,
+        "hash_avg": 9429306,
+        "hash_max": 9470586,
+        "hash_median": 9429306,
+        "hash_min": 9388025,
+        "invalid": false,
+        "pct": 85.05,
+        "total_avg": 11086688,
+        "total_median": 11086688
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 10204511,
+        "hash_max": 10204511,
+        "hash_median": 10204511,
+        "hash_min": 10204511,
+        "invalid": false,
+        "pct": 70.17,
+        "total_avg": 14543254,
+        "total_median": 14543254
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 9164342,
+        "hash_max": 9164342,
+        "hash_median": 9164342,
+        "hash_min": 9164342,
+        "invalid": false,
+        "pct": 81.18,
+        "total_avg": 11288667,
+        "total_median": 11288667
+       }
+      },
+      "own_hash_symbols": [
+       "COMPASS_SIG_shake128_stream_init",
+       "COMPASS_SIG_shake256_stream_init",
+       "shake128",
+       "shake128_squeeze",
+       "shake128_squeezeblocks",
+       "shake256",
+       "shake256_absorb",
+       "shake256_finalize",
+       "shake256_init",
+       "shake256_squeeze",
+       "shake256_squeezeblocks"
+      ],
+      "pct": 78.0,
+      "pct_measured": 78.0,
+      "self_instrumented": false,
+      "total_avg": 36918609
+     },
      "id": "crypto_sign_COMPASS-SIG-256_ref",
      "impl": "ref",
      "kat": {
@@ -21940,6 +33551,74 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 19282400,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 2,
+        "hash_avg": 6594658,
+        "hash_max": 6594948,
+        "hash_median": 6594658,
+        "hash_min": 6594369,
+        "invalid": false,
+        "pct": 73.71,
+        "total_avg": 8946526,
+        "total_median": 8946526
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 6811457,
+        "hash_max": 6811457,
+        "hash_median": 6811457,
+        "hash_min": 6811457,
+        "invalid": false,
+        "pct": 50.79,
+        "total_avg": 13410019,
+        "total_median": 13410019
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 5876285,
+        "hash_max": 5876285,
+        "hash_median": 5876285,
+        "hash_min": 5876285,
+        "invalid": false,
+        "pct": 65.44,
+        "total_avg": 8979818,
+        "total_median": 8979818
+       }
+      },
+      "own_hash_symbols": [
+       "COMPASS_SIG_shake128_stream_init",
+       "COMPASS_SIG_shake256_stream_init",
+       "shake128",
+       "shake128_squeeze",
+       "shake128_squeezeblocks",
+       "shake256",
+       "shake256_absorb",
+       "shake256_finalize",
+       "shake256_init",
+       "shake256_squeeze",
+       "shake256_squeezeblocks"
+      ],
+      "pct": 61.53,
+      "pct_measured": 61.53,
+      "self_instrumented": false,
+      "total_avg": 31336363
+     },
      "id": "crypto_sign_COMPASS-SIG-384_ref",
      "impl": "ref",
      "kat": {
@@ -22029,6 +33708,74 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 35652408,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 1,
+        "hash_avg": 10335901,
+        "hash_max": 10335901,
+        "hash_median": 10335901,
+        "hash_min": 10335901,
+        "invalid": false,
+        "pct": 75.46,
+        "total_avg": 13697326,
+        "total_median": 13697326
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 15877109,
+        "hash_max": 15877109,
+        "hash_median": 15877109,
+        "hash_min": 15877109,
+        "invalid": false,
+        "pct": 44.15,
+        "total_avg": 35961264,
+        "total_median": 35961264
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 9439398,
+        "hash_max": 9439398,
+        "hash_median": 9439398,
+        "hash_min": 9439398,
+        "invalid": false,
+        "pct": 68.56,
+        "total_avg": 13768421,
+        "total_median": 13768421
+       }
+      },
+      "own_hash_symbols": [
+       "COMPASS_SIG_shake128_stream_init",
+       "COMPASS_SIG_shake256_stream_init",
+       "shake128",
+       "shake128_squeeze",
+       "shake128_squeezeblocks",
+       "shake256",
+       "shake256_absorb",
+       "shake256_finalize",
+       "shake256_init",
+       "shake256_squeeze",
+       "shake256_squeezeblocks"
+      ],
+      "pct": 56.21,
+      "pct_measured": 56.21,
+      "self_instrumented": false,
+      "total_avg": 63427011
+     },
      "id": "crypto_sign_COMPASS-SIG-512_ref",
      "impl": "ref",
      "kat": {
@@ -22118,6 +33865,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 23209609,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 778315,
+        "hash_max": 1560363,
+        "hash_median": 778328,
+        "hash_min": 517515,
+        "invalid": false,
+        "pct": 23.63,
+        "total_avg": 3294015,
+        "total_median": 3293834
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 22017664,
+        "hash_max": 69436812,
+        "hash_median": 14196302,
+        "hash_min": 4966298,
+        "invalid": false,
+        "pct": 57.32,
+        "total_avg": 38411057,
+        "total_median": 24848359
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 413630,
+        "hash_max": 413665,
+        "hash_median": 413626,
+        "hash_min": 413626,
+        "invalid": false,
+        "pct": 37.19,
+        "total_avg": 1112142,
+        "total_median": 1112142
+       }
+      },
+      "own_hash_symbols": [
+       "sm3_shake256",
+       "sm3_xof_absorb_once",
+       "sm3_xof_absorb_twice",
+       "sm3_xof_squeeze",
+       "sm3_xof_squeezeblocks",
+       "sm3_xof_stream_init"
+      ],
+      "pct": 54.21,
+      "pct_measured": 54.21,
+      "self_instrumented": false,
+      "total_avg": 42817214
+     },
      "id": "crypto_sign_DARTS128_ref",
      "impl": "ref",
      "kat": {
@@ -22211,6 +34022,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 41012514,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1315418,
+        "hash_max": 1315463,
+        "hash_median": 1315427,
+        "hash_min": 1315299,
+        "invalid": false,
+        "pct": 35.21,
+        "total_avg": 3735479,
+        "total_median": 3735472
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 38538851,
+        "hash_max": 138836315,
+        "hash_median": 20190511,
+        "hash_min": 8732055,
+        "invalid": false,
+        "pct": 57.05,
+        "total_avg": 67554211,
+        "total_median": 35838645
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 1158245,
+        "hash_max": 1173223,
+        "hash_median": 1151838,
+        "hash_min": 1151836,
+        "invalid": false,
+        "pct": 45.99,
+        "total_avg": 2518459,
+        "total_median": 2511979
+       }
+      },
+      "own_hash_symbols": [
+       "sm3_shake256",
+       "sm3_xof_absorb_once",
+       "sm3_xof_absorb_twice",
+       "sm3_xof_squeeze",
+       "sm3_xof_squeezeblocks",
+       "sm3_xof_stream_init"
+      ],
+      "pct": 55.57,
+      "pct_measured": 55.57,
+      "self_instrumented": false,
+      "total_avg": 73808149
+     },
      "id": "crypto_sign_DARTS256_ref",
      "impl": "ref",
      "kat": {
@@ -22304,6 +34179,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 59625874,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 2410775,
+        "hash_max": 2410801,
+        "hash_median": 2410780,
+        "hash_min": 2410702,
+        "invalid": false,
+        "pct": 31.62,
+        "total_avg": 7623802,
+        "total_median": 7623782
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 54883829,
+        "hash_max": 92582952,
+        "hash_median": 54892382,
+        "hash_min": 17159015,
+        "invalid": false,
+        "pct": 56.77,
+        "total_avg": 96671237,
+        "total_median": 96885078
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 2331270,
+        "hash_max": 2331301,
+        "hash_median": 2331262,
+        "hash_min": 2331262,
+        "invalid": false,
+        "pct": 49.89,
+        "total_avg": 4672384,
+        "total_median": 4672384
+       }
+      },
+      "own_hash_symbols": [
+       "sm3_shake256",
+       "sm3_xof_absorb_once",
+       "sm3_xof_absorb_twice",
+       "sm3_xof_squeeze",
+       "sm3_xof_squeezeblocks",
+       "sm3_xof_stream_init"
+      ],
+      "pct": 54.72,
+      "pct_measured": 54.72,
+      "self_instrumented": false,
+      "total_avg": 108967423
+     },
      "id": "crypto_sign_DARTS512_ref",
      "impl": "ref",
      "kat": {
@@ -22397,6 +34336,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3578340,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1767809,
+        "hash_max": 1767849,
+        "hash_median": 1767806,
+        "hash_min": 1767800,
+        "invalid": false,
+        "pct": 0.94,
+        "total_avg": 187407370,
+        "total_median": 187406702
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 363195,
+        "hash_max": 363199,
+        "hash_median": 363199,
+        "hash_min": 363188,
+        "invalid": false,
+        "pct": 0.46,
+        "total_avg": 79566874,
+        "total_median": 71227378
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 1447336,
+        "hash_max": 1447372,
+        "hash_median": 1447332,
+        "hash_min": 1447331,
+        "invalid": false,
+        "pct": 32.78,
+        "total_avg": 4414864,
+        "total_median": 4414724
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 1.32,
+      "pct_measured": 1.32,
+      "self_instrumented": false,
+      "total_avg": 271389108
+     },
      "id": "crypto_sign_Facto-DSA-128_ref",
      "impl": "ref",
      "kat": {
@@ -22478,6 +34474,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-160F_ref",
      "impl": "ref",
      "kat": {
@@ -22553,6 +34550,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-160S_ref",
      "impl": "ref",
      "kat": {
@@ -22628,6 +34626,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-256F_ref",
      "impl": "ref",
      "kat": {
@@ -22703,6 +34702,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-256S_ref",
      "impl": "ref",
      "kat": {
@@ -22778,6 +34778,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-384F_ref",
      "impl": "ref",
      "kat": {
@@ -22853,6 +34854,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-384S_ref",
      "impl": "ref",
      "kat": {
@@ -22928,6 +34930,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-512F_ref",
      "impl": "ref",
      "kat": {
@@ -23003,6 +35006,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Galas-512S_ref",
      "impl": "ref",
      "kat": {
@@ -23054,34 +35058,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 111632,
-      "total": 113532
+      "text": 117456,
+      "total": 119356
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 32302878,
+       "avg": 32041406,
        "count": 10,
-       "max": 78221350,
-       "median": 29188208,
-       "min": 9959630
+       "max": 77582161,
+       "median": 28955778,
+       "min": 9901520
       },
       "sign": {
-       "avg": 1075409455,
+       "avg": 957862491,
        "count": 10,
-       "max": 1111533113,
-       "median": 1072391600,
-       "min": 1062054376
+       "max": 969153537,
+       "median": 956971185,
+       "min": 953489919
       },
       "verify": {
-       "avg": 655110622,
+       "avg": 548232413,
        "count": 10,
-       "max": 655155539,
-       "median": 655112650,
-       "min": 655059869
+       "max": 548277346,
+       "median": 548234449,
+       "min": 548181687
       }
      },
-     "cycles_total": 1762822955,
+     "cycles_total": 1538136310,
      "expected_ops": [
       "keypair",
       "sign",
@@ -23090,6 +35094,76 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 101058131,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 131094,
+        "hash_max": 299642,
+        "hash_median": 112367,
+        "hash_min": 37457,
+        "invalid": false,
+        "pct": 0.51,
+        "total_avg": 25598314,
+        "total_median": 26525165
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 54019639,
+        "hash_max": 64439799,
+        "hash_median": 50745166,
+        "hash_min": 47506393,
+        "invalid": false,
+        "pct": 5.62,
+        "total_avg": 961048326,
+        "total_median": 957533418
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 46907398,
+        "hash_max": 46907432,
+        "hash_median": 46907394,
+        "hash_min": 46907392,
+        "invalid": false,
+        "pct": 8.55,
+        "total_avg": 548879181,
+        "total_median": 548871436
+       }
+      },
+      "own_hash_symbols": [
+       "KeccakP1600_AddByte",
+       "KeccakP1600_AddBytes",
+       "KeccakP1600_ExtractBytes",
+       "KeccakP1600_Initialize",
+       "KeccakWidth1600_SpongeAbsorb",
+       "KeccakWidth1600_SpongeAbsorbLastFewBits",
+       "KeccakWidth1600_SpongeInitialize",
+       "KeccakWidth1600_SpongeSqueeze",
+       "Keccak_HashFinal",
+       "Keccak_HashInitialize",
+       "Keccak_HashSqueeze",
+       "Keccak_HashUpdate"
+      ],
+      "pct": 6.58,
+      "pct_measured": 6.58,
+      "self_instrumented": false,
+      "total_avg": 1535525821
+     },
      "id": "crypto_sign_GreatWall128f_ref",
      "impl": "ref",
      "kat": {
@@ -23176,6 +35250,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_GreatWall128s_ref",
      "impl": "ref",
      "kat": {
@@ -23256,6 +35331,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_GreatWall192f_ref",
      "impl": "ref",
      "kat": {
@@ -23336,6 +35412,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_GreatWall192s_ref",
      "impl": "ref",
      "kat": {
@@ -23416,6 +35493,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_GreatWall256f_ref",
      "impl": "ref",
      "kat": {
@@ -23496,6 +35574,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_GreatWall256s_ref",
      "impl": "ref",
      "kat": {
@@ -23576,6 +35655,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_GreatWall512f_ref",
      "impl": "ref",
      "kat": {
@@ -23656,6 +35736,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_GreatWall512s_ref",
      "impl": "ref",
      "kat": {
@@ -23748,6 +35829,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 3,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "partial",
+      "direct_primitives": [],
+      "hash_avg": 243231888,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 3,
+        "hash_avg": 44046186,
+        "hash_max": 44046212,
+        "hash_median": 44046210,
+        "hash_min": 44046137,
+        "invalid": false,
+        "pct": 60.06,
+        "total_avg": 73337260,
+        "total_median": 73331992
+       },
+       "sign": {
+        "count": 3,
+        "hash_avg": 144581416,
+        "hash_max": 145721761,
+        "hash_median": 144799080,
+        "hash_min": 143223406,
+        "invalid": false,
+        "pct": 8.52,
+        "total_avg": 1697028837,
+        "total_median": 1697273165
+       },
+       "verify": {
+        "count": 3,
+        "hash_avg": 54604286,
+        "hash_max": 54604289,
+        "hash_median": 54604285,
+        "hash_min": 54604284,
+        "invalid": false,
+        "pct": 3.56,
+        "total_avg": 1534890782,
+        "total_median": 1534861603
+       }
+      },
+      "own_hash_symbols": [
+       "K_SHA256"
+      ],
+      "pct": 7.36,
+      "pct_measured": 7.36,
+      "self_instrumented": false,
+      "total_avg": 3305256879
+     },
      "id": "crypto_sign_Lynxer-160f_ref",
      "impl": "ref",
      "kat": {
@@ -23829,6 +35968,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Lynxer-160s_ref",
      "impl": "ref",
      "kat": {
@@ -23904,6 +36044,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Lynxer-256f_ref",
      "impl": "ref",
      "kat": {
@@ -23979,6 +36120,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Lynxer-256s_ref",
      "impl": "ref",
      "kat": {
@@ -24054,6 +36196,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Lynxer-384f_ref",
      "impl": "ref",
      "kat": {
@@ -24129,6 +36272,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Lynxer-384s_ref",
      "impl": "ref",
      "kat": {
@@ -24204,6 +36348,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Lynxer-512f_ref",
      "impl": "ref",
      "kat": {
@@ -24279,6 +36424,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Lynxer-512s_ref",
      "impl": "ref",
      "kat": {
@@ -24366,6 +36512,64 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 11495133,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 3898868,
+        "hash_max": 4076794,
+        "hash_median": 3871490,
+        "hash_min": 3803058,
+        "invalid": false,
+        "pct": 74.59,
+        "total_avg": 5226984,
+        "total_median": 5199482
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 4180882,
+        "hash_max": 4180919,
+        "hash_median": 4180880,
+        "hash_min": 4180821,
+        "invalid": false,
+        "pct": 64.5,
+        "total_avg": 6481820,
+        "total_median": 6481505
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 3415383,
+        "hash_max": 3415414,
+        "hash_median": 3415375,
+        "hash_min": 3415374,
+        "invalid": false,
+        "pct": 63.05,
+        "total_avg": 5417056,
+        "total_median": 5417053
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 67.12,
+      "pct_measured": 67.12,
+      "self_instrumented": false,
+      "total_avg": 17125860
+     },
      "id": "crypto_sign_OPSsig-128_ref",
      "impl": "ref",
      "kat": {
@@ -24459,6 +36663,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 20569359,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 6659108,
+        "hash_max": 6818665,
+        "hash_median": 6666690,
+        "hash_min": 6514751,
+        "invalid": false,
+        "pct": 77.8,
+        "total_avg": 8559205,
+        "total_median": 8566780
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 7944739,
+        "hash_max": 9806870,
+        "hash_median": 8374435,
+        "hash_min": 6942038,
+        "invalid": false,
+        "pct": 59.86,
+        "total_avg": 13271814,
+        "total_median": 14375787
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 5965512,
+        "hash_max": 5965536,
+        "hash_median": 5965496,
+        "hash_min": 5965496,
+        "invalid": false,
+        "pct": 68.32,
+        "total_avg": 8732223,
+        "total_median": 8732210
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 67.3,
+      "pct_measured": 67.3,
+      "self_instrumented": false,
+      "total_avg": 30563242
+     },
      "id": "crypto_sign_OPSsig-256_ref",
      "impl": "ref",
      "kat": {
@@ -24552,6 +36813,63 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 45582496,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 13013674,
+        "hash_max": 13358983,
+        "hash_median": 13096481,
+        "hash_min": 12687460,
+        "invalid": false,
+        "pct": 76.2,
+        "total_avg": 17077607,
+        "total_median": 17160492
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 20809941,
+        "hash_max": 38699472,
+        "hash_median": 17027644,
+        "hash_min": 13931652,
+        "invalid": false,
+        "pct": 46.63,
+        "total_avg": 44632461,
+        "total_median": 33483969
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 11758881,
+        "hash_max": 12363211,
+        "hash_median": 11691750,
+        "hash_min": 11691712,
+        "invalid": false,
+        "pct": 66.65,
+        "total_avg": 17642172,
+        "total_median": 17575020
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 57.44,
+      "pct_measured": 57.44,
+      "self_instrumented": false,
+      "total_avg": 79352240
+     },
      "id": "crypto_sign_OPSsig-512_ref",
      "impl": "ref",
      "kat": {
@@ -24645,6 +36963,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 3744149,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 857724,
+        "hash_max": 857737,
+        "hash_median": 857737,
+        "hash_min": 857609,
+        "invalid": false,
+        "pct": 31.33,
+        "total_avg": 2737660,
+        "total_median": 2737665
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 2076024,
+        "hash_max": 3791898,
+        "hash_median": 1567628,
+        "hash_min": 1249852,
+        "invalid": false,
+        "pct": 24.15,
+        "total_avg": 8596066,
+        "total_median": 6445866
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 810401,
+        "hash_max": 810401,
+        "hash_median": 810401,
+        "hash_min": 810401,
+        "invalid": false,
+        "pct": 23.0,
+        "total_avg": 3524064,
+        "total_median": 3524064
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 25.2,
+      "pct_measured": 25.2,
+      "self_instrumented": false,
+      "total_avg": 14857790
+     },
      "id": "crypto_sign_Octarine-128_ref",
      "impl": "ref",
      "kat": {
@@ -24738,6 +37112,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 8541246,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 1541394,
+        "hash_max": 1541432,
+        "hash_median": 1541393,
+        "hash_min": 1541361,
+        "invalid": false,
+        "pct": 28.06,
+        "total_avg": 5492281,
+        "total_median": 5492273
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 5454177,
+        "hash_max": 13314825,
+        "hash_median": 4505484,
+        "hash_min": 2472545,
+        "invalid": false,
+        "pct": 25.54,
+        "total_avg": 21357385,
+        "total_median": 17897108
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 1545675,
+        "hash_max": 1545706,
+        "hash_median": 1545667,
+        "hash_min": 1545667,
+        "invalid": false,
+        "pct": 22.36,
+        "total_avg": 6913694,
+        "total_median": 6913701
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 25.3,
+      "pct_measured": 25.3,
+      "self_instrumented": false,
+      "total_avg": 33763360
+     },
      "id": "crypto_sign_Octarine-256_ref",
      "impl": "ref",
      "kat": {
@@ -24831,6 +37261,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 19283804,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 3645565,
+        "hash_max": 3645611,
+        "hash_median": 3645568,
+        "hash_min": 3645414,
+        "invalid": false,
+        "pct": 24.79,
+        "total_avg": 14706583,
+        "total_median": 14706602
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 11929202,
+        "hash_max": 28674924,
+        "hash_median": 10068565,
+        "hash_min": 6347278,
+        "invalid": false,
+        "pct": 25.41,
+        "total_avg": 46941843,
+        "total_median": 40789830
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 3709037,
+        "hash_max": 3709072,
+        "hash_median": 3709033,
+        "hash_min": 3709033,
+        "invalid": false,
+        "pct": 20.71,
+        "total_avg": 17905971,
+        "total_median": 17905993
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 24.24,
+      "pct_measured": 24.24,
+      "self_instrumented": false,
+      "total_avg": 79554397
+     },
      "id": "crypto_sign_Octarine-512_ref",
      "impl": "ref",
      "kat": {
@@ -24888,34 +37374,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 30360,
-      "total": 32260
+      "text": 34012,
+      "total": 35912
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 167075797,
-       "count": 9,
-       "max": 167075808,
-       "median": 167075803,
-       "min": 167075767
+       "avg": 109401180,
+       "count": 10,
+       "max": 109401201,
+       "median": 109401181,
+       "min": 109401158
       },
       "sign": {
-       "avg": 3145775354,
-       "count": 8,
-       "max": 3162566459,
-       "median": 3140728876,
-       "min": 3134853281
+       "avg": 2065420634,
+       "count": 10,
+       "max": 2084273693,
+       "median": 2062516458,
+       "min": 2055801987
       },
       "verify": {
-       "avg": 87920062,
-       "count": 8,
-       "max": 87947436,
-       "median": 87922648,
-       "min": 87899097
+       "avg": 57782127,
+       "count": 10,
+       "max": 57797002,
+       "median": 57780642,
+       "min": 57764492
       }
      },
-     "cycles_total": 3400771213,
+     "cycles_total": 2232603941,
      "expected_ops": [
       "keypair",
       "sign",
@@ -24924,6 +37410,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 1884943746,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 92615533,
+        "hash_max": 92615567,
+        "hash_median": 92615531,
+        "hash_min": 92615489,
+        "invalid": false,
+        "pct": 83.6,
+        "total_avg": 110778073,
+        "total_median": 110778070
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 1743911239,
+        "hash_max": 1769471401,
+        "hash_median": 1738335608,
+        "hash_min": 1733707342,
+        "invalid": false,
+        "pct": 83.18,
+        "total_avg": 2096612624,
+        "total_median": 2089407055
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 48416974,
+        "hash_max": 48437401,
+        "hash_median": 48418262,
+        "hash_min": 48386366,
+        "invalid": false,
+        "pct": 82.78,
+        "total_avg": 58488037,
+        "total_median": 58489630
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb.constprop.0",
+       "shake256",
+       "shake256_inc_absorb",
+       "shake256_inc_finalize",
+       "shake256_inc_init",
+       "shake256_inc_squeeze"
+      ],
+      "pct": 83.19,
+      "pct_measured": 83.19,
+      "self_instrumented": false,
+      "total_avg": 2265878734
+     },
      "id": "crypto_sign_Phoenix-SHAKE-128f_ref",
      "impl": "ref",
      "kat": {
@@ -24975,9 +37525,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 3904,
-      "sign": 4916,
-      "verify": 5896
+      "keypair": 4004,
+      "sign": 4908,
+      "verify": 5888
      },
      "status_text": null,
      "tier": "qemu"
@@ -25012,6 +37562,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SHAKE-128s_ref",
      "impl": "ref",
      "kat": {
@@ -25074,34 +37625,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 30848,
-      "total": 32748
+      "text": 34524,
+      "total": 36424
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 244522735,
-       "count": 6,
-       "max": 244522768,
-       "median": 244522726,
-       "min": 244522713
+       "avg": 161714096,
+       "count": 10,
+       "max": 161714112,
+       "median": 161714106,
+       "min": 161714066
       },
       "sign": {
-       "avg": 4777758536,
-       "count": 5,
-       "max": 4802777133,
-       "median": 4769680562,
-       "min": 4767269529
+       "avg": 3168890446,
+       "count": 10,
+       "max": 3188153439,
+       "median": 3165167852,
+       "min": 3163307630
       },
       "verify": {
-       "avg": 129139432,
-       "count": 5,
-       "max": 129227860,
-       "median": 129154088,
-       "min": 128958751
+       "avg": 85862947,
+       "count": 10,
+       "max": 85915886,
+       "median": 85874528,
+       "min": 85733954
       }
      },
-     "cycles_total": 5151420703,
+     "cycles_total": 3416467489,
      "expected_ops": [
       "keypair",
       "sign",
@@ -25110,6 +37661,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 2785294810,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 133019586,
+        "hash_max": 133019654,
+        "hash_median": 133019574,
+        "hash_min": 133019535,
+        "invalid": false,
+        "pct": 81.26,
+        "total_avg": 163694684,
+        "total_median": 163694695
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 2582665235,
+        "hash_max": 2593128724,
+        "hash_median": 2581424666,
+        "hash_min": 2576363019,
+        "invalid": false,
+        "pct": 80.41,
+        "total_avg": 3211768971,
+        "total_median": 3210116668
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 69609989,
+        "hash_max": 69644439,
+        "hash_median": 69612586,
+        "hash_min": 69542374,
+        "invalid": false,
+        "pct": 80.11,
+        "total_avg": 86897803,
+        "total_median": 86900473
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb.constprop.0",
+       "shake256",
+       "shake256_inc_absorb",
+       "shake256_inc_finalize",
+       "shake256_inc_init",
+       "shake256_inc_squeeze"
+      ],
+      "pct": 80.44,
+      "pct_measured": 80.44,
+      "self_instrumented": false,
+      "total_avg": 3462361458
+     },
      "id": "crypto_sign_Phoenix-SHAKE-192f_ref",
      "impl": "ref",
      "kat": {
@@ -25161,9 +37776,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 5796,
-      "sign": 6764,
-      "verify": 9288
+      "keypair": 5788,
+      "sign": 6756,
+      "verify": 9356
      },
      "status_text": null,
      "tier": "qemu"
@@ -25198,6 +37813,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SHAKE-192s_ref",
      "impl": "ref",
      "kat": {
@@ -25260,34 +37876,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 31048,
-      "total": 32948
+      "text": 34780,
+      "total": 36680
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 496173410,
-       "count": 3,
-       "max": 496173427,
-       "median": 496173412,
-       "min": 496173391
+       "avg": 331548540,
+       "count": 10,
+       "max": 331548559,
+       "median": 331548554,
+       "min": 331548509
       },
       "sign": {
-       "avg": 9263536224,
-       "count": 2,
-       "max": 9263605397,
-       "median": 9263536224,
-       "min": 9263467051
+       "avg": 6244654098,
+       "count": 10,
+       "max": 6309040990,
+       "median": 6237088108,
+       "min": 6204030216
       },
       "verify": {
-       "avg": 252755502,
-       "count": 2,
-       "max": 252756894,
-       "median": 252755502,
-       "min": 252754110
+       "avg": 169521246,
+       "count": 10,
+       "max": 169583423,
+       "median": 169524918,
+       "min": 169447256
       }
      },
-     "cycles_total": 10012465136,
+     "cycles_total": 6745723884,
      "expected_ops": [
       "keypair",
       "sign",
@@ -25296,6 +37912,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "KeccakF1600_StatePermute (asm, wrapped)",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 5277834316,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 264387444,
+        "hash_max": 264387556,
+        "hash_median": 264387440,
+        "hash_min": 264387368,
+        "invalid": false,
+        "pct": 78.82,
+        "total_avg": 335427956,
+        "total_median": 335427956
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 4879628034,
+        "hash_max": 4900387531,
+        "hash_median": 4881906269,
+        "hash_min": 4862698898,
+        "invalid": false,
+        "pct": 77.37,
+        "total_avg": 6307147192,
+        "total_median": 6310952807
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 133818838,
+        "hash_max": 133829071,
+        "hash_median": 133828928,
+        "hash_min": 133777939,
+        "invalid": false,
+        "pct": 78.02,
+        "total_avg": 171522578,
+        "total_median": 171536500
+       }
+      },
+      "own_hash_symbols": [
+       "keccak_absorb.constprop.0",
+       "shake256",
+       "shake256_inc_absorb",
+       "shake256_inc_finalize",
+       "shake256_inc_init",
+       "shake256_inc_squeeze"
+      ],
+      "pct": 77.45,
+      "pct_measured": 77.45,
+      "self_instrumented": false,
+      "total_avg": 6814097726
+     },
      "id": "crypto_sign_Phoenix-SHAKE-256f_ref",
      "impl": "ref",
      "kat": {
@@ -25347,9 +38027,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 7004,
-      "sign": 10124,
-      "verify": 14856
+      "keypair": 6996,
+      "sign": 10116,
+      "verify": 14884
      },
      "status_text": null,
      "tier": "qemu"
@@ -25384,6 +38064,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SHAKE-256s_ref",
      "impl": "ref",
      "kat": {
@@ -25466,6 +38147,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SHAKE-384f_ref",
      "impl": "ref",
      "kat": {
@@ -25548,6 +38230,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SHAKE-384s_ref",
      "impl": "ref",
      "kat": {
@@ -25630,6 +38313,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SHAKE-512f_ref",
      "impl": "ref",
      "kat": {
@@ -25704,6 +38388,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SHAKE-512s_ref",
      "impl": "ref",
      "kat": {
@@ -25760,34 +38445,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 28056,
-      "total": 29956
+      "text": 26724,
+      "total": 28624
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 36206577,
+       "avg": 21572115,
        "count": 10,
-       "max": 36206605,
-       "median": 36206566,
-       "min": 36206564
+       "max": 21572862,
+       "median": 21572023,
+       "min": 21572019
       },
       "sign": {
-       "avg": 721074344,
+       "avg": 438915856,
        "count": 10,
-       "max": 740437683,
-       "median": 716504772,
-       "min": 706244070
+       "max": 457311253,
+       "median": 434588132,
+       "min": 424831112
       },
       "verify": {
-       "avg": 20173302,
+       "avg": 12048100,
        "count": 10,
-       "max": 20182647,
-       "median": 20176753,
-       "min": 20152627
+       "max": 12053889,
+       "median": 12050012,
+       "min": 12035735
       }
      },
-     "cycles_total": 777454223,
+     "cycles_total": 472536071,
      "expected_ops": [
       "keypair",
       "sign",
@@ -25796,6 +38481,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 383683961,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 17991465,
+        "hash_max": 17991500,
+        "hash_median": 17991461,
+        "hash_min": 17991422,
+        "invalid": false,
+        "pct": 77.98,
+        "total_avg": 23071450,
+        "total_median": 23071435
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 355561260,
+        "hash_max": 364992737,
+        "hash_median": 356121694,
+        "hash_min": 346169558,
+        "invalid": false,
+        "pct": 76.74,
+        "total_avg": 463342590,
+        "total_median": 464048546
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 10131236,
+        "hash_max": 10139028,
+        "hash_median": 10129302,
+        "hash_min": 10119538,
+        "invalid": false,
+        "pct": 78.7,
+        "total_avg": 12873187,
+        "total_median": 12870892
+       }
+      },
+      "own_hash_symbols": [
+       "mgf1_sm3",
+       "seed_state_sm3",
+       "sm3",
+       "sm3_inc_blocks",
+       "sm3_inc_finalize",
+       "sm3_inc_init"
+      ],
+      "pct": 76.85,
+      "pct_measured": 76.85,
+      "self_instrumented": false,
+      "total_avg": 499287227
+     },
      "id": "crypto_sign_Phoenix-SM3-128f_ref",
      "impl": "ref",
      "kat": {
@@ -25847,9 +38596,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 4556,
-      "sign": 4996,
-      "verify": 6172
+      "keypair": 4024,
+      "sign": 4460,
+      "verify": 5640
      },
      "status_text": null,
      "tier": "qemu"
@@ -25860,34 +38609,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29356,
-      "total": 31256
+      "text": 28040,
+      "total": 29940
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 1152185496,
-       "count": 2,
-       "max": 1152186885,
-       "median": 1152185496,
-       "min": 1152184108
+       "avg": 687357396,
+       "count": 10,
+       "max": 687728782,
+       "median": 687257880,
+       "min": 687188779
       },
       "sign": {
-       "avg": 14369089091,
-       "count": 1,
-       "max": 14369089091,
-       "median": 14369089091,
-       "min": 14369089091
+       "avg": 8090930706,
+       "count": 10,
+       "max": 10165762202,
+       "median": 7661147859,
+       "min": 7148520132
       },
       "verify": {
-       "avg": 46492306,
-       "count": 1,
-       "max": 46492306,
-       "median": 46492306,
-       "min": 46492306
+       "avg": 27749759,
+       "count": 10,
+       "max": 27753294,
+       "median": 27747784,
+       "min": 27747426
       }
      },
-     "cycles_total": 15567766893,
+     "cycles_total": 8806037861,
      "expected_ops": [
       "keypair",
       "sign",
@@ -25896,6 +38645,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 7370473080,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 572333869,
+        "hash_max": 572333961,
+        "hash_median": 572333847,
+        "hash_min": 572333768,
+        "invalid": false,
+        "pct": 77.76,
+        "total_avg": 736068200,
+        "total_median": 736068214
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 6774948352,
+        "hash_max": 10024970809,
+        "hash_median": 6288728111,
+        "hash_min": 5823351077,
+        "invalid": false,
+        "pct": 78.95,
+        "total_avg": 8581003175,
+        "total_median": 8028034778
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 23190859,
+        "hash_max": 23199170,
+        "hash_median": 23194288,
+        "hash_min": 23155232,
+        "invalid": false,
+        "pct": 78.08,
+        "total_avg": 29703281,
+        "total_median": 29707517
+       }
+      },
+      "own_hash_symbols": [
+       "mgf1_sm3",
+       "seed_state_sm3",
+       "sm3",
+       "sm3_inc_blocks",
+       "sm3_inc_finalize",
+       "sm3_inc_init"
+      ],
+      "pct": 78.86,
+      "pct_measured": 78.86,
+      "self_instrumented": false,
+      "total_avg": 9346774656
+     },
      "id": "crypto_sign_Phoenix-SM3-128s_ref",
      "impl": "ref",
      "kat": {
@@ -25947,9 +38760,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 3764,
-      "sign": 4548,
-      "verify": 5204
+      "keypair": 3232,
+      "sign": 4012,
+      "verify": 4672
      },
      "status_text": null,
      "tier": "qemu"
@@ -25960,34 +38773,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 28624,
-      "total": 30524
+      "text": 27296,
+      "total": 29196
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 96865197,
+       "avg": 55222167,
        "count": 10,
-       "max": 96865208,
-       "median": 96865201,
-       "min": 96865169
+       "max": 55222243,
+       "median": 55222221,
+       "min": 55221662
       },
       "sign": {
-       "avg": 1918834508,
+       "avg": 1112345383,
        "count": 10,
-       "max": 1949640821,
-       "median": 1914864306,
-       "min": 1909358967
+       "max": 1141066685,
+       "median": 1108661837,
+       "min": 1103517441
       },
       "verify": {
-       "avg": 50922622,
+       "avg": 29145357,
        "count": 10,
-       "max": 50953427,
-       "median": 50934184,
-       "min": 50886198
+       "max": 29163593,
+       "median": 29152280,
+       "min": 29123911
       }
      },
-     "cycles_total": 2066622327,
+     "cycles_total": 1196712907,
      "expected_ops": [
       "keypair",
       "sign",
@@ -25996,6 +38809,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 1035074356,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 49288239,
+        "hash_max": 49288290,
+        "hash_median": 49288250,
+        "hash_min": 49288173,
+        "invalid": false,
+        "pct": 85.96,
+        "total_avg": 57340175,
+        "total_median": 57340166
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 959769411,
+        "hash_max": 971213792,
+        "hash_median": 957635487,
+        "hash_min": 955923313,
+        "invalid": false,
+        "pct": 83.32,
+        "total_avg": 1151948710,
+        "total_median": 1149399869
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 26016706,
+        "hash_max": 26027428,
+        "hash_median": 26022546,
+        "hash_min": 25993295,
+        "invalid": false,
+        "pct": 85.83,
+        "total_avg": 30312275,
+        "total_median": 30319160
+       }
+      },
+      "own_hash_symbols": [
+       "mgf1_sm3",
+       "seed_state_sm3",
+       "sm3",
+       "sm3_inc_blocks",
+       "sm3_inc_finalize",
+       "sm3_inc_init"
+      ],
+      "pct": 83.5,
+      "pct_measured": 83.5,
+      "self_instrumented": false,
+      "total_avg": 1239601160
+     },
      "id": "crypto_sign_Phoenix-SM3-192f_ref",
      "impl": "ref",
      "kat": {
@@ -26047,9 +38924,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 7116,
-      "sign": 6852,
-      "verify": 9644
+      "keypair": 6584,
+      "sign": 6316,
+      "verify": 9056
      },
      "status_text": null,
      "tier": "qemu"
@@ -26084,6 +38961,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SM3-192s_ref",
      "impl": "ref",
      "kat": {
@@ -26147,34 +39025,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 28844,
-      "total": 30744
+      "text": 27528,
+      "total": 29428
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 191724496,
-       "count": 8,
-       "max": 191727172,
-       "median": 191724912,
-       "min": 191720270
+       "avg": 110052579,
+       "count": 10,
+       "max": 110059715,
+       "median": 110052766,
+       "min": 110048003
       },
       "sign": {
-       "avg": 3725466782,
-       "count": 7,
-       "max": 3879029639,
-       "median": 3684240749,
-       "min": 3651846204
+       "avg": 2211660803,
+       "count": 10,
+       "max": 2367984702,
+       "median": 2187070940,
+       "min": 2150275259
       },
       "verify": {
-       "avg": 97376406,
-       "count": 7,
-       "max": 97410991,
-       "median": 97392747,
-       "min": 97307230
+       "avg": 56037854,
+       "count": 10,
+       "max": 56055553,
+       "median": 56047183,
+       "min": 55991801
       }
      },
-     "cycles_total": 4014567684,
+     "cycles_total": 2377751236,
      "expected_ops": [
       "keypair",
       "sign",
@@ -26183,6 +39061,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 2039108454,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 101210340,
+        "hash_max": 101210393,
+        "hash_median": 101210316,
+        "hash_min": 101210314,
+        "invalid": false,
+        "pct": 85.42,
+        "total_avg": 118479265,
+        "total_median": 118479262
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 1886465977,
+        "hash_max": 1919831712,
+        "hash_median": 1884228556,
+        "hash_min": 1860281573,
+        "invalid": false,
+        "pct": 81.06,
+        "total_avg": 2327228578,
+        "total_median": 2323710656
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 51432137,
+        "hash_max": 51449714,
+        "hash_median": 51437512,
+        "hash_min": 51396012,
+        "invalid": false,
+        "pct": 85.34,
+        "total_avg": 60264224,
+        "total_median": 60269646
+       }
+      },
+      "own_hash_symbols": [
+       "mgf1_sm3",
+       "seed_state_sm3",
+       "sm3",
+       "sm3_inc_blocks",
+       "sm3_inc_finalize",
+       "sm3_inc_init"
+      ],
+      "pct": 81.37,
+      "pct_measured": 81.37,
+      "self_instrumented": false,
+      "total_avg": 2505972067
+     },
      "id": "crypto_sign_Phoenix-SM3-256f_ref",
      "impl": "ref",
      "kat": {
@@ -26234,9 +39176,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 8940,
-      "sign": 10204,
-      "verify": 15164
+      "keypair": 8296,
+      "sign": 9668,
+      "verify": 14632
      },
      "status_text": null,
      "tier": "qemu"
@@ -26271,6 +39213,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SM3-256s_ref",
      "impl": "ref",
      "kat": {
@@ -26333,34 +39276,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29476,
-      "total": 31376
+      "text": 28164,
+      "total": 30064
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 406241657,
-       "count": 3,
-       "max": 406241689,
-       "median": 406241645,
-       "min": 406241638
+       "avg": 233856164,
+       "count": 10,
+       "max": 233862740,
+       "median": 233855273,
+       "min": 233852364
       },
       "sign": {
-       "avg": 12318526801,
-       "count": 2,
-       "max": 12333077897,
-       "median": 12318526801,
-       "min": 12303975705
+       "avg": 7564796374,
+       "count": 10,
+       "max": 7590600987,
+       "median": 7567429472,
+       "min": 7520295294
       },
       "verify": {
-       "avg": 220092910,
-       "count": 2,
-       "max": 220171287,
-       "median": 220092910,
-       "min": 220014532
+       "avg": 126798883,
+       "count": 10,
+       "max": 126879158,
+       "median": 126805524,
+       "min": 126664350
       }
      },
-     "cycles_total": 12944861368,
+     "cycles_total": 7925451421,
      "expected_ops": [
       "keypair",
       "sign",
@@ -26369,6 +39312,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 6178277872,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 213467193,
+        "hash_max": 213467262,
+        "hash_median": 213467173,
+        "hash_min": 213467149,
+        "invalid": false,
+        "pct": 84.85,
+        "total_avg": 251592512,
+        "total_median": 251592510
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 5849113503,
+        "hash_max": 5849750808,
+        "hash_median": 5849155021,
+        "hash_min": 5848539855,
+        "invalid": false,
+        "pct": 72.81,
+        "total_avg": 8033941768,
+        "total_median": 8034398596
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 115697176,
+        "hash_max": 115810270,
+        "hash_median": 115699340,
+        "hash_min": 115581169,
+        "invalid": false,
+        "pct": 84.93,
+        "total_avg": 136222740,
+        "total_median": 136226106
+       }
+      },
+      "own_hash_symbols": [
+       "mgf1_sm3",
+       "seed_state_sm3",
+       "sm3",
+       "sm3_inc_blocks",
+       "sm3_inc_finalize",
+       "sm3_inc_init"
+      ],
+      "pct": 73.36,
+      "pct_measured": 73.36,
+      "self_instrumented": false,
+      "total_avg": 8421757020
+     },
      "id": "crypto_sign_Phoenix-SM3-384f_ref",
      "impl": "ref",
      "kat": {
@@ -26421,9 +39428,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 14324,
-      "sign": 11124,
-      "verify": 18052
+      "keypair": 13900,
+      "sign": 10588,
+      "verify": 17520
      },
      "status_text": null,
      "tier": "qemu"
@@ -26458,6 +39465,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SM3-384s_ref",
      "impl": "ref",
      "kat": {
@@ -26516,34 +39524,34 @@ window.NGCCM4_DATA = {
       "bss": 548,
       "data": 1352,
       "source": "report",
-      "text": 29568,
-      "total": 31468
+      "text": 28256,
+      "total": 30156
      },
      "completed_ops": [],
      "cycles": {
       "keypair": {
-       "avg": 809618905,
-       "count": 1,
-       "max": 809618905,
-       "median": 809618905,
-       "min": 809618905
+       "avg": 467062735,
+       "count": 10,
+       "max": 467068811,
+       "median": 467063052,
+       "min": 467055982
       },
       "sign": {
-       "avg": 19666493167,
-       "count": 1,
-       "max": 19666493167,
-       "median": 19666493167,
-       "min": 19666493167
+       "avg": 12775213188,
+       "count": 10,
+       "max": 14240813985,
+       "median": 12735617276,
+       "min": 11991976146
       },
       "verify": {
-       "avg": 437171999,
-       "count": 1,
-       "max": 437171999,
-       "median": 437171999,
-       "min": 437171999
+       "avg": 252253361,
+       "count": 10,
+       "max": 252274005,
+       "median": 252249926,
+       "min": 252239493
       }
      },
-     "cycles_total": 20913284071,
+     "cycles_total": 13494529284,
      "expected_ops": [
       "keypair",
       "sign",
@@ -26552,6 +39560,70 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "sm3_bit_compress_asm (asm, wrapped)",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 11071503822,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 424530077,
+        "hash_max": 424530215,
+        "hash_median": 424530066,
+        "hash_min": 424529943,
+        "invalid": false,
+        "pct": 84.48,
+        "total_avg": 502523452,
+        "total_median": 502523456
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 10417740198,
+        "hash_max": 12548690237,
+        "hash_median": 9974790476,
+        "hash_min": 9486429127,
+        "invalid": false,
+        "pct": 74.81,
+        "total_avg": 13926229550,
+        "total_median": 13369612298
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 229233547,
+        "hash_max": 229254380,
+        "hash_median": 229247102,
+        "hash_min": 229139732,
+        "invalid": false,
+        "pct": 84.59,
+        "total_avg": 270985015,
+        "total_median": 271000091
+       }
+      },
+      "own_hash_symbols": [
+       "mgf1_sm3",
+       "seed_state_sm3",
+       "sm3",
+       "sm3_inc_blocks",
+       "sm3_inc_finalize",
+       "sm3_inc_init"
+      ],
+      "pct": 75.32,
+      "pct_measured": 75.32,
+      "self_instrumented": false,
+      "total_avg": 14699738017
+     },
      "id": "crypto_sign_Phoenix-SM3-512f_ref",
      "impl": "ref",
      "kat": {
@@ -26603,9 +39675,9 @@ window.NGCCM4_DATA = {
       "source": "kat_raw"
      },
      "stack": {
-      "keypair": 20380,
-      "sign": 16076,
-      "verify": 28540
+      "keypair": 19848,
+      "sign": 15540,
+      "verify": 28008
      },
      "status_text": null,
      "tier": "qemu"
@@ -26640,6 +39712,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "timeout",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Phoenix-SM3-512s_ref",
      "impl": "ref",
      "kat": {
@@ -26734,6 +39807,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 28513102,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 376233,
+        "hash_max": 377898,
+        "hash_median": 375126,
+        "hash_min": 375122,
+        "invalid": false,
+        "pct": 42.26,
+        "total_avg": 890338,
+        "total_median": 888950
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 19274390,
+        "hash_max": 19291598,
+        "hash_median": 19272194,
+        "hash_min": 19269401,
+        "invalid": false,
+        "pct": 31.37,
+        "total_avg": 61439603,
+        "total_median": 61445520
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 8862479,
+        "hash_max": 8871313,
+        "hash_median": 8863018,
+        "hash_min": 8857470,
+        "invalid": false,
+        "pct": 35.15,
+        "total_avg": 25216778,
+        "total_median": 25217894
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 32.57,
+      "pct_measured": 32.57,
+      "self_instrumented": false,
+      "total_avg": 87546719
+     },
      "id": "crypto_sign_QingLuan-128_ref",
      "impl": "ref",
      "kat": {
@@ -26815,6 +39944,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_QingLuan-256_ref",
      "impl": "ref",
      "kat": {
@@ -26890,6 +40020,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_QingLuan-384_ref",
      "impl": "ref",
      "kat": {
@@ -26965,6 +40096,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_QingLuan-512_ref",
      "impl": "ref",
      "kat": {
@@ -27040,6 +40172,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-160f_ref",
      "impl": "ref",
      "kat": {
@@ -27120,6 +40253,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-160s_ref",
      "impl": "ref",
      "kat": {
@@ -27190,6 +40324,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-256f_ref",
      "impl": "ref",
      "kat": {
@@ -27258,6 +40393,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-256s_ref",
      "impl": "ref",
      "kat": {
@@ -27326,6 +40462,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-384f_ref",
      "impl": "ref",
      "kat": {
@@ -27394,6 +40531,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-384s_ref",
      "impl": "ref",
      "kat": {
@@ -27462,6 +40600,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-512f_ref",
      "impl": "ref",
      "kat": {
@@ -27530,6 +40669,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ReSolveD-alpha-512s_ref",
      "impl": "ref",
      "kat": {
@@ -27592,6 +40732,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "link-overflow",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Sigurd128_REF_ref",
      "impl": "ref",
      "kat": {
@@ -27651,6 +40792,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "link-overflow",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Sigurd256_REF_ref",
      "impl": "ref",
      "kat": {
@@ -27711,6 +40853,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "link-overflow",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_Sigurd512_REF_ref",
      "impl": "ref",
      "kat": {
@@ -27786,6 +40929,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_TRINE-128-ShortSig_ref",
      "impl": "ref",
      "kat": {
@@ -27863,6 +41007,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_TRINE-128-balanced_ref",
      "impl": "ref",
      "kat": {
@@ -27950,6 +41095,67 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 46900162,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 15563326,
+        "hash_max": 15563439,
+        "hash_median": 15563302,
+        "hash_min": 15563282,
+        "invalid": false,
+        "pct": 24.33,
+        "total_avg": 63960636,
+        "total_median": 63960064
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 15786400,
+        "hash_max": 16585080,
+        "hash_median": 15697660,
+        "hash_min": 15697641,
+        "invalid": false,
+        "pct": 18.42,
+        "total_avg": 85723940,
+        "total_median": 85205242
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 15550436,
+        "hash_max": 15550491,
+        "hash_median": 15550431,
+        "hash_min": 15550412,
+        "invalid": false,
+        "pct": 21.72,
+        "total_avg": 71600957,
+        "total_median": 71600376
+       }
+      },
+      "own_hash_symbols": [
+       "RejSampPRG_sm3.constprop.2",
+       "RejSampPRG_sm3.constprop.3"
+      ],
+      "pct": 21.19,
+      "pct_measured": 21.19,
+      "self_instrumented": false,
+      "total_avg": 221285533
+     },
      "id": "crypto_sign_TSUOV_128_ref",
      "impl": "ref",
      "kat": {
@@ -28045,6 +41251,67 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 293150469,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 97531069,
+        "hash_max": 97531161,
+        "hash_median": 97531056,
+        "hash_min": 97531018,
+        "invalid": false,
+        "pct": 21.92,
+        "total_avg": 445013684,
+        "total_median": 445014536
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 98127917,
+        "hash_max": 100866503,
+        "hash_median": 97823628,
+        "hash_min": 97823584,
+        "invalid": false,
+        "pct": 13.24,
+        "total_avg": 741254024,
+        "total_median": 738415574
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 97491483,
+        "hash_max": 97491536,
+        "hash_median": 97491490,
+        "hash_min": 97491447,
+        "invalid": false,
+        "pct": 15.98,
+        "total_avg": 610240773,
+        "total_median": 610241547
+       }
+      },
+      "own_hash_symbols": [
+       "RejSampPRG_sm3.constprop.2",
+       "RejSampPRG_sm3.constprop.3"
+      ],
+      "pct": 16.32,
+      "pct_measured": 16.32,
+      "self_instrumented": false,
+      "total_avg": 1796508481
+     },
      "id": "crypto_sign_TSUOV_256_ref",
      "impl": "ref",
      "kat": {
@@ -28140,6 +41407,67 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 1,
+      "counted": [
+       "sm3hash",
+       "pseudohash",
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "core",
+      "direct_primitives": [],
+      "hash_avg": 3740484077,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 1,
+        "hash_avg": 1246794787,
+        "hash_max": 1246794787,
+        "hash_median": 1246794787,
+        "hash_min": 1246794787,
+        "invalid": false,
+        "pct": 16.07,
+        "total_avg": 7757614284,
+        "total_median": 7757614284
+       },
+       "sign": {
+        "count": 1,
+        "hash_avg": 1247417907,
+        "hash_max": 1247417907,
+        "hash_median": 1247417907,
+        "hash_min": 1247417907,
+        "invalid": false,
+        "pct": 32.53,
+        "total_avg": 3834564264,
+        "total_median": 3834564264
+       },
+       "verify": {
+        "count": 1,
+        "hash_avg": 1246271383,
+        "hash_max": 1246271383,
+        "hash_median": 1246271383,
+        "hash_min": 1246271383,
+        "invalid": false,
+        "pct": 34.44,
+        "total_avg": 3618171242,
+        "total_median": 3618171242
+       }
+      },
+      "own_hash_symbols": [
+       "RejSampPRG_sm3.constprop.2",
+       "RejSampPRG_sm3.constprop.3"
+      ],
+      "pct": 24.59,
+      "pct_measured": 24.59,
+      "self_instrumented": false,
+      "total_avg": 15210349790
+     },
      "id": "crypto_sign_TSUOV_512_ref",
      "impl": "ref",
      "kat": {
@@ -28231,6 +41559,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 16331556,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 4375920,
+        "hash_max": 4375957,
+        "hash_median": 4375915,
+        "hash_min": 4375806,
+        "invalid": false,
+        "pct": 62.45,
+        "total_avg": 7007462,
+        "total_median": 7007472
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 7554778,
+        "hash_max": 14489263,
+        "hash_median": 6055436,
+        "hash_min": 5118322,
+        "invalid": false,
+        "pct": 33.73,
+        "total_avg": 22400983,
+        "total_median": 15703752
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 4400858,
+        "hash_max": 4400858,
+        "hash_median": 4400858,
+        "hash_min": 4400858,
+        "invalid": false,
+        "pct": 59.04,
+        "total_avg": 7454488,
+        "total_median": 7454471
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 44.3,
+      "pct_measured": 44.3,
+      "self_instrumented": false,
+      "total_avg": 36862933
+     },
      "id": "crypto_sign_lwrdsa128_ref",
      "impl": "ref",
      "kat": {
@@ -28324,6 +41708,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 37573513,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 10364523,
+        "hash_max": 10364561,
+        "hash_median": 10364523,
+        "hash_min": 10364409,
+        "invalid": false,
+        "pct": 62.43,
+        "total_avg": 16601494,
+        "total_median": 16601509
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 16664085,
+        "hash_max": 23616415,
+        "hash_median": 16833623,
+        "hash_min": 11746621,
+        "invalid": false,
+        "pct": 32.6,
+        "total_avg": 51110884,
+        "total_median": 51919857
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 10544905,
+        "hash_max": 10544935,
+        "hash_median": 10544894,
+        "hash_min": 10544893,
+        "invalid": false,
+        "pct": 60.62,
+        "total_avg": 17394172,
+        "total_median": 17394066
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 44.15,
+      "pct_measured": 44.15,
+      "self_instrumented": false,
+      "total_avg": 85106550
+     },
      "id": "crypto_sign_lwrdsa192_ref",
      "impl": "ref",
      "kat": {
@@ -28417,6 +41857,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 16502004,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 4759683,
+        "hash_max": 4759741,
+        "hash_median": 4759702,
+        "hash_min": 4759474,
+        "invalid": false,
+        "pct": 40.18,
+        "total_avg": 11845568,
+        "total_median": 11845621
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 6993345,
+        "hash_max": 11267714,
+        "hash_median": 6069176,
+        "hash_min": 5491519,
+        "invalid": false,
+        "pct": 19.88,
+        "total_avg": 35173246,
+        "total_median": 26783176
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 4748976,
+        "hash_max": 4749003,
+        "hash_median": 4748965,
+        "hash_min": 4748964,
+        "invalid": false,
+        "pct": 37.11,
+        "total_avg": 12798627,
+        "total_median": 12798620
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 27.59,
+      "pct_measured": 27.59,
+      "self_instrumented": false,
+      "total_avg": 59817441
+     },
      "id": "crypto_sign_lwrdsa256_ref",
      "impl": "ref",
      "kat": {
@@ -28510,6 +42006,62 @@ window.NGCCM4_DATA = {
      "failure_kind": null,
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": {
+      "complete": true,
+      "count": 10,
+      "counted": [
+       "pseudoXOF",
+       "SM3_DRNG"
+      ],
+      "coverage": "full",
+      "direct_primitives": [],
+      "hash_avg": 53287551,
+      "measured_ops": [
+       "keypair",
+       "sign",
+       "verify"
+      ],
+      "ops": {
+       "keypair": {
+        "count": 10,
+        "hash_avg": 13516926,
+        "hash_max": 13516948,
+        "hash_median": 13516947,
+        "hash_min": 13516769,
+        "invalid": false,
+        "pct": 16.15,
+        "total_avg": 83699085,
+        "total_median": 83699284
+       },
+       "sign": {
+        "count": 10,
+        "hash_avg": 26282987,
+        "hash_max": 52528378,
+        "hash_median": 20620950,
+        "hash_min": 20620909,
+        "invalid": false,
+        "pct": 10.16,
+        "total_avg": 258755147,
+        "total_median": 190579272
+       },
+       "verify": {
+        "count": 10,
+        "hash_avg": 13487638,
+        "hash_max": 13487646,
+        "hash_median": 13487641,
+        "hash_min": 13487606,
+        "invalid": false,
+        "pct": 14.41,
+        "total_avg": 93571155,
+        "total_median": 93571154
+       }
+      },
+      "own_hash_symbols": [],
+      "pct": 12.22,
+      "pct_measured": 12.22,
+      "self_instrumented": false,
+      "total_avg": 436025387
+     },
      "id": "crypto_sign_lwrdsa512_ref",
      "impl": "ref",
      "kat": {
@@ -28591,6 +42143,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_d3_128f_loose_ref",
      "impl": "ref",
      "kat": {
@@ -28666,6 +42219,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_d3_128f_tight_ref",
      "impl": "ref",
      "kat": {
@@ -28741,6 +42295,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_d3_128s_loose_ref",
      "impl": "ref",
      "kat": {
@@ -28816,6 +42371,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_d3_128s_tight_ref",
      "impl": "ref",
      "kat": {
@@ -28891,6 +42447,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_em_d2_128f_loose_ref",
      "impl": "ref",
      "kat": {
@@ -28966,6 +42523,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_em_d2_128f_tight_ref",
      "impl": "ref",
      "kat": {
@@ -29041,6 +42599,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_em_d2_128s_loose_ref",
      "impl": "ref",
      "kat": {
@@ -29116,6 +42675,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sm4th_em_d2_128s_tight_ref",
      "impl": "ref",
      "kat": {
@@ -29191,6 +42751,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sydo_160f_ref",
      "impl": "ref",
      "kat": {
@@ -29271,6 +42832,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sydo_160s_ref",
      "impl": "ref",
      "kat": {
@@ -29351,6 +42913,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sydo_256f_ref",
      "impl": "ref",
      "kat": {
@@ -29431,6 +42994,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sydo_256s_ref",
      "impl": "ref",
      "kat": {
@@ -29511,6 +43075,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sydo_512f_ref",
      "impl": "ref",
      "kat": {
@@ -29591,6 +43156,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_sydo_512s_ref",
      "impl": "ref",
      "kat": {
@@ -29671,6 +43237,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ublockith_d3_256f_ref",
      "impl": "ref",
      "kat": {
@@ -29746,6 +43313,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ublockith_d3_256s_ref",
      "impl": "ref",
      "kat": {
@@ -29821,6 +43389,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ublockith_em_d3_256f_ref",
      "impl": "ref",
      "kat": {
@@ -29896,6 +43465,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_ublockith_em_d3_256s_ref",
      "impl": "ref",
      "kat": {
@@ -29971,6 +43541,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_vistrutith_d3_512f_ref",
      "impl": "ref",
      "kat": {
@@ -30046,6 +43617,7 @@ window.NGCCM4_DATA = {
      "failure_kind": "hardfault",
      "family": "crypto_sign",
      "hand_ported": false,
+     "hashing": null,
      "id": "crypto_sign_vistrutith_d3_512s_ref",
      "impl": "ref",
      "kat": {
@@ -30114,7 +43686,11 @@ window.NGCCM4_DATA = {
    "Signature schemes re-measured 2026-10-06/07 in several runs: 23 schemes (Aigis-Sig, BiT, CEDRUSALPHA-160*, CEDRUSC, COMPASS-SIG, DARTS) at NGCC_ITERATIONS=100; the remaining 98 at NGCC_ITERATIONS=10 (the 'count' column gives the iterations actually completed). Per-target capture caps: 30 min for the 100-iteration run and the first 10-iteration run, 5 min for the final 44 schemes (QingLuan, ReSolveD, Sigurd, TRINE, TSUOV, lwrdsa, Chinith-family, SYDO, ...); where a shorter-capped rerun timed out without adding anything, the earlier run's figures and status were kept. Targets whose status line says 'timeout' did not finish all operations within the cap; 'completed <ops>' lists the operations that were measured.",
    "2026-10-07: added the submitters' Cortex-M4 ports (BW-KEM, DTRU, MORNING-Scabbard, Rudraksh2 as <scheme>/m4), the PolarLAC reference sets and the 13 board-tier CreTAKE sets (NGCC_ITERATIONS=10, speed and stack; all 66 targets completed).",
    "2026-10-05/06: all 108 board-tier KEM/KEX reference and hand-ported m4 sets (plus BiT, DARTS) re-measured at NGCC_ITERATIONS=100 with the speed and stack apps (run output in benchmark_summary.{csv,md}; the 'count' column is 100 for these rows). The 2026-10-01..03 10-iteration figures remain only where the 100-iteration run did not finish within its 30 min cap (BAG-Loong-128, HQC-128/256, TRIKE-2/5, bag_piglet_256/384/512) and for the imported submitter m4 ports, PolarLAC and CreTAKE sets measured 2026-10-07 at 10 iterations. The HQC-384 and MAMBA-NIKE-384/512 raw logs show a HardFault (not a hang) after the listed operations.",
-   "2026-10-07/08: the 23 signature/KEM targets that had timed out were rerun once more at NGCC_ITERATIONS=1 with a 30 min capture cap (speed; stack for the 15 that had no stack figures). This completed Phoenix-SM3-512f and TSUOV_512 (speed) and Phoenix-SM3-384f/512f (stack), measured TRINE-128-balanced keypair before its HardFault, and showed HQC-512 HardFaults at start-up (not a hang). Status lines saying '30 min cap, 1 iteration' are targets whose remaining operations exceed even that cap; their earlier figures were kept."
+   "2026-10-07/08: the 23 signature/KEM targets that had timed out were rerun once more at NGCC_ITERATIONS=1 with a 30 min capture cap (speed; stack for the 15 that had no stack figures). This completed Phoenix-SM3-512f and TSUOV_512 (speed) and Phoenix-SM3-384f/512f (stack), measured TRINE-128-balanced keypair before its HardFault, and showed HQC-512 HardFaults at start-up (not a hang). Status lines saying '30 min cap, 1 iteration' are targets whose remaining operations exceed even that cap; their earlier figures were kept.",
+   "2026-10-09: BAG-Loong-256 rerun on the board (speed and stack, NGCC_ITERATIONS=10): both apps HardFault inside newlib malloc before the first keypair completes (imprecise bus error, same pc as 2026-10-05). The heap wrapper (_sbrk) does not check the SRAM limit, so the fault is heap exhaustion, not a hang: on QEMU the speed app's heap high-water mark is 1,488,600 bytes for BAG-Loong-256 versus 640,728 bytes for BAG-Loong-128, which is why only the 128 set fits the 640 KB SRAM.",
+   "2026-10-21: Lore-SHAKE, MAMBA-NIKE-128/192/256, HQC-128/256, Phoenix-SHAKE-128f/192f/256f, Phoenix-SM3-128f/192f/256f/384f/512f/128s, GreatWall128f and DKEX-128/256/512 (ref and m4, whose ML-DSA dependency uses SHAKE) re-measured (NGCC_ITERATIONS=10 for the KEM/KEX sets, Phoenix-SHAKE-128f, Phoenix-SM3-128f and GreatWall128f; 3 for Phoenix-SHAKE-192f/256f and Phoenix-SM3-192f/256f; 1 for Phoenix-SM3-384f/512f/128s) after their own Keccak permutation and SM3 compression were routed to the assembly primitives in common/ (see README, 'Hash primitives'); these rows replace the earlier ones even where those had more iterations.",
+   "2026-10-21: DTRU-Light and DTRU-1024 m4 re-measured (NGCC_ITERATIONS=10) after adding the missing vpush/vpop of the callee-saved FPU registers their assembly clobbers (s17/s18 and s24, AAPCS); the cost is below 0.03%.",
+   "2026-10-21/22: the routed signature sets re-measured with speed, stack and hashing at NGCC_ITERATIONS=10 (Phoenix-SHAKE-192f/256f, Phoenix-SM3-192f/256f/384f; stack re-measured for Phoenix-SHAKE-128f, Phoenix-SM3-128f, GreatWall128f and DKEX-128/256/512, since the plain-state Keccak wrapper adds a 200-byte scratch state). Phoenix-SM3-128s and Phoenix-SM3-512f: the board was reprogrammed by another program during their speed/hashing captures (foreign output after five iterations) and those captures were discarded. Phoenix-SM3-128s speed was repeated on 2026-10-23 (NGCC_ITERATIONS=10, 10 clean iterations; these rows replace the routed 1-iteration ones). Phoenix-SM3-512f speed and hashing were repeated on 2026-10-23 16:32-21:25 (NGCC_ITERATIONS=10, 10 clean iterations each; these rows replace the routed 1-iteration ones)."
   ],
   "counts": {
    "by_category": {
@@ -30142,6 +43718,20 @@ window.NGCCM4_DATA = {
     "sig.board": 13,
     "sig.qemu": 108
    },
+   "hashing": {
+    "by_category": {
+     "kem": 118,
+     "kex": 40,
+     "sig": 44
+    },
+    "complete": 202,
+    "coverage": {
+     "core": 48,
+     "full": 153,
+     "partial": 1
+    },
+    "measured": 202
+   },
    "implementations": 345,
    "kat": {
     "match": 275,
@@ -30155,9 +43745,17 @@ window.NGCCM4_DATA = {
   "footnotes": [
    "10 instances listed in schemes.json are components of another submission (CreTAKE's BiT/ZEN/POLARLAC building blocks, benchmarked under their own submissions) and are not counted: CreTAKE/BiT-128, CreTAKE/BiT-256, CreTAKE/BiT-512, CreTAKE/POLARLAC-128, CreTAKE/POLARLAC-256, CreTAKE/POLARLAC-512, CreTAKE/POLARLAC-512-Star, CreTAKE/ZEN_128, CreTAKE/ZEN_256, CreTAKE/ZEN_512"
   ],
-  "generated_on": "2026-10-08",
+  "generated_on": "2026-10-23",
   "generator": "tools/make_site_data.py",
-  "git_rev": "b395f18",
+  "git_rev": "dfacd2d",
+  "hashing_conditions": [
+   "Measured 2026-10-20 16:40 to 2026-10-21 02:19 with `benchmark_schemes.py PLATFORM=nucleo-l4r5zi --apps hashing` (tools/run_hashing_benchmark.sh, groups from tools/plan_hashing_run.py).",
+   "Hash cycles are the DWT cycles spent in the HASHING_PROFILE-instrumented hash code: the ICCS sm3hash/pseudohash/pseudoXOF wrappers and the SM3 DRNG in common/, plus (since the assembly hash routing of 2026-10-21) the assembly SM3 compression and Keccak-f[1600] permutation whoever calls them; operation cycles are the whole operation measured in the same hashing-app run. Coverage per implementation: Out/benchmark_hashing_coverage.json.",
+   "Iterations per operation (the \"count\" column): 10 for the 157 schemes whose 10 iterations of all operations were estimated at no more than 20 minutes from the speed run, 3 for CEDRUSC-256f, Lynxer-160f and bag_piglet_384, 1 for CEDRUSALPHA-160s, CEDRUSC-160s/256s/384f/512f, TRIKE-5, TSUOV_512 and bag_piglet_512 (capture caps 30 min, 30 min and 75 min). 202 of the 203 implementations with a complete speed benchmark completed; CEDRUSC-384s (hashing) exceeded the 30 min cap at 10 iterations and has no hashing share.",
+   "2026-10-21: Lore-SHAKE, MAMBA-NIKE-128/192/256, HQC-128/256, Phoenix-SHAKE-128f/192f/256f, Phoenix-SM3-128f/192f/256f/384f/512f/128s, GreatWall128f and DKEX-128/256/512 (ref and m4, whose ML-DSA dependency uses SHAKE) re-measured after their own Keccak permutation and SM3 compression were routed to the assembly primitives in common/ (see README, Hash primitives); these rows replace the earlier ones.",
+   "2026-10-21/22: the routed signature sets re-measured with speed, stack and hashing at NGCC_ITERATIONS=10 (Phoenix-SHAKE-192f/256f, Phoenix-SM3-192f/256f/384f; stack re-measured for Phoenix-SHAKE-128f, Phoenix-SM3-128f, GreatWall128f and DKEX-128/256/512, since the plain-state Keccak wrapper adds a 200-byte scratch state). Phoenix-SM3-128s and Phoenix-SM3-512f: the board was reprogrammed by another program during their speed/hashing captures (foreign output after five iterations) and those captures were discarded. Phoenix-SM3-128s hashing was repeated at NGCC_ITERATIONS=10 (these rows replace the 1-iteration ones). Phoenix-SM3-512f hashing was repeated on 2026-10-23 at NGCC_ITERATIONS=10 (these rows replace the 1-iteration ones).",
+   "2026-10-21: DTRU-Light m4 re-measured after fixing its assembly, which clobbered the callee-saved FPU register d8 that the hashing app uses to clear the counters (the earlier run showed hash cycles near 2^64); DTRU-1024 m4 (same class of bug, s24) re-measured as well."
+  ],
   "kat_notes": [
    "qube-128/256/384/512 and Phoenix-SM3 (10). The submissions' own reference code, built on the host, reproduces our QEMU output byte for byte and does not reproduce their published test-vector files. These are inconsistencies inside the submission packages.",
    "lwrdsa-128/192/256/512. The wrapper reports a signature length of CRYPTO_BYTES plus the message length but never writes those trailing bytes, so both the KAT file and our output end in uninitialized memory. The real signature bytes match in every count.",
@@ -30177,6 +43775,8 @@ window.NGCCM4_DATA = {
   "platform": "nucleo-l4r5zi",
   "repo": "https://github.com/ngccm4dev/ngccm4",
   "sources": {
+   "hashing_coverage": "Out/benchmark_hashing_coverage.json",
+   "hashing_csv": "Out/benchmark_hashing_nucleo-l4r5zi.csv",
    "kat_summary": "Out/kat_summary.md",
    "manifest": "tools/ngcc_manifest.json",
    "speed_csv": "Out/benchmark_speed_nucleo-l4r5zi.csv",

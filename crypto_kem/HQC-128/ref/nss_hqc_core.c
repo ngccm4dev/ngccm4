@@ -229,7 +229,9 @@ static void store64_le(uint8_t *x, uint64_t u)
     }
 }
 
-static void keccakf1600(uint64_t s[25])
+#include "keccakf1600.h"
+static void keccakf1600(uint64_t s[25]) { KeccakF1600_StatePermute_plain(s); }
+static void __attribute__((unused)) keccakf1600_c(uint64_t s[25])
 {
     static const uint64_t rc[24] = {
         0x0000000000000001ULL, 0x0000000000008082ULL,

@@ -167,6 +167,13 @@
 //    uniParam pointer to the optional parameter
 //
 *F*/
+#include "auxfunc.h"
+/* SM3 compression from common/ (sm3_bit_compress: assembly with SM3_ASM); the IPP round-constant table is not needed */
+void UpdateSM3(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)
+{
+	(void)uniParam;
+	if (mlen >= MBS_SM3) sm3_bit_compress((unsigned int*)uniHash, mblk, (unsigned long long)(mlen / MBS_SM3));
+}
 #if defined(_ALG_SM3_COMPACT_)
 #pragma message("SM3 compact")
 
@@ -185,7 +192,7 @@ __INLINE Ipp32u MagicGG(int s, Ipp32u e, Ipp32u f, Ipp32u g)
 	}
 }
 
-void UpdateSM3(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)
+static void __attribute__((unused)) UpdateSM3_c(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)
 {
 	Ipp32u* data = (Ipp32u*)mblk;
 
@@ -242,7 +249,7 @@ void UpdateSM3(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)
 }
 
 #else
-void UpdateSM3(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)
+static void __attribute__((unused)) UpdateSM3_c(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)
 {
 	Ipp32u* data = (Ipp32u*)mblk;
 

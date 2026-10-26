@@ -7,6 +7,9 @@ Inputs (all read-only):
                                         status table, code-size tables
   Out/benchmark_sizes/<target>.txt      arm-none-eabi-size output (code-size fallback)
   Out/benchmark_raw/<target>_stack.run1.txt   stack usage per operation
+  Out/benchmark_hashing_<platform>.csv  hash cycles per operation (hashing app; tools/run_hashing_benchmark.sh)
+  Out/benchmark_hashing_<platform>.md   measurement conditions of the hashing run (header lines)
+  Out/benchmark_hashing_coverage.json   which hash code each hashing ELF counts (tools/hashing_coverage.py)
   Out/kat_summary.md                    KAT check results (QEMU)
   Out/kat_raw/<target>_testvectors.txt  device hex dumps (key-size fallback)
   tools/ngcc_manifest.json              import rules, unsupported schemes + reasons
@@ -44,6 +47,9 @@ sys.path.insert(0, str(ROOT))
 import benchmark_schemes  # noqa: E402
 import build_schemes  # noqa: E402
 import kat_check  # noqa: E402
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import hashing_percentage  # noqa: E402
 
 CATEGORY_OF_FAMILY = kat_check.CATEGORY_OF_FAMILY
 CATEGORY_KEY = {"KEM": "kem", "KEX": "kex", "SIG": "sig"}
@@ -89,6 +95,13 @@ def git_rev() -> str | None:
         return out.stdout.strip() or None
     except Exception:
         return None
+
+
+def rel(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 
 def warn(msg: str) -> None:
@@ -322,6 +335,70 @@ def parse_kat_summary(path: Path) -> tuple[dict[str, dict], list[str]]:
         if in_notes and line.startswith("- "):
             notes.append(line[2:].strip())
     return results, notes
+
+
+# --------------------------------------------------------------------------- hashing share
+
+def load_hashing(csv_path: Path, md_path: Path, coverage_path: Path, platform: str) -> tuple[dict[str, dict], list[str]]:
+    """Per implementation: hash cycles / operation cycles of every operation measured by the hashing app,
+    plus what the instrumentation covered in that ELF (tools/hashing_coverage.py)."""
+    if not csv_path.is_file():
+        warn(f"{csv_path} missing: rows carry no hashing share (run tools/run_hashing_benchmark.sh)")
+        return {}, []
+    data = hashing_percentage.load_hashing([csv_path])
+    coverage: dict[str, dict] = json.loads(coverage_path.read_text(encoding="utf-8")) if coverage_path.is_file() else {}
+    if not coverage:
+        warn(f"{coverage_path} missing: hashing coverage unknown for every implementation")
+    conditions = parse_md(md_path)[0] if md_path.is_file() else []
+    out: dict[str, dict] = {}
+    for stem, entry in data.items():
+        if entry["platform"] != platform:
+            raise SystemExit(f"{csv_path}: unexpected platform {entry['platform']} for {stem}")
+        cov = coverage.get(stem) or {}
+        ops: "OrderedDict[str, dict]" = OrderedDict()
+        for op, v in entry["ops"].items():
+            ops[op] = {
+                "hash_avg": v["hash"]["avg"], "hash_median": v["hash"]["median"], "hash_min": v["hash"]["min"], "hash_max": v["hash"]["max"],
+                "total_avg": v["total"]["avg"], "total_median": v["total"]["median"],
+                "count": v["total"]["count"],
+                "pct": round(v["pct"], 2) if v["pct"] is not None else None,
+                "invalid": bool(v.get("invalid")),
+            }
+        out[stem] = {
+            "ops": ops,
+            "coverage": cov.get("coverage", "unknown"),
+            "counted": cov.get("counted", []),
+            "own_hash_symbols": cov.get("own_hash_symbols", []),
+            "direct_primitives": cov.get("direct_primitives", []),
+            "self_instrumented": bool(cov.get("self_instrumented", False)),
+        }
+    return out, conditions
+
+
+def finish_hashing(row: dict) -> None:
+    """Drop hashing metrics of operations the scheme does not have and compute the all-operations share."""
+    h = row.get("hashing")
+    if not h:
+        row["hashing"] = None
+        return
+    ops = row["expected_ops"]
+    for op in [op for op in h["ops"] if op not in ops]:
+        row["notes"].append(f"ignored hashing metric '{op}_hash_cycles' (not an operation of this scheme)")
+        del h["ops"][op]
+    invalid = [op for op, v in h["ops"].items() if v.get("invalid")]
+    if invalid:
+        row["notes"].append("hashing run: the hash-cycle counter of " + ", ".join(invalid) + " exceeds the operation's own cycle count "
+                            "(the implementation overwrites the profiling counter; memory error suspected in this port), so no hashing share is given for it")
+    hash_sum = sum(v["hash_avg"] for v in h["ops"].values() if not v.get("invalid"))
+    total_sum = sum(v["total_avg"] for v in h["ops"].values() if not v.get("invalid"))
+    h["complete"] = bool(h["ops"]) and all(op in h["ops"] for op in ops) and not invalid
+    h["measured_ops"] = [op for op in ops if op in h["ops"]]
+    h["hash_avg"] = hash_sum
+    h["total_avg"] = total_sum
+    h["count"] = min((v["count"] for v in h["ops"].values()), default=0)
+    share = round(100.0 * hash_sum / total_sum, 2) if total_sum else None
+    h["pct"] = share if h["complete"] else None
+    h["pct_measured"] = share
 
 
 # --------------------------------------------------------------------------- status classification
@@ -866,6 +943,9 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--docs", type=Path, default=ROOT / "docs")
     ap.add_argument("--platform", default="nucleo-l4r5zi")
     ap.add_argument("--strict", action="store_true", help="fail if any implementation has no key sizes or no normalised security level")
+    ap.add_argument("--hashing-csv", type=Path, help="merged hashing-run CSV (default Out/benchmark_hashing_<platform>.csv)")
+    ap.add_argument("--hashing-md", type=Path, help="hashing-run Markdown report whose header gives the conditions (default Out/benchmark_hashing_<platform>.md)")
+    ap.add_argument("--hashing-coverage", type=Path, help="coverage JSON from tools/hashing_coverage.py (default Out/benchmark_hashing_coverage.json)")
     args = ap.parse_args(argv)
 
     ngcc_root: Path = args.ngcc_root.resolve()
@@ -887,6 +967,13 @@ def main(argv: list[str]) -> int:
     stack, stack_skipped = parse_stack(out_dir / "benchmark_raw", rows)
     kat_results, kat_notes = parse_kat_summary(out_dir / "kat_summary.md")
     kat_raw = out_dir / "kat_raw"
+    hashing_csv = args.hashing_csv or out_dir / f"benchmark_hashing_{args.platform}.csv"
+    hashing_md = args.hashing_md or out_dir / f"benchmark_hashing_{args.platform}.md"
+    hashing_cov = args.hashing_coverage or out_dir / "benchmark_hashing_coverage.json"
+    hashing, hashing_conditions = load_hashing(hashing_csv, hashing_md, hashing_cov, args.platform)
+    unknown_hashing = sorted(set(hashing) - set(rows))
+    if unknown_hashing:
+        warn(f"hashing rows without an implementation directory (ignored): {', '.join(unknown_hashing)}")
 
     unknown_csv = sorted(set(cycles) - set(rows))
     unknown_status = sorted(set(status) - set(rows))
@@ -897,6 +984,7 @@ def main(argv: list[str]) -> int:
         row["cycles"] = cycles.get(stem, {})
         row["code"] = code_md.get(stem) or code_files.get(stem)
         row["stack"] = stack.get(stem)
+        row["hashing"] = hashing.get(stem)
         inst_rule = (manifest.get(row["ngcc"]["folder"], {}).get("instances") or {}).get(row["ngcc"]["instance"])
         row["level"] = security_level(row["scheme"], inst_rule.get("defines") if isinstance(inst_rule, dict) else None)
         resolve_sizes(ngcc_root, kat_raw, row, manifest)
@@ -910,6 +998,7 @@ def main(argv: list[str]) -> int:
                           "the recorded 'match' compared nothing")
             row["kat"] = {"status": kat["status"], "detail": kat["detail"], "caveat": caveat}
         finish_row(row, status.get(stem))
+        finish_hashing(row)
 
     not_bench, footnotes = build_not_benchmarked(schemes, manifest, rows, ngcc_root, kat_raw, specs, links)
     check_levels(list(rows.values()) + not_bench["unsupported"], args.strict)
@@ -959,6 +1048,9 @@ def main(argv: list[str]) -> int:
     print("csv targets:", len(cycles), " status rows:", len(status), " overlap:", len(set(cycles) & set(status)))
     print("code size rows:", sum(1 for r in rows.values() if r["code"]), " stack rows:", len(stack), f"(skipped {stack_skipped} raw files without a directory)")
     print("kat rows:", len(kat_results), " unsupported instances:", n_unsupported, " non-skip NGCC instances:", non_skip)
+    hashing_rows = [r for r in rows.values() if r["hashing"]]
+    print("hashing rows:", len(hashing_rows), " complete:", sum(1 for r in hashing_rows if r["hashing"]["complete"]),
+          " coverage:", dict(Counter(r["hashing"]["coverage"] for r in hashing_rows)))
     if problems:
         for p in problems:
             print("error:", p, file=sys.stderr)
@@ -992,7 +1084,14 @@ def main(argv: list[str]) -> int:
                 "by_tier": {f"{cat}.{t}": n for (cat, t), n in sorted(by_tier.items())},
                 "kat": dict(Counter(r["kat"]["status"] for r in rows.values())),
                 "unsupported_instances": n_unsupported,
+                "hashing": {
+                    "measured": len(hashing_rows),
+                    "complete": sum(1 for r in hashing_rows if r["hashing"]["complete"]),
+                    "coverage": dict(Counter(r["hashing"]["coverage"] for r in hashing_rows)),
+                    "by_category": {cat: sum(1 for r in hashing_rows if r["category"] == cat) for cat in ("kem", "kex", "sig")},
+                },
             },
+            "hashing_conditions": hashing_conditions,
             "kat_notes": kat_notes,
             "footnotes": footnotes,
             "sources": {
@@ -1000,6 +1099,8 @@ def main(argv: list[str]) -> int:
                 "speed_md": str(md_path.relative_to(ROOT)),
                 "kat_summary": "Out/kat_summary.md",
                 "manifest": "tools/ngcc_manifest.json",
+                "hashing_csv": rel(hashing_csv) if hashing_csv.is_file() else None,
+                "hashing_coverage": rel(hashing_cov) if hashing_cov.is_file() else None,
             },
             "repo": "https://github.com/ngccm4dev/ngccm4",
         },

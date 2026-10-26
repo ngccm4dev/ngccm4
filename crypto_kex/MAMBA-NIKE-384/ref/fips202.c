@@ -60,7 +60,9 @@ static const uint64_t KeccakF_RoundConstants[NROUNDS] =
     (uint64_t)0x8000000080008008ULL
 };
 
-void KeccakF1600_StatePermute(uint64_t * state)
+#include "keccakf1600.h"
+#define KeccakF1600_StatePermute KeccakF1600_StatePermute_plain
+static void __attribute__((unused)) KeccakF1600_StatePermute_c(uint64_t *state)
 {
   int round;
 

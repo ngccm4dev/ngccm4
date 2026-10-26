@@ -36,9 +36,7 @@ other purposes.
 					 (a)[2] = (unsigned char)((b) >> 8),  \
 					 (a)[3] = (unsigned char)(b))
 
-#ifdef HASHING_PROFILE
-extern unsigned long long hash_cycles;
-#endif
+#include "hashprof.h"
 
 // GB/T 32905-2016
 static void sm3_bit_init(unsigned int *init_digest)
@@ -58,6 +56,7 @@ extern void sm3_bit_compress_asm(unsigned int dgst[8], const unsigned char *msg,
 #endif
 void sm3_bit_compress(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks)
 {
+	HASHPROF_BEGIN();
 #ifdef SM3_ASM
 	// unsigned int W[76];
 	// memcpy(W, dgst, 8 * sizeof(unsigned int)); // init memory for bit compress.
@@ -134,6 +133,7 @@ void sm3_bit_compress(unsigned int dgst[8], const unsigned char *msg, unsigned l
 		msg += 64;
 	}
 #endif
+	HASHPROF_END();
 }
 
 static void sm3_bit(const unsigned char *msg, unsigned long long msg_bitlen, unsigned char *dgst)
@@ -462,9 +462,7 @@ static int pseudohash_1024(const unsigned char *msg, unsigned long long msg_len_
 
 int sm3hash(int digest_len_bits, const unsigned char *msg, unsigned long long msg_len_bits, unsigned char *digest)
 {
-#ifdef HASHING_PROFILE
-	uint64_t t0=hal_get_time();
-#endif
+	HASHPROF_BEGIN();
 	if (digest_len_bits == 256)
 	{
 		sm3_bit(msg, msg_len_bits, digest);
@@ -472,20 +470,16 @@ int sm3hash(int digest_len_bits, const unsigned char *msg, unsigned long long ms
 	else
 	{
 		fprintf(stderr, "ERROR: Digestbitlen not in the limitation. \n");
+		HASHPROF_END();
 		return INVALID_DIGESTBITLEN;
 	}
-#ifdef HASHING_PROFILE
-	uint64_t t1 = hal_get_time();
-	hash_cycles+=(t1-t0);
-#endif
+	HASHPROF_END();
 	return HASH_SUCCESS;
 }
 
 int pseudohash(int digest_len_bits, const unsigned char *msg, unsigned long long msg_len_bits, unsigned char *digest)
 {
-#ifdef HASHING_PROFILE
-	uint64_t t0 = hal_get_time();
-#endif
+	HASHPROF_BEGIN();
 	int ret=0;
 	if (digest_len_bits == 512)
 	{
@@ -502,27 +496,24 @@ int pseudohash(int digest_len_bits, const unsigned char *msg, unsigned long long
 	else
 	{
 		fprintf(stderr, "ERROR: Digestbitlen not in the limitation. \n");
+		HASHPROF_END();
 		return INVALID_DIGESTBITLEN;
 	}
-#ifdef HASHING_PROFILE
-	uint64_t t1 = hal_get_time();
-	hash_cycles += (t1 - t0);
-#endif
+	HASHPROF_END();
 	return ret;
 }
 
 // GB/T 32918.4-2016 Section 5.4.3
 int pseudoXOF(unsigned long long output_len_bits, const unsigned char *msg, unsigned long long msg_len_bits, unsigned char *output)
 {
-#ifdef HASHING_PROFILE
-	uint64_t t0 = hal_get_time();
-#endif
+	HASHPROF_BEGIN();
 	unsigned int ct = 1;
 	unsigned char *cascade_msg_ct;
 	cascade_msg_ct = (unsigned char *)malloc((msg_len_bits + 7) / 8 + 4);
 	if (cascade_msg_ct == NULL)
 	{
 		fprintf(stderr, "ERROR: Memory allocation failed at %s, line %d. \n", __FILE__, __LINE__);
+		HASHPROF_END();
 		return MEMORY_ALLOCATION_FAILED;
 	}
 	unsigned char *K;
@@ -530,6 +521,7 @@ int pseudoXOF(unsigned long long output_len_bits, const unsigned char *msg, unsi
 	if (K == NULL)
 	{
 		fprintf(stderr, "ERROR: Memory allocation failed at %s, line %d. \n", __FILE__, __LINE__);
+		HASHPROF_END();
 		return MEMORY_ALLOCATION_FAILED;
 	}
 
@@ -562,19 +554,14 @@ int pseudoXOF(unsigned long long output_len_bits, const unsigned char *msg, unsi
 	{
 		normalize(output, output_len_bits);
 	}
-#ifdef HASHING_PROFILE
-	uint64_t t1 = hal_get_time();
-	hash_cycles += (t1 - t0);
-#endif
+	HASHPROF_END();
 	return XOF_SUCCESS;
 }
 
 // msg should be msg_len_bits+32 long to cascade msg+ct; ct is the counter for cascade, which should be set by users. The output is the same as pseudoXOF.
 int pseudoXOF_squeeze(unsigned long long output_len_bits, unsigned char *cascade_msg_ct, unsigned long long msg_len_bits, unsigned int* ct, unsigned char *output)
 {
-#ifdef HASHING_PROFILE
-	uint64_t t0 = hal_get_time();
-#endif
+	HASHPROF_BEGIN();
 	unsigned long long output_len_bytes = (output_len_bits + 7) / 8;
 	unsigned long long full_blocks = output_len_bytes / 32;
 	unsigned long long remaining_bytes = output_len_bytes % 32;
@@ -614,9 +601,6 @@ int pseudoXOF_squeeze(unsigned long long output_len_bits, unsigned char *cascade
 	{
 		normalize(output, output_len_bits);
 	}
-#ifdef HASHING_PROFILE
-	uint64_t t1 = hal_get_time();
-	hash_cycles += (t1 - t0);
-#endif
+	HASHPROF_END();
 	return XOF_SUCCESS;
 }

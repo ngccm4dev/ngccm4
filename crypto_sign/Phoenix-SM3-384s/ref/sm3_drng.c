@@ -76,7 +76,17 @@ static const uint32_t sm3_Tj[64] = {
     0xa7a879d8u, 0x4f50f3b1u, 0x9ea1e762u, 0x3d43cec5u
 };
 
-static size_t crypto_hashblocks_sm3(uint8_t *statebytes,
+static size_t crypto_hashblocks_sm3(uint8_t *statebytes, const uint8_t *in, size_t inlen) {
+    /* SM3 compression from common/ (sm3_bit_compress: assembly with SM3_ASM) */
+    unsigned int v[8];
+    unsigned int k;
+    for (k = 0; k < 8; k++) v[k] = load_bigendian_32(statebytes + 4 * k);
+    if (inlen >= 64) sm3_bit_compress(v, in, (unsigned long long)(inlen / 64));
+    for (k = 0; k < 8; k++) store_bigendian_32(statebytes + 4 * k, v[k]);
+    return inlen % 64;
+}
+
+static size_t __attribute__((unused)) crypto_hashblocks_sm3_c(uint8_t *statebytes,
                                     const uint8_t *in, size_t inlen) {
     uint32_t A, B, C, D, E, F, G, H;
     uint32_t SS1, SS2, TT1, TT2;

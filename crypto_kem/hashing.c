@@ -13,7 +13,6 @@
 DRNG_ctx drng_algorithm;
 #endif
 unsigned long long hash_cycles;
-unsigned long long func_cycles;
 static const unsigned char hashing_seed[] = {
     0x6e, 0x67, 0x63, 0x63, 0x6d, 0x34, 0x2d, 0x68,
     0x61, 0x73, 0x68, 0x69, 0x6e, 0x67, 0x2d, 0x73, 0x65, 0x65, 0x64
@@ -61,7 +60,6 @@ int main(void) {
     }
     for(int i=0;i<NGCC_ITERATIONS;i++){
         hash_cycles = 0;
-        func_cycles = 0;
         pk_len = kem_get_pk_len_bytes();
         sk_len = kem_get_sk_len_bytes();
         ss_len = kem_get_ss_len_bytes();
@@ -72,26 +70,20 @@ int main(void) {
         t1 = hal_get_time();
         send_unsignedll("keypair cycles:", (unsigned long long)(t1 - t0));
         send_unsignedll("keypair hash cycles:", hash_cycles);
-        send_unsignedll("keypair func cycles:", func_cycles);
 
         hash_cycles = 0;
-        func_cycles = 0;
         t0 = hal_get_time();
         if (kem_enc(pk, pk_len, ss_a, &ss_len, ct, &ct_len) != 0) fail_and_halt("kem_enc_failed");
         t1 = hal_get_time();
         send_unsignedll("encaps cycles:", (unsigned long long)(t1 - t0));
         send_unsignedll("encaps hash cycles:", hash_cycles);
-        send_unsignedll("encaps func cycles:", func_cycles);
 
         hash_cycles = 0;
-        func_cycles = 0;
         t0 = hal_get_time();
         if (kem_dec(sk, sk_len, ct, ct_len, ss_b, &ss_len_dec) != 0) fail_and_halt("kem_dec_failed");
         t1 = hal_get_time();
         send_unsignedll("decaps cycles:", (unsigned long long)(t1 - t0));
         send_unsignedll("decaps hash cycles:", hash_cycles);
-        send_unsignedll("decaps func cycles:", func_cycles);
-        
         if (memcmp(ss_a, ss_b, ss_len) != 0) {
             fail_and_halt("ERROR KEYS");
         }

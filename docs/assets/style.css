@@ -11,6 +11,7 @@
   --bar-sizes: #2a78d6;
   --bar-cycles: #eb6834;
   --bar-code: #1baf7a;
+  --bar-hash: #7c4dcc;
   --status-good: #0ca30c;
   --status-warning: #fab219;
   --status-serious: #ec835a;
@@ -33,6 +34,7 @@
     --bar-sizes: #3987e5;
     --bar-cycles: #d95926;
     --bar-code: #199e70;
+    --bar-hash: #a07ff2;
   }
 }
 :root[data-theme="dark"] {
@@ -48,6 +50,7 @@
   --bar-sizes: #3987e5;
   --bar-cycles: #d95926;
   --bar-code: #199e70;
+  --bar-hash: #a07ff2;
 }
 
 * { box-sizing: border-box; }
@@ -139,7 +142,7 @@ table.data thead th.sticky { z-index: 3; background: var(--surface-2); }
 table.data tbody tr:hover td.sticky { background: var(--surface-2); }
 
 /* column-group visibility */
-table.hide-cycles .col-cycles, table.hide-sizes .col-sizes, table.hide-code .col-code,
+table.hide-cycles .col-cycles, table.hide-hash .col-hash, table.hide-sizes .col-sizes, table.hide-code .col-code,
 table.hide-stack .col-stack, table.hide-kat .col-kat { display: none; }
 
 /* inline bars: value above, thin 4px bar, rounded data-end only */
@@ -149,6 +152,7 @@ td.bar-cell { min-width: 96px; }
 .bar.sizes { background: var(--bar-sizes); }
 .bar.cycles { background: var(--bar-cycles); }
 .bar.code, .bar.stack { background: var(--bar-code); }
+.bar.hash { background: var(--bar-hash); }
 table.bars-off .bar-track { display: none; }
 
 /* badges: icon glyph + label, never colour alone */

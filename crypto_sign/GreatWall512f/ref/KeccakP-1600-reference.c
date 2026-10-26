@@ -8,7 +8,13 @@ static uint64_t rotl64(uint64_t x, unsigned int n)
 	return n ? ((x << n) | (x >> (64 - n))) : x;
 }
 
+#include "keccakf1600.h"
+static void keccakp1600_permute_c(uint64_t st[25], unsigned int nrounds);
 static void keccakp1600_permute(uint64_t st[25], unsigned int nrounds)
+{
+	if (nrounds == 24) KeccakF1600_StatePermute_plain(st); else keccakp1600_permute_c(st, nrounds);
+}
+static void keccakp1600_permute_c(uint64_t st[25], unsigned int nrounds)
 {
 	static const uint64_t round_constants[24] = {
 		UINT64_C(0x0000000000000001), UINT64_C(0x0000000000008082),

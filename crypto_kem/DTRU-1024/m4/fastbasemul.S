@@ -145,6 +145,7 @@ doublebasemul_asm:
 .align 2
 doublebasemul_asm_opt:
   push {r4-r11, lr}
+  vpush {s24-s25}  @ ngccm4: s24 is callee-saved (AAPCS), the port uses it as scratch
 
   movw q, #3457
   movt qinv, #52607 //-q^(-1),Montgomery Reduction
@@ -373,6 +374,7 @@ doublebasemul_asm_opt:
   bne.w 2b
 #endif
 
+  vpop {s24-s25}
   pop {r4-r11, pc}
 
 

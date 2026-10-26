@@ -47,7 +47,17 @@ static void sm3_bit_init(unsigned int *init_digest)
 	init_digest[7] = 0xB0FB0E4E;
 }
 
+extern void sm3_bit_compress_asm(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks); /* common/sm3_bit_compress_asm_fp.S */
+static void sm3_bit_compress_c(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks);
 static void sm3_bit_compress(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks)
+{
+#ifdef SM3_ASM
+	sm3_bit_compress_asm(dgst, msg, blocks);
+#else
+	sm3_bit_compress_c(dgst, msg, blocks);
+#endif
+}
+static void sm3_bit_compress_c(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks)
 {
 	unsigned int A, B, C, D, E, F, G, H;
 	unsigned int W[68];

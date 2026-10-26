@@ -107,6 +107,19 @@ DEFAULT_SED = [
     # The driver owns the global DRNG context; schemes must only declare it.
     [r"^[ \t]*DRNG_ctx[ \t]+drng_algorithm[ \t]*;", "extern DRNG_ctx drng_algorithm;"],
 ]
+# Route a scheme's own Keccak-f[1600] permutation to the assembly one in
+# common/keccakf1600.S (always in the library): the definition is renamed to an
+# unused *_c function and a macro sends every later call in the file to
+# KeccakF1600_StatePermute_plain (keccakf1600_plain.c), which converts the plain
+# lane state to the bit-interleaved form the assembly works on and back. Covers the Kyber/Dilithium/SPHINCS+-style fips202.c files (static
+# or not, "uint64_t *state" or "uint64_t state[25]"). Permutations under other
+# names (XKCP, Lore, HQC) get scheme-specific sed rules in the manifest. A
+# scheme entry can opt out with "keccak_asm": false.
+KECCAK_ASM_SED = [
+    [r"^([ \t]*)(?:static[ \t]+)?void[ \t]+KeccakF1600_StatePermute[ \t]*\([ \t]*uint64_t[ \t]*(?:\*[ \t]*(\w+)|(\w+)[ \t]*\[[ \t]*25[ \t]*\])[ \t]*\)[ \t]*(\{?)[ \t]*$",
+     r'\1#include "keccakf1600.h"\n\1#define KeccakF1600_StatePermute KeccakF1600_StatePermute_plain\n\1static void __attribute__((unused)) KeccakF1600_StatePermute_c(uint64_t *\2\3)\4'],
+]
+
 INCLUDE_RE = re.compile(r'^([ \t]*#[ \t]*include[ \t]*)"([^"\n]+)"', re.MULTILINE)
 
 
@@ -458,6 +471,8 @@ def run_job(job: Job, ngcc_root: Path, repo: Path, args) -> tuple[bool, str]:
     # Include rewriting, sed rules, patches.
     rewritten = rewrite_includes(dest)
     default_sed = [["*.c", pat, repl] for pat, repl in DEFAULT_SED] + [["*.h", pat, repl] for pat, repl in DEFAULT_SED]
+    if job.cfg("keccak_asm", True):
+        default_sed += [["*.c", pat, repl] for pat, repl in KECCAK_ASM_SED]
     for rule in default_sed + job.cfg("sed", []):
         glob_pat, pattern, repl = rule
         for p in sorted(dest.glob(glob_pat)):

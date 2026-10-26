@@ -38,9 +38,9 @@
     partial: "Partial: some operations never returned",
     other: "Other",
   };
-  const GROUPS = ["cycles", "sizes", "code", "stack", "kat"];
+  const GROUPS = ["cycles", "hash", "sizes", "code", "stack", "kat"];
   const LEVELS = ["128", "192", "256", "384", "512"];
-  const GROUP_LABEL = { cycles: "Cycles", sizes: "Sizes", code: "Code size", stack: "Stack", kat: "KAT" };
+  const GROUP_LABEL = { cycles: "Cycles", hash: "Hashing %", sizes: "Sizes", code: "Code size", stack: "Stack", kat: "KAT" };
 
   const rowsById = {};
   for (const cat of Object.keys(DATA.categories)) for (const r of DATA.categories[cat].rows) rowsById[r.id] = r;
@@ -102,6 +102,34 @@
     if (!c) return naReason(row, op);
     return `${op}: avg ${fmt(c.avg)}, median ${fmt(c.median)}, min ${fmt(c.min)}, max ${fmt(c.max)} cycles (${c.count} iteration${c.count === 1 ? "" : "s"})`;
   }
+  // hashing share: cycles spent in the instrumented hash functions / cycles of the operation (same hashing-app run)
+  const pct1 = (v) => (v === null || v === undefined) ? "" : Number(v).toFixed(1);
+  const hashFmt = (v, r) => (r.hashing && r.hashing.coverage === "partial" ? "\u2265" : "") + pct1(v);
+  function coverageNote(h) {
+    const list = (a) => a.slice(0, 4).join(", ") + (a.length > 4 ? ", \u2026" : "");
+    if (h.coverage === "partial") {
+      const own = list(h.own_primitive_symbols && h.own_primitive_symbols.length ? h.own_primitive_symbols : h.own_hash_symbols);
+      return "; lower bound: an uncounted hash primitive of the scheme is reachable" + (own ? ` (${own})` : "") + (h.direct_primitives.length ? `; direct calls to ${h.direct_primitives.join(", ")}` : "");
+    }
+    if (h.coverage === "core") return "; counted: " + h.counted.join(", ") + "; the scheme's own padding/absorb/squeeze layer around the assembly primitive is not counted (" + list(h.own_hash_symbols) + ")";
+    if (h.coverage === "full") return "; counted: " + h.counted.join(", ");
+    return "; coverage of the instrumentation not recorded";
+  }
+  function hashTitle(row, op) {
+    const h = row.hashing;
+    if (!h) return row.expected_ops.includes(op) ? (row.run_status === "measured" ? "not measured by the hashing run" : naReason(row, op)) : naReason(row, op);
+    const v = h.ops[op];
+    if (!v) return naReason(row, op);
+    if (v.invalid) return `${op}: invalid measurement, the hash-cycle counter (${fmt(v.hash_avg)}) exceeds the operation's cycles (${fmt(v.total_avg)}): the implementation overwrites the profiling counter`;
+    if (v.pct === null) return `${op}: operation took 0 cycles`;
+    return `${op}: ${fmt(v.hash_avg)} of ${fmt(v.total_avg)} cycles in the instrumented hash functions = ${v.pct.toFixed(2)}% (${v.count} iteration${v.count === 1 ? "" : "s"})` + coverageNote(h);
+  }
+  function hashTotalTitle(r) {
+    const h = r.hashing;
+    if (!h) return r.run_status === "measured" ? "not measured by the hashing run" : "no hashing measurement";
+    if (h.pct === null) return `only given when every operation was measured in the hashing run (measured: ${h.measured_ops.join(", ") || "none"}` + (h.pct_measured !== null ? `; share over those: ${h.pct_measured.toFixed(2)}%` : "") + ")";
+    return `all operations: ${fmt(h.hash_avg)} of ${fmt(h.total_avg)} cycles in the instrumented hash functions = ${h.pct.toFixed(2)}%` + coverageNote(h);
+  }
   function sizeCols(cat) {
     const S = (key, label, title) => ({ key: "sz_" + key, label, group: "sizes", type: "num", bar: "sizes", unit: "bytes",
       get: (r) => (r.sizes && r.sizes[key] !== undefined) ? r.sizes[key] : null, title: () => title });
@@ -131,6 +159,10 @@
       get: (r) => r.cycles[op] ? r.cycles[op][state.stat] : null, title: (r) => cycleTitle(r, op) });
     cols.push({ key: "cyc_total", label: "total", group: "cycles", type: "num", bar: "cycles", unit: "cycles",
       get: (r) => r.cycles_total, title: (r) => r.cycles_total === null ? "total is only given when every operation was measured" : "sum of the average cycles of all operations" });
+    for (const op of C.ops) cols.push({ key: "hash_" + op, label: op, group: "hash", type: "num", bar: "hash", unit: "%", fmt: hashFmt,
+      get: (r) => (r.hashing && r.hashing.ops[op]) ? r.hashing.ops[op].pct : null, title: (r) => hashTitle(r, op) });
+    cols.push({ key: "hash_total", label: "all", group: "hash", type: "num", bar: "hash", unit: "%", fmt: hashFmt,
+      get: (r) => r.hashing ? r.hashing.pct : null, title: hashTotalTitle });
     cols.push(...sizeCols(cat));
     for (const [k, label] of [["text", ".text"], ["data", ".data"], ["bss", ".bss"], ["total", "flash+ram"]]) cols.push({ key: "code_" + k, label, group: "code", type: "num", bar: "code", unit: "bytes",
       get: (r) => r.code ? r.code[k] : null, title: (r) => r.code ? `${label} of the speed ELF, including the benchmark driver and HAL (source: ${r.code.source})` : "ELF not linked for the board" });
@@ -219,7 +251,7 @@
       td.title = col.title ? col.title(row) : "";
       if (v === null || v === undefined) td.append(el("span", { class: "na", text: "—" }));
       else {
-        td.append(document.createTextNode(fmt(v)));
+        td.append(document.createTextNode(col.fmt ? col.fmt(v, row) : fmt(v)));
         if (col.bar) td.append(el("span", { class: "bar-track" }, el("span", { class: "bar " + col.bar, style: "width:" + barWidth(v, max).toFixed(2) + "%" })));
       }
     }
@@ -249,6 +281,20 @@
       st.append(t);
     }
     sections.push(st);
+    const hs = el("div", null, [el("h4", { text: "Hashing share" })]);
+    if (row.hashing) {
+      const h = row.hashing;
+      const t = el("table", null, el("tr", null, [el("th", { text: "op" }), ...["hash cycles", "op cycles", "share", "count"].map((k) => el("th", { text: k, style: "text-align:right" }))]));
+      const line = (label, v) => el("tr", null, [el("th", { text: label }), el("td", { text: fmt(v.hash_avg) }), el("td", { text: fmt(v.total_avg) }), el("td", { text: v.pct === null ? "\u2014" : v.pct.toFixed(2) + "%" }), el("td", { text: fmt(v.count) })]);
+      for (const op of row.expected_ops) if (h.ops[op]) t.append(line(op, h.ops[op]));
+      if (h.pct !== null) t.append(line("all", h));
+      hs.append(t);
+      hs.append(el("div", { class: "note", text: "Counted (HASHING_PROFILE instrumentation in common/): " + h.counted.join(", ") + ". Operation cycles are from the same hashing-app run." + (h.pct === null ? ` Only ${h.measured_ops.length} of ${row.expected_ops.length} operations completed in the hashing run, so no all-operations share is given.` : "") }));
+      if (h.coverage === "partial") hs.append(el("div", { class: "note", text: "Lower bound (\u2265): an uncounted hash primitive outside common/ is reachable in this ELF: " + (h.own_primitive_symbols && h.own_primitive_symbols.length ? h.own_primitive_symbols : h.own_hash_symbols).join(", ") + (h.direct_primitives.length ? "; direct calls to the common primitives " + h.direct_primitives.join(", ") : "") + "." }));
+      else if (h.coverage === "core") hs.append(el("div", { class: "note", text: "The permutation/compression runs in the counted assembly primitive; the scheme's own padding and absorb/squeeze code around it is not counted: " + h.own_hash_symbols.join(", ") + "." }));
+      else if (h.coverage === "unknown") hs.append(el("div", { class: "note", text: "Coverage of the instrumentation was not recorded for this ELF." }));
+    } else hs.append(el("div", { class: "note", text: row.run_status === "measured" ? "not measured by the hashing run" : "no hashing measurement (the speed run did not complete)" }));
+    sections.push(hs);
     const sz = el("div", null, [el("h4", { text: "Sizes" })]);
     if (row.sizes) {
       const src = { kat_raw: "measured from the benchmarked binary (testvectors dump on QEMU)", ngcc_results: "host build of the same reference code", kat: "official NGCC KAT file" }[row.sizes.source] || row.sizes.source;
@@ -278,7 +324,7 @@
     while (i < cols.length) {
       let j = i; while (j < cols.length && cols[j].group === cols[i].group) j++;
       const g = cols[i].group;
-      grpRow.append(el("th", { colspan: j - i, class: "col-" + g + (cols[i].sticky ? " sticky" : ""), text: g === "id" ? "" : (g === "cycles" ? `cycles (${state.stat})` : g === "sizes" ? "sizes (bytes)" : g === "code" ? "code size (bytes)" : g === "stack" ? "stack (bytes)" : "") }));
+      grpRow.append(el("th", { colspan: j - i, class: "col-" + g + (cols[i].sticky ? " sticky" : ""), text: g === "id" ? "" : (g === "cycles" ? `cycles (${state.stat})` : g === "hash" ? "hashing share (% of cycles)" : g === "sizes" ? "sizes (bytes)" : g === "code" ? "code size (bytes)" : g === "stack" ? "stack (bytes)" : "") }));
       i = j;
     }
     const colRow = el("tr", { class: "cols" });
@@ -522,6 +568,7 @@
       <h2>What the tables show</h2>
       <ul>
         <li><b>Cycles</b>: choose average, median, minimum or maximum in the toolbar. The row details list all four plus the iteration count. "total" is the sum of the averages and is only shown when every operation completed.</li>
+        <li><b>Hashing %</b>: share of each operation's cycles spent in hashing (SM3, SHAKE/SHA-3, SHA-2 and the SM3 DRNG), measured by the hashing app: the build defines <code>HASHING_PROFILE</code>, which makes the ICCS hash API in <code>common/</code> (<code>sm3hash</code>, <code>pseudohash</code>, <code>pseudoXOF</code>, <code>pseudoXOF_squeeze</code>) and the SM3 DRNG accumulate their DWT cycles; the share is that sum divided by the operation's cycles in the same run (the instrumentation itself costs well under 1%). "all" is the sum over all operations. The Keccak-f[1600] permutation and the SM3 compression function always run in the assembly code of <code>common/</code> (the importer routes the schemes' own copies there) and are counted through link-time wrappers whoever calls them. A value marked \u2265 is a lower bound: the linked ELF still contains an uncounted hash primitive of the scheme (for example a C SHA-256); the row details list it. Schemes whose own padding and absorb/squeeze layer around the counted primitive is not measured say so in the row details. Hover a value for the cycle counts and iteration count.</li>
         <li><b>Sizes</b>: bytes of public key, secret key and ciphertext (KEM), signature (SIG, the largest over the ten KAT counts) or per-pass messages (KEX). The preferred source is the benchmarked binary itself (its testvectors output on QEMU), then a host build of the same reference code, then the submission's official KAT file. Where sources disagree the row details say so.</li>
         <li><b>Scheme</b>: click the name for details; the \u2197 next to it opens the submission's algorithm specification, a PDF copied from the NGCC package and served from this site (docs/specs/, tools/ngcc_specs.json). Addenda, the original submission zip and the public-comment thread are linked from the row details.</li>
         <li><b>Level</b>: the submitter's claimed classical security, normalised to one of 128, 192, 256, 384 or 512 bits. Where the instance name carries the number it is taken from the name; otherwise (parameter-set names such as <code>n=1024</code>, <code>L2</code>, <code>C1</code>, <code>I</code>, or the <code>160</code> hash-based sets) it is taken from the submission's specification. Hover a level to see the original parameter-set name and the exact claim. A dash means the submission states no level.</li>
@@ -529,6 +576,9 @@
         <li><b>KAT</b>: result of <code>kat_check.py</code> on QEMU (mps2-an386) against the official test vectors.</li>
         <li><b>Bars</b> are scaled to the largest visible value of each column, so filtering rescales them. Use the log scale when a few huge values flatten the rest.</li>
       </ul>
+      <h2>Hashing share</h2>
+      <ul>${(m.hashing_conditions || []).map((c) => `<li>${inlineCode(c)}</li>`).join("")}</ul>
+      <p>${counts.hashing ? `${counts.hashing.measured} implementations measured by the hashing run (${counts.hashing.by_category.kem} KEM, ${counts.hashing.by_category.kex} KEX, ${counts.hashing.by_category.sig} SIG; ${counts.hashing.complete} with every operation completed). Coverage of the instrumentation, from the symbols of each hashing ELF (<code>tools/hashing_coverage.py</code>): ${Object.entries(counts.hashing.coverage).map(([k, v]) => `${v} ${k}`).join(", ")}.` : "The hashing app has not been run yet."} Implementations that bring their own hash primitives are shown as lower bounds (\u2265); their uncounted code is listed in the row details. The run groups the slow hash-based signature schemes into fewer iterations (<code>tools/plan_hashing_run.py</code>), so the iteration count in the tooltip can be 1 or 3 for those.</p>
       <h2>KAT check notes</h2>
       <ul>${(m.kat_notes || []).map((n) => `<li>${esc(n)}</li>`).join("")}</ul>
       <h2>Coverage</h2>
@@ -536,6 +586,7 @@
       <h2>Reproducing</h2>
       <pre>git clone --recursive https://github.com/ngccm4dev/ngccm4.git
 python3 benchmark_schemes.py PLATFORM=nucleo-l4r5zi --apps speed      # all board-tier schemes
+tools/run_hashing_benchmark.sh                                         # hashing share (hashing app, grouped iterations)
 python3 kat_check.py --md Out/kat_summary.md                           # KAT check on QEMU
 python3 tools/make_site_data.py --ngcc-root NGCC                    # regenerate docs/data</pre>
       <p>Data files: <a href="data/benchmark.json" download>benchmark.json</a> (generated ${esc(m.generated_on)}${m.git_rev ? ` from commit <code>${esc(m.git_rev)}</code>` : ""}); sources ${Object.values(m.sources).map((s) => `<code>${esc(s)}</code>`).join(", ")}.</p>`;

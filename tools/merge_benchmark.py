@@ -8,7 +8,8 @@
 
 Each --add is CSV[:MD[:LOG]] of one benchmark_schemes.py run (later runs win):
   * CSV rows replace base rows with the same (family, scheme, implementation, app, metric), unless the
-    base row was measured over more iterations (its "count" is higher): that row is kept;
+    base row was measured over more iterations (its "count" is higher): that row is kept
+    (unless --replace is given, for re-measurements after a code change);
   * every target the run attempted (from its LOG "==> target run" lines, else from its CSV/MD)
     loses its old status line, unless the run merely timed out without measuring anything the
     base did not already have (a shorter capture cap adds no information: the base rows and
@@ -210,6 +211,9 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--raw-dir", default="Out/benchmark_raw")
     ap.add_argument("--note", action="append", default=[], help="line appended to the report header")
     ap.add_argument("--out", default=None, help="output prefix (default: overwrite --base, keeping .bak copies)")
+    ap.add_argument("--replace", action="store_true",
+                    help="let the run's rows replace base rows even when the base was measured over more iterations "
+                         "(for a re-measurement after a code change, e.g. the assembly hash routing)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
 
@@ -247,7 +251,7 @@ def main(argv: list[str]) -> int:
         run_rows = OrderedDict((k, v) for k, v in run_rows.items() if f"{k[1]}_{k[2]}_{k[3]}_{k[4]}" not in keep)
         # A row measured over fewer iterations never displaces one measured over more (a 1-iteration
         # rerun that merely completes the operation list keeps the earlier multi-iteration averages).
-        fewer = [k for k, v in run_rows.items() if k in rows and to_int(rows[k]["count"]) > to_int(v["count"])]
+        fewer = [] if args.replace else [k for k, v in run_rows.items() if k in rows and to_int(rows[k]["count"]) > to_int(v["count"])]
         for k in fewer:
             del run_rows[k]
         replaced = sum(1 for k in run_rows if k in rows)

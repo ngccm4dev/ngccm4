@@ -1,5 +1,5 @@
 {
- "_comment": "Curated import manifest for tools/import_ngcc.py, keyed by the NGCC scheme folder. status: supported (default) | unsupported | skip. tier: board (fits nucleo-l4r5zi) | qemu (mps2-an386 only). copy_dirs are relative to the instance dir ('@path' = relative to schemes/<folder>/). defines -> ngcc_config.h; cflags -> IMPL_CFLAGS_<impl>; exclude_common -> IMPL_EXCLUDE_COMMON_<impl>; sed = [glob, regex, replacement]; patches = repo-relative unified diffs applied with patch -p1 in the impl dir. m4 = submitter-provided Cortex-M4 implementation: {zip_dir: sub-directory of the submission zip (unpacked by tools/extract_ngcc_m4.py into schemes/<folder>/M4_Implementation/), zip_exclude: dir names not to unpack, instances: {<instance>: {dir: path below zip_dir, ...any import rule}}, plus any import rule applying to every m4 instance}; the m4 job inherits the scheme-level rules (except copy_dirs/instances) and the reference instance's defines, and lands in crypto_<fam>/<instance>/m4/. An m4 block with status skip/unsupported documents a submission whose ARM tree is not imported.",
+ "_comment": "Curated import manifest for tools/import_ngcc.py, keyed by the NGCC scheme folder. status: supported (default) | unsupported | skip. tier: board (fits nucleo-l4r5zi) | qemu (mps2-an386 only). copy_dirs are relative to the instance dir ('@path' = relative to schemes/<folder>/). defines -> ngcc_config.h; cflags -> IMPL_CFLAGS_<impl>; exclude_common -> IMPL_EXCLUDE_COMMON_<impl>; sed = [glob, regex, replacement]; patches = repo-relative unified diffs applied with patch -p1 in the impl dir. m4 = submitter-provided Cortex-M4 implementation: {zip_dir: sub-directory of the submission zip (unpacked by tools/extract_ngcc_m4.py into schemes/<folder>/M4_Implementation/), zip_exclude: dir names not to unpack, instances: {<instance>: {dir: path below zip_dir, ...any import rule}}, plus any import rule applying to every m4 instance}; the m4 job inherits the scheme-level rules (except copy_dirs/instances) and the reference instance's defines, and lands in crypto_<fam>/<instance>/m4/. An m4 block with status skip/unsupported documents a submission whose ARM tree is not imported. Hash code: the importer routes every KeccakF1600_StatePermute definition to the assembly permutation in common/keccakf1600.S via KeccakF1600_StatePermute_plain (plain lane state <-> bit-interleaved assembly state) (KECCAK_ASM_SED; opt out with keccak_asm: false); permutations under other names (Lore, NSS-HQC, GreatWall, Lynxer/ReSolveD XKCP) and the schemes' own SM3 compression functions (Phoenix-SM3, Aigis-Sig+, Scloudplus) are routed by per-scheme sed rules to KeccakF1600_StatePermute / sm3_bit_compress(_asm).",
  "ZEN": {
   "status": "skip",
   "reason": "already ported by hand (crypto_kem/ZEN-*, DKEM-*, crypto_kex/DKEX-*, ADKEX-*)",
@@ -604,7 +604,7 @@
     "libopencm3",
     "mupq"
    ],
-   "note": "pqm4-layout tree (KEM-DTRU-ARM-Optimized); m4fspeed per instance with Cortex-M4 NTT/basemul assembly and its own ICCS glue; its Test_Vectors/*_SPEED.txt equal the official KAT files (PK_PACK_OPT=0, as for ref)",
+   "note": "pqm4-layout tree (KEM-DTRU-ARM-Optimized); m4fspeed per instance with Cortex-M4 NTT/basemul assembly and its own ICCS glue; its Test_Vectors/*_SPEED.txt equal the official KAT files (PK_PACK_OPT=0, as for ref) ngccm4 fixes (sed): DTRU-Light's ntt_fast/invntt_fast and DTRU-1024's doublebasemul_asm_opt clobber callee-saved FPU registers (s17/s18, s24) without saving them; vpush/vpop added. The hashing app's main() keeps a zero in d8 (s16/s17), which DTRU-Light overwrote with its Barrett constant 0xffed0ae3.",
    "instances": {
     "DTRU-648": {
      "dir": "crypto_kem/dtru-648/m4fspeed"
@@ -613,7 +613,14 @@
      "dir": "crypto_kem/dtru-768/m4fspeed"
     },
     "DTRU-1024": {
-     "dir": "crypto_kem/dtru-1024/m4fspeed"
+     "dir": "crypto_kem/dtru-1024/m4fspeed",
+     "sed": [
+      [
+       "fastbasemul.S",
+       "^(doublebasemul_asm_opt:\\n  push \\{r4-r11, lr\\})([\\s\\S]*?)(\\n  pop \\{r4-r11, pc\\})",
+       "\\1\\n  vpush {s24-s25}  @ ngccm4: s24 is callee-saved (AAPCS), the port uses it as scratch\\2\\n  vpop {s24-s25}\\3"
+      ]
+     ]
     },
     "DTRU-1536": {
      "dir": "crypto_kem/dtru-1536/m4fspeed"
@@ -622,7 +629,29 @@
      "dir": "crypto_kem/dtru-2048/m4fspeed"
     },
     "DTRU-Light": {
-     "dir": "crypto_kem/dtru-light/m4fspeed"
+     "dir": "crypto_kem/dtru-light/m4fspeed",
+     "sed": [
+      [
+       "fastntt.S",
+       "^ntt_fast:\\n  push \\{r4-r11, r14\\}$",
+       "ntt_fast:\n  push {r4-r11, r14}\n  vpush {s16-s19}  @ ngccm4: s17/s18 are callee-saved (AAPCS), the port clobbers them"
+      ],
+      [
+       "fastntt.S",
+       "^    pop \\{r4-r11, pc\\}$",
+       "    vpop {s16-s19}\n    pop {r4-r11, pc}"
+      ],
+      [
+       "fastinvntt.S",
+       "^invntt_fast:\\n  push \\{r4-r11, lr\\}$",
+       "invntt_fast:\n  push {r4-r11, lr}\n  vpush {s16-s19}  @ ngccm4: s17/s18 are callee-saved (AAPCS), the port clobbers them"
+      ],
+      [
+       "fastinvntt.S",
+       "^  pop \\{r4-r11, pc\\}$",
+       "  vpop {s16-s19}\n  pop {r4-r11, pc}"
+      ]
+     ]
     },
     "DTRU-Prime": {
      "dir": "crypto_kem/dtru-prime/m4fspeed"
@@ -722,6 +751,11 @@
     "randombytes.c",
     "^[ \\t]*#include[ \\t]*<sys/syscall\\.h>[ \\t]*\\n",
     ""
+   ],
+   [
+    "fips202.c",
+    "^static void keccak_permute\\(uint64_t a\\[25\\]\\)$",
+    "#include \"keccakf1600.h\"\\nstatic void keccak_permute(uint64_t a[25]) { KeccakF1600_StatePermute_plain(a); }\\nstatic void __attribute__((unused)) keccak_permute_c(uint64_t a[25])"
    ]
   ]
  },
@@ -926,7 +960,14 @@
   }
  },
  "NSS-HQC": {
-  "tier": "board"
+  "tier": "board",
+  "sed": [
+   [
+    "nss_hqc_core.c",
+    "^static void keccakf1600\\(uint64_t s\\[25\\]\\)$",
+    "#include \"keccakf1600.h\"\\nstatic void keccakf1600(uint64_t s[25]) { KeccakF1600_StatePermute_plain(s); }\\nstatic void __attribute__((unused)) keccakf1600_c(uint64_t s[25])"
+   ]
+  ]
  },
  "NTRE": {
   "tier": "board"
@@ -1204,6 +1245,13 @@
   },
   "keep_files": [
    "kat_random.c"
+  ],
+  "sed": [
+   [
+    "sm3_reference.c",
+    "^static void sm3_bit_compress\\(unsigned int dgst\\[8\\], const unsigned char \\*msg, unsigned long long blocks\\)$",
+    "extern void sm3_bit_compress_asm(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks); /* common/sm3_bit_compress_asm_fp.S */\nstatic void sm3_bit_compress_c(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks);\nstatic void sm3_bit_compress(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks)\n{\n#ifdef SM3_ASM\n\tsm3_bit_compress_asm(dgst, msg, blocks);\n#else\n\tsm3_bit_compress_c(dgst, msg, blocks);\n#endif\n}\nstatic void sm3_bit_compress_c(unsigned int dgst[8], const unsigned char *msg, unsigned long long blocks)"
+   ]
   ]
  },
  "TRIKE": {
@@ -1392,7 +1440,19 @@
   },
   "keep_as": {
    "rng.c": "rng_iccs.c"
-  }
+  },
+  "sed": [
+   [
+    "pcphashsm3px.h",
+    "^void UpdateSM3\\(void\\* uniHash, const Ipp8u\\* mblk, int mlen, const void\\* uniParam\\)$",
+    "static void __attribute__((unused)) UpdateSM3_c(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)"
+   ],
+   [
+    "pcphashsm3px.h",
+    "^#if defined\\(_ALG_SM3_COMPACT_\\)$",
+    "#include \"auxfunc.h\"\n/* SM3 compression from common/ (sm3_bit_compress: assembly with SM3_ASM); the IPP round-constant table is not needed */\nvoid UpdateSM3(void* uniHash, const Ipp8u* mblk, int mlen, const void* uniParam)\n{\n\t(void)uniParam;\n\tif (mlen >= MBS_SM3) sm3_bit_compress((unsigned int*)uniHash, mblk, (unsigned long long)(mlen / MBS_SM3));\n}\n#if defined(_ALG_SM3_COMPACT_)"
+   ]
+  ]
  },
  "BiT": {
   "tier": "qemu"
@@ -1689,7 +1749,14 @@
  },
  "GreatWall": {
   "tier": "qemu",
-  "cflags": "-std=gnu11"
+  "cflags": "-std=gnu11",
+  "sed": [
+   [
+    "KeccakP-1600-reference.c",
+    "^static void keccakp1600_permute\\(uint64_t st\\[25\\], unsigned int nrounds\\)$",
+    "#include \"keccakf1600.h\"\\nstatic void keccakp1600_permute_c(uint64_t st[25], unsigned int nrounds);\\nstatic void keccakp1600_permute(uint64_t st[25], unsigned int nrounds)\\n{\\n\\tif (nrounds == 24) KeccakF1600_StatePermute_plain(st); else keccakp1600_permute_c(st, nrounds);\\n}\\nstatic void keccakp1600_permute_c(uint64_t st[25], unsigned int nrounds)"
+   ]
+  ]
  },
  "Lynxer": {
   "tier": "qemu",
@@ -1700,7 +1767,24 @@
    "WITH_KECCAK_X4": "",
    "XOF_PSEUDO": ""
   },
-  "cflags": "-std=gnu11"
+  "cflags": "-std=gnu11",
+  "sed": [
+   [
+    "KeccakP-1600-opt64.c",
+    "^#include \"SnP-Relaned.h\"$",
+    "#include \"SnP-Relaned.h\"\n#include \"keccakf1600.h\""
+   ],
+   [
+    "KeccakP-1600-opt64.c",
+    "^void KeccakP1600_Permute_24rounds\\(void \\*state\\)\\n\\{\\n[\\s\\S]*?\\n\\}",
+    "void KeccakP1600_Permute_24rounds(void *state)\n{\n    KeccakF1600_StatePermute_plain((uint64_t*)state);\n}"
+   ],
+   [
+    "KeccakP-1600-opt64.c",
+    "^size_t KeccakF1600_FastLoop_Absorb\\(void \\*state, unsigned int laneCount, const unsigned char \\*data, size_t dataByteLen\\)\\n\\{\\n[\\s\\S]*?\\n\\}",
+    "size_t KeccakF1600_FastLoop_Absorb(void *state, unsigned int laneCount, const unsigned char *data, size_t dataByteLen)\n{\n    size_t originalDataByteLen = dataByteLen;\n    uint64_t *stateAsLanes = (uint64_t*)state;\n    unsigned int i;\n    uint64_t lane;\n\n    while(dataByteLen >= laneCount*8) {\n        for (i = 0; i < laneCount; i++) {\n            memcpy(&lane, data + 8*i, 8);\n            stateAsLanes[i] ^= lane;\n        }\n        KeccakF1600_StatePermute_plain(stateAsLanes);\n        data += laneCount*8;\n        dataByteLen -= laneCount*8;\n    }\n    return originalDataByteLen - dataByteLen;\n}"
+   ]
+  ]
  },
  "ReSolveD-alpha": {
   "tier": "qemu",
@@ -1711,7 +1795,24 @@
    "WITH_KECCAK_X4": "",
    "XOF_PSEUDO": ""
   },
-  "cflags": "-std=gnu11"
+  "cflags": "-std=gnu11",
+  "sed": [
+   [
+    "KeccakP-1600-opt64.c",
+    "^#include \"SnP-Relaned.h\"$",
+    "#include \"SnP-Relaned.h\"\n#include \"keccakf1600.h\""
+   ],
+   [
+    "KeccakP-1600-opt64.c",
+    "^void KeccakP1600_Permute_24rounds\\(void \\*state\\)\\n\\{\\n[\\s\\S]*?\\n\\}",
+    "void KeccakP1600_Permute_24rounds(void *state)\n{\n    KeccakF1600_StatePermute_plain((uint64_t*)state);\n}"
+   ],
+   [
+    "KeccakP-1600-opt64.c",
+    "^size_t KeccakF1600_FastLoop_Absorb\\(void \\*state, unsigned int laneCount, const unsigned char \\*data, size_t dataByteLen\\)\\n\\{\\n[\\s\\S]*?\\n\\}",
+    "size_t KeccakF1600_FastLoop_Absorb(void *state, unsigned int laneCount, const unsigned char *data, size_t dataByteLen)\n{\n    size_t originalDataByteLen = dataByteLen;\n    uint64_t *stateAsLanes = (uint64_t*)state;\n    unsigned int i;\n    uint64_t lane;\n\n    while(dataByteLen >= laneCount*8) {\n        for (i = 0; i < laneCount; i++) {\n            memcpy(&lane, data + 8*i, 8);\n            stateAsLanes[i] ^= lane;\n        }\n        KeccakF1600_StatePermute_plain(stateAsLanes);\n        data += laneCount*8;\n        dataByteLen -= laneCount*8;\n    }\n    return originalDataByteLen - dataByteLen;\n}"
+   ]
+  ]
  },
  "MORNING-ATLAS": {
   "tier": "qemu",
@@ -1917,7 +2018,14 @@
      "PARAMNAME": "\"Phoenix-SM3-512s\""
     }
    }
-  }
+  },
+  "sed": [
+   [
+    "sm3_drng.c",
+    "^static size_t crypto_hashblocks_sm3\\(uint8_t \\*statebytes,\\n[ \\t]*const uint8_t \\*in, size_t inlen\\) \\{$",
+    "static size_t crypto_hashblocks_sm3(uint8_t *statebytes, const uint8_t *in, size_t inlen) {\n    /* SM3 compression from common/ (sm3_bit_compress: assembly with SM3_ASM) */\n    unsigned int v[8];\n    unsigned int k;\n    for (k = 0; k < 8; k++) v[k] = load_bigendian_32(statebytes + 4 * k);\n    if (inlen >= 64) sm3_bit_compress(v, in, (unsigned long long)(inlen / 64));\n    for (k = 0; k < 8; k++) store_bigendian_32(statebytes + 4 * k, v[k]);\n    return inlen % 64;\n}\n\nstatic size_t __attribute__((unused)) crypto_hashblocks_sm3_c(uint8_t *statebytes,\n                                    const uint8_t *in, size_t inlen) {"
+   ]
+  ]
  },
  "QingLuan": {
   "tier": "qemu",
